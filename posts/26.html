@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>设计模式之观察者模式【详细解读】 | Feijiang&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/prism/9000.0.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.5.1/katex.min.css">
+    <script charset="utf-8" src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async="true"></script>
+    <link rel="icon" type="image/png" href="https://avatars2.githubusercontent.com/u/16968934?s=460&amp;v=4">
+    <meta name="description" content="在这里了解我的一切，对编程的热爱永不停歇。">
+    
+    <link rel="preload" href="/assets/css/0.styles.0ff818ed.css" as="style"><link rel="preload" href="/assets/js/app.56a012b3.js" as="script"><link rel="preload" href="/assets/js/11.05d3e33d.js" as="script"><link rel="preload" href="/assets/js/4.75c217d6.js" as="script"><link rel="preload" href="/assets/js/8.cabf8971.js" as="script"><link rel="preload" href="/assets/js/32.63df2050.js" as="script"><link rel="preload" href="/assets/js/3.62f894e9.js" as="script"><link rel="prefetch" href="/assets/js/10.e1ca0b20.js"><link rel="prefetch" href="/assets/js/12.0132a1d0.js"><link rel="prefetch" href="/assets/js/13.9f313e03.js"><link rel="prefetch" href="/assets/js/14.11860b71.js"><link rel="prefetch" href="/assets/js/15.e8a2f346.js"><link rel="prefetch" href="/assets/js/16.d2f291d0.js"><link rel="prefetch" href="/assets/js/17.5226bea0.js"><link rel="prefetch" href="/assets/js/18.e322531b.js"><link rel="prefetch" href="/assets/js/19.866ad2e4.js"><link rel="prefetch" href="/assets/js/2.fe237bcd.js"><link rel="prefetch" href="/assets/js/20.aad53867.js"><link rel="prefetch" href="/assets/js/21.b0ca1a5e.js"><link rel="prefetch" href="/assets/js/22.0e0bc5ca.js"><link rel="prefetch" href="/assets/js/23.471fb30e.js"><link rel="prefetch" href="/assets/js/24.7046d9a9.js"><link rel="prefetch" href="/assets/js/25.654b5ac4.js"><link rel="prefetch" href="/assets/js/26.25dac275.js"><link rel="prefetch" href="/assets/js/27.837b735e.js"><link rel="prefetch" href="/assets/js/28.6b1af554.js"><link rel="prefetch" href="/assets/js/29.e0761061.js"><link rel="prefetch" href="/assets/js/30.ad20b703.js"><link rel="prefetch" href="/assets/js/31.0f63db12.js"><link rel="prefetch" href="/assets/js/5.5f8c47ca.js"><link rel="prefetch" href="/assets/js/6.e567b3ca.js"><link rel="prefetch" href="/assets/js/7.9aba82c0.js"><link rel="prefetch" href="/assets/js/9.d78be9b4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0ff818ed.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="header-wrap" data-v-33920667><div class="header page" data-v-33920667><div class="left" data-v-33920667><div class="motto" data-v-33920667></div> <div class="nav" data-v-33920667></div></div> <div class="right" data-v-33920667><div class="search-box" data-v-33920667><input aria-label="Search" placeholder="" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div></div> <div class="page post-page"><div class="title"><div class="post-title">设计模式之观察者模式【详细解读】</div></div> <div class="info"><div class="author">FeijiangHan</div> <div class="date">2023/09/10</div> <div class="count"><span id="busuanzi_value_page_pv"></span> <span>views</span></div></div> <div class="post-content"><div class="content__default"><h1 id="设计模式之观察者模式【详细解读】"><a href="#设计模式之观察者模式【详细解读】" class="header-anchor">#</a> 设计模式之观察者模式【详细解读】</h1> <h1 id="观察者模式"><a href="#观察者模式" class="header-anchor">#</a> 观察者模式</h1> <h2 id="参考"><a href="#参考" class="header-anchor">#</a> 参考</h2> <h2 id="引入"><a href="#引入" class="header-anchor">#</a> 引入</h2> <ol><li>游戏死亡过程：https://www.bilibili.com/video/BV1JB4y167zk</li></ol> <p>想像一下你从今天开始无法直接收到任何订阅消息：</p> <p>你无法收到明天的天气预报</p> <p>你无法收到快递、外买送达通知</p> <p>你也不知道老师什么时候在可视化平台布置了作业</p> <p>。。。。。。</p> <p>你只能一遍又一遍的询问快递员、外卖员、老师..... 这会让你很累，也很浪费时间和精力，因为有可能状态并没有更新，你连续几次问道的状态都是旧状态</p> <p>比如：</p> <p>高考、四六级、考研出分的时候你是不是守在屏幕前连续刷新了好久。。</p> <p>所以，我们想用最少的力气知道状态什么时候被改变，此时就需要状态的改变者负起这个责任了</p> <p>比如：</p> <p>快递、外卖送达以后，你的包裹状态发生了变化，此时快递员和外卖员有义务及时通知你这些变化</p> <hr> <p>快递员一次性要送一车快递，此时快递员要通知所有快递收取者，因此他们必须要有一个详细的清单来记录这一车包裹的领取者有哪些，以便于通知的时候不漏掉任何一个人。</p> <p>一对多关系</p> <p>Observerable、subject、publisher</p> <p><img src="https://refactoring.guru/images/patterns/diagrams/observer/solution1-en.png?id=60fb9a2822649dec1c68b78733479c57" alt=""></p> <p>The Observer pattern suggests that you add a subscription mechanism to the publisher class so individual objects can subscribe to or unsubscribe from a stream of events coming from that publisher.</p> <p><img src="https://refactoring.guru/images/patterns/diagrams/observer/solution2-en.png?id=fcea7791ac77b6ecb6fea2c2b4128d4a" alt=""></p> <p>因为：不想把publisher和object绑定在一起，让publisher成为object的附属品；</p> <p>所以：it’s crucial that all subscribers implement the same interface and that the publisher communicates with them only via that interface</p> <p>做一个集成系统，此时可能有多个publisher，但是他们的功能是相同的：都是要发送一个消息给所有observer</p> <p>The interface would allow subscribers to observe publishers’ states without coupling to their concrete classes.</p> <p>如果你的应用程序有几种不同类型的发布者，你想让你的订阅者兼容所有的发布者，你可以更进一步，让所有的发布者遵循相同的界面。这个接口只需要描述一些订阅方法。该接口允许订阅者观察发布者的状态，而不必耦合到他们的具体类。</p> <p>If you subscribe to a newspaper or magazine, you no longer need to go to the store to check if the next issue is available. Instead, the publisher sends new issues directly to your mailbox right after publication or even in advance.</p> <p>The publisher maintains a list of subscribers and knows which magazines they’re interested in. Subscribers can leave the list at any time when they wish to stop the publisher sending new magazine issues to them.</p> <p><img src="https://refactoring.guru/images/patterns/content/observer/observer-comic-2-en.png?id=a9be31ab5f90e47b0f250fe9821c34c5" alt=""></p> <p><img src="https://refactoring.guru/images/patterns/content/observer/observer-comic-1-en-2x.png?id=8e89674eb83b01e82203987e600ba59e" alt=""></p> <p>Use the Observer pattern when changes to the state of one object may require changing other objects, and the actual set of objects is unknown beforehand or changes dynamically.</p> <p>You can often experience this problem when working with classes of the graphical user interface. For example, you created custom button classes, and you want to let the clients hook some custom code to your buttons so that it fires whenever a user presses a button.</p> <p>The Observer pattern lets any object that implements the subscriber interface subscribe for event notifications in publisher objects. You can add the subscription mechanism to your buttons, letting the clients hook up their custom code via custom subscriber classes.</p> <p>Use the pattern when some objects in your app must observe others, but only for a limited time or in specific cases.</p> <p>The subscription list is dynamic, so subscribers can join or leave the list whenever they need to.</p> <p>当一个对象的状态改变可能需要改变其他对象时使用观察者模式，而实际的一组对象事先是未知的，或者是动态改变的。</p> <p>当你和图形用户界面一起工作时，你经常会遇到这个问题。例如，您创建了自定义按钮类，并希望让客户机将一些自定义代码挂接到您的按钮上，以便在用户按下按钮时触发。</p> <p>该观察者模式允许任何实现订阅方接口的对象订阅发布者对象中的事件通知。您可以将订阅机制添加到按钮中，让客户端通过自定义订阅方类连接自定义代码。</p> <p>当应用程序中的某些对象必须观察其他对象时，但只能在有限的时间或特定情况下使用该模式。</p> <p>订阅列表是动态的，因此订阅者可以在需要时加入或离开该列表。</p> <p><strong>Usage examples:</strong> The Observer pattern is pretty common in C++ code, especially in the GUI components. It provides a way to react to events happening in other objects without coupling to their classes.</p> <p><strong>Identification:</strong> The pattern can be recognized by subscription methods, that store objects in a list and by calls to the update method issued to objects in that list.</p> <h3 id="_1-降低耦合度"><a href="#_1-降低耦合度" class="header-anchor">#</a> 1. 降低耦合度</h3> <p>观察者模式可以将观察者和被观察者分离开来，从而降低它们之间的耦合度。被观察者只需要知道观察者的接口，而不需要知道观察者的具体实现。同样，观察者也只需要知道被观察者的接口，而不需要知道被观察者的具体实现。这样，当一个对象发生改变时，它只需要通知它的观察者，而不需要知道观察者的具体实现，从而降低了它们之间的耦合度。</p> <h3 id="_2-易于扩展"><a href="#_2-易于扩展" class="header-anchor">#</a> 2. 易于扩展</h3> <p>观察者模式可以很容易地扩展新的观察者和被观察者，而不需要修改原有的代码。当需要添加新的观察者时，只需要实现观察者接口即可。同样，当需要添加新的被观察者时，只需要实现被观察者接口即可。这样，就可以很容易地扩展新的观察者和被观察者，而不需要修改原有的代码。</p> <h3 id="_3-支持广播通信"><a href="#_3-支持广播通信" class="header-anchor">#</a> 3. 支持广播通信</h3> <p>观察者模式支持广播通信，即一个被观察者可以同时通知多个观察者。这样，当一个对象发生改变时，它可以同时通知多个观察者，从而实现广播通信。</p> <h3 id="_4-符合开闭原则"><a href="#_4-符合开闭原则" class="header-anchor">#</a> 4. 符合开闭原则</h3> <p>观察者模式符合开闭原则，即对扩展开放，对修改关闭。当需要添加新的观察者时，只需要实现观察者接口即可，而不需要修改原有的代码。同样，当需要添加新的被观察者时，只需要实现被观察者接口即可，而不需要修改原有的代码。这样，就可以很容易地扩展新的观察者和被观察者，而不需要修改原有的代码。</p> <p>总之，观察者模式是一种非常有用的设计模式，它可以降低耦合度、易于扩展、支持广播通信，同时符合开闭原则。在实际的软件开发中，我们可以根据具体的需求来选择是否使用观察者模式。</p> <h2 id="问题"><a href="#问题" class="header-anchor">#</a> 问题</h2> <p>慎用，简单小项目无所谓，大起来就有麻烦，这个模式无法控制代码执行的顺序</p> <h3 id="关于业务使用场景"><a href="#关于业务使用场景" class="header-anchor">#</a> 关于业务使用场景</h3> <p>可以说观察者模式能解决的，消息队列也可以解决，并且可以做的更好。主要根据实际情况取舍。</p> <p><strong>考虑使用消息队列的情况</strong></p> <p>当公司的服务器资源充足，并且用户量大，相关业务逻辑调用频繁，消息要求高可靠性，以及消息要求发布订阅更灵活，就可以考虑使用消息队列。</p> <p><strong>考虑使用观察者模式的情况</strong></p> <p>当服务器资源不充足，或者调用比较少，或者希望使用轻量的通知机制，对于消息可靠性要求不高，可以考虑在项目代码里面使用观察者模式。 当然使用观察者模式比较麻烦的一点就是要自己写一定量的代码，而且功能还不如消息队列的强大，并且不能保证消息的可靠性，当观察者获取消息在自己的处理逻辑里面产生异常时，可能还需要自己先写好发生异常后的降级代码（当然如果对可靠性要求不高的业务场景就不需要）。</p> <p><strong>为什么框架使用观察者模式而不使用消息队列（个人理解）</strong>：</p> <p>\1. 消息队列太重；</p> <p>\2. 本身就是开源框架（本身代表原创），不适合再引入另一个很重的消息队列。如果引入会增加用户的使用和部署成本以及难度，对于自身的推广也不利。</p> <p>我就想告诉大家，设计模式其实只是一种思维方式，我们学习设计模式只是了解一个基本的编程思维方式，在实际的使用过程中是需要根据实际情况变化的。观察者模式也是如此，只要思想不滑坡，你可以创造出很多种不同实现方式的观察者模式。</p> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">// 观察者接口</span>
+<span class="token keyword">class</span> <span class="token class-name">IObserver</span> <span class="token punctuation">{</span>
+ <span class="token keyword">public</span><span class="token operator">:</span>
+  <span class="token keyword">virtual</span> <span class="token operator">~</span><span class="token function">IObserver</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">Update</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string <span class="token operator">&amp;</span>message_from_subject<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 主题接口</span>
+<span class="token keyword">class</span> <span class="token class-name">ISubject</span> <span class="token punctuation">{</span>
+ <span class="token keyword">public</span><span class="token operator">:</span>
+  <span class="token keyword">virtual</span> <span class="token operator">~</span><span class="token function">ISubject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">Attach</span><span class="token punctuation">(</span>IObserver <span class="token operator">*</span>observer<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">Detach</span><span class="token punctuation">(</span>IObserver <span class="token operator">*</span>observer<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">Notify</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 主题类</span>
+<span class="token keyword">class</span> <span class="token class-name">Subject</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">ISubject</span></span> <span class="token punctuation">{</span>
+ <span class="token keyword">public</span><span class="token operator">:</span>
+  <span class="token keyword">virtual</span> <span class="token operator">~</span><span class="token function">Subject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;Goodbye, I was the Subject.\n&quot;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 添加观察者</span>
+  <span class="token keyword">void</span> <span class="token function">Attach</span><span class="token punctuation">(</span>IObserver <span class="token operator">*</span>observer<span class="token punctuation">)</span> <span class="token keyword">override</span> <span class="token punctuation">{</span>
+    list_observer_<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>observer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 移除观察者</span>
+  <span class="token keyword">void</span> <span class="token function">Detach</span><span class="token punctuation">(</span>IObserver <span class="token operator">*</span>observer<span class="token punctuation">)</span> <span class="token keyword">override</span> <span class="token punctuation">{</span>
+    list_observer_<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>observer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 通知观察者</span>
+  <span class="token keyword">void</span> <span class="token function">Notify</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">override</span> <span class="token punctuation">{</span>
+    std<span class="token double-colon punctuation">::</span>list<span class="token operator">&lt;</span>IObserver <span class="token operator">*</span><span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>iterator iterator <span class="token operator">=</span> list_observer_<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">HowManyObserver</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>iterator <span class="token operator">!=</span> list_observer_<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">(</span><span class="token operator">*</span>iterator<span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">Update</span><span class="token punctuation">(</span>message_<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token operator">++</span>iterator<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 创建消息</span>
+  <span class="token keyword">void</span> <span class="token function">CreateMessage</span><span class="token punctuation">(</span>std<span class="token double-colon punctuation">::</span>string message <span class="token operator">=</span> <span class="token string">&quot;Empty&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token operator">-&gt;</span>message_ <span class="token operator">=</span> message<span class="token punctuation">;</span>
+    <span class="token function">Notify</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 获取观察者数量</span>
+  <span class="token keyword">void</span> <span class="token function">HowManyObserver</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;There are &quot;</span> <span class="token operator">&lt;&lt;</span> list_observer_<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">&quot; observers in the list.\n&quot;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 业务逻辑</span>
+  <span class="token keyword">void</span> <span class="token function">SomeBusinessLogic</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token operator">-&gt;</span>message_ <span class="token operator">=</span> <span class="token string">&quot;change message message&quot;</span><span class="token punctuation">;</span>
+    <span class="token function">Notify</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;I'm about to do some thing important\n&quot;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+ <span class="token keyword">private</span><span class="token operator">:</span>
+  std<span class="token double-colon punctuation">::</span>list<span class="token operator">&lt;</span>IObserver <span class="token operator">*</span><span class="token operator">&gt;</span> list_observer_<span class="token punctuation">;</span>
+  std<span class="token double-colon punctuation">::</span>string message_<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 观察者类</span>
+<span class="token keyword">class</span> <span class="token class-name">Observer</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">IObserver</span></span> <span class="token punctuation">{</span>
+ <span class="token keyword">public</span><span class="token operator">:</span>
+  <span class="token function">Observer</span><span class="token punctuation">(</span>Subject <span class="token operator">&amp;</span>subject<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">subject_</span><span class="token punctuation">(</span>subject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token operator">-&gt;</span>subject_<span class="token punctuation">.</span><span class="token function">Attach</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;Hi, I'm the Observer \&quot;&quot;</span> <span class="token operator">&lt;&lt;</span> <span class="token operator">++</span>Observer<span class="token double-colon punctuation">::</span>static_number_ <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;\&quot;.\n&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token operator">-&gt;</span>number_ <span class="token operator">=</span> Observer<span class="token double-colon punctuation">::</span>static_number_<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">virtual</span> <span class="token operator">~</span><span class="token function">Observer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;Goodbye, I was the Observer \&quot;&quot;</span> <span class="token operator">&lt;&lt;</span> <span class="token keyword">this</span><span class="token operator">-&gt;</span>number_ <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;\&quot;.\n&quot;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 更新消息</span>
+  <span class="token keyword">void</span> <span class="token function">Update</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string <span class="token operator">&amp;</span>message_from_subject<span class="token punctuation">)</span> <span class="token keyword">override</span> <span class="token punctuation">{</span>
+    message_from_subject_ <span class="token operator">=</span> message_from_subject<span class="token punctuation">;</span>
+    <span class="token function">PrintInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 从观察者列表中移除</span>
+  <span class="token keyword">void</span> <span class="token function">RemoveMeFromTheList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    subject_<span class="token punctuation">.</span><span class="token function">Detach</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;Observer \&quot;&quot;</span> <span class="token operator">&lt;&lt;</span> number_ <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;\&quot; removed from the list.\n&quot;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 打印消息</span>
+  <span class="token keyword">void</span> <span class="token function">PrintInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;Observer \&quot;&quot;</span> <span class="token operator">&lt;&lt;</span> <span class="token keyword">this</span><span class="token operator">-&gt;</span>number_ <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;\&quot;: a new message is available --&gt; &quot;</span> <span class="token operator">&lt;&lt;</span> <span class="token keyword">this</span><span class="token operator">-&gt;</span>message_from_subject_ <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;\n&quot;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+ <span class="token keyword">private</span><span class="token operator">:</span>
+  std<span class="token double-colon punctuation">::</span>string message_from_subject_<span class="token punctuation">;</span>
+  Subject <span class="token operator">&amp;</span>subject_<span class="token punctuation">;</span>
+  <span class="token keyword">static</span> <span class="token keyword">int</span> static_number_<span class="token punctuation">;</span>
+  <span class="token keyword">int</span> number_<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> Observer<span class="token double-colon punctuation">::</span>static_number_ <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Subject <span class="token operator">*</span>subject <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Subject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Observer <span class="token operator">*</span>observer1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Observer</span><span class="token punctuation">(</span><span class="token operator">*</span>subject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Observer <span class="token operator">*</span>observer2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Observer</span><span class="token punctuation">(</span><span class="token operator">*</span>subject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Observer <span class="token operator">*</span>observer3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Observer</span><span class="token punctuation">(</span><span class="token operator">*</span>subject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  subject<span class="token operator">-&gt;</span><span class="token function">CreateMessage</span><span class="token punctuation">(</span><span class="token string">&quot;Hello World!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  observer3<span class="token operator">-&gt;</span><span class="token function">RemoveMeFromTheList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  subject<span class="token operator">-&gt;</span><span class="token function">CreateMessage</span><span class="token punctuation">(</span><span class="token string">&quot;The weather is hot today!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">delete</span> observer1<span class="token punctuation">;</span>
+  <span class="token keyword">delete</span> observer2<span class="token punctuation">;</span>
+  <span class="token keyword">delete</span> observer3<span class="token punctuation">;</span>
+  <span class="token keyword">delete</span> subject<span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在观察者设计模式中，<code>static int static_number_</code> 是一个静态变量，用于跟踪观察者的数量。这个变量的作用是为了确保每个观察者都有一个唯一的标识符，以便在添加或删除观察者时进行跟踪。</p> <p>在这个示例中，<code>static_number_</code> 是一个静态变量，因此它是与类相关联的，而不是与类的实例相关联的。这意味着，无论创建多少个观察者对象，<code>static_number_</code> 的值都是相同的，并且在所有观察者对象之间共享。</p> <p>在 <code>Observer</code> 类中，<code>static_number_</code> 用于为每个观察者对象分配唯一的标识符。在构造函数中，<code>static_number_</code> 的值会自增，以便为每个新的观察者对象分配一个唯一的标识符。这个标识符存储在 <code>number_</code> 变量中，并用于在 <code>PrintInfo()</code> 和 <code>RemoveMeFromTheList()</code> 方法中标识观察者对象。</p> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token keyword">class</span> <span class="token class-name">Subject</span> <span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+	message HUAWEI_info<span class="token punctuation">;</span>
+    Observer observer_Huawei<span class="token punctuation">;</span>
+    
+ <span class="token keyword">public</span><span class="token operator">:</span>
+  <span class="token function">Subject</span><span class="token punctuation">(</span>Observer o<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>observer_Huawei <span class="token operator">=</span> o<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">virtual</span> <span class="token operator">~</span><span class="token function">Subject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;Goodbye, I was the Subject.\n&quot;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+	
+   message <span class="token function">Huawei_logic</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+      <span class="token keyword">return</span> new_huawei_info<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+    
+  <span class="token comment">// 发送通知</span>
+  <span class="token keyword">void</span> <span class="token function">SendingInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 获得最新消息</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>HUAWEI_info <span class="token operator">=</span> <span class="token function">Huawei_logic</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 发送给订阅者</span>
+    observer_Huawei<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>HUAWEI_info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Observer</span> <span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+message HUAWEI_info<span class="token punctuation">;</span>
+ <span class="token keyword">public</span><span class="token operator">:</span>
+  <span class="token comment">// 更新消息</span>
+  <span class="token keyword">void</span> <span class="token function">Update</span><span class="token punctuation">(</span>message new_info<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>HUAWEI_info <span class="token operator">=</span> new_info<span class="token punctuation">;</span>
+    <span class="token function">PrintInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 打印消息</span>
+  <span class="token keyword">void</span> <span class="token function">PrintInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> HUAWEI_info <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;\n&quot;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 初始化两个用户，分布预定了华为和iPhone</span>
+  Observer observer_Huawei <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Observer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 把用户绑定到商场</span>
+  Subject Mall <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Subject</span><span class="token punctuation">(</span>observer_Huawei<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 进货后通知用户</span>
+  Mall<span class="token punctuation">.</span><span class="token function">SendingInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Subject 保存对具体显示元素对象的引用，即使它只需要调用这些对象的 update 方法，但它也可以访问比它需要的更多的额外信息。</p> <p>Subject 和 observer是紧密耦合的。</p> <p>这个语句“observer_Huawei.update(this.HUAWEI_info);”违反了最重要的设计原则之一“Program to interfaces, not implementations”. 因为我们使用具体的对象来共享数据而不是抽象的接口。你是通过具体的对象observer_Huawei来调用他的成员函数update的。</p> <p>让我们来了解一下“Program to interfaces, not implementations”原则。这个原则是指在编程时，应该针对接口编程，而不是针对实现编程。这样可以使代码更加灵活，易于维护和扩展。当我们针对接口编程时，我们只需要关注接口的行为，而不需要关注具体的实现细节。这样可以使代码更加松耦合，易于测试和重构。</p> <p>如果将来需要添加或删除另一个显示元素，我们需要对代码中不变的部分(Subject)进行更改。这肯定不是一个好的设计实践，应用程序可能无法处理更改，也不容易维护。</p> <p>Observer没办法动态取关subscriber</p> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">// 观察者接口</span>
+<span class="token keyword">class</span> <span class="token class-name">IObserver</span> <span class="token punctuation">{</span>
+ <span class="token keyword">public</span><span class="token operator">:</span>
+  <span class="token keyword">virtual</span> <span class="token operator">~</span><span class="token function">IObserver</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">Update</span><span class="token punctuation">(</span>message message_from_subject<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 主题接口</span>
+<span class="token keyword">class</span> <span class="token class-name">ISubject</span> <span class="token punctuation">{</span>
+ <span class="token keyword">public</span><span class="token operator">:</span>
+  <span class="token keyword">virtual</span> <span class="token operator">~</span><span class="token function">ISubject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">Attach</span><span class="token punctuation">(</span>IObserver <span class="token operator">*</span>observer<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">Detach</span><span class="token punctuation">(</span>IObserver <span class="token operator">*</span>observer<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">Notify</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">// 主题类</span>
+<span class="token keyword">class</span> <span class="token class-name">Subject</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">ISubject</span></span> <span class="token punctuation">{</span>
+ <span class="token keyword">private</span><span class="token operator">:</span>
+   std<span class="token double-colon punctuation">::</span>list<span class="token operator">&lt;</span>IObserver <span class="token operator">*</span><span class="token operator">&gt;</span> list_observer_<span class="token punctuation">;</span>
+   std<span class="token double-colon punctuation">::</span>string message_<span class="token punctuation">;</span>
+ <span class="token keyword">public</span><span class="token operator">:</span>
+  <span class="token comment">// 添加观察者</span>
+  <span class="token keyword">void</span> <span class="token function">Attach</span><span class="token punctuation">(</span>IObserver <span class="token operator">*</span>observer<span class="token punctuation">)</span> <span class="token keyword">override</span> <span class="token punctuation">{</span>
+    list_observer_<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>observer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 移除观察者</span>
+  <span class="token keyword">void</span> <span class="token function">Detach</span><span class="token punctuation">(</span>IObserver <span class="token operator">*</span>observer<span class="token punctuation">)</span> <span class="token keyword">override</span> <span class="token punctuation">{</span>
+    list_observer_<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>observer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 通知观察者</span>
+  <span class="token keyword">void</span> <span class="token function">Notify</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">override</span> <span class="token punctuation">{</span>
+    std<span class="token double-colon punctuation">::</span>list<span class="token operator">&lt;</span>IObserver <span class="token operator">*</span><span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>iterator iterator <span class="token operator">=</span> list_observer_<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>iterator <span class="token operator">!=</span> list_observer_<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">(</span><span class="token operator">*</span>iterator<span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">Update</span><span class="token punctuation">(</span>message_<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token operator">++</span>iterator<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  message <span class="token function">Huawei_logic</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+      <span class="token keyword">return</span> new_huawei_info<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+    
+  <span class="token comment">// 发送通知</span>
+  <span class="token keyword">void</span> <span class="token function">SendingInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 获得最新消息</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>HUAWEI_info <span class="token operator">=</span> <span class="token function">Huawei_logic</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 发送给所有订阅者</span>
+     <span class="token function">Notify</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 观察者类</span>
+<span class="token keyword">class</span> <span class="token class-name">Observer</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">IObserver</span></span> <span class="token punctuation">{</span>
+ <span class="token keyword">private</span><span class="token operator">:</span>
+  <span class="token comment">// 来自subject的message</span>
+  message message_from_subject_<span class="token punctuation">;</span>
+  <span class="token comment">// 订阅的对象，方便取关</span>
+  Subject <span class="token operator">&amp;</span>subject_<span class="token punctuation">;</span>
+ <span class="token keyword">public</span><span class="token operator">:</span>
+  <span class="token function">Observer</span><span class="token punctuation">(</span>Subject <span class="token operator">&amp;</span>subject<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">subject_</span><span class="token punctuation">(</span>subject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token operator">-&gt;</span>subject_<span class="token punctuation">.</span><span class="token function">Attach</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 更新消息</span>
+  <span class="token keyword">void</span> <span class="token function">Update</span><span class="token punctuation">(</span>message message_from_subject<span class="token punctuation">)</span> <span class="token keyword">override</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>message_from_subject_ <span class="token operator">=</span> message_from_subject<span class="token punctuation">;</span>
+    <span class="token function">PrintInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 打印消息</span>
+  <span class="token keyword">void</span> <span class="token function">PrintInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> HUAWEI_info <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;\n&quot;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+    
+  <span class="token comment">// 从观察者列表中移除</span>
+  <span class="token keyword">void</span> <span class="token function">RemoveMeFromTheList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>subject_<span class="token punctuation">.</span><span class="token function">Detach</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p><img src="https://refactoring.guru/images/patterns/diagrams/observer/solution1-en-2x.png?id=a6bc643488b8fbc8bbb309539139c316" alt=""></p> <p><img src="https://refactoring.guru/images/patterns/diagrams/observer/solution2-en-2x.png?id=630cfb84753c258aa4e8500e189c0b65" alt=""></p> <p><img src="https://refactoring.guru/images/patterns/content/observer/observer-comic-2-en-2x.png?id=2147046fb16c427533db8ed85e8cce4c" alt=""></p></div></div> <!----></div> <div class="footer" data-v-3ef679b5><div class="footer-content page" data-v-3ef679b5><div class="left" data-v-3ef679b5><div class="footer-title" data-v-3ef679b5>FRIEND LINKS</div> <div class="links footer-text" data-v-3ef679b5></div> <div class="footer-text" data-v-3ef679b5><span id="busuanzi_container_site_pv" class="footer-count" data-v-3ef679b5><span id="busuanzi_value_site_pv" data-v-3ef679b5></span> <span id="busuanzi_value_site_uv" data-v-3ef679b5></span></span> <div class="counter" data-v-3ef679b5><div class="counter-title" data-v-3ef679b5>PAGE VIEWS</div> <div class="counter-content" data-v-3ef679b5><span class="counter-number" data-v-3ef679b5>0</span><span class="counter-number" data-v-3ef679b5>0</span><span class="counter-number" data-v-3ef679b5>0</span><span class="counter-number" data-v-3ef679b5>0</span><span class="counter-number" data-v-3ef679b5>0</span></div></div> <div class="counter" data-v-3ef679b5><div class="counter-title" data-v-3ef679b5>USER VIEWS</div> <div class="counter-content" data-v-3ef679b5><span class="counter-number" data-v-3ef679b5>0</span><span class="counter-number" data-v-3ef679b5>0</span><span class="counter-number" data-v-3ef679b5>0</span><span class="counter-number" data-v-3ef679b5>0</span><span class="counter-number" data-v-3ef679b5>0</span></div></div></div> </div> <div class="right" data-v-3ef679b5><div class="footer-title power" data-v-3ef679b5>POWERED BY</div> <a href="https://github.com/Yidadaa/Issue-Blog-With-Github-Action" class="logo" data-v-3ef679b5>ISSUE BLOG</a></div></div></div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.56a012b3.js" defer></script><script src="/assets/js/11.05d3e33d.js" defer></script><script src="/assets/js/4.75c217d6.js" defer></script><script src="/assets/js/8.cabf8971.js" defer></script><script src="/assets/js/32.63df2050.js" defer></script><script src="/assets/js/3.62f894e9.js" defer></script>
+  </body>
+</html>
