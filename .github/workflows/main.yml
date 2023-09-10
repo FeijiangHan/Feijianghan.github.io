@@ -35,7 +35,7 @@ jobs:
           ref: source
       - name: Build
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: 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
         run: |
           wget https://raw.githubusercontent.com/FeijiangHan/FeijiangHan.github.io/main/.github/workflows/cv.md -O ./src/cv.md
           wget https://raw.githubusercontent.com/FeijiangHan/FeijiangHan.github.io/main/.github/workflows/custom.js -O ./src/.vuepress/custom.js
