@@ -5,14 +5,14 @@
 let mainConfig = {
   vssueConfig: {
     owner: "FeijiangHan",
-    repo: "feijianghan.github.io",
+    repo: "FeijiangHan.github.io",
     clientId: "80c73f5857605754e05d",
     clientSecret: "800019e08ab02df1e57e16e81c6580edbe326d1b"
   },
 
   repoConfig: {
     owner: "FeijiangHan",
-    repo: "feijianghan.github.io",
+    repo: "FeijiangHan.github.io",
     pushBranch: "main",
     email: "2918589839@qq.com",
     filterUsers: ["FeijiangHan"]
