@@ -32,7 +32,7 @@ let mainConfig = {
     nav: [
       {
         name: "首页",
-        link: "/FeijiangHan.github.io"
+        link: "/"
       },
       {
         name: "Github",
@@ -40,7 +40,7 @@ let mainConfig = {
       },
       {
         name: "CV",
-        link: "/FeijiangHan.github.io/cv.html"
+        link: "/cv.html"
       }
     ],
     headTitle: ["暮春早夏的月亮", "原是情人的月亮，不比秋冬是诗人的月亮"],
