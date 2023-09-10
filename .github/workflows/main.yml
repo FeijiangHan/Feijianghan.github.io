@@ -33,7 +33,7 @@ jobs:
           version: latest
       - uses: actions/checkout@v3
         with:
-          repository: FeijiangHan/FeijiangHan.github.io
+          repository: FeijiangHan/Issue-Blog-With-Github-Action
           ref: source
       - name: Build
         env:
@@ -45,3 +45,4 @@ jobs:
           pnpm action
           pnpm build
           pnpm run deploy
+          
