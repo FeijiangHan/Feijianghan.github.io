@@ -21,6 +21,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    permissions: write-all
+
     strategy:
       matrix:
         node-version: [19.x]
@@ -31,16 +33,15 @@ jobs:
           version: latest
       - uses: actions/checkout@v3
         with:
-          repository: FeijiangHan/Issue-Blog-With-Github-Action
+          repository: Yidadaa/Issue-Blog-With-Github-Action
           ref: source
       - name: Build
         env:
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          wget https://raw.githubusercontent.com/FeijiangHan/FeijiangHan.github.io/main/.github/workflows/cv.md -O ./src/cv.md
-          wget https://raw.githubusercontent.com/FeijiangHan/FeijiangHan.github.io/main/.github/workflows/custom.js -O ./src/.vuepress/custom.js
-          pnpm i
+          wget https://raw.githubusercontent.com/FeijiangHan/FeijiangHan.github.io/master/.github/workflows/cv.md -O ./src/cv.md
+          wget https://raw.githubusercontent.com/FeijiangHan/FeijiangHan.github.io/master/.github/workflows/custom.js -O ./src/.vuepress/custom.js
+          pnpm i 
           pnpm action
           pnpm build
           pnpm run deploy
-          
