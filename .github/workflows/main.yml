@@ -3,7 +3,7 @@ name: Blog
 on:
   push:
     branches:
-      - master
+      - main
   issues:
     types:
       [
@@ -39,8 +39,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          wget https://raw.githubusercontent.com/FeijiangHan/FeijiangHan.github.io/master/.github/workflows/cv.md -O ./src/cv.md
-          wget https://raw.githubusercontent.com/FeijiangHan/FeijiangHan.github.io/master/.github/workflows/custom.js -O ./src/.vuepress/custom.js
+          wget https://raw.githubusercontent.com/FeijiangHan/FeijiangHan.github.io/main/.github/workflows/cv.md -O ./src/cv.md
+          wget https://raw.githubusercontent.com/FeijiangHan/FeijiangHan.github.io/main/.github/workflows/custom.js -O ./src/.vuepress/custom.js
           pnpm i 
           pnpm action
           pnpm build
