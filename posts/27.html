@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>D3.js绘制柱状图教程 | Feijiang&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/prism/9000.0.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.5.1/katex.min.css">
+    <script charset="utf-8" src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async="true"></script>
+    <link rel="icon" type="image/png" href="https://avatars2.githubusercontent.com/u/16968934?s=460&amp;v=4">
+    <meta name="description" content="在这里了解我的一切，对编程的热爱永不停歇。">
+    
+    <link rel="preload" href="/assets/css/0.styles.0ff818ed.css" as="style"><link rel="preload" href="/assets/js/app.ac4c2016.js" as="script"><link rel="preload" href="/assets/js/11.05d3e33d.js" as="script"><link rel="preload" href="/assets/js/4.75c217d6.js" as="script"><link rel="preload" href="/assets/js/8.cabf8971.js" as="script"><link rel="preload" href="/assets/js/33.33f6221d.js" as="script"><link rel="preload" href="/assets/js/3.62f894e9.js" as="script"><link rel="prefetch" href="/assets/js/10.e1ca0b20.js"><link rel="prefetch" href="/assets/js/12.0132a1d0.js"><link rel="prefetch" href="/assets/js/13.9f313e03.js"><link rel="prefetch" href="/assets/js/14.11860b71.js"><link rel="prefetch" href="/assets/js/15.e8a2f346.js"><link rel="prefetch" href="/assets/js/16.cfedb12a.js"><link rel="prefetch" href="/assets/js/17.a3bcd53b.js"><link rel="prefetch" href="/assets/js/18.68076b68.js"><link rel="prefetch" href="/assets/js/19.d3723be2.js"><link rel="prefetch" href="/assets/js/2.fe237bcd.js"><link rel="prefetch" href="/assets/js/20.7b5fdd05.js"><link rel="prefetch" href="/assets/js/21.aa611074.js"><link rel="prefetch" href="/assets/js/22.6ea8496e.js"><link rel="prefetch" href="/assets/js/23.471fb30e.js"><link rel="prefetch" href="/assets/js/24.7046d9a9.js"><link rel="prefetch" href="/assets/js/25.654b5ac4.js"><link rel="prefetch" href="/assets/js/26.25dac275.js"><link rel="prefetch" href="/assets/js/27.837b735e.js"><link rel="prefetch" href="/assets/js/28.6b1af554.js"><link rel="prefetch" href="/assets/js/29.e0761061.js"><link rel="prefetch" href="/assets/js/30.ad20b703.js"><link rel="prefetch" href="/assets/js/31.0f63db12.js"><link rel="prefetch" href="/assets/js/32.63df2050.js"><link rel="prefetch" href="/assets/js/34.0021f085.js"><link rel="prefetch" href="/assets/js/35.3a49a9cd.js"><link rel="prefetch" href="/assets/js/36.115b9753.js"><link rel="prefetch" href="/assets/js/37.9f13daf8.js"><link rel="prefetch" href="/assets/js/5.6c7f9f27.js"><link rel="prefetch" href="/assets/js/6.c07cb30b.js"><link rel="prefetch" href="/assets/js/7.9aba82c0.js"><link rel="prefetch" href="/assets/js/9.d78be9b4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0ff818ed.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="header-wrap" data-v-33920667><div class="header page" data-v-33920667><div class="left" data-v-33920667><div class="motto" data-v-33920667></div> <div class="nav" data-v-33920667></div></div> <div class="right" data-v-33920667><div class="search-box" data-v-33920667><input aria-label="Search" placeholder="" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div></div> <div class="page post-page"><div class="title"><div class="post-title">D3.js绘制柱状图教程</div></div> <div class="info"><div class="author">FeijiangHan</div> <div class="date">2023/09/10</div> <div class="count"><span id="busuanzi_value_page_pv"></span> <span>views</span></div></div> <div class="post-content"><div class="content__default"><h1 id="d3-js绘制柱状图教程"><a href="#d3-js绘制柱状图教程" class="header-anchor">#</a> D3.js绘制柱状图教程</h1> <ul><li><strong>https://www.jb51.net/article/266954.htm</strong></li> <li><a href="https://www.jb51.net/article/266954.htm#_label0" target="_blank" rel="noopener noreferrer">获取处理数据<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://www.jb51.net/article/266954.htm#_label1" target="_blank" rel="noopener noreferrer">设置图表大小位置信息<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://www.jb51.net/article/266954.htm#_label2" target="_blank" rel="noopener noreferrer">绘制画布<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://www.jb51.net/article/266954.htm#_label3" target="_blank" rel="noopener noreferrer">创建比例尺<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://www.jb51.net/article/266954.htm#_label4" target="_blank" rel="noopener noreferrer">绘制数据<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://www.jb51.net/article/266954.htm#_label5" target="_blank" rel="noopener noreferrer">绘制坐标轴<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://www.jb51.net/article/266954.htm#_label6" target="_blank" rel="noopener noreferrer">优化<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://www.jb51.net/article/266954.htm#_label7" target="_blank" rel="noopener noreferrer">tickSize 和 nice 属性<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <p>在了解了svg和d3的基础知识以及画图最重要的比例尺，接下来就可以开始画图表了。本章我们以柱状图为例，尽可能的按照图表的<strong>绘制步骤</strong>实现下面的柱状图。<a href="https://codesandbox.io/s/bar-chart-qd748k" target="_blank" rel="noopener noreferrer">点击查看demo。<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><img src="https://img.jbzj.com/file_images/article/202211/202211894043116.png" alt="img"></p> <h2 id="获取处理数据"><a href="#获取处理数据" class="header-anchor">#</a> 获取处理数据</h2> <div class="language- extra-class"><pre class="language-text"><code>// 定义数据，d3有d3.json 和 d3.csv 获取json和表格数据，后面章节会涉及
+const data = [
+    { name: &quot;外包&quot;, value: 3000 },
+    { name: &quot;金融&quot;, value: 4754 },
+    { name: &quot;制造&quot;, value: 1120 },
+    { name: &quot;咨询&quot;, value: 4032 }
+];
+
+// 获取y轴的值
+const yValue = (d) =&gt; d.value;
+// 获取x轴的值
+const xValue = (d) =&gt; d.name;
+
+</code></pre></div><h2 id="设置图表大小位置信息"><a href="#设置图表大小位置信息" class="header-anchor">#</a> 设置图表大小位置信息</h2> <div class="language- extra-class"><pre class="language-text"><code>const dimensions = {
+    width: 600, // 画布宽度
+    height: 600, // 画布高度
+    margin: {
+        top: 15,
+        right: 15,
+        bottom: 40,
+        left: 60
+    }
+}
+// 图表宽度
+dimensions.boundedWidth =
+dimensions.width - dimensions.margin.left - dimensions.margin.right;
+// 图表高度
+dimensions.boundedHeight =
+dimensions.height - dimensions.margin.top - dimensions.margin.bottom;
+
+</code></pre></div><p><img src="https://img.jbzj.com/file_images/article/202211/202211894043117.jpg" alt="img"></p> <h2 id="绘制画布"><a href="#绘制画布" class="header-anchor">#</a> 绘制画布</h2> <div class="language- extra-class"><pre class="language-text"><code>const svg = d3
+    .select(&quot;#root&quot;)
+    .append(&quot;svg&quot;)
+    .attr(&quot;width&quot;, dimensions.width)
+    .attr(&quot;height&quot;, dimensions.height);
+
+</code></pre></div><h2 id="创建比例尺"><a href="#创建比例尺" class="header-anchor">#</a> 创建比例尺</h2> <div class="language- extra-class"><pre class="language-text"><code>// y轴为线性比例尺
+const yScale = d3.scaleLinear()
+    .domain([0, d3.max(data, (d) =&gt; yValue(d))])
+    .range([dimensions.boundedHeight, 0]);
+    
+// d3.max 取最大值，d3.min 取最小值
+ 
+// 序数比例尺 可以通过 xScale.bandwidth() 获取柱状图的宽度
+const xScale = d3.scaleBand() 
+    .domain(data.map((d) =&gt; xValue(d)))
+    .range([0, dimensions.boundedWidth])
+
+// 颜色比例尺
+const color = d3.scaleOrdinal(d3.schemePastel2);
+
+</code></pre></div><p><img src="https://img.jbzj.com/file_images/article/202211/202211894043118.png" alt="img"></p> <p>因为y轴是向下,所以<code>range(max, min)</code>输出域应该由大到小。</p> <h2 id="绘制数据"><a href="#绘制数据" class="header-anchor">#</a> 绘制数据</h2> <div class="language- extra-class"><pre class="language-text"><code>const chartG = svg
+    .append(&quot;g&quot;)
+    .style(&quot;transform&quot;,`translate(${dimensions.margin.left}px, ${dimensions.margin.top}px)`
+);
+
+chartG.selectAll(&quot;rect&quot;)
+    .data(data)
+    .join(&quot;rect&quot;)
+    .attr(&quot;x&quot;, (d) =&gt; xScale(xValue(d)))
+    .attr(&quot;y&quot;, (d) =&gt; yScale(yValue(d)))
+    .attr(&quot;width&quot;, xScale.bandwidth())
+    .attr(&quot;height&quot;, (d) =&gt; yScale(yValue(d)))
+    .attr(&quot;fill&quot;, (d, i) =&gt; color(i));
+
+</code></pre></div><p><img src="https://img.jbzj.com/file_images/article/202211/202211894043119.png" alt="img"></p> <p>为啥会出现上图的效果：</p> <ul><li>y轴从上而下，y的定位<code>yScale(yValue(d))</code>，<code>range([dimensions.boundedHeight, 0])</code>,值越大，y越小。<code>金融4754</code>是最大值，所以高度为0，看不到</li> <li>由下图可知，<code>y + height = boundedHeight</code>，所以<code>height = boundedHeight - y</code></li></ul> <p><img src="https://img.jbzj.com/file_images/article/202211/202211894043120.jpg" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>chartG.selectAll(&quot;rect&quot;)
+    .data(data)
+    .join(&quot;rect&quot;)
+    ...
+    .attr(&quot;height&quot;, (d) =&gt; dimensions.boundedHeight - yScale(yValue(d)))
+
+</code></pre></div><p><img src="https://img.jbzj.com/file_images/article/202211/202211894043121.png" alt="img"></p> <h2 id="绘制坐标轴"><a href="#绘制坐标轴" class="header-anchor">#</a> 绘制坐标轴</h2> <div class="language- extra-class"><pre class="language-text"><code>// d3 提供了 axisBottom axisLeft 来绘制坐标轴
+const xAxis = d3.axisBottom(xScale);
+
+chartG.append(&quot;g&quot;)
+    .call(xAxis)
+    // x 轴 默认位置在(0,0)，所以需要往下移
+    .attr(&quot;transform&quot;, `translate(0, ${dimensions.boundedHeight})`);
+
+const yAxis = d3.axisLeft(yScale);
+chartG.append(&quot;g&quot;).call(yAxis);
+
+</code></pre></div><p><img src="https://img.jbzj.com/file_images/article/202211/202211894043122.png" alt="img"></p> <h2 id="优化"><a href="#优化" class="header-anchor">#</a> 优化</h2> <p>完成以上步骤一个柱状图就算制作好了，剩下的就是可以加一下图例、交互等优化方面的，但是本章先不涉及，我们可以优化一下柱状图的间距。</p> <div class="language- extra-class"><pre class="language-text"><code>const xScale = d3
+    .scaleBand()
+    .domain(data.map((d) =&gt; xValue(d)))
+    .range([0, dimensions.boundedWidth])
+    .padding(0.2); // padding 百分比的值
+
+</code></pre></div><p><img src="https://img.jbzj.com/file_images/article/202211/202211894043123.png" alt="img"></p> <h2 id="ticksize-和-nice-属性"><a href="#ticksize-和-nice-属性" class="header-anchor">#</a> tickSize 和 nice 属性</h2> <div class="language- extra-class"><pre class="language-text"><code>// 我们把 y轴的 刻度线延长(tickSize)``const yAxis = d3.axisLeft(yScale).tickSize(-dimensions.boundedWidth);
+</code></pre></div><p><img src="https://img.jbzj.com/file_images/article/202211/202211894043124.png" alt="img"></p> <p>我们可以看到除了最上面的刻度线的间距，其他的都是均匀的，这是由于我们设置的最大值是<code>4754</code>,为了美观我们可以加上<code>nice</code>属性：</p> <div class="language- extra-class"><pre class="language-text"><code>const yScale = d3
+    .scaleLinear()
+    .domain([0, d3.max(data, (d) =&gt; yValue(d))])
+    .range([dimensions.boundedHeight, 0])
+    .nice();
+
+</code></pre></div><p>如果域是根据实际数据自动计算的，则开始值和结束值可能不是整数。这不一定是个问题，但它可能看起来有点不整洁，因此，d3.nice() 提供一个刻度函数，它将域四舍五入到一个不错的值。</p> <p><img src="https://img.jbzj.com/file_images/article/202211/202211894043125.png" alt="img"></p></div></div> <!----></div> <div class="footer" data-v-3ef679b5><div class="footer-content page" data-v-3ef679b5><div class="left" data-v-3ef679b5><div class="footer-title" data-v-3ef679b5>FRIEND LINKS</div> <div class="links footer-text" data-v-3ef679b5></div> <div class="footer-text" data-v-3ef679b5><span id="busuanzi_container_site_pv" class="footer-count" data-v-3ef679b5><span id="busuanzi_value_site_pv" data-v-3ef679b5></span> <span id="busuanzi_value_site_uv" data-v-3ef679b5></span></span> <div class="counter" data-v-3ef679b5><div class="counter-title" data-v-3ef679b5>PAGE VIEWS</div> <div class="counter-content" data-v-3ef679b5><span class="counter-number" data-v-3ef679b5>0</span><span class="counter-number" data-v-3ef679b5>0</span><span class="counter-number" data-v-3ef679b5>0</span><span class="counter-number" data-v-3ef679b5>0</span><span class="counter-number" data-v-3ef679b5>0</span></div></div> <div class="counter" data-v-3ef679b5><div class="counter-title" data-v-3ef679b5>USER VIEWS</div> <div class="counter-content" data-v-3ef679b5><span class="counter-number" data-v-3ef679b5>0</span><span class="counter-number" data-v-3ef679b5>0</span><span class="counter-number" data-v-3ef679b5>0</span><span class="counter-number" data-v-3ef679b5>0</span><span class="counter-number" data-v-3ef679b5>0</span></div></div></div> </div> <div class="right" data-v-3ef679b5><div class="footer-title power" data-v-3ef679b5>POWERED BY</div> <a href="https://github.com/Yidadaa/Issue-Blog-With-Github-Action" class="logo" data-v-3ef679b5>ISSUE BLOG</a></div></div></div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.ac4c2016.js" defer></script><script src="/assets/js/11.05d3e33d.js" defer></script><script src="/assets/js/4.75c217d6.js" defer></script><script src="/assets/js/8.cabf8971.js" defer></script><script src="/assets/js/33.33f6221d.js" defer></script><script src="/assets/js/3.62f894e9.js" defer></script>
+  </body>
+</html>
