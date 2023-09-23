@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSU 群智感知学生科研团队</title>
+
+	<link rel="stylesheet" href="css/main.css" />
+
+	 <link rel="stylesheet" href="components/reset/reset.css">
+
+	<link rel="stylesheet" href="components/firstscreen/firstscreen.css">
+	<link rel="stylesheet" href="css/members.css">
+	<link rel="stylesheet" href="components/footer/footer.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+
+
+</head>
+<body>
+
+	<section id="see1" class="panel se1" data-section-name="se1">
+	<div id="first_screen">
+		<div id="ife_logo">
+			<a href="http://www.csu.edu.cn/">
+				<img src="components/logo/ife-logo.png" alt="CSU ">
+			</a>
+		</div>
+        <div id="svg_logo">
+            <div>
+                <a href="https://git.io/typing-svg">
+                    <img src="https://readme-typing-svg.demolab.com?font=Playfair+Display&weight=900&size=50&duration=3000&color=FFF9FB&background=0F0F0F00&center=true&repeat=false&width=830&height=200&lines=CSU+Undergraduate+Research+Team" alt="Typing SVG" />
+                </a>
+                <p id="slogan">We are a computer science undergraduate research group at Central South University！</p>
+                <!-- <p id="slogan">Research direction: Truth discovery, Blockchain, Crowdsourcing,Deep learning, Privacy protection</p> -->
+            </div>
+            <div id="scroll_down" style="margin-top: 2rem;">
+            </div>
+            <div id="arow_down">
+                <i class="xiangxia">&#xe682;</i>
+            </div>
+	    </div>
+	</section>
+
+	<section id="see2" class="panel se2" data-section-name="se2">
+		<div id="container"></div>
+	</section>
+
+	<section id="see3" class="panel se3" data-section-name="se3">
+        <div id="teamAbout" class="panel indexCom" data-section-name="se3">
+            <div class="description">
+                <h1>About Us</h1>
+                <div id="div1">
+                      我们是中南大学计算机学院的本科生科研团队，主要成员包括唐健恒、韩非江、范珂嘉、谢文轩等。我们致力于群智感知、众包、深度学习、隐私保护和区块链等前沿技术的研究。<br><br>
+                </div>
+                <div>
+                    我们在这些领域发表了多篇重要的期刊论文，其中代表性的论文包括：
+                </div>
+                <div class="paperDiv">
+                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290">
+                        <span style="font-weight: bold;">(2023)</span> Credit and Quality Intelligent Learning based Multi-armed Bandit Scheme for Unknown Worker Selection in Multimedia MCS.
+                    </a>
+                    <div class="journalInfo">(Information Sciences，中科院一区Top，影响因子IF=8.1)</div>
+                </div>
+
+                <div class="paperDiv">
+                    <a href="#">
+                        <span style="font-weight: bold;">(2023)</span> BTV-CMAB: A Bi-directional Trust Verification Based Combinatorial Multi-Armed Bandit Scheme for Mobile Crowdsourcing.
+                    </a>
+                    <div class="journalInfo">(IEEE Internet of Things Journal，中科院一区TopJ，影响因子IF=10.238)</div>
+                </div>
+
+                <div class="paperDiv">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S0140366423001433">
+                        <span style="font-weight: bold;">(2023)</span> A Semi-supervised Sensing Rate Learning based CMAB Scheme to Combat COVID-19 by Trustful Data Collection in the Crowd.
+                    </a>
+                    <div class="journalInfo">(Computer Communications，CR一区，影响因子IF=6.0)</div>
+                </div>
+
+                <div class="paperDiv">
+                    <a href="#">
+                        <span style="font-weight: bold;">(2023)</span> Minority is all you need: Eliciting the Minority Report in Crowdsourcing.
+                    </a>
+                    <div class="journalInfo">(AAAI 在投)</div>
+                </div>
+
+                <div class="paperDiv">
+                    <a href="#">
+                        <span style="font-weight: bold;">(2023)</span> MAB-RP: A Multi-Armed Bandit based Scheme for Accurate Data Collection in Crowdsensing.
+                    </a>
+                    <div class="journalInfo">(Information Sciences，中科院一区Top，影响因子IF=8.1)</div>
+                </div>
+                <div id="div1">通过这些论文的发表，我们在相关领域取得了显著的研究成果，并为学术界和工业界提供了有价值的贡献。作为团队，我们将继续努力推动科学研究的前沿，并致力于解决现实世界中的问题。</div>
+                </div>
+
+        </div>
+        <div class="footer">
+            Copyright&nbsp;2023 by <a href="https://github.com/FeijiangHan/">CSU Cutting-Edge CrowdSensing Research Team</a>
+        </div>
+	</section>
+
+    <!-- <section id="see4" class="panel se3" data-section-name="se4">
+
+	</section> -->
+
+	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/scrollify.min.js"></script>
+
+		<script src="js/three.min.js"></script>
+		<script src="js/libs/tween.min.js"></script>
+		<script src="js/renderers/CSS3DRenderer.js"></script>
+		<script src="js/renderers/Projector.js"></script>
+		<script src="js/renderers/CanvasRenderer.js"></script>
+		<script src="./components/onload/onload.js"></script>
+		<script src="components/firstscreen/firstscreen.js"></script>
+		<script src="js/firstback.js"></script>
+		<script src="js/members.js"></script>
+
+
+	<script>
+		$(function() {
+			$(".panel").css({"height":$(window).height()});
+			$.scrollify({
+				section:".panel"
+			});
+			$(".scroll").click(function(e) {
+				e.preventDefault();
+				$.scrollify("move",$(this).attr("href"));
+			});
+		});
+	</script>
+</body>
+</html>

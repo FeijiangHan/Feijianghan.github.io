@@ -1,0 +1,91 @@
+.panel {
+    height:100vh;
+    border-bottom:1px solid #666;
+}
+
+.se3{
+    height:100vh;
+    background-color: rgba(0, 0, 0);
+    /* background-image: url("../images/bg3.png");
+    background-size: cover;
+    background-position: center; */
+}
+
+
+/*关于我们*/
+#teamAbout {
+    /* background: url(../img/bg2.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%; */
+    color: rgb(255, 255, 255);
+}
+
+#teamAbout .all .fr {
+    color: rgb(255, 255, 255);
+}
+
+
+#see3 {
+    /* background-color: #f5f5f5; */
+    padding: 40px 0;
+    /* text-align: center; */
+}
+
+.description {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.description h1 {
+    font-size: 60px;
+    padding: 30px;
+    /* margin-bottom: 90px; */
+    text-align: center;
+}
+
+.description p {
+    font-size: 16px;
+    line-height: 1.5;
+    /* margin-bottom: 20px; */
+}
+
+.description #div1 {
+    text-indent: 1em;
+    margin-top: 20px;
+}
+
+.description #div2 {
+    text-indent: 1em;
+}
+
+.paperDiv {
+    text-indent: 2em;
+    margin-top: 10px;
+}
+
+.paperDiv a {
+    /* font-style: italic; */
+}
+
+.journalInfo {
+    font-size: 13px;
+    padding: 1px;
+    color: #888;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: rgb(134, 134, 134);
+
+}
+
+#slogan {
+    font-family: "Skranji", serif;
+    /* font-size: 15px; */
+    font-weight: bold;
+    list-style:lower-alpha;
+    line-height: 2rem;
+    text-align: center;
+}
