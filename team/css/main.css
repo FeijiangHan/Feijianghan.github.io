@@ -34,7 +34,6 @@
 .description {
     max-width: 800px;
     margin: 0 auto;
-    text-align: justify;
 }
 
 .description h1 {
@@ -44,10 +43,8 @@
     text-align: center;
 }
 
-.description p {
-    font-size: 16px;
-    line-height: 1.5;
-    /* margin-bottom: 20px; */
+.description div {
+    text-align: justify;
 }
 
 .description #div1 {

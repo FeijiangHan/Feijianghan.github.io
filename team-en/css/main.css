@@ -50,9 +50,8 @@
     text-align: center;
 }
 
-.description p div{
-    line-height: 1.5;
-    /* margin-bottom: 20px; */
+.description div {
+    text-align: justify;
 }
 
 .description #div1 {
