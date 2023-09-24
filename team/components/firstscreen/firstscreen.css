@@ -36,7 +36,7 @@ html,body{
 }
 
 #see2 {
-    background-image: url("../../images/bg3.png"); /* 替换为您的背景图片路径 */
+    background-image: url("../../images/bg3.jpg"); /* 替换为您的背景图片路径 */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

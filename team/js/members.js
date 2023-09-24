@@ -132,18 +132,18 @@
 
 					var details1= document.createElement( 'div' );
 					details1.className = 'details1';
-					details1.innerHTML =' 姓名:'+table[ i + 1 ]+'<br>'+
-										'性别:'+table[i+5]+ '<br>' +
-										'专业:'+table[i+6]+ '<br>' +
-										'教育程度:'+table[ i + 3 ]+'<br>'+
-										'所在地:'+table[i+2]+'<br>'+
-										'学校:'+table[ i + 4 ];
+					details1.innerHTML =' Name:'+table[ i + 1 ]+'<br>'+
+										'Sex:'+table[i+5]+ '<br>' +
+										'Major:'+table[i+6]+ '<br>' +
+										'Edu:'+table[ i + 3 ]+'<br>'+
+										'Location:'+table[i+2]+'<br>'+
+										'University:'+table[ i + 4 ];
 					details1.style.display="none";
 					element.appendChild( details1 );
 
 					var details2= document.createElement( 'div' );
 					details2.className = 'details2';
-					details2.innerHTML ='个人简介:'+table[ i + 7 ];
+					details2.innerHTML ='Desc:'+table[ i + 7 ];
 					details2.style.display="none";
 					element.appendChild( details2 );
 
@@ -289,12 +289,12 @@
 											.to( { width:610,height:800}, 1000 )
 											.easing( TWEEN.Easing.Elastic.InOut )
 											.onUpdate(update2);
-											
+											500
 											// tweenback3.chain(tweenback);
 										// tweenback3.chain(tween);
 
 										var tweenback4=new TWEEN.Tween( elstyle )
-										.to( { left:0}, 300 )
+										.to( { left:-600}, 300 )
 										.easing( TWEEN.Easing.Exponential.InOut )
 										.onUpdate(backupdate2);
 										
