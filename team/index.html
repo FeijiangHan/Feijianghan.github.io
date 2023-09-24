@@ -14,10 +14,41 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/iconfont.css">
 
+    <style>
+        /* CSS 样式 */
+        #popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+          }
+      
+          #popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
+            color: red;
+            font-size: 24px;
+          }
+      </style>
 
 </head>
 <body>
-
+    <div id="popup">
+        <div id="popup-content">
+          Please view this page on a computer for better experience.
+        </div>
+    </div>
 	<section id="see1" class="panel se1" data-section-name="se1">
 	<div id="first_screen">
 		<div id="ife_logo">
@@ -128,6 +159,32 @@
 				$.scrollify("move",$(this).attr("href"));
 			});
 		});
+
+             // 检测屏幕宽度是否小于某个阈值（这里设定为 600px）
+    function isMobile() {
+        return window.innerWidth < 1300;
+    }
+  
+      // 禁止滑动和其他交互行为
+      function preventDefault(e) {
+        e.preventDefault();
+      }
+  
+      // 当页面加载完成时执行
+      window.addEventListener('load', function() {
+        // 如果是移动设备，显示弹窗并禁止滑动和其他交互行为
+        if (isMobile()) {
+          var popup = document.getElementById('popup');
+          popup.style.display = 'block';
+  
+          // 禁止滑动和其他交互行为
+          document.addEventListener('touchmove', preventDefault, { passive: false });
+          document.addEventListener('mousedown', preventDefault);
+          document.addEventListener('mouseup', preventDefault);
+          document.addEventListener('keydown', preventDefault);
+          document.addEventListener('wheel', preventDefault);
+        }
+      });
 	</script>
 </body>
 </html>
