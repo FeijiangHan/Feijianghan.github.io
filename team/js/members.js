@@ -44,7 +44,6 @@
 				"男",
 				"计算机科学与技术",
 				"作为我们团队的指导教授，他主持和参加了许多研究项目，其中包括国家自然科学基金和国家973计划的资助项目。他在知名的国际期刊和会议上发表了多篇SCI论文，研究领域涵盖云计算、边缘计算、大数据、无线传感器网络和面向服务计算等。此外，他还获得了三项省部级科技成果奖，并在教材编写和国际期刊编辑方面做出了贡献。"
-				
 			];
 
 
@@ -132,20 +131,20 @@
 
 					var details1= document.createElement( 'div' );
 					details1.className = 'details1';
-					details1.innerHTML =' Name:'+table[ i + 1 ]+'<br>'+
-										'Sex:'+table[i+5]+ '<br>' +
-										'Major:'+table[i+6]+ '<br>' +
-										'Edu:'+table[ i + 3 ]+'<br>'+
-										'Location:'+table[i+2]+'<br>'+
-										'University:'+table[ i + 4 ];
-					details1.style.display="none";
-					element.appendChild( details1 );
+					details1.innerHTML = 'Name: ' + table[i + 1] + '<br>' +
+					'Gender: ' + table[i + 5] + '<br>' +
+					'Major: ' + table[i + 6] + '<br>' +
+					'Education Level: ' + table[i + 3] + '<br>' +
+					'Location: ' + table[i + 2] + '<br>' +
+					'School: ' + table[i + 4];
+					details1.style.display = "none";
+					element.appendChild(details1);
 
-					var details2= document.createElement( 'div' );
+					var details2 = document.createElement('div');
 					details2.className = 'details2';
-					details2.innerHTML ='Desc:'+table[ i + 7 ];
-					details2.style.display="none";
-					element.appendChild( details2 );
+					details2.innerHTML = 'Bio: ' + table[i + 7];
+					details2.style.display = "none";
+					element.appendChild(details2);
 
 					var object = new THREE.CSS3DObject( element );
 					object.position.x = Math.random() * 4000 - 2000;
@@ -286,15 +285,15 @@
 											domnodes[b].style.height = elstyle.height + 'px';
 											}
 											tweenback6=new TWEEN.Tween( elstyle )
-											.to( { width:610,height:800}, 1000 )
+											.to( { width:610,height:800}, 1000 ) // 展示板高度
 											.easing( TWEEN.Easing.Elastic.InOut )
 											.onUpdate(update2);
-											500
+											
 											// tweenback3.chain(tweenback);
 										// tweenback3.chain(tween);
 
 										var tweenback4=new TWEEN.Tween( elstyle )
-										.to( { left:-600}, 300 )
+										.to( { left:0}, 300 )
 										.easing( TWEEN.Easing.Exponential.InOut )
 										.onUpdate(backupdate2);
 										
@@ -344,7 +343,7 @@
 								
 
 								var tween4=new TWEEN.Tween( elstyle )
-								.to( { width:1600,height:1000}, 1000 )
+								.to( { width:1600,height:1200}, 1000 )
 								.easing( TWEEN.Easing.Elastic.InOut )
 								.onUpdate(update4);
 
