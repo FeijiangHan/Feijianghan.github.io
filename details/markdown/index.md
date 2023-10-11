@@ -25,64 +25,64 @@ I am a final year computer science student at Central South University with a st
 * In order to overcome the 32-bit WASM memory limitation, I implemented an innovative two-level storage architecture using indexedDB. This allowed for efficient profiling of huge codebases exceeding 4GB in size.
 * Furthermore, I improved the profiling speeds by an additional 10% through the implementation of a block-based LRU algorithm and bitmap dirty checking logic. These optimizations intelligently streamlined disk I/O and memory usage, resulting in faster and more efficient profiling operations.
 
-![flameshow-01](markdown/assets/demo2.a7673cc1.gif)
+![flameshow-01](markdown/img/demo2.a7673cc1.gif)
 
 * 这里是在大数据集上的展示效果
 
-![flame-02](markdown/image-20231011191329203.png)
+![flame-02](markdown/img/image-20231011191329203.png)
 
 * 支持点击节点并展开子节点
 
-![flame-03](markdown/assets/image-20231011191347874.png)
+![flame-03](markdown/img/image-20231011191347874.png)
 
 ### [Pulmonary Embolism Detection Syste](https://github.com/FeijiangHan/CT-image-segmentation-for-pulmonary-embolism/)
 
 * **Python & Pytorch & OpenCv & Cuda**
 * As team leader, I led a 5-member group to develop a CT image detection model for identifying pulmonary embolisms. We built an ensemble model combining YOLO and UNet that achieved top 5% ranking in a Kaggle competition, improving on the UNet baseline by 8%. I spearheaded innovative data augmentation techniques that expanded our training dataset by 30%.
 
-<img src="markdown/assets/schema.png" alt="image-20231011185448410" style="zoom:70%;" />
+<img src="markdown/img/schema.png" alt="image-20231011185448410" style="zoom:70%;" />
 
 * 使用图像拼接扩增图像，提高小目标占比
 
-<img src="./assets/cut.png" alt="image-20231011185448410" style="zoom:70%;" />
+<img src="markdown/img/cut.png" alt="image-20231011185448410" style="zoom:70%;" />
 
 * 图像增强算法
 
-<img src="markdown/assets/improve.png" alt="image-20231011185448410" style="zoom:70%;" />
+<img src="markdown/img/improve.png" alt="image-20231011185448410" style="zoom:70%;" />
 
 * 下面是最终检测结果
 
-<img src="markdown/assets/finall.png" alt="image-20231011185448410" style="zoom:70%;" />
+<img src="markdown/img/finall.png" alt="image-20231011185448410" style="zoom:70%;" />
 
 ### Web Shell Detection and Visualization [GitHub](https://github.com/FeijiangHan/Malware-Family-Vis-Platform/)
 
 * **D3.js & React & Redux & Django**
 * I enhanced clustering algorithms to identify malicious web shell families from a dataset of 561K function calls with 100% accuracy. Using React and Django, I built a real-time model training platform that allowed analysts to refine the clustering model interactively. A related patent was published.
 
-<img src="markdown/assets/web-01.png" alt="image-20231011185448410" style="zoom:67%;" />
+<img src="markdown/img/web-01.png" alt="image-20231011185448410" style="zoom:67%;" />
 
 * 训练一轮后：
 
-<img src="markdown/assets/web-02.png" alt="web-2" style="zoom:67%;" />
+<img src="markdown/img/web-02.png" alt="web-2" style="zoom:67%;" />
 
 ### Innovative Function Call Visualization [Paper](https://github.com/FeijiangHan/openPaper/blob/main/Fctree.pdf)
 
 * **D3.js & Vue & Django**
 * I proposed FCTree, a novel technique to visualize function calls during execution. Using Vue and d3.js, I built an interactive web prototype and demonstrated its effectiveness through user studies. A related patent was published.
 
-<img src="markdown/assets/image-20231011184940562.png" alt="image-20231011185448410" style="zoom:67%;" />
+<img src="markdown/img/image-20231011184940562.png" alt="image-20231011185448410" style="zoom:67%;" />
 
 * 下面是FCtree在不同数据集上的可视化
 
-![image-20231011185448410](markdown/assets/image-20231011185448410.png)
+![image-20231011185448410](markdown/img/image-20231011185448410.png)
 
 * 实现了动态链路交互功能，可以显示选择节点的调用链路
 
-<img src="markdown/assets/image-20231011192344897.png" alt="image-20231011185448410" style="zoom: 67%;" />
+<img src="markdown/img/image-20231011192344897.png" alt="image-20231011185448410" style="zoom: 67%;" />
 
 * 可以动态显示函数调用次数和时序
 
-<img src="markdown/assets/fct-04.png" alt="fct-04" style="zoom: 67%;" />
+<img src="markdown/img/fct-04.png" alt="fct-04" style="zoom: 67%;" />
 
 ## Working Experience
 
