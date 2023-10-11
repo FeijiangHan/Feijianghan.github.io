@@ -40,26 +40,26 @@ I am a final year computer science student at Central South University with a st
 * **Python & Pytorch & OpenCv & Cuda**
 * As team leader, I led a 5-member group to develop a CT image detection model for identifying pulmonary embolisms. We built an ensemble model combining YOLO and UNet that achieved top 5% ranking in a Kaggle competition, improving on the UNet baseline by 8%. I spearheaded innovative data augmentation techniques that expanded our training dataset by 30%.
 
-<img src="markdown/img/schema.png" alt="image-20231011185448410" style="zoom:70%;" />
+<img src="markdown/img/schema.png" alt="image-schema" style="zoom:70%;" />
 
 * 使用图像拼接扩增图像，提高小目标占比
 
-<img src="markdown/img/cut.png" alt="image-20231011185448410" style="zoom:70%;" />
+<img src="markdown/img/cut.png" alt="image-cut" style="zoom:70%;" />
 
 * 图像增强算法
 
-<img src="markdown/img/improve.png" alt="image-20231011185448410" style="zoom:70%;" />
+<img src="markdown/img/improve.png" alt="image-improve" style="zoom:70%;" />
 
 * 下面是最终检测结果
 
-<img src="markdown/img/finall.png" alt="image-20231011185448410" style="zoom:70%;" />
+<img src="markdown/img/finall.png" alt="image-finall" style="zoom:70%;" />
 
 ### Web Shell Detection and Visualization [GitHub](https://github.com/FeijiangHan/Malware-Family-Vis-Platform/)
 
 * **D3.js & React & Redux & Django**
 * I enhanced clustering algorithms to identify malicious web shell families from a dataset of 561K function calls with 100% accuracy. Using React and Django, I built a real-time model training platform that allowed analysts to refine the clustering model interactively. A related patent was published.
 
-<img src="markdown/img/web-01.png" alt="image-20231011185448410" style="zoom:67%;" />
+<img src="markdown/img/web-01.png" alt="image-web-01" style="zoom:67%;" />
 
 * 训练一轮后：
 
@@ -78,7 +78,7 @@ I am a final year computer science student at Central South University with a st
 
 * 实现了动态链路交互功能，可以显示选择节点的调用链路
 
-<img src="markdown/img/image-20231011192344897.png" alt="image-20231011185448410" style="zoom: 67%;" />
+<img src="markdown/img/image-20231011192344897.png" alt="image-20231011192344897" style="zoom: 67%;" />
 
 * 可以动态显示函数调用次数和时序
 
