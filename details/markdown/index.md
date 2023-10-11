@@ -33,7 +33,7 @@ I am a final year computer science student at Central South University with a st
 
 * 支持点击节点并展开子节点
 
-![flame-03](./assets/image-20231011191347874.png)
+![flame-03](/markdown/assets/image-20231011191347874.png)
 
 ### [Pulmonary Embolism Detection Syste](https://github.com/FeijiangHan/CT-image-segmentation-for-pulmonary-embolism/)
 
