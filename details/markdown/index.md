@@ -21,7 +21,7 @@ I am a final year computer science student at Central South University with a st
 
 ## Projects
 
-### EasyView - Profiling Tool for Golang Applications [Website](https://www.easyview.dev/)
+### [EasyView - Profiling Tool for Golang Applications](https://www.easyview.dev/)
 
 * **C++; Web Assembly; JavaScript; React; WebGL**
 * I developed EasyView, a profiling tool specifically designed for Golang applications. This tool allowed Golang engineers within the company to effectively analyze large-scale applications. EasyView supported the parsing of profiles and DrCCprofile in Protocol Buffers format. To make EasyView accessible to a wider audience, I launched the EasyView plugin on the VSCode extension marketplace, which received positive feedback and garnered 1,000 downloads.
@@ -29,48 +29,64 @@ I am a final year computer science student at Central South University with a st
 * In order to overcome the 32-bit WASM memory limitation, I implemented an innovative two-level storage architecture using indexedDB. This allowed for efficient profiling of huge codebases exceeding 4GB in size.
 * Furthermore, I improved the profiling speeds by an additional 10% through the implementation of a block-based LRU algorithm and bitmap dirty checking logic. These optimizations intelligently streamlined disk I/O and memory usage, resulting in faster and more efficient profiling operations.
 
-![img](https://www.easyview.dev/assets/demo2.a7673cc1.gif)
+![flameshow-01](./assets/demo2.a7673cc1.gif)
 
-![image-20231011191329203](https://gitee.com/han-feijiang/img-store/raw/master/2023/image-20231011191329203.png)
+* 这里是在大数据集上的展示效果
 
-![image-20231011191347874](https://gitee.com/han-feijiang/img-store/raw/master/2023/image-20231011191347874.png)
+![flame-02](./assets/image-20231011191329203.png)
 
-### Pulmonary Embolism Detection System [GitHub](https://github.com/FeijiangHan/CT-image-segmentation-for-pulmonary-embolism/)
+* 支持点击节点并展开子节点
+
+![flame-03](./assets/image-20231011191347874.png)
+
+### [Pulmonary Embolism Detection Syste](https://github.com/FeijiangHan/CT-image-segmentation-for-pulmonary-embolism/)
 
 * **Python & Pytorch & OpenCv & Cuda**
 * As team leader, I led a 5-member group to develop a CT image detection model for identifying pulmonary embolisms. We built an ensemble model combining YOLO and UNet that achieved top 5% ranking in a Kaggle competition, improving on the UNet baseline by 8%. I spearheaded innovative data augmentation techniques that expanded our training dataset by 30%.
 
-<img src="https://gitee.com/han-feijiang/img-store/raw/master/2023/image-20231011192742812.png" alt="image-20231011192742812" style="zoom:80%;" />
+<img src="./assets/schema.png" alt="image-20231011185448410" style="zoom:70%;" />
 
-<img src="https://gitee.com/han-feijiang/img-store/raw/master/2023/image-20231011192637578.png" alt="image-20231011192637578" style="zoom: 80%;" />
+* 使用图像拼接扩增图像，提高小目标占比
 
-<img src="https://gitee.com/han-feijiang/img-store/raw/master/2023/image-20231011192700001.png" alt="image-20231011192700001" style="zoom:80%;" />
+<img src="./assets/cut.png" alt="image-20231011185448410" style="zoom:70%;" />
 
-<img src="https://gitee.com/han-feijiang/img-store/raw/master/2023/image-20231011192833142.png" alt="image-20231011192833142" style="zoom:80%;" />
+* 图像增强算法
+
+<img src="./assets/improve.png" alt="image-20231011185448410" style="zoom:70%;" />
+
+* 下面是最终检测结果
+
+<img src="./assets/finall.png" alt="image-20231011185448410" style="zoom:70%;" />
 
 ### Web Shell Detection and Visualization [GitHub](https://github.com/FeijiangHan/Malware-Family-Vis-Platform/)
 
 * **D3.js & React & Redux & Django**
 * I enhanced clustering algorithms to identify malicious web shell families from a dataset of 561K function calls with 100% accuracy. Using React and Django, I built a real-time model training platform that allowed analysts to refine the clustering model interactively. A related patent was published.
 
-<img src="https://gitee.com/han-feijiang/img-store/raw/master/2023/image-20231011184438763.png" alt="image-20231011184438763" style="zoom:80%;" />
+<img src="./assets/web-01.png" alt="image-20231011185448410" style="zoom:67%;" />
 
-<img src="https://gitee.com/han-feijiang/img-store/raw/master/2023/image-20231011184510872.png" alt="image-20231011184510872" style="zoom:80%;" />
+* 训练一轮后：
+
+<img src="./assets/web-02.png" alt="web-2" style="zoom:67%;" />
 
 ### Innovative Function Call Visualization [Paper](https://github.com/FeijiangHan/openPaper/blob/main/Fctree.pdf)
 
 * **D3.js & Vue & Django**
 * I proposed FCTree, a novel technique to visualize function calls during execution. Using Vue and d3.js, I built an interactive web prototype and demonstrated its effectiveness through user studies. A related patent was published.
 
-<img src="https://gitee.com/han-feijiang/img-store/raw/master/2023/image-20231011184940562.png" alt="image-20231011184940562" style="zoom:67%;" />
+<img src="./assets/image-20231011184940562.png" alt="image-20231011185448410" style="zoom:67%;" />
 
-![image-20231011185448410](https://gitee.com/han-feijiang/img-store/raw/master/2023/image-20231011185448410.png)
+* 下面是FCtree在不同数据集上的可视化
 
-![image-20231011185028155](./C:/Users/29185/AppData/Roaming/Typora/typora-user-images/image-20231011185028155.png)
+![image-20231011185448410](./assets/image-20231011185448410.png)
 
-<img src="https://gitee.com/han-feijiang/img-store/raw/master/2023/image-20231011192344897.png" alt="image-20231011192344897" style="zoom:50%;" />
+* 实现了动态链路交互功能，可以显示选择节点的调用链路
 
-<img src="https://gitee.com/han-feijiang/img-store/raw/master/2023/image-20231011192429486.png" alt="image-20231011192429486" style="zoom: 80%;" />
+<img src="./assets/image-20231011192344897.png" alt="image-20231011185448410" style="zoom: 67%;" />
+
+* 可以动态显示函数调用次数和时序
+
+<img src="./assets/fct-04.png" alt="fct-04" style="zoom: 67%;" />
 
 ## Working Experience
 
