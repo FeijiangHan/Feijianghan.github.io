@@ -84,15 +84,11 @@ I am a final year computer science student at Central South University with a st
 
 <img src="markdown/img/fct-04.png" alt="fct-04" style="zoom: 67%;" />
 
+### Open Courses
+
+See: https://github.com/FeijiangHan/cs_courses
+
 ## Working Experience
-
-**Matrix Origins Inc.**
-
-*Database Kernel Development Intern*
-
-- As a Database Kernel Development Intern at Matrix Origins Inc., I have been responsible for maintaining a deployed distributed database kernel. During my time there, I successfully refactored high-performance index structures, resulting in the deployment and release of three new features.
-- To ensure the quality and reliability of the database kernel, I utilized GoogleTest for unit testing and PingCode for bug management. Additionally, I performed code scans using Sonar and Cppcheck to identify areas for improvement. This included addressing low GoogleTest coverage and promptly making necessary corrections.
-- In order to support ongoing development and the onboarding of new engineers, I co-authored technical documentation, manuals, and design documents in both Chinese and English.
 
 **Beijing SINA Information Technology**
 
