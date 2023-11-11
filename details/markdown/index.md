@@ -2,11 +2,11 @@
 
 ## About Me
 
-I am a final year computer science student at Central South University with a strong academic background and practical experience in software development and data science.
+I am a final-year computer science student at Central South University with a strong academic background and practical experience in software development and data science.
 
-* Research topic: High-Performance System (distributed & parallel platform), Crowdsouring, AI, Internet of Things
-* Interests:  **Software System**, **High-Performance System** (distributed & parallel platform), **AI** (DL, ML, CV), **Internet of Things**, **Crowdsouring**
-* Supervisor: Prof. Xu liu, Prof. Ying Zhao, Prof. Anfeng Liu, Dr. Qidong Zhao
+* Research topic: High-Performance Systems (distributed & parallel platform), Crowdsourcing, AI, Internet of Things
+* Interests:  **Software System**, **High-Performance System** (distributed & parallel platform), **AI** (DL, ML, CV), **Internet of Things**, **Crowdsourcing**
+* Supervisor: Prof. Xu Liu, Prof. Ying Zhao, Prof. Anfeng Liu, Dr. Qidong Zhao
 
 ## Skills
 
@@ -24,7 +24,7 @@ Visit: https://feijiang.info/team-en/
 
 J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [Credit and Quality Intelligent Learning based Multi-armed Bandit Scheme for Unknown Worker Selection in Multimedia MCS](https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290). *Information Sciences*. Volume 647, November 2023, 119444* (Co-1st author, JCR Q1, IF=8.1)
 
-* **Abstract:** The field of intelligent multimedia systems, which rely heavily on multimodal models trained on large amounts of high-quality data, has been revolutionized by the use of deep learning. One promising approach to collect such multimodal data is Mobile Crowd Sensing (MCS). However, MCS platforms face a significant challenge in selecting both high-credit and high-quality workers at low cost due to the Post-Unknown Worker Recruitment (PUWR) problem. The PUWR problem makes it difficult to determine the credits and qualities of workers in advance, which can lead to the recruitment of dishonest or low-quality workers. This problem severely affects the quality and quantity of MCS data collection, posing a serious threat to the security and robustness of large-scale multimedia models. To address this issue, we propose a Credit and Quality Learning based Multi-Armed Bandit (CQL-MAB) scheme, which consists of a novel credit identification algorithm, a fine-grained worker quality calculation method, and a two-stage reward-based Multi-Armed Bandit (MAB) for worker selection in reverse auction. The theoretical proof shows that the CQL-MAB scheme achieves the truthfulness, [individual rationality](https://www.sciencedirect.com/topics/engineering/individual-rationality), and efficiency of the auction mechanism. A large number of simulation experiments on real data traces are conducted to demonstrate the outstanding performance of CQL-MAB.
+* **Abstract:** The field of intelligent multimedia systems, which rely heavily on multimodal models trained on large amounts of high-quality data, has been revolutionized by deep learning. One promising approach to collecting such multimodal data is Mobile Crowd Sensing (MCS). However, MCS platforms face a significant challenge in selecting both high-credit and high-quality workers at low cost due to the Post-Unknown Worker Recruitment (PUWR) problem. The PUWR problem makes it difficult to determine the credits and qualities of workers in advance, which can lead to the recruitment of dishonest or low-quality workers. This problem severely affects the quality and quantity of MCS data collection, posing a serious threat to the security and robustness of large-scale multimedia models. To address this issue, we propose a Credit and Quality Learning based Multi-Armed Bandit (CQL-MAB) scheme, which consists of a novel credit identification algorithm, a fine-grained worker quality calculation method, and a two-stage reward-based Multi-Armed Bandit (MAB) for worker selection in reverse auction. The theoretical proof shows that the CQL-MAB scheme achieves the truthfulness, [individual rationality](https://www.sciencedirect.com/topics/engineering/individual-rationality), and efficiency of the auction mechanism. A large number of simulation experiments on real data traces are conducted to demonstrate the outstanding performance of CQL-MAB.
 
 <center class="half">
     <img src="markdown/assets/image-20231111214203872.png" width="50%"/><img src="markdown/assets/image-20231111214941735.png" width="50%"/> </center>
