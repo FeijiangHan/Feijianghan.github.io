@@ -41,9 +41,9 @@ J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [
 
 <center class="half">
     <img src="markdown/assets/image-20231111214430989.png" width="50%"/><img src="markdown/assets/image-20231111214537986.png" width="50%"/> </center>
+
+
 ------
-
-
 
 **F. Han**, J. Tang, K. Fan, W. Xie, [Minority is all you need: Eliciting the Minority Report in Crowdsourcing](https://github.com/FeijiangHan/openPaper/blob/main/Minority Report is All your need.pdf). (Under review)
 
@@ -65,26 +65,38 @@ J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [
 <center class="half">
     <img src="markdown/assets/image-20231111214758724.png" width="26.66%"/><img src="markdown/assets/image-20231111214808170.png" width="26.66%"/><img src="markdown/assets/image-20231111214821445.png" width="26.66%"/> </center>
 
+
 ------
-
-
 
 J. Tang, K. Fan, W. Xie, **F. Han**, Y. Zhai, T. Su, Anfeng Liu, Neal N. Xiong, [ A Bi-directional Trust Verification Based Combinatorial Multi-Armed Bandit Scheme for Mobile Crowdsourcing](https://ieeexplore.ieee.org/document/10302275/), *IEEE Internet of Things Journal,* DOI: 10.1109/JIOT.2023.3325274 (IF=10.238)
 
 <center class="half">
     <img src="markdown/assets/image-20231111215848910.png" width="40%"/><img src="markdown/assets/image-20231111215922826.png" width="40%"/> </center>
 
+
 ------
-
-
 
 J. Tang, K. Fan, W. Xie, **F. Han**, Pengzhi Yin, Zhenzhe Qu, [A Semi-supervised Sensing Rate Learning based CMAB Scheme to Combat COVID-19 by Trustful Data Collection in the Crowd](https://www.sciencedirect.com/science/article/pii/S0140366423001433). *Computer Communications.* *Volume 206, 1 June 2023, Pages 85-100* (JCR Q1, IF=6.0)
 
-J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Accurate Data Collection in Crowdsensing](https://github.com/FeijiangHan/openPaper/blob/main/MAB-RP.pdf). (Under review)
+* **Abstract:** The recruitment of trustworthy and high-quality workers is an important research issue for MCS. Previous studies either assume that the qualities of workers are known in advance, or assume that the platform knows the qualities of workers once it receives their collected data. In reality, to reduce costs and thus maximize revenue, many strategic workers do not perform their sensing tasks honestly and report fake data to the platform, which is called False data attacks. And it is very hard for the platform to evaluate the authenticity of the received data In this paper, an incentive mechanism named Semi-supervision based Combinatorial Multi-Armed Bandit reverse Auction (SCMABA) is proposed to solve the recruitment problem of multiple unknown and strategic workers in MCS. First, we model the worker recruitment as a multi-armed bandit reverse [auction problem](https://www.sciencedirect.com/topics/computer-science/auction-problem) and design an UCB-based algorithm to separate the exploration and exploitation, regarding the Sensing Rates (SRs) of recruited workers as the gain of the bandit Next, a Semi-supervised Sensing Rate Learning (SSRL) approach is proposed to quickly and accurately obtain the workers’ SRs, which consists of two phases, supervision and self-supervision. Last, SCMABA is designed organically combining the SRs acquisition mechanism with multi-armed bandit reverse auction, where supervised [SR learning](https://www.sciencedirect.com/topics/computer-science/learning-rate) is used in the exploration, and the self-supervised one is used in the exploitation. We theoretically prove that our SCMABA achieves truthfulness and [individual rationality](https://www.sciencedirect.com/topics/engineering/individual-rationality) and exhibits outstanding performances of the SCMABA mechanism through in-depth simulations of real-world data traces.
+
+<center class="half">
+    <img src="markdown/assets/image-20231112004054698.png" width="28%"/><img src="markdown/assets/image-20231112004255187.png" width="28%"/><img src="markdown/assets/image-20231112004312258.png" width="28%"/> </center>
+
+
+
+
 
 ------
 
+J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Accurate Data Collection in Crowdsensing](https://github.com/FeijiangHan/openPaper/blob/main/MAB-RP.pdf). (Under review)
 
+<center class="half">
+    <img src="markdown/assets/image-20231112004154397.png" width="80%"/></center>
+
+
+
+------
 
 ## PATENTS                              
 
@@ -92,9 +104,9 @@ J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Ac
 * A Flexible Charging Method for Tramcars. China. Patent No. (Public): CN115891697A. April 4, 2023.
 * A Method for Characterizing Malware Behaviors Based on Morpheme Vector Model. China. Patent No. (Public): CN115587361A. October 14, 2022.
 
+
+
 ------
-
-
 
 ## Projects
 
@@ -104,9 +116,9 @@ J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Ac
 
 <center class="half">
     <img src="markdown/img/demo2.a7673cc1.gif" width="90%"/> </center>
+
+
 ------
-
-
 
 
 ### Web Shell Detection and Visualization [GitHub](https://github.com/FeijiangHan/Malware-Family-Vis-Platform/)
@@ -119,10 +131,8 @@ J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Ac
     <img src="markdown/assets/image-20231111214519387.png" width="80%"/>
     </center>
 
+
 ------
-
-
-
 
 ### Innovative Function Call Visualization [Paper](https://github.com/FeijiangHan/openPaper/blob/main/Fctree.pdf)
 
@@ -133,9 +143,8 @@ J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Ac
     <img src="markdown/img/image-20231011192344897.png" width="40%"/>
     <img src="markdown/img/fct-04.png" width="40%"/> </center>
 
+
 ------
-
-
 
 ### [Pulmonary Embolism Detection Syste](https://github.com/FeijiangHan/CT-image-segmentation-for-pulmonary-embolism/)
 
@@ -147,21 +156,18 @@ J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Ac
 <img src="markdown/img/cut.png" width="25%"/> 
     <img src="markdown/img/improve.png" width="25%"/>
     <img src="markdown/img/finall.png" width="75%"/> </center>
-
 ​    
 
 ------
-
-
 
 
 ### Open CS Courses 
 
 See: https://github.com/FeijiangHan/cs_courses
 
+
+
 ------
-
-
 
 ## Honors & Awards
 
@@ -175,4 +181,3 @@ See: https://github.com/FeijiangHan/cs_courses
 <center class="half">  
     <img src="markdown/assets/image-20231111223202878.png" width="35%"/> 
 <img src="markdown/assets/image-20231111223231540.png" width="35%"/>  </center>
-
