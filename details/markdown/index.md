@@ -4,10 +4,9 @@
 
 I am a final year computer science student at Central South University with a strong academic background and practical experience in software development and data science.
 
-* GPA: 3.85/4.0
 * Research topic: High-Performance System (distributed & parallel platform), Crowdsouring, AI, Internet of Things
-* Interests: **Crowdsouring**, **High-Performance System** (distributed & parallel platform), **AI** (DL, ML, CV), **Internet of Things**
-* Supervisor: Prof. Xu liu, Prof. Ying Zhao, Prof. Anfeng Liu, Phd. Qidong Zhao
+* Interests:  **Software System**, **High-Performance System** (distributed & parallel platform), **AI** (DL, ML, CV), **Internet of Things**, **Crowdsouring**
+* Supervisor: Prof. Xu liu, Prof. Ying Zhao, Prof. Anfeng Liu, Dr. Qidong Zhao
 
 ## Skills
 
@@ -15,7 +14,9 @@ I am a final year computer science student at Central South University with a st
 * **Framework:** Proficient in React, Vue, D3.js, PyTorch; Familiar with MPI, OpenMP, Django, Ajax
 * **Other Skill Set:** Proficient in Git, Linux, Docker
 
+## Our Team
 
+Visit: https://feijiang.info/team-en/
 
 ## Research List
 
