@@ -31,6 +31,7 @@ J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [
 
 <center class="half">
     <img src="markdown/assets/image-20231111220012495.png" width="50%"/><img src="markdown/assets/image-20231111220100931.png" width="50%"/> </center>
+------
 
 
 
@@ -40,6 +41,7 @@ J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [
 
 <center class="half">
     <img src="markdown/assets/image-20231111214430989.png" width="50%"/><img src="markdown/assets/image-20231111214537986.png" width="50%"/> </center>
+------
 
 
 
@@ -60,22 +62,27 @@ J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [
     <img src="markdown/assets/image-20231111214730451.png" width="80%"/> </center>
 
 
-
 <center class="half">
-    <img src="markdown/assets/image-20231111214758724.png" width="30%"/><img src="markdown/assets/image-20231111214808170.png" width="30%"/><img src="markdown/assets/image-20231111214821445.png" width="30%"/> </center>
+    <img src="markdown/assets/image-20231111214758724.png" width="26.66%"/><img src="markdown/assets/image-20231111214808170.png" width="26.66%"/><img src="markdown/assets/image-20231111214821445.png" width="26.66%"/> </center>
+
+------
 
 
 
 J. Tang, K. Fan, W. Xie, **F. Han**, Y. Zhai, T. Su, Anfeng Liu, Neal N. Xiong, [ A Bi-directional Trust Verification Based Combinatorial Multi-Armed Bandit Scheme for Mobile Crowdsourcing](https://ieeexplore.ieee.org/document/10302275/), *IEEE Internet of Things Journal,* DOI: 10.1109/JIOT.2023.3325274 (IF=10.238)
 
 <center class="half">
-    <img src="markdown/assets/image-20231111215848910.png" width="50%"/><img src="markdown/assets/image-20231111215922826.png" width="50%"/> </center>
+    <img src="markdown/assets/image-20231111215848910.png" width="40%"/><img src="markdown/assets/image-20231111215922826.png" width="40%"/> </center>
+
+------
 
 
 
 J. Tang, K. Fan, W. Xie, **F. Han**, Pengzhi Yin, Zhenzhe Qu, [A Semi-supervised Sensing Rate Learning based CMAB Scheme to Combat COVID-19 by Trustful Data Collection in the Crowd](https://www.sciencedirect.com/science/article/pii/S0140366423001433). *Computer Communications.* *Volume 206, 1 June 2023, Pages 85-100* (JCR Q1, IF=6.0)
 
 J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Accurate Data Collection in Crowdsensing](https://github.com/FeijiangHan/openPaper/blob/main/MAB-RP.pdf). (Under review)
+
+------
 
 
 
@@ -84,6 +91,8 @@ J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Ac
 * A Visualization Method for Dynamic Function Calls. China. Patent No. (Public): CN115952230A. April 11, 2023.
 * A Flexible Charging Method for Tramcars. China. Patent No. (Public): CN115891697A. April 4, 2023.
 * A Method for Characterizing Malware Behaviors Based on Morpheme Vector Model. China. Patent No. (Public): CN115587361A. October 14, 2022.
+
+------
 
 
 
@@ -95,6 +104,8 @@ J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Ac
 
 <center class="half">
     <img src="markdown/img/demo2.a7673cc1.gif" width="90%"/> </center>
+------
+
 
 
 
@@ -103,11 +114,12 @@ J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Ac
 * **D3.js & React & Redux & Django**
 
 <center class="half">
-    <img src="markdown/img/web-01.png" width="45%"/> 
-<img src="markdown/img/image-20231011185448410.png" width="45%"/> 
-    <img src="markdown/assets/image-20231111214519387.png" width="90%"/>
-</center>
+    <img src="markdown/img/web-01.png" width="40%"/> 
+    <img src="markdown/img/web-02.png" width="40%"/> 
+    <img src="markdown/assets/image-20231111214519387.png" width="80%"/>
+    </center>
 
+------
 
 
 
@@ -117,13 +129,11 @@ J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Ac
 * **D3.js & Vue & Django**
 
 <center class="half">
-<img src="markdown/img/web-02.png" width="90%"/>     <img src="markdown/img/image-20231011192344897.png" width="45%"/>
-    <img src="markdown/img/fct-04.png" width="45%"/> </center>
+    <img src="markdown/img/image-20231011185448410.png" width="80%"/> 
+    <img src="markdown/img/image-20231011192344897.png" width="40%"/>
+    <img src="markdown/img/fct-04.png" width="40%"/> </center>
 
-
-
-
-
+------
 
 
 
@@ -133,16 +143,23 @@ J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Ac
 * As team leader, I led a 5-member group to develop a CT image detection model for identifying pulmonary embolisms. We built an ensemble model combining YOLO and UNet that achieved top 5% ranking in a Kaggle competition, improving on the UNet baseline by 8%. I spearheaded innovative data augmentation techniques that expanded our training dataset by 30%.
 
 <center class="half">
-    <img src="markdown/img/schema.png" width="30%"/> 
-<img src="markdown/img/cut.png" width="30%"/> 
-    <img src="markdown/img/improve.png" width="30%"/>
-    <img src="markdown/img/finall.png" width="90%"/> </center>
+    <img src="markdown/img/schema.png" width="25%"/> 
+<img src="markdown/img/cut.png" width="25%"/> 
+    <img src="markdown/img/improve.png" width="25%"/>
+    <img src="markdown/img/finall.png" width="75%"/> </center>
 
 ​    
+
+------
+
+
+
 
 ### Open CS Courses 
 
 See: https://github.com/FeijiangHan/cs_courses
+
+------
 
 
 
@@ -156,5 +173,6 @@ See: https://github.com/FeijiangHan/cs_courses
 - 1st Prize, Competition of Service Outsourcing and Entrepreneurship Innovation, 2022
 
 <center class="half">  
-    <img src="markdown/assets/image-20231111223202878.png" width="45%"/> 
-<img src="markdown/assets/image-20231111223231540.png" width="45%"/>  </center>
+    <img src="markdown/assets/image-20231111223202878.png" width="35%"/> 
+<img src="markdown/assets/image-20231111223231540.png" width="35%"/>  </center>
+
