@@ -45,7 +45,7 @@ J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [
 
 ------
 
-**F. Han**, J. Tang, K. Fan, W. Xie, [Minority is all you need: Eliciting the Minority Report in Crowdsourcing](https://github.com/FeijiangHan/openPaper/blob/main/Minority Report is All your need.pdf). (Under review)
+**F. Han**, J. Tang, K. Fan, W. Xie, [Minority is all you need: Eliciting the Minority Report in Crowdsourcing](https://github.com/FeijiangHan/openPaper/blob/main/Minority Report is All your need.pdf/). (Under review)
 
 * **Abstract:** Have you ever questioned the assumption that the majority always holds the truth? In the realm of crowdsourcing-based data collection, such as data labeling for supervised ML models, the prevailing practice relies on majority voting to determine the ground truth. However, traditional majoritybased methods suffer from certain inherent flaws that have long been overlooked. Specifically, majority voting has already been proven to be inadequate when the truth is held by a minority, which can lead to inaccurate labeling. Additionally, traditional majority-based methods predominantly depend on redundant workers to improve accuracy, not only causing high and inefficient costs but also introducing potential biases. To address the issues of majority-based methods, we propose a novel Minority Learning-based Worker Recruitment (MiLWR) scheme, consisting of Minority Report Elicitation (MRE), Minority Worker Discovery (MWD), and Minority Winner Recruitment (MWR). Through extensive simulations, we demonstrate that our MiLWR scheme effectively reduces system overhead and eliminates wasteful redundancy while improving accuracy. To the best of our knowledge, we are the first to propose a minority-based worker recruitment scheme, providing an effective approach to crowdsourcing by harnessing the wisdom of the minority.
 
@@ -146,7 +146,7 @@ J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Ac
 
 ------
 
-### [Pulmonary Embolism Detection Syste](https://github.com/FeijiangHan/CT-image-segmentation-for-pulmonary-embolism/)
+### [Pulmonary Embolism Detection System](https://github.com/FeijiangHan/CT-image-segmentation-for-pulmonary-embolism/)
 
 * **Python & Pytorch & OpenCv & Cuda**
 * As team leader, I led a 5-member group to develop a CT image detection model for identifying pulmonary embolisms. We built an ensemble model combining YOLO and UNet that achieved top 5% ranking in a Kaggle competition, improving on the UNet baseline by 8%. I spearheaded innovative data augmentation techniques that expanded our training dataset by 30%.
@@ -175,8 +175,8 @@ See: https://github.com/FeijiangHan/cs_courses
 - Undergraduate first Grade Scholarship, CSU, 2023 **(top 2%)**
 - National Scholarship, CSU, 2021, 1st in major **(rank 1)**
 - M Award, Mathematical Contest in Modeling (MCM), 2023
-- National 2st Prize, Chinese College Students Computer Design Contest, 2023
-- 1st Prize, Competition of Service Outsourcing and Entrepreneurship Innovation, 2022
+- Regional 1st Prize, Chinese College Students Computer Design Contest, 2023
+- Regional 1st Prize, Competition of Service Outsourcing and Entrepreneurship Innovation, 2022
 
 <center class="half">  
     <img src="markdown/assets/image-20231111223202878.png" width="35%"/> 
