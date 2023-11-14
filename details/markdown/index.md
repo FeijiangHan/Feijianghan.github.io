@@ -1,22 +1,34 @@
 # Feijiang Han's Portfolio
 
+## Table of Contents
+
+- [About Me](#about-me)
+- [Skills](#skills)
+- [Our IoT Research Team](#our-iot-research-team)
+- [Reaserch List](#research-list)
+- [Patents](#patents)
+- [Projects](#projects)
+- [Honors & Awards](#honors-and-awards)
+- [Student Affairs](#student-affairs)
+- [Leaderships & Activities](#leaderships-and-activities)
+- [Voluntary Activity & My Peaceful Life](#voluntary-activity) 
+
+
+
 ## About Me
 
 I am a final-year computer science student at Central South University with a strong academic background and practical experience in software development and data science.
 
-* Research topic: High-Performance Systems (distributed & parallel platform), Crowdsourcing, AI, Internet of Things
-* Interests:  **Software System**, **High-Performance System** (distributed & parallel platform), **AI** (DL, ML, CV), **Internet of Things**, **Crowdsourcing**
-* Supervisor: Prof. Xu Liu, Prof. Ying Zhao, Prof. Anfeng Liu, Dr. Qidong Zhao
+* **Research topics:** Visualization, High-Performance Systems (distributed & parallel platform), Crowdsourcing, Internet of Things, Deep learning (Computer version)
+* **Interests:**  Computer Education, Software System, High-Performance System, AI, Internet of Things, Crowdsourcing
+* **Supervisor:** Prof. Xu Liu (NCSU), Prof. Ying Zhao (CSU), Prof. Anfeng Liu (CSU), Dr. Qidong Zhao (NCSU)
+* **Our IoT Team Website**:   https://feijiang.info/team-en/
 
 ## Skills
 
 * **Programming Language:** Proficient in C/C++, Web Assembly, Python, JavaScript, Html/CSS; Familiar with Shell, Go
 * **Framework:** Proficient in React, Vue, D3.js, PyTorch; Familiar with MPI, OpenMP, Django, Ajax
 * **Other Skill Set:** Proficient in Git, Linux, Docker
-
-## Our Team
-
-Visit: https://feijiang.info/team-en/
 
 
 
@@ -31,8 +43,6 @@ J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [
 
 <center class="half">
     <img src="markdown/assets/image-20231111220012495.png" width="50%"/><img src="markdown/assets/image-20231111220100931.png" width="50%"/> </center>
-------
-
 
 
 **F. Han**, Y. Zhao, S. Lv, [FCTree: Visualization of Function Calls in Execution](https://github.com/FeijiangHan/openPaper/blob/main/Fctree.pdf) (Frontiers of Computer Science, accept)
@@ -42,8 +52,6 @@ J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [
 <center class="half">
     <img src="markdown/assets/image-20231111214430989.png" width="50%"/><img src="markdown/assets/image-20231111214537986.png" width="50%"/> </center>
 
-
-------
 
 **F. Han**, J. Tang, K. Fan, W. Xie, [Minority is all you need: Eliciting the Minority Report in Crowdsourcing](https://github.com/FeijiangHan/openPaper/blob/main/Minority Report is All your need.pdf/). (Under review)
 
@@ -66,15 +74,11 @@ J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [
     <img src="markdown/assets/image-20231111214758724.png" width="26.66%"/><img src="markdown/assets/image-20231111214808170.png" width="26.66%"/><img src="markdown/assets/image-20231111214821445.png" width="26.66%"/> </center>
 
 
-------
-
 J. Tang, K. Fan, W. Xie, **F. Han**, Y. Zhai, T. Su, Anfeng Liu, Neal N. Xiong, [ A Bi-directional Trust Verification Based Combinatorial Multi-Armed Bandit Scheme for Mobile Crowdsourcing](https://ieeexplore.ieee.org/document/10302275/), *IEEE Internet of Things Journal,* DOI: 10.1109/JIOT.2023.3325274 (IF=10.238)
 
 <center class="half">
     <img src="markdown/assets/image-20231111215848910.png" width="40%"/><img src="markdown/assets/image-20231111215922826.png" width="40%"/> </center>
 
-
-------
 
 J. Tang, K. Fan, W. Xie, **F. Han**, Pengzhi Yin, Zhenzhe Qu, [A Semi-supervised Sensing Rate Learning based CMAB Scheme to Combat COVID-19 by Trustful Data Collection in the Crowd](https://www.sciencedirect.com/science/article/pii/S0140366423001433). *Computer Communications.* *Volume 206, 1 June 2023, Pages 85-100* (JCR Q1, IF=6.0)
 
@@ -86,23 +90,24 @@ J. Tang, K. Fan, W. Xie, **F. Han**, Pengzhi Yin, Zhenzhe Qu, [A Semi-supervised
 
 
 
-
-------
-
 J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Accurate Data Collection in Crowdsensing](https://github.com/FeijiangHan/openPaper/blob/main/MAB-RP.pdf). (Under review)
 
 <center class="half">
-    <img src="markdown/assets/image-20231112004154397.png" width="80%"/></center>
+    <img src="markdown/assets/image-20231112004154397.png" width="60%"/></center>
+
 
 
 
 ------
 
-## PATENTS                              
+## Patents                            
 
 * A Visualization Method for Dynamic Function Calls. China. Patent No. (Public): CN115952230A. April 11, 2023.
 * A Flexible Charging Method for Tramcars. China. Patent No. (Public): CN115891697A. April 4, 2023.
 * A Method for Characterizing Malware Behaviors Based on Morpheme Vector Model. China. Patent No. (Public): CN115587361A. October 14, 2022.
+
+<center class="half">
+    <img src="markdown/assets/image-20231114200025219.png" width="80%"/> </center>
 
 
 
@@ -112,13 +117,12 @@ J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Ac
 
 ### [EasyView - Profiling Tool for Golang Applications](https://www.easyview.dev/)
 
-* **C++; Web Assembly; JavaScript; React; WebGL**
+* **C++ & Web Assembly &  JavaScript & React & WebGL**
 
 <center class="half">
-    <img src="markdown/img/demo2.a7673cc1.gif" width="90%"/> </center>
+    <img src="markdown/img/demo2.a7673cc1.gif" width="80%"/> </center>
 
 
-------
 
 
 ### Web Shell Detection and Visualization [GitHub](https://github.com/FeijiangHan/Malware-Family-Vis-Platform/)
@@ -132,8 +136,6 @@ J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Ac
     </center>
 
 
-------
-
 ### Innovative Function Call Visualization [Paper](https://github.com/FeijiangHan/openPaper/blob/main/Fctree.pdf)
 
 * **D3.js & Vue & Django**
@@ -144,8 +146,6 @@ J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Ac
     <img src="markdown/img/fct-04.png" width="40%"/> </center>
 
 
-------
-
 ### [Pulmonary Embolism Detection System](https://github.com/FeijiangHan/CT-image-segmentation-for-pulmonary-embolism/)
 
 * **Python & Pytorch & OpenCv & Cuda**
@@ -155,21 +155,28 @@ J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Ac
     <img src="markdown/img/schema.png" width="25%"/> 
 <img src="markdown/img/cut.png" width="25%"/> 
     <img src="markdown/img/improve.png" width="25%"/>
-    <img src="markdown/img/finall.png" width="75%"/> </center>
-​    
+    <img src="markdown/img/finall.png" width="65%"/> </center>
 
-------
+​    
 
 
 ### Open CS Courses 
 
-See: https://github.com/FeijiangHan/cs_courses
+**See famous online courses I've taken before:** https://github.com/FeijiangHan/cs_courses
+
+
+
+### Teaching Assistant Notes
+
+* Delivered final review sessions for the Algorithms & AI course in English, clarifying concepts and answering questions
+* Collected and graded assignments for 100+ students, providing feedback and evaluating their understanding of the course
+* Authored comprehensive English course notes for students; **See:**  [**feijiang/RA-course-notes**](https://gitee.com/han-feijiang/code-and-notes-for-course) 
 
 
 
 ------
 
-## Honors & Awards
+## Honors And Awards
 
 - Xiaomi Outstanding Scholarship, Xiaomi Public Welfare Foundation, 2023 **(only 5 awards university-wide)**
 - Undergraduate first Grade Scholarship, CSU, 2023 **(top 2%)**
@@ -181,3 +188,88 @@ See: https://github.com/FeijiangHan/cs_courses
 <center class="half">  
     <img src="markdown/assets/image-20231111223202878.png" width="35%"/> 
 <img src="markdown/assets/image-20231111223231540.png" width="35%"/>  </center>
+
+
+## Student Affairs
+
+* Class Committee Member
+* Office Assistant of Peer Psychological Mutual Aid Association (Outstanding Individual)
+* Counseling and Exchange Center Lecturer at Central South University (Certified 6 times)
+* Student lecturer at  Computer School Study Service and Star Study Association(Certified 6 times), teaching the following courses: 
+  * Advanced Mathematics A1, A2  [2020-2021]
+  * Inorganic Chemistry [2020]
+  * Linear Algebra [2021]
+  * Digital Circuits [2022]
+  * Discrete Mathematics [2022]
+* Teaching assistant for Algorithms & AI course
+
+<center class="half">  
+    <img src="markdown/assets/image-20231114193752457.png" width="80%"/>  </center>
+
+
+
+## Leaderships And Activities
+
+* Serve as a host for school-level events [2020-2021]
+* Participated in the organization and planning of the garden party [2020-2021-2022]
+* Participated in organizing patriotic education activities [2022]
+* Participating in debate teams and competitions [2022]
+
+<center class="half">  
+    <img src="markdown/assets/image-20231114194905625.png" width="80%"/>  </center>
+
+
+
+## Voluntary Activity
+
+**70 hours volunteering during the COVID-19 pandemic**
+
+- Inventory management and headcount tracking of supplies
+- Notification and distribution of supplies to households
+- Participation in organizing COVID-19 vaccinations for residents in the community
+
+
+
+## My Peaceful Life
+
+<center class="half">  
+
+ I love nature's embrace,
+Where stress finds its solace,
+In harmony with nature, I find my place.
+
+Beneath the azure sky so wide,
+Where gentle breezes softly glide,
+Nature's beauty, my heart can't hide.
+
+Amidst the rustling leaves and trees,
+I find tranquility and inner peace,
+Nature's symphony puts my mind at ease.
+
+The vibrant colors of flora and fauna,
+Inspire awe and fill me with wonder,
+In nature's presence, I feel no ponder.
+
+From mountains tall to rivers deep,
+Nature's wonders, a treasure to keep,
+In its embrace, my soul finds its leap.
+
+With each step on the earth's lush ground,
+I connect with nature, profound,
+Love for the natural world, I have found.
+
+For in nature's realm, I find my release,
+A sanctuary where my spirit finds peace,
+In harmony with nature, my joy will never cease.  </center>
+
+
+
+<center class="half">  
+    <img src="markdown/assets/c5680fe0faaedc71c96ec7ebb2e6793.jpg" width="40%"/> 
+<img src="markdown/assets/a6cfd3284e7af3e2728a44fe70e1e8b.jpg" width="40%"/> </center>
+
+
+
+<center class="half">  
+    <img src="markdown/assets/86605494738e1555b4a0ae022a57081.jpg" width="40%"/> 
+<img src="markdown/assets/9a05a185aea939da00c2068215d2d32.jpg" width="40%"/> </center>
