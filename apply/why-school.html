@@ -1,0 +1,605 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+</style><title>WHY SCHOOL</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='1）columbia-university'><span>（1）Columbia University</span></h1><p><span>You get out of Columbia what you put in to Columbia</span></p><p><span>You want to be in New York City and will be willing to take advangtage of the social, cultural, educational opportunities that NYC offers.</span></p><h2 id='感兴趣的方向老师'><span>感兴趣的方向+老师</span></h2><p><span>theory：</span><a href='https://www.cs.columbia.edu/areas/theory/' target='_blank' class='url'>https://www.cs.columbia.edu/areas/theory/</a><span>；</span>
+<span>The group does research on the fundamental capabilities and limitations of efficient computation.</span></p><p><span>In addition, they use computation as a lens to gain deeper insights into problems from the natural, social, and engineering sciences.</span></p><p><span>The group is highly collaborative, both within Columbia and among peer institutions. They hold a weekly Theory Lunch and a bi-weekly Student Seminar. Most graduate students have (at least) two advisors and collaborate with several professors and other students. Some of the faculty are cross-listed with the IEOR department and the Data Science Institute.</span></p><p><span>Tim Roughgarden:</span><a href='https://timroughgarden.org/,Research' target='_blank' class='url'>https://timroughgarden.org/,Research</a><span> interests: Design, analysis, applications, and limitations of algorithms.</span>
+<span>Game theory and microeconomics, especially as applied to networks,</span>
+<span>auctions, and blockchains/web3.</span></p><hr /><p><span>Graphics &amp; User Interfaces: </span><a href='https://www.cs.columbia.edu/areas/graphics/' target='_blank' class='url'>https://www.cs.columbia.edu/areas/graphics/</a>
+<span>Computation is fundamentally changing the way people see and interact with the world. Many parts of society have been transformed by graphics and user interfaces.</span></p><p><span>The group has played instrumental roles in developing groundbreaking graphics for Hollywood movies, life-saving augmented and virtual reality applications in the medical field, camera phone technology used by billions of people, 3D printing technologies for consumers and industry uses, and AI tools that aid the computational design process. Additionally, they have a strong commitment to enabling computers to be used by all people regardless of ability.</span></p><p><span>The classes involve hands-on learning and help students develop a portfolio of projects that demonstrate their unique abilities and interests.</span></p><p><span>Steven K. Feiner: </span><a href='https://www.cs.columbia.edu/~feiner/' target='_blank' class='url'>https://www.cs.columbia.edu/~feiner/</a><span>;</span>
+<span>Steven K. Feiner (PhD, Brown) is Professor of Computer Science at Columbia University, where he directs the Computer Graphics and User Interfaces Lab. His research interests include human–computer interaction, augmented reality and virtual reality, 3D and 2D user interfaces, automated design of graphics and multimedia, mobile and wearable computing, health applications, computer games, and information visualization.</span></p><hr /><p><span>System:</span><a href='https://www.cs.columbia.edu/areas/software/' target='_blank' class='url'>https://www.cs.columbia.edu/areas/software/</a>
+<span>The Software Systems group pursues fundamental research in all aspects of the design, implementation, analysis, verification, and evaluation of software systems.</span></p><p><span>The group conducts research with systems at all scales, from handheld devices to cloud computing data centers. They take an experimental systems approach in building real systems to investigate new research ideas, create tools to enable developers to quickly and correctly build complex systems, and teach students how to do it.</span></p><p><span>Gail E. Kaiser: </span><a href='https://www.cs.columbia.edu/~kaiser/;Prof' target='_blank' class='url'>https://www.cs.columbia.edu/~kaiser/;Prof</a><span>. Kaiser conducts research in software engineering and security from a systems perspective, focusing on program analysis and software testing. Her current work ranges across both static and dynamic program analysis techniques, and across source code and executable (bytecode/binaries) targets. She also investigates machine learning techniques to solving software engineering problems (AI4SE).</span></p><p><span>Roxana Geambasu:</span><a href='https://roxanageambasu.github.io/;My' target='_blank' class='url'>https://roxanageambasu.github.io/;My</a><span> research spans broad areas of computer systems, including distributed systems, security and privacy, operating systems, databases, and applications of cryptography and machine learning to systems. Much of my current research aims to expose problems and invent solutions to threats to our data security and privacy in the context of new, emerging technologies, such as cloud computing, mobile devices, and big data. I design, build, and evaluate scalable distributed infrastructures that address these problems</span></p><p>&nbsp;</p><h1 id='2）johns-hopkins-university'><span>（2）Johns Hopkins University</span></h1><p>&nbsp;</p><p>&nbsp;</p><h1 id='3）northwest-university'><span>（3）Northwest University</span></h1><p><strong><span>The program also provides effective preparation for PhD studies.</span></strong><span> </span><mark><span>因此目标可以加上长期目标读博</span></mark></p><h2 id='方向1'><span>方向1：</span></h2><p><strong><span>Human-Computer Interaction (HCI)</span></strong><span> is a rapidly expanding area of research and development that has transformed the way we use computers in the last thirty years. Research topics and areas include augmented-reality, collective action, computer-mediated communication, computer-supported collaborative work, </span><strong><span>crowdsourcing</span></strong><span> and social computing, cyberlearning and future learning technologies, inclusive technologies and accessibility, interactive audio, mixed-initiative systems, mobile interaction design, multi-touch interaction, social media, social networks, tangible user interfaces, ubiquitous computing, and user-centered design.:</span></p><h3 id='lab1cognition-creativity-and-communication-c3'><span>LAB1：</span><a href='https://c3lab.northwestern.edu/'><span>Cognition, Creativity and Communication (C3)</span></a></h3><p><span>The C3 Lab is focused on bridging the gap between the wealth of data that surrounds us and the information that is hidden within it. Using the tools of natural language processing, data analytics, and cognitive modeling the C3 Lab builds systems that link people to the information and insight that serves them. C3 is led by </span><a href='https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/hammond-kristian.html'><span>Kristian Hammond</span></a><span>.</span></p><h3 id='lab2delta-lab'><span>LAB2：</span><a href='http://delta.northwestern.edu/'><span>Delta Lab</span></a></h3><p><span>The Delta Lab is an interdisciplinary research lab and design studio at Northwestern University. Its driving mission is to improve the way we design, work, learn, play, and fundamentally change the way we interact. This lab is headed by </span><a href='https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/zhang-haoqi.html'><span>Haoqi Zhang.</span></a></p><p><span>Delta Lab 是西北大学的一个跨学科研究实验室和设计工作室。 它的驱动使命是改善我们设计、工作、学习、娱乐的方式，并从根本上改变我们的互动方式。 该实验室由张浩琪领导。</span></p><p>&nbsp;</p><h3 id='darren-gergle'><span>Darren Gergle</span></h3><p><a href='https://www.mccormick.northwestern.edu/research-faculty/directory/affiliated/gergle-darren.html' target='_blank' class='url'>https://www.mccormick.northwestern.edu/research-faculty/directory/affiliated/gergle-darren.html</a></p><p><span>My research is in the fields of Human-Computer Interaction (HCI), Computer-Supported Cooperative Work (CSCW) and Computer-Mediated Communication (CMC) with an interest in developing a theoretical understanding of the role that visual information plays in supporting communication and group interactions. A key component of my work is the application of social and cognitive psychology theory to the design, deployment and evaluation of computing technologies.</span></p><h3 id='matthew-kay'><span>Matthew Kay</span></h3><p><a href='https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/kay-matthew.html' target='_blank' class='url'>https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/kay-matthew.html</a></p><p><span>Matthew Kay is an Assistant Professor jointly appointed in Computer Science and Communications Studies at Northwestern University. He works in human-computer interaction and information visualization; more specifically, his research areas include uncertainty visualization, personal health informatics, and the design of human-centered tools for data analysis. His current research is funded by multiple NSF awards, and he has received multiple best paper awards across human-computer interaction and information visualization venues (including CHI, InfoVis, UbiComp, and MobileHCI). He co-directs the </span><a href='https://mucollective.northwestern.edu/'><span>Midwest Uncertainty Collective</span></a><span> and is the author of the </span><a href='https://mjskay.github.io/tidybayes/'><span>tidybayes</span></a><span> and </span><a href='https://mjskay.github.io/ggdist/'><span>ggdist</span></a><span> R packages for visualizing Bayesian statistical model output and uncertainty. For more information, visit </span><a href='http://mjskay.com/'><span>his website</span></a><span>.</span></p><p><span>马修·凯 (Matthew Kay) 是西北大学计算机科学和通信研究联合任命的助理教授。 主要从事人机交互和信息可视化研究； 更具体地说，他的研究领域包括不确定性可视化、个人健康信息学以及以人为本的数据分析工具设计。 他目前的研究获得了多项 NSF 奖项的资助，并在人机交互和信息可视化领域（包括 CHI、InfoVis、UbiComp 和 MobileHCI）获得了多项最佳论文奖。 他是 Midwest Uncertainty Collective 的共同负责人，也是用于可视化贝叶斯统计模型输出和不确定性的 tidybayes 和 ggdist R 软件包的作者。 欲了解更多信息，请访问他的网站。</span></p><h3 id='jessica-hullman'><span>Jessica Hullman</span></h3><p><span>My interests lie in challenges and limitations that arise when people theorize and draw inductive inferences from data. My research on uncertainty representation and interactive data analysis explores how to best align data-driven interfaces and summaries with human reasoning capabilities, how to understand the role of interactive analysis across different stages of a statistical workflow, how to evaluate data interfaces as well as the experiments researchers use to identify differences between them, and how to develop tools that support reasoning under uncertainty in domains like strategic games or privacy. I approach many of these problems by drawing on formal models of rational inference as a basis for comparison and proposing solutions. </span></p><h3 id='kristian-j-hammond'><span>Kristian J. Hammond</span></h3><p><a href='https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/hammond-kristian.html' target='_blank' class='url'>https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/hammond-kristian.html</a></p><ul><li><p><span>Developing human capabilities onto machines</span></p></li><li><p><span>Co-founded Narrative Science, a startup that uses artificial intelligence and journalism to turn information from raw data into natural language</span></p></li><li><p><span>Integrating Computer Science and Artificial Intelligent into all aspects of life</span></p></li></ul><p>&nbsp;</p><p>&nbsp;</p><h1 id='4）duke-university'><span>（4）Duke University</span></h1><h2 id='方向1computer-science-education'><span>方向1：Computer Science Education</span></h2><h2 id='方向2algorithmic-game-theory'><span>方向2：Algorithmic Game Theory</span></h2><p><span>The field of algorithmic game theory lies at the intersection of computer science and economics. It concerns itself with computational questions in the presence of self-interested agents. Researchers at Duke have studied fundamental questions in this emerging area, including auction theory, social choice theory, fair resource allocation, preference elicitation, and crowdsourcing, along with real-world implications to ethics, democracy, and society.</span></p><h3 id='kamesh-munagala'><span>Kamesh Munagala</span></h3><p><a href='https://scholars.duke.edu/person/kamesh' target='_blank' class='url'>https://scholars.duke.edu/person/kamesh</a></p><p><span>My research is in the general area of theoretical computer science, particularly the areas of Approximation Algorithms, Online Algorithms, and Computational Economics. I work on developing models, algorithms, and markets for resource allocation, decision making, and provisioning problems.</span></p><h2 id='方向3systems'><span>方向3：Systems</span></h2><ul><li><p><a href='https://cs.duke.edu/research/distributed-systems'><span>Distributed Systems</span></a></p></li><li><p><a href='https://cs.duke.edu/research/high-performance-computing'><span>High Performance Computing</span></a></p></li></ul><h3 id='tingjun-chen'><span>Tingjun Chen</span></h3><p><a href='https://scholars.duke.edu/person/Tingjun.Chen/research' target='_blank' class='url'>https://scholars.duke.edu/person/Tingjun.Chen/research</a></p><p><span>Wireless networking, next-generation wireless and optical networks, edge cloud and computing, Internet-of-Things (IoT), mobile and embedded systems, platforms and testbeds</span></p><h4></h4><p>&nbsp;</p><h1 id='5）dartmouth-college'><span>（5）Dartmouth College</span></h1><h2 id='research-groups'><span>RESEARCH GROUPS</span></h2><p><a href='http://dartnets.cs.dartmouth.edu/'><span>Dartmouth Networking and Ubiquitous Systems</span></a></p><p><span>Our research centers on applications, systems, and networking aspects of mobile computing. We are currently exploring the following research directions.</span></p><p><strong><span>实验室的某个项目：Smartphone Sensing：</span></strong></p><p><span>Today&#39;s smartphones are equipped with a rich set of sensors (e.g., audio, GPS, accelerometer, Bluetooth, etc). We study the use of these sensors to track user behaviors and activities, and infer their behavioral pattern and mental wellbeing.</span></p><p><span>Our current project StudentLife examines the correlation between smartphone automatic sensing data and students&#39; behavioral trends, mental health, and academic performance. We conducted our study on a group of undergraduate students in a smartphone programming class over 10 weeks of Spring 2013. We have released our dataset via </span><a href='http://studentlife.cs.dartmouth.edu/'><span>this link</span></a><span>. Please refer to our papers at </span><a href='http://studentlife.cs.dartmouth.edu/studentlife.pdf'><span>UbiComp&#39;14</span></a><span>, </span><a href='http://studentlife.cs.dartmouth.edu/smartgpa.pdf'><span>UbiComp&#39;15</span></a><span>, and </span><a href='file:///Users/xia/Dropbox/for homer/dartnets_web/papers/crosscheck_paper553.pdf'><span>UbiComp&#39;16</span></a><span> for detail.</span></p><p><strong><span>Differentiating Higher and Lower Job Performers in the Workplace Using Mobile Sensing.</span></strong></p><p><strong><span>Sensing Behavioral Change Over Time: Using Within-Person Variability Features from Mobile Sensing to Predict Personality Trait</span></strong></p><p><strong><span>Predicting Symptom Trajectories of Schizophrenia using Mobile Sensing.</span></strong></p><p><strong><span>Capturing Situational Information with Smartphones and Mobile Sensing Methods.</span></strong></p><p>&nbsp;</p><h2 id='导师david-kotz'><span>导师：David Kotz</span></h2><p><span>David Kotz is the Provost, and the Pat and John Rosenwald Professor in the Department of Computer Science, at Dartmouth College. He previously served as Associate Dean of the Faculty for the Sciences, as a Core Director at the Center for Technology and Behavioral Health, and as the Executive Director of the Institute for Security Technology Studies. His current research involves security and privacy in smart homes, and wireless networks. He has published over 250 refereed papers, obtained $89m in grant funding, and mentored over 100 research students and postdocs. He is an ACM Fellow, an IEEE Fellow, a 2008 Fulbright Fellow to India, a 2019 Visiting Professor at ETH Zürich, and an elected member of Phi Beta Kappa.  He received his AB in Computer Science and Physics from Dartmouth in 1986, and his PhD in Computer Science from Duke University in 1991.</span></p><p><span>David Kotz 是达特茅斯学院计算机科学系教务长、Pat 和 John Rosenwald 教授。 他曾担任科学学院副院长、技术与行为健康中心核心主任以及安全技术研究所执行主任。 他目前的研究涉及智能家居和无线网络的安全和隐私。 他发表了 250 多篇审稿论文，获得了 8900 万美元的资助，并指导了 100 多名研究生和博士后。 他是 ACM 院士、IEEE 院士、2008 年印度富布赖特院士、2019 年苏黎世联邦理工学院客座教授以及 Phi Beta Kappa 当选会员。 他于 1986 年获得达特茅斯大学计算机科学和物理学学士学位，并于 1991 年获得杜克大学计算机科学博士学位。</span></p><p>&nbsp;</p><p>&nbsp;</p><h1 id='6）brown'><span>（6）Brown</span></h1><p><a href='https://cs.brown.edu/degrees/why-brown/' target='_blank' class='url'>https://cs.brown.edu/degrees/why-brown/</a></p><p><span>原因补充，想和优秀的人/导师建立长久的、宝贵的社交关系：Brown CS empowered me with a top-notch, research-driven curriculum and practical, real-world experience that are valuable in both industry and academia. It is so much more than a Master&#39;s degree. Some technology we learned will be outdated in decades, but the close partnership with world-class faculty and friendships with fellow students and future leaders will stay, as well as our determination to make the world a better place, 1 bit at a time.</span></p><h2 id='实验室visualization-research-lab'><span>实验室：Visualization Research Lab</span></h2><p><span>The Visualization Research Lab (VRL) is part of the </span><a href='http://graphics.cs.brown.edu/'><span>Brown University Graphics, Visualization, &amp; Interaction (GVI) Group.</span></a><span> In the VRL we focus on developing ways to visualize, interact with, and study a range of problems and phenomena from science as well as the arts and humanities.</span></p><p><span>Our interdisciplinary team from Computer Science and other disciplines develop robust and effective interactive visualization tools for solving a range of problems. Collaborative work with colleagues in the arts and sciences areas guides the research and provides a mechanism for evaluating the usefulness and robustness of results.</span></p><h2 id='教授jeff-huang'><span>教授：</span><a href='https://jeffhuang.com/'><span>Jeff Huang</span></a></h2><p><span>I&#39;m an Associate Professor and Associate Chair of Computer Science at Brown University. My research is in Human-Computer Interaction, where </span><a href='https://jeffhuang.com/hci/'><span>my research</span></a><span> is building personalized systems based on user behavior data. These systems are applied to attention, mobile, user experience, and health. I am primarily funded by the NSF, NIH, and ARO, and have received the NSF CAREER award, Facebook Fellowship, and ARO Young Investigator Award.</span></p><p><span>My Ph.D. is in Information Science from the University of Washington in Seattle, and my masters and undergraduate degrees are in Computer Science from the University of Illinois at Urbana-Champaign (UIUC). Before joining Brown, I analyzed search behavior at Microsoft Research, Google, Yahoo, and Bing; and co-founded World Blender, a Techstars-backed startup that made geolocation mobile games.</span></p><p><span>Brown University students interested in joining my group should review </span><a href='https://jeffhuang.com/hci/'><span>our active projects</span></a><span> and read </span><a href='https://docs.google.com/document/d/1M3MXfClgl03K_Dfn1ZI4REgh96I4HIge8Apc2a6cmvk/edit?usp=sharing'><span>about the expectations</span></a><span>. Ph.D. applicants please read the </span><a href='https://jeffhuang.com/faq.html'><span>Student FAQ</span></a><span>.</span></p><blockquote><p><span>Applications can use your data from interactions and behavior to create new experiences for you. They can personalize how you interact with computers, support peer collaborations, and help you understand yourself.</span></p><p><span>Our HCI systems research group develops these ideas into applications for anyone to try. See the </span><a href='https://jeffhuang.com/students/'><span>students who contributed</span></a><span>; Brown University students can </span><a href='https://docs.google.com/document/d/1M3MXfClgl03K_Dfn1ZI4REgh96I4HIge8Apc2a6cmvk/edit'><span>learn more</span></a><span> and </span><a href='https://goo.gl/forms/7lIg8dvBS5Gmedx03'><span>get involved</span></a><span>.</span></p></blockquote><h2 id='方向systemsbrown'><span>方向：Systems@Brown</span></h2><p><a href='https://systems.cs.brown.edu/' target='_blank' class='url'>https://systems.cs.brown.edu/</a></p><p><span>The Brown Systems research group investigates questions in computer systems—particularly distributed systems, operating systems, networking, and security. We build practical systems that combine performance, correctness, automation, and other desirable properties.</span></p><p>&nbsp;</p><h1 id='7）berkeley'><span>（7）Berkeley</span></h1><h2 id='方向1education-educ'><span>方向1：Education (EDUC)</span></h2><p><span>We are interested both in computer science education and in the use of computing devices in education generally (K-12 and college level). The use of case studies in teaching programming was pioneered here. Current research interests include MOOCs, autograding, CS 0-level curriculum, equity and inclusion, and K-12 teacher preparation in computer science.</span></p><h2 id='教授armando-fox'><span>教授：</span><a href='https://www.armandofox.com/'><span>Armando Fox</span></a></h2><p><span>My current research focuses on CS education and technology-enhanced learning, at the intersection of pedagogy, human-computer interaction, and programming systems.</span></p><p>&nbsp;</p><h2 id='方向2human-computer-interaction-hci'><span>方向2：Human-Computer Interaction (HCI)</span></h2><p><span>The Human-Computer Interaction Group in EECS studies interaction in current and future computing environments, spanning workplaces, homes, public spaces, and beyond. The HCI group engages in collaborations with scholars and designers across campus, driving research presented at venues such as CHI, UIST, DIS, VIS, and CSCW, and creates novel artifacts that lead to real-world impact, benefiting end users beyond the academic community. Our research takes place in several spaces on campus. In addition to core EECS facilities, we work in the Berkeley Institute of Design (BID), a 4000-sq ft research lab designed to foster interdisciplinary collaboration. Researchers have access to the Jacobs Institute for Design Innovation which provides extensive prototyping and fabrication resources. Many of our faculty also have close ties to the School of Information which offers masters and PhD programs focused on HCI.</span></p><p><strong><span>感兴趣的具体的topics：</span></strong></p><ul><li><h3 id='context-aware-computing'><span>Context-aware computing:</span></h3><p><span>Activity analysis, Embodied and Wearable Computing, Smart Spaces, Location-aware systems, Privacy </span></p></li><li><h3 id='collaboration-and-learning'><span>Collaboration and Learning:</span></h3><p><span>Tutorial and instruction systems, </span><strong><span>Crowdsourcing</span></strong><span>, Pattern-based authoring tools, Learning at scale, Remote group collaboration technologies, Citizen science</span></p></li></ul><p>&nbsp;</p><h2 id='方向3programming-systems-ps'><span>方向3：Programming Systems (PS)</span></h2><p><strong><span>Topics：</span></strong></p><ul><li><h3 id='program-analysis-and-verification'><span>Program Analysis and Verification:</span></h3><p><span>Model checking. Static and dynamic analysis. Theorem proving. Schedulability analysis for real-time systems.</span></p></li><li><h3 id='software-design-synthesis-and-testing'><span>Software design, synthesis, and testing:</span></h3><p><span>Software design for parallel computing; for embedded systems; for numerical computing; for symbolic computing; for distributed computing. Software Testing. Sketching-based synthesis.</span></p></li></ul><p>&nbsp;</p><h1 id='8）carnegie-mellon-university'><span>（8）Carnegie Mellon University</span></h1><h1 id='9）georgia-institute-of-technology'><span>（9）Georgia Institute of Technology</span></h1><h1 id='10）university-of-michigan-ann-arbor'><span>（10）University of Michigan, Ann Arbor</span></h1><p>&nbsp;</p><h1 id='11）university--of-california--san-diego'><span>（11）University  of California--San Diego</span></h1><h2 id='方向1computing-education'><span>方向1：Computing Education</span></h2><p><span>Computing Education at UC San Diego includes an interdisciplinary group of researchers and students who study how students learn computing, effective pedagogies for teaching computing, helping diverse populations of students succeed in computing, effective learning at scale, preparing computing students for industry jobs, teaching K-12 students about computing or using computing, and training K-12 teachers in how to teach computing. Our research labs include Ph.D., M.S., and undergraduate students at UC San Diego.</span></p><ul><li><p><a href='https://sites.google.com/ucsd.edu/cs-ed-research-group/home'><span>Computing Education Research Lab</span></a></p></li></ul><h2 id='教授william-g-griswold'><span>教授：</span><strong><span>William G. Griswold</span></strong></h2><figure class='table-figure'><table><thead><tr><th>&nbsp;</th><th><span>I&#39;m fascinated by the challenges of constructing large, complex software systems – software engineering. I&#39;m especially interested in the </span><strong><span>evolution (e.g., enhancement) of large software systems</span></strong><span>, which is driven by unpredictable market forces, including the creative spark of innovation and the user&#39;s appetite for leading-edge functionality.My research in this area largely comprises two topics, infrastructure for </span><strong><span>ubiquitous computing</span></strong><span> and the invention of new </span><strong><span>programming tools</span></strong><span>, most recently in the area of </span><strong><span>aspect-oriented software development</span></strong><span>. The latter is often aided the application of leading-edge </span><strong><span>compiler technology</span></strong><span>. My ubicomp work can be found at </span><em><a href='http://activecampus.ucsd.edu/'><span>activecampus.ucsd.edu</span></a></em><span>. I also have an active </span><a href='http://up.ucsd.edu/'><span>educational technology program</span></a><span> supported by my ubicomp and SE work. Check out the </span><a href='https://cseweb.ucsd.edu/~wgg/swevolution.html'><em><span>UCSD Software Evolution Lab&#39;s page</span></em></a><span> for my projects on tool-assisted program restructuring, visualization of latent program structure, software architecture for evolving systems, and whole-program analysis techniques for program understanding and restructuring.</span></th></tr></thead><tbody><tr><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure><h2 id='方向2ucsd-programming-systems'><span>方向2：UCSD Programming Systems</span></h2><p><span>The Programming Systems Group in the Department of Computer Science and Engineering at the University of California, San Diego is interested in developing new languages, compilers, program analysis techniques and development environments for making software systems easier to build, maintain and understand.</span></p><h2 id='方向3software-engineering'><span>方向3：SOFTWARE ENGINEERING</span></h2><p><span>Software Engineering is concerned with discovering techniques for improving the cost, correctness, and usability of software systems. Unfortunately, these goals are in continual tension with each other. Indeed, most commercial software systems fail on all counts, threatening the health of the software companies and the well-being of software users.</span></p><p><span>A critical component of achieving these three goals is reducing the complexity of software systems through improved reasoning techniques, system structures, and analysis. A less complex system is less costly to build correctly and more predictable in use. The Software Engineering Group&#39;s primary thrust is to cope with the crippling complexity of large systems and the processes that produce them.</span></p><p><span>Requirements Engineering</span></p><p><span>Empirical studies show that most of the difficulties in producing large complex systems stem from problems with the requirements, which define what the system is supposed to accomplish. Consequently, methods for acquiring and analyzing requirements can have very large economic leverage. Studies also show that social, political and cultural factors very often lie behind failures in large system development efforts. Our research in requirements is concerned with the use of social science methods and video to develop requirements that will allow the system to succeed in the environment where it will actually be used.</span></p><h1 id='12）university--of-illinois--urbana-champaign'><span>（12）University  of Illinois--Urbana-Champaign</span></h1><h2 id='方向1computers-and-education'><span>方向1：Computers and Education</span></h2><p><span>Computing has a large and growing impact on education. It is improving classroom interactivity, increasing accessibility, facilitating personalized learning inside and outside the classroom, and providing a platform for exploring fundamental questions about how people learn.</span></p><p><span>At the same time, demand for computer science education is skyrocketing world-wide. Reaching larger and more diverse audiences requires both understanding how people learn computer science and creating best practices for teaching specific computing topics.</span></p><p><span>Our faculty study broadly in both of these facets of computers and education. We build new systems, run them at scale, and design interfaces and study the human impacts of technology in the classroom. We gather and analyze data about student behavior to better understand the learning process using both data science techniques and qualitative research.</span></p><p><a href='https://cs.illinois.edu/about/people/faculty/challen'><span>Geoffrey Challen</span></a></p><p><span>Technology to Improve Classroom Interactivity and Outcomes, Data-Driven Approaches to Teaching and Learning</span></p><h2 id='方向2systems-and-networking'><span>方向2：Systems and Networking</span></h2><p><span>Working on problems that are directly relevant to industry, our faculty are advancing the state of the art in cloud computing and systems for big data, software defined networks, wired and datacenter networking, Internet of Things, wearable computing, mobile computing, multimedia systems, security, privacy, health-care engineering systems, and cyber-physical systems.</span></p><p><span>We work collaboratively with industry partners including Google, Microsoft, AT&amp;T, HP, and many others. Our research has also resulted in the creation of several startup companies.</span></p><p><span>We produce creative and innovative students who become faculty at top-ranked schools, researchers at prestigious labs, and who join cutting-edge companies. Our courses are not just available to on-campus students, but a selection of them are also offered to off-campus students through </span><a href='https://www.coursera.org/specializations/cloud-computing'><span>Coursera MOOCs</span></a><span> with enrollment numbers in the hundreds of thousands.</span></p><p><a href='https://cs.illinois.edu/about/people/faculty/zaher'><span>Tarek Abdelzaher</span></a></p><p><span>Networked Sensing; Intelligent Internet-of-Things (IoT) Applications; IoT and Big Data; Embedded (Cyber-physical) and Real-Time Systems; Machine Learning for CPS; Crowdsensing/Social Sensing; Social Media Analysis; Social Networks in the Age of Information Overload</span></p><h2 id='方向3programming-languages-formal-methods-and-software-engineering'><span>方向3：Programming Languages, Formal Methods, and Software Engineering</span></h2><p><span>The growing complexity and scale of software poses formidable challenges for reliability, security, performance, and productivity. Our faculty tackle these problems by developing innovative techniques in programming language design and semantics; techniques and tools for formal verification, software testing, and automated debugging; and models and verification techniques for embedded systems that interact with physical entities.</span></p><p><span>We are known for theoretical advances such as the </span><a href='https://en.wikipedia.org/wiki/Actor_model'><span>Actor model of concurrency</span></a><span>; </span><a href='http://fsl.cs.illinois.edu/index.php/Term_Rewriting_and_Rewriting_Logic'><span>rewriting logic</span></a><span> and related semantic frameworks; </span><a href='https://en.wikipedia.org/wiki/Concolic_testing'><span>concolic testing</span></a><span> for automated test generation; automated logic reasoning; automated inference of specifications and invariants; and control-theoretic techniques for analyzing cyberphysical systems. We have also produced widely-used tools and techniques like the </span><a href='http://maude.cs.illinois.edu/w/index.php?title=The_Maude_System'><span>Maude rewriting engine</span></a><span>; the </span><a href='http://llvm.org/'><span>LLVM compiler infrastructure</span></a><span>; </span><a href='https://publish.illinois.edu/hpvm-project/'><span>HPVM and ApproxHPVM</span></a><span> systems for compiling and approximating programs running on heterogeneous systems; </span><a href='http://www.kframework.org/index.php/Main_Page'><span>K Framework</span></a><span>; </span><a href='https://www.probfuzz.com/'><span>Probfuzz</span></a><span>, </span><a href='https://psense.info/'><span>PSense</span></a><span>, and </span><a href='https://axprof.org/'><span>AxProf</span></a><span> systems for testing probabilistic and randomized computations; the </span><a href='http://fsl.cs.illinois.edu/index.php/K_and_Matching_Logic'><span>first complete formalizations of C, Java, and Javascript</span></a><span>; and regression testing techniques.</span></p><p><a href='https://cs.illinois.edu/about/people/faculty/marinov'><span>Darko Marinov</span></a></p><p><span>Software Engineering, Software Testing</span></p></div></div>
+</body>
+</html>
