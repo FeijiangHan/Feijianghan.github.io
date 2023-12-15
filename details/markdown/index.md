@@ -23,6 +23,9 @@ I am a final-year computer science student at Central South University with a st
 * **Interests:**  Computer Education, Software System, High-Performance System, AI, Internet of Things, Crowdsourcing
 * **Supervisor:** Prof. Xu Liu (NCSU), Prof. Ying Zhao (CSU), Prof. Anfeng Liu (CSU), Dr. Qidong Zhao (NCSU)
 * **Our IoT Team Website**:   https://feijiang.info/team-en/
+* **My Github Link:** https://github.com/FeijiangHan
+
+
 
 ## Skills
 
@@ -34,7 +37,7 @@ I am a final-year computer science student at Central South University with a st
 
 ## Research List
 
-J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [Credit and Quality Intelligent Learning based Multi-armed Bandit Scheme for Unknown Worker Selection in Multimedia MCS](https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290). *Information Sciences*. Volume 647, November 2023, 119444* (Co-1st author, JCR Q1, IF=8.1)
+J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [Credit and Quality Intelligent Learning based Multi-armed Bandit Scheme for Unknown Worker Selection in Multimedia MCS](https://drive.google.com/file/d/1169FD3QCUWwrvt0I0WRd0RqRYSh2p-Qv/view). *Information Sciences*. Volume 647, November 2023, 119444 (JCR Q1, IF=8.1)
 
 * **Abstract:** The field of intelligent multimedia systems, which rely heavily on multimodal models trained on large amounts of high-quality data, has been revolutionized by deep learning. One promising approach to collecting such multimodal data is Mobile Crowd Sensing (MCS). However, MCS platforms face a significant challenge in selecting both high-credit and high-quality workers at low cost due to the Post-Unknown Worker Recruitment (PUWR) problem. The PUWR problem makes it difficult to determine the credits and qualities of workers in advance, which can lead to the recruitment of dishonest or low-quality workers. This problem severely affects the quality and quantity of MCS data collection, posing a serious threat to the security and robustness of large-scale multimedia models. To address this issue, we propose a Credit and Quality Learning based Multi-Armed Bandit (CQL-MAB) scheme, which consists of a novel credit identification algorithm, a fine-grained worker quality calculation method, and a two-stage reward-based Multi-Armed Bandit (MAB) for worker selection in reverse auction. The theoretical proof shows that the CQL-MAB scheme achieves the truthfulness, [individual rationality](https://www.sciencedirect.com/topics/engineering/individual-rationality), and efficiency of the auction mechanism. A large number of simulation experiments on real data traces are conducted to demonstrate the outstanding performance of CQL-MAB.
 
@@ -45,7 +48,7 @@ J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [
     <img src="markdown/assets/image-20231111220012495.png" width="50%"/><img src="markdown/assets/image-20231111220100931.png" width="50%"/> </center>
 
 
-**F. Han**, Y. Zhao, S. Lv, [FCTree: Visualization of Function Calls in Execution](https://github.com/FeijiangHan/openPaper/blob/main/Fctree.pdf) (Frontiers of Computer Science, accept)
+**F. Han**, Y. Zhao, S. Lv, [FCTree: Visualization of Function Calls in Execution](https://drive.google.com/file/d/19Y9thDHZa_Kelvbm1T7rO1n_DUK_ZA7b/view?usp=sharing) (Frontiers of Computer Science, Under review)
 
 * **Abstrac:** Function calls in execution contain rich bivariate, hierarchical, and chronological information. Many visualizations have been adopted to analyze function calls in execution for program testing, vulnerability locating, and malware detection. However, we conducted a pilot study and revealed that existing single-viewed function call visualizations fail to present the bivariate, hierarchical, and chronological information comprehensively. A new function call visualization named FCTree is proposed in this work to deal with this situation. Learned from advantages of existing visualizations and iterative discussions with actual users, FCTree uses a compact and aligned hierarchical layout design to present the bivariate and hierarchical information and adopts a glyph design to present the chronological information. Subjective and objective experiments in the laboratory and a field study in a real-world scenario were conducted to evaluate the effectiveness of FCTree.
 
@@ -53,7 +56,7 @@ J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [
     <img src="markdown/assets/image-20231111214430989.png" width="50%"/><img src="markdown/assets/image-20231111214537986.png" width="50%"/> </center>
 
 
-**F. Han**, J. Tang, K. Fan, W. Xie, [Minority is all you need: Eliciting the Minority Report in Crowdsourcing](https://github.com/FeijiangHan/openPaper/blob/main/Minority Report is All your need.pdf/). (Under review)
+J. Tang\*,**F. Han***, K. Fan, W. Xie, [Minority is all you need: Eliciting the Minority Report in Crowdsourcing](https://drive.google.com/file/d/1dBms9XoUs3PjMJosesDZUcjpFogLspuH/view?usp=sharing). (AAAI, Under review) [APPENDIX pdf](https://drive.google.com/file/d/1FgCZGGC48Ul7fgdy4OEwID0hqVEEmsH4/view?usp=sharing)
 
 * **Abstract:** Have you ever questioned the assumption that the majority always holds the truth? In the realm of crowdsourcing-based data collection, such as data labeling for supervised ML models, the prevailing practice relies on majority voting to determine the ground truth. However, traditional majoritybased methods suffer from certain inherent flaws that have long been overlooked. Specifically, majority voting has already been proven to be inadequate when the truth is held by a minority, which can lead to inaccurate labeling. Additionally, traditional majority-based methods predominantly depend on redundant workers to improve accuracy, not only causing high and inefficient costs but also introducing potential biases. To address the issues of majority-based methods, we propose a novel Minority Learning-based Worker Recruitment (MiLWR) scheme, consisting of Minority Report Elicitation (MRE), Minority Worker Discovery (MWD), and Minority Winner Recruitment (MWR). Through extensive simulations, we demonstrate that our MiLWR scheme effectively reduces system overhead and eliminates wasteful redundancy while improving accuracy. To the best of our knowledge, we are the first to propose a minority-based worker recruitment scheme, providing an effective approach to crowdsourcing by harnessing the wisdom of the minority.
 
@@ -74,10 +77,30 @@ J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [
     <img src="markdown/assets/image-20231111214758724.png" width="26.66%"/><img src="markdown/assets/image-20231111214808170.png" width="26.66%"/><img src="markdown/assets/image-20231111214821445.png" width="26.66%"/> </center>
 
 
+
+
+Y. Yuwei, J. Tang, **F. Han**, Anfeng Liu, Neal N. Xiong, [MAB-RP: A Multi-Armed Bandit based Scheme for Accurate Data Collection in Crowdsensing](https://drive.google.com/file/d/1hsdOhoHCiULRcT6ijiHqcq1_4hHHFwML/view?usp=sharing). (INS 2024, Accept)
+
+<center class="half">
+    <img src="markdown/assets/image-20231112004154397.png" width="60%"/></center>
+
+
+
+
+
 J. Tang, K. Fan, W. Xie, **F. Han**, Y. Zhai, T. Su, Anfeng Liu, Neal N. Xiong, [ A Bi-directional Trust Verification Based Combinatorial Multi-Armed Bandit Scheme for Mobile Crowdsourcing](https://ieeexplore.ieee.org/document/10302275/), *IEEE Internet of Things Journal,* DOI: 10.1109/JIOT.2023.3325274 (IF=10.238)
 
 <center class="half">
     <img src="markdown/assets/image-20231111215848910.png" width="40%"/><img src="markdown/assets/image-20231111215922826.png" width="40%"/> </center>
+
+
+
+
+l  K. Fan, J. Tang, W. Xie, **F. Han**, Y. Huang, Qu Zhenzhe, Anfeng Liu, [CRL-MABA: A Completion Rate Learning based Accurate Data Collection Scheme in Large-scale Energy Internet](https://drive.google.com/file/d/1M_sdZweWia-u0r8_FpO6wgYzi3skcCyd/view?usp=sharing), *IEEE Internet of Things Journal* (**Accepted**)
+
+<center class="half">
+    <img src="markdown/assets/image-20231215233636284.png" width="20%"/><img src="markdown/assets/image-20231215233713887.png" width="60%"/> </center>
+
 
 
 J. Tang, K. Fan, W. Xie, **F. Han**, Pengzhi Yin, Zhenzhe Qu, [A Semi-supervised Sensing Rate Learning based CMAB Scheme to Combat COVID-19 by Trustful Data Collection in the Crowd](https://www.sciencedirect.com/science/article/pii/S0140366423001433). *Computer Communications.* *Volume 206, 1 June 2023, Pages 85-100* (JCR Q1, IF=6.0)
@@ -86,14 +109,6 @@ J. Tang, K. Fan, W. Xie, **F. Han**, Pengzhi Yin, Zhenzhe Qu, [A Semi-supervised
 
 <center class="half">
     <img src="markdown/assets/image-20231112004054698.png" width="28%"/><img src="markdown/assets/image-20231112004255187.png" width="28%"/><img src="markdown/assets/image-20231112004312258.png" width="28%"/> </center>
-
-
-
-
-J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Accurate Data Collection in Crowdsensing](https://github.com/FeijiangHan/openPaper/blob/main/MAB-RP.pdf). (Under review)
-
-<center class="half">
-    <img src="markdown/assets/image-20231112004154397.png" width="60%"/></center>
 
 
 
@@ -125,7 +140,43 @@ J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Ac
 
 
 
-### Web Shell Detection and Visualization [GitHub](https://github.com/FeijiangHan/Malware-Family-Vis-Platform/)
+### [Dead Code Analyzer](https://github.com/FeijiangHan/dead_code_analyzer)
+
+* **C++ & CMake & DynamoRIO & XED**
+
+Using DynamoRIO and XED to find redundant executions (Dead code)
+* This project can be used as a framework for dead code analysis.
+* This project can also be seen as introductory training to help students or beginners explore some instruction-level programming work
+
+> 1. This tool aims to detect and analyze dead code (redundant executions) in binary files using DynamoRIO and XED.
+> 2. Here, I only implement a basic logic to detect dead writes and reads
+> 3. You have the freedom to modify the detection logic in [dead_code_analysis.cpp](https://github.com/FeijiangHan/DeadCodeDetection/blob/main/src/trace/cpps/dead_code_analysis.cpp) to achieve better dead code detection than what is currently implemented.
+> 4. You can also modify the code output logic to use CSV or any other file you want
+> 5. This project does not read files using C++, so you need to configure the compiler to specify the binary path in order to get the binary into the program. I feel that Clion is more convenient, VScode is slightly more complicated
+
+**Here is a poster of me showcasing my work during NCSU GEARE training:**
+
+<center class="half">
+    <img src="https://github.com/FeijiangHan/dead_code_analyzer/blob/main/poster-Feijiang%20Han.png" width="80%"/> </center>
+
+
+**The process can be summarized as follows:**
+
+1. Obtain the binary file (trace) that needs to be parsed.
+2. Extract the necessary code from DynamoRIO for parsing the target binary. This step gathers detailed information about instructions, such as read/write operations and parameter details.
+3. Utilize [Intel XED](https://intelxed.github.io/) to decode register details and analyze fine-grained parameters.
+4. Modify the dead code detection logic in [dead_code_analysis.cpp](https://github.com/FeijiangHan/DeadCodeDetection/blob/main/src/trace/cpps/dead_code_analysis.cpp). The implementation includes detecting redundant reads and redundant writes.
+5. The analysis results will be output to the 'out' file, which can be further analyzed.
+
+
+**TODO:**
+
+- Optimize the output format for better readability.
+- Implement more sophisticated dead code detection logic.
+
+
+
+### [Web Shell Detection and Visualization](https://github.com/FeijiangHan/Malware-Family-Vis-Platform/)
 
 * **D3.js & React & Redux & Django**
 
@@ -136,7 +187,7 @@ J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Ac
     </center>
 
 
-### Innovative Function Call Visualization [Paper](https://github.com/FeijiangHan/openPaper/blob/main/Fctree.pdf)
+### [Innovative Function Call Visualization](https://github.com/FeijiangHan/Function-Visualization/) [Paper PDF](https://drive.google.com/file/d/19Y9thDHZa_Kelvbm1T7rO1n_DUK_ZA7b/view?usp=sharing)
 
 * **D3.js & Vue & Django**
 
@@ -159,18 +210,29 @@ J. Tang, Y. Yuwei, **F. Han**, [MAB-RP: A Multi-Armed Bandit based Scheme for Ac
 
 ​    
 
+### [Trie Performance Optmization](https://github.com/FeijiangHan/tire-match/)
+
+* **Js & Wasm & C++ & PHP**
+* I wrote a detailed blog about how I used Trie to improve the keyword matching speed from 10 hours to 10 minutes, please click the project hyperlink above
+
+
+
+### Teaching Assistant Notes
+
+* Collected and graded assignments for 100+ students, providing feedback and evaluating their understanding of the course
+* Authored comprehensive English course notes for students; **See:**  [**feijiang/RA-course-notes**](https://gitee.com/han-feijiang/code-and-notes-for-course) 
+* Designed experiments for *Object-Oriented Analysis and Design (AC22004)*, taught by *Prof. Ping Zhong* in Fall 2023
+* Refactored [**muduo**](https://github.com/chenshuo/muduo) networking library with **C++11,** removing dependency on the Boost; [muduo_c11](https://github.com/FeijiangHan/muduo_c11)
+* Developed **cluster server** using **C++11** and **Redis** for group chat; [group-chat](https://github.com/FeijiangHan/group-chat-app)
+* Developed **mprpc** distributed framework using **C++11** and **Protobuf** protocols; [mprpc](https://github.com/FeijiangHan/mprpc)
+
+
 
 ### Open CS Courses 
 
 **See famous online courses I've taken before:** https://github.com/FeijiangHan/cs_courses
 
 
-
-### Teaching Assistant Notes
-
-* Delivered final review sessions for the Algorithms & AI course in English, clarifying concepts and answering questions
-* Collected and graded assignments for 100+ students, providing feedback and evaluating their understanding of the course
-* Authored comprehensive English course notes for students; **See:**  [**feijiang/RA-course-notes**](https://gitee.com/han-feijiang/code-and-notes-for-course) 
 
 
 
