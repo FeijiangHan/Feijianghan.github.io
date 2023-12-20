@@ -31,6 +31,7 @@ I am a final-year computer science student at Central South University with a st
     * = 97: Advanced Mathematics A2 (Part 2), Linux System and Applications, Introduction to Innovation and Entrepreneurship
     * = 96: Computer Architecture, Embedded Systems, Data Structures, Distributed Systems and Cloud Computing, Analog Electronic Technology B
     * = 95: Software Architecture
+    * = 94: Human-Computer Interaction, Web Technology, Parallel Computing, Data Analysis And Fusion, Training of Career Planning, Database Principle, Computer Network, Linear Algebra, Fundamental of Engineering Drawing A
 
 * **Research topics:** HCI, Visualization, High-Performance Systems (distributed & parallel platform), Crowdsourcing, Internet of Things, Deep learning (Computer version)
 * **Interests:**  HCI, Computer Education, Software System, High-Performance System, AI, Internet of Things, Crowdsourcing
@@ -92,7 +93,7 @@ J. Tang\*,**F. Han***, K. Fan, W. Xie, [Minority is all you need: Eliciting the 
 
 
 
-Y. Yuwei, J. Tang, **F. Han**, Anfeng Liu, Neal N. Xiong, [MAB-RP: A Multi-Armed Bandit based Scheme for Accurate Data Collection in Crowdsensing](https://drive.google.com/file/d/1hsdOhoHCiULRcT6ijiHqcq1_4hHHFwML/view?usp=sharing). (INS 2024, Accept)
+Y. Yuwei, J. Tang, **F. Han**, Anfeng Liu, Neal N. Xiong, [MAB-RP: A Multi-Armed Bandit based Scheme for Accurate Data Collection in Crowdsensing](https://drive.google.com/file/d/1hsdOhoHCiULRcT6ijiHqcq1_4hHHFwML/view?usp=sharing). (INS 2024, Accepted)
 
 * **Abstract:** Accurate data collection from workers is crucial for the success of Mobile Crowd Sensing (MCS) applications. However, the current study suffers from several drawbacks:
 
@@ -183,11 +184,6 @@ Using DynamoRIO and XED to find redundant executions (Dead code)
 > 4. You can also modify the code output logic to use CSV or any other file you want
 > 5. This project does not read files using C++, so you need to configure the compiler to specify the binary path in order to get the binary into the program. I feel that Clion is more convenient, VScode is slightly more complicated
 
-**Here is a poster of me showcasing my work during NCSU GEARE training:**
-
-<center class="half">
-    <img src="markdown/assets/image-20231220184411591.png" width="80%"/> </center>
-
 **The process can be summarized as follows:**
 
 1. Obtain the binary file (trace) that needs to be parsed.
@@ -196,11 +192,10 @@ Using DynamoRIO and XED to find redundant executions (Dead code)
 4. Modify the dead code detection logic in [dead_code_analysis.cpp](https://github.com/FeijiangHan/DeadCodeDetection/blob/main/src/trace/cpps/dead_code_analysis.cpp). The implementation includes detecting redundant reads and redundant writes.
 5. The analysis results will be output to the 'out' file, which can be further analyzed.
 
+**Here is a poster of me showcasing my work during NCSU GEARE training:**
 
-**TODO:**
-
-- Optimize the output format for better readability.
-- Implement more sophisticated dead code detection logic.
+<center class="half">
+    <img src="markdown/assets/image-20231220184411591.png" width="80%"/> </center>
 
 
 
@@ -229,7 +224,7 @@ Using DynamoRIO and XED to find redundant executions (Dead code)
     </center>
 
 
-### [Innovative Function Call Visualization](https://github.com/FeijiangHan/Function-Visualization/) [Paper PDF](https://drive.google.com/file/d/19Y9thDHZa_Kelvbm1T7rO1n_DUK_ZA7b/view?usp=sharing)
+### [Innovative Function Call Visualization](https://github.com/FeijiangHan/Function-Visualization/) [[Paper PDF](https://drive.google.com/file/d/19Y9thDHZa_Kelvbm1T7rO1n_DUK_ZA7b/view?usp=sharing)]
 
 * **D3.js & Vue & Django**
 * [Graph Visualization](https://github.com/FeijiangHan/Function-Visualization/#graph-visualization)
