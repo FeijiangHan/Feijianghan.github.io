@@ -19,8 +19,21 @@
 
 I am a final-year computer science student at Central South University with a strong academic background and practical experience in software development and data science.
 
-* **Research topics:** Visualization, High-Performance Systems (distributed & parallel platform), Crowdsourcing, Internet of Things, Deep learning (Computer version)
-* **Interests:**  Computer Education, Software System, High-Performance System, AI, Internet of Things, Crowdsourcing
+* **Academic Performance**
+  * Lastly Year (Junior Year) Performance in Computer Science：
+    * Weighted GPA: 94.09
+    * comprehensive performance GPA: 97.448
+    * Major Ranking: 5/248 (3rd out of 248 in the second term)
+  * **The Historical Highest Major Ranking:** 1/240, 2020-2021, major in materials engineering
+  * **A total of 20 courses scored above 95, and 48 courses scored above 90.**
+    * = 99: Object-Oriented Programming (C++)
+    * = 98: Advanced Mathematics A2 (Part 1), Data Warehousing and Data Mining
+    * = 97: Advanced Mathematics A2 (Part 2), Linux System and Applications, Introduction to Innovation and Entrepreneurship
+    * = 96: Computer Architecture, Embedded Systems, Data Structures, Distributed Systems and Cloud Computing, Analog Electronic Technology B
+    * = 95: Software Architecture
+
+* **Research topics:** HCI, Visualization, High-Performance Systems (distributed & parallel platform), Crowdsourcing, Internet of Things, Deep learning (Computer version)
+* **Interests:**  HCI, Computer Education, Software System, High-Performance System, AI, Internet of Things, Crowdsourcing
 * **Supervisor:** Prof. Xu Liu (NCSU), Prof. Ying Zhao (CSU), Prof. Anfeng Liu (CSU), Dr. Qidong Zhao (NCSU)
 * **Our IoT Team Website**:   https://feijiang.info/team-en/
 * **My Github Link:** https://github.com/FeijiangHan
@@ -81,6 +94,14 @@ J. Tang\*,**F. Han***, K. Fan, W. Xie, [Minority is all you need: Eliciting the 
 
 Y. Yuwei, J. Tang, **F. Han**, Anfeng Liu, Neal N. Xiong, [MAB-RP: A Multi-Armed Bandit based Scheme for Accurate Data Collection in Crowdsensing](https://drive.google.com/file/d/1hsdOhoHCiULRcT6ijiHqcq1_4hHHFwML/view?usp=sharing). (INS 2024, Accept)
 
+* **Abstract:** Accurate data collection from workers is crucial for the success of Mobile Crowd Sensing (MCS) applications. However, the current study suffers from several drawbacks:
+
+  1. The workers' sensing qualities remain unknown even after the platform acquires the data submitted by the workers, known as the Post Unknown Worker Selection (PUWS) problem.
+  2. Systematic deviations between worker data and the Ground Truth Data (GTD) reduce the quality of MCS applications.
+  3. The data collected by workers for different tasks may vary in accuracy, resulting in low-quality data collection.
+
+  We propose a novel Multi-Armed Bandit-based worker selection scheme with Reputation and Preference (MAB-RP) to address these challenges. The proposed scheme aims at selecting credible workers for high-quality data collection through trust identification, thus addressing the PUWS issue after worker recruitment. Additionally, the scheme employs a learning-based approach to identify and correct the gaps between the sensed data and the GTD, ultimately improving the accuracy of data collection. Lastly, a matching-based approach is used to identify workers' sensing qualities for different tasks, further enhancing the accuracy of data collection in MCS. Extensive simulations on real-world datasets demonstrate that the proposed MAB-RP scheme outperforms previous strategies in terms of both data quality and cost.
+
 <center class="half">
     <img src="markdown/assets/image-20231112004154397.png" width="60%"/></center>
 
@@ -133,6 +154,14 @@ J. Tang, K. Fan, W. Xie, **F. Han**, Pengzhi Yin, Zhenzhe Qu, [A Semi-supervised
 ### [EasyView - Profiling Tool for Golang Applications](https://www.easyview.dev/)
 
 * **C++ & Web Assembly &  JavaScript & React & WebGL**
+* EasyView is a user-friendly, versatile, high-performance and intelligent local performance analysis and visualization tool. It balances ease of use, analytical flexibility and data security.
+  * **Easy:** EasyView is easy to install, use and customize. It can meet the needs of performance engineers at all levels
+  * **General:** EasyView is not designed to support specific profilers. Instead, it aims to provide a general solution that widely supports a broad range of profilers.
+  * **Portable:** EasyView is implemented with web frontend techniques, making it portable across different platforms and allowing it to be integrated into IDEs as a plugin or extension.
+  * **Private:** EasyView analyzes and visualizes performance data locally without uploading data to a remote server, minimizing security and privacy concerns.
+  * **Efficient:** EasyView is extremely efficient. It handles profilers of gigabytes in size and is significantly faster than existing solutions. For example, it shows a ~50x speedup over PProf.
+  * **Intelligent:** EasyView can easily integrate various data mining and machine learning models to analyze profiles and correlate the analysis results with source code.
+
 
 <center class="half">
     <img src="markdown/img/demo2.a7673cc1.gif" width="80%"/> </center>
@@ -157,8 +186,7 @@ Using DynamoRIO and XED to find redundant executions (Dead code)
 **Here is a poster of me showcasing my work during NCSU GEARE training:**
 
 <center class="half">
-    <img src="https://github.com/FeijiangHan/dead_code_analyzer/blob/main/poster-Feijiang%20Han.png" width="80%"/> </center>
-
+    <img src="markdown/assets/image-20231220184411591.png" width="80%"/> </center>
 
 **The process can be summarized as follows:**
 
@@ -179,6 +207,20 @@ Using DynamoRIO and XED to find redundant executions (Dead code)
 ### [Web Shell Detection and Visualization](https://github.com/FeijiangHan/Malware-Family-Vis-Platform/)
 
 * **D3.js & React & Redux & Django**
+* **Implemented Clustering Algorithms**
+  - [G Class: Clustering algorithm based on Graph2Vec graph embedding g_graph2vec_clustering.py](https://github.com/FeijiangHan/MFVP?tab=readme-ov-file#g-class-clustering-algorithm-based-on-graph2vec-graph-embedding-g_graph2vec_clusteringpy)
+  - [G Class: Clustering algorithm based on graph edit distance](https://github.com/FeijiangHan/MFVP?tab=readme-ov-file#g-class-clustering-algorithm-based-on-graph-edit-distance)
+  - [G Class: Clustering based on graph kernel g_graph_kernel.py](https://github.com/FeijiangHan/MFVP?tab=readme-ov-file#g-class-clustering-based-on-graph-kernel-g_graph_kernelpy)
+  - [T Class: Clustering based on tree edit distance t_tree_edit_distance.py](https://github.com/FeijiangHan/MFVP?tab=readme-ov-file#t-class-clustering-based-on-tree-edit-distance-t_tree_edit_distancepy)
+  - [S Class: Clustering based on Word2Vec s_cbow.py](https://github.com/FeijiangHan/MFVP?tab=readme-ov-file#s-class-clustering-based-on-word2vec-s_cbowpy)
+  - [S Class: Clustering based on Bert s_bert.py](https://github.com/FeijiangHan/MFVP?tab=readme-ov-file#s-class-clustering-based-on-bert-s_bertpy)
+  - [S Class: Clustering based on GloVe s.glove_clustering.py](https://github.com/FeijiangHan/MFVP?tab=readme-ov-file#s-class-clustering-based-on-glove-sglove_clusteringpy)
+  - [S Class: Clustering based on SimCSE s.simcse_clustering.py](https://github.com/FeijiangHan/MFVP?tab=readme-ov-file#s-class-clustering-based-on-simcse-ssimcse_clusteringpy)
+* **Fronend Platform Introduction**
+  - [Screenshots](https://github.com/FeijiangHan/MFVP?tab=readme-ov-file#screenshots)
+  - [New Feature - FCTree Visualization](https://github.com/FeijiangHan/MFVP?tab=readme-ov-file#new-feature---fctree-visualization)
+  - [Online Demo](https://github.com/FeijiangHan/MFVP?tab=readme-ov-file#online-demo)
+  - [Intellectual Property](https://github.com/FeijiangHan/MFVP?tab=readme-ov-file#intellectual-property)
 
 <center class="half">
     <img src="markdown/img/web-01.png" width="40%"/> 
@@ -190,6 +232,15 @@ Using DynamoRIO and XED to find redundant executions (Dead code)
 ### [Innovative Function Call Visualization](https://github.com/FeijiangHan/Function-Visualization/) [Paper PDF](https://drive.google.com/file/d/19Y9thDHZa_Kelvbm1T7rO1n_DUK_ZA7b/view?usp=sharing)
 
 * **D3.js & Vue & Django**
+* [Graph Visualization](https://github.com/FeijiangHan/Function-Visualization/#graph-visualization)
+* [Hierarchy Graph](https://github.com/FeijiangHan/Function-Visualization/#hierarchy-graph)
+* [Hierarchy Matrix](https://github.com/FeijiangHan/Function-Visualization/#hierarchy-matrix)
+* [Hierarchy Tree](https://github.com/FeijiangHan/Function-Visualization/#hierarchy-tree)
+* [Icicle Graph](https://github.com/FeijiangHan/Function-Visualization/#icicle-graph)
+* [Matrix](https://github.com/FeijiangHan/Function-Visualization/#matrix)
+* [MSV](https://github.com/FeijiangHan/Function-Visualization/#msv)
+* [FCTree](https://github.com/FeijiangHan/Function-Visualization/#fctree)
+* [Platform Overview](https://github.com/FeijiangHan/Function-Visualization/#platform-overview)
 
 <center class="half">
     <img src="markdown/img/image-20231011185448410.png" width="80%"/> 
@@ -213,7 +264,12 @@ Using DynamoRIO and XED to find redundant executions (Dead code)
 ### [Trie Performance Optmization](https://github.com/FeijiangHan/tire-match/)
 
 * **Js & Wasm & C++ & PHP**
-* I wrote a detailed blog about how I used Trie to improve the keyword matching speed from 10 hours to 10 minutes, please click the project hyperlink above
+
+A few days ago at work, I encountered the following problem:
+
+> There are 600,000 short message log records, each around 50 characters, and 50,000 keywords, 2-8 characters in length, mostly Chinese. The task is to extract all keywords contained in the 600,000 records and count the number of hits for each keyword.
+
+**I wrote a detailed blog about how I used Trie to improve the keyword matching speed from 10 hours to 10 minutes, please click the project hyperlink above. **This article fully introduces my implementation approach, showing how I optimized a task that took 10 hours to run to under 10 minutes. Although the implementation language is PHP, this article focuses more on the concepts, which should be helpful to everyone.
 
 
 
@@ -240,11 +296,13 @@ Using DynamoRIO and XED to find redundant executions (Dead code)
 
 ## Honors And Awards
 
-- Xiaomi Outstanding Scholarship, Xiaomi Public Welfare Foundation, 2023 **(only 5 awards university-wide)**
+- Xiaomi Outstanding Scholarship, Xiaomi Public Welfare Foundation, 2023 **(top 0.1%, the highest undergraduate award)**
 - Undergraduate first Grade Scholarship, CSU, 2023 **(top 2%)**
 - National Scholarship, CSU, 2021, 1st in major **(rank 1)**
+- Dean's list, CSU, 2021, 2022, 2023
+- The First Prize Scholarship, CSU, 2021, 2023
 - M Award, Mathematical Contest in Modeling (MCM), 2023
-- Regional 1st Prize, Chinese College Students Computer Design Contest, 2023
+- Natioal 1st Prize, Chinese College Students Computer Design Contest, 2023
 - Regional 1st Prize, Competition of Service Outsourcing and Entrepreneurship Innovation, 2022
 
 <center class="half">  
