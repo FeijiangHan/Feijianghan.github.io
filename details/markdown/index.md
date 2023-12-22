@@ -1,18 +1,26 @@
 # Feijiang Han's Portfolio
 
 ## Table of Contents
-
-- [About Me](#about-me)
-- [Skills](#skills)
-- [Our IoT Research Team](#our-iot-research-team)
-- [Reaserch List](#research-list)
-- [Patents](#patents)
-- [Projects](#projects)
-- [Honors & Awards](#honors-and-awards)
-- [Student Affairs](#student-affairs)
-- [Leaderships & Activities](#leaderships-and-activities)
-- [Voluntary Activity & My Peaceful Life](#voluntary-activity) 
-
+- [Feijiang Han's Portfolio](#feijiang-hans-portfolio)
+  - [Table of Contents](#table-of-contents)
+  - [About Me](#about-me)
+  - [Skills](#skills)
+  - [Research List](#research-list)
+  - [Patents](#patents)
+  - [Projects](#projects)
+    - [EasyView - Profiling Tool for Golang Applications](#easyview---profiling-tool-for-golang-applications)
+    - [Dead Code Analyzer](#dead-code-analyzer)
+    - [Web Shell Detection and Visualization](#web-shell-detection-and-visualization)
+    - [Innovative Function Call Visualization \[Paper PDF\]](#innovative-function-call-visualization-paper-pdf)
+    - [Pulmonary Embolism Detection System](#pulmonary-embolism-detection-system)
+    - [Trie Performance Optmization](#trie-performance-optmization)
+    - [Teaching Assistant Notes](#teaching-assistant-notes)
+    - [Open CS Courses](#open-cs-courses)
+  - [Honors And Awards](#honors-and-awards)
+  - [Student Affairs](#student-affairs)
+  - [Leaderships And Activities](#leaderships-and-activities)
+  - [Voluntary Activity](#voluntary-activity)
+  - [My Peaceful Life](#my-peaceful-life)
 
 
 ## About Me
@@ -291,14 +299,22 @@ A few days ago at work, I encountered the following problem:
 
 ## Honors And Awards
 
-- Xiaomi Outstanding Scholarship, Xiaomi Public Welfare Foundation, 2023 **(top 0.1%, the highest undergraduate award)**
-- Undergraduate first Grade Scholarship, CSU, 2023 **(top 2%)**
-- National Scholarship, CSU, 2021, 1st in major **(rank 1)**
-- Dean's list, CSU, 2021, 2022, 2023
-- The First Prize Scholarship, CSU, 2021, 2023
-- M Award, Mathematical Contest in Modeling (MCM), 2023
-- Natioal 1st Prize, Chinese College Students Computer Design Contest, 2023
-- Regional 1st Prize, Competition of Service Outsourcing and Entrepreneurship Innovation, 2022
+**Academic Honors:** 
+
+* National Scholarship, CSU, 2021 (rank 1)
+* Xiaomi Outstanding Scholarship, Xiaomi Public Welfare Foundation, 2023 (top 0.1%, the highest award)
+* The First Prize Scholarship, CSU, 2021, 2023 (top 1.5%)
+* SENDI TECHNOLOGY Scholarships, CSU, 2021 (rank 1)
+* Dean's list, CSU, 2021, 2022, 2023
+
+**Competition Awards:**
+
+* M Award, The International Mathematical Contest in Modeling (MCM), 2023
+* Silver Medal, Kaggle Competition in Pulmonary Embolism Detection, 2023 (rank 126/2745)
+* National 1st Prize, Chinese College Students Computer Design Contest, 2023 (top 5%)
+* National 2st Prize, Competition of Service Outsourcing and Entrepreneurship Innovation, 2022
+* National 2st Prize, “Internet+” Innovation and Entrepreneurship Competition, 2022
+* Most popular paper award, National Training Program of Innovation and Entrepreneurship, 2021 (top 3%)
 
 <center class="half">  
     <img src="markdown/assets/image-20231111223202878.png" width="35%"/> 
