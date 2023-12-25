@@ -49,7 +49,7 @@ I've done an introductory slide, if you're interested you can read this document
 * **Supervisor:** Prof. Xu Liu (NCSU), Prof. Ying Zhao (CSU), Prof. Anfeng Liu (CSU), Dr. Qidong Zhao (NCSU)
 * **Our IoT Team Website**:   https://feijiang.info/team-en/
 * **My Github Link:** https://github.com/FeijiangHan
-* **Sincere self-analysis: **
+* **Sincere self-analysis:** 
 
 <center class="half">
     <img src="markdown/assets/image-20231225175009812.png" width="80%"/>
@@ -69,16 +69,15 @@ I've done an introductory slide, if you're interested you can read this document
 
 
 <center class="half">
-    <img src="markdown/assets/image-20231225173238455.png" width="40%"/>
-    <img src="markdown/assets/image-20231225173049750.png" width="40%"/>
+    <img src="markdown/assets/image-20231225223505829.png" width="40%"/>
+    <img src="markdown/assets/image-20231225223529274.png" width="40%"/>
 </center>
 
 
 
 <center class="half">
-    <img src="markdown/assets/image-20231225173238455.png" width="80%"/>
+    <img src="markdown/assets/image-20231225223608040.png" width="80%"/>
 </center>
-
 
 
 
