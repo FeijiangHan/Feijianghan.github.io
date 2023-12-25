@@ -59,6 +59,12 @@ I am a final-year computer science student at Central South University with a st
 
 ## Research List
 
+***View this document for my contributions to all papers**：https://drive.google.com/file/d/1OJgPe5ZpEzGd3xGtLE--e0hMwnk0MY2k/view?usp=sharing
+
+---
+
+
+
 J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [Credit and Quality Intelligent Learning based Multi-armed Bandit Scheme for Unknown Worker Selection in Multimedia MCS](https://drive.google.com/file/d/1169FD3QCUWwrvt0I0WRd0RqRYSh2p-Qv/view). *Information Sciences*. Volume 647, November 2023, 119444 (JCR Q1, IF=8.1)
 
 * **Abstract:** The field of intelligent multimedia systems, which rely heavily on multimodal models trained on large amounts of high-quality data, has been revolutionized by deep learning. One promising approach to collecting such multimodal data is Mobile Crowd Sensing (MCS). However, MCS platforms face a significant challenge in selecting both high-credit and high-quality workers at low cost due to the Post-Unknown Worker Recruitment (PUWR) problem. The PUWR problem makes it difficult to determine the credits and qualities of workers in advance, which can lead to the recruitment of dishonest or low-quality workers. This problem severely affects the quality and quantity of MCS data collection, posing a serious threat to the security and robustness of large-scale multimedia models. To address this issue, we propose a Credit and Quality Learning based Multi-Armed Bandit (CQL-MAB) scheme, which consists of a novel credit identification algorithm, a fine-grained worker quality calculation method, and a two-stage reward-based Multi-Armed Bandit (MAB) for worker selection in reverse auction. The theoretical proof shows that the CQL-MAB scheme achieves the truthfulness, [individual rationality](https://www.sciencedirect.com/topics/engineering/individual-rationality), and efficiency of the auction mechanism. A large number of simulation experiments on real data traces are conducted to demonstrate the outstanding performance of CQL-MAB.
@@ -78,7 +84,7 @@ J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [
     <img src="markdown/assets/image-20231111214430989.png" width="50%"/><img src="markdown/assets/image-20231111214537986.png" width="50%"/> </center>
 
 
-J. Tang\*,**F. Han***, K. Fan, W. Xie, [Minority is all you need: Eliciting the Minority Report in Crowdsourcing](https://drive.google.com/file/d/1dBms9XoUs3PjMJosesDZUcjpFogLspuH/view?usp=sharing). (AAAI, Under review) [APPENDIX pdf](https://drive.google.com/file/d/1FgCZGGC48Ul7fgdy4OEwID0hqVEEmsH4/view?usp=sharing)
+J. Tang\*,**F. Han***, K. Fan, W. Xie, [Minority is all you need: Eliciting the Minority Report in Crowdsourcing](https://drive.google.com/file/d/1dBms9XoUs3PjMJosesDZUcjpFogLspuH/view?usp=sharing). (*Expert Systems with Applications*, Under review) [APPENDIX pdf](https://drive.google.com/file/d/1FgCZGGC48Ul7fgdy4OEwID0hqVEEmsH4/view?usp=sharing)
 
 * **Abstract:** Have you ever questioned the assumption that the majority always holds the truth? In the realm of crowdsourcing-based data collection, such as data labeling for supervised ML models, the prevailing practice relies on majority voting to determine the ground truth. However, traditional majoritybased methods suffer from certain inherent flaws that have long been overlooked. Specifically, majority voting has already been proven to be inadequate when the truth is held by a minority, which can lead to inaccurate labeling. Additionally, traditional majority-based methods predominantly depend on redundant workers to improve accuracy, not only causing high and inefficient costs but also introducing potential biases. To address the issues of majority-based methods, we propose a novel Minority Learning-based Worker Recruitment (MiLWR) scheme, consisting of Minority Report Elicitation (MRE), Minority Worker Discovery (MWD), and Minority Winner Recruitment (MWR). Through extensive simulations, we demonstrate that our MiLWR scheme effectively reduces system overhead and eliminates wasteful redundancy while improving accuracy. To the best of our knowledge, we are the first to propose a minority-based worker recruitment scheme, providing an effective approach to crowdsourcing by harnessing the wisdom of the minority.
 
@@ -358,6 +364,15 @@ A few days ago at work, I encountered the following problem:
 - Inventory management and headcount tracking of supplies
 - Notification and distribution of supplies to households
 - Participation in organizing COVID-19 vaccinations for residents in the community
+
+
+
+**Funding Member & Lead Tutor of Student Service Organization**
+
+* Offered in-person and video lectures on courses including Calculus, Linear Algebra, Probability and Statistics, Discrete Mathematics, College Physics, Digital Circuits, and Inorganic Chemistry to help students pass final exams
+* Provided individually tailored tutoring sessions to help students grasp challenging concepts
+* Organized social and educational events: Fall Dating Meet-up, Spring Carnival, Mental Health Awareness Drama Contest
+* Hosted three experience-sharing sessions and webinars for computer science students to discuss study strategies, programming experiences, and study abroad experiences
 
 
 
