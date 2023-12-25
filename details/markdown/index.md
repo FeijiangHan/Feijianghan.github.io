@@ -5,13 +5,14 @@
   - [Table of Contents](#table-of-contents)
   - [About Me](#about-me)
   - [Skills](#skills)
+  - [My Opinion and Way of Studying](#my-opinion-and-way-of-studying)
   - [Research List](#research-list)
   - [Patents](#patents)
   - [Projects](#projects)
     - [EasyView - Profiling Tool for Golang Applications](#easyview---profiling-tool-for-golang-applications)
     - [Dead Code Analyzer](#dead-code-analyzer)
     - [Web Shell Detection and Visualization](#web-shell-detection-and-visualization)
-    - [Innovative Function Call Visualization \[Paper PDF\]](#innovative-function-call-visualization-paper-pdf)
+    - [Innovative Function Call Visualization](#innovative-function-call-visualization-paper-pdf)
     - [Pulmonary Embolism Detection System](#pulmonary-embolism-detection-system)
     - [Trie Performance Optmization](#trie-performance-optmization)
     - [Teaching Assistant Notes](#teaching-assistant-notes)
@@ -25,7 +26,9 @@
 
 ## About Me
 
-I am a final-year computer science student at Central South University with a strong academic background and practical experience in software development and data science.
+I am a final-year computer science student at Central South University with a strong academic background and practical experience in software development and data science. 
+
+I've done an introductory slide, if you're interested you can read this document, **but the content is mostly the same as below**：[Click here to see slide](https://docs.google.com/presentation/d/1VUGfG8Gexeikz-J4mJliqujFif8x3kMJ/edit?usp=sharing&ouid=106857639894919772271&rtpof=true&sd=true)
 
 * **Academic Performance**
   * Lastly Year (Junior Year) Performance in Computer Science：
@@ -46,7 +49,11 @@ I am a final-year computer science student at Central South University with a st
 * **Supervisor:** Prof. Xu Liu (NCSU), Prof. Ying Zhao (CSU), Prof. Anfeng Liu (CSU), Dr. Qidong Zhao (NCSU)
 * **Our IoT Team Website**:   https://feijiang.info/team-en/
 * **My Github Link:** https://github.com/FeijiangHan
+* **Sincere self-analysis: **
 
+<center class="half">
+    <img src="markdown/assets/image-20231225175009812.png" width="80%"/>
+</center>
 
 
 ## Skills
@@ -57,11 +64,28 @@ I am a final-year computer science student at Central South University with a st
 
 
 
+# My Opinion and Way of Studying
+
+
+
+<center class="half">
+    <img src="markdown/assets/image-20231225173238455.png" width="40%"/>
+    <img src="markdown/assets/image-20231225173049750.png" width="40%"/>
+</center>
+
+
+
+<center class="half">
+    <img src="markdown/assets/image-20231225173238455.png" width="80%"/>
+</center>
+
+
+
+
+
 ## Research List
 
-***View this document for my contributions to all papers**：https://drive.google.com/file/d/1OJgPe5ZpEzGd3xGtLE--e0hMwnk0MY2k/view?usp=sharing
-
----
+**View this document for my contributions to all papers**：https://drive.google.com/file/d/1OJgPe5ZpEzGd3xGtLE--e0hMwnk0MY2k/view?usp=sharing
 
 
 
