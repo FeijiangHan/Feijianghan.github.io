@@ -90,6 +90,8 @@ I've done an introductory slide, if you're interested you can read this document
 
 J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [Credit and Quality Intelligent Learning based Multi-armed Bandit Scheme for Unknown Worker Selection in Multimedia MCS](https://drive.google.com/file/d/1169FD3QCUWwrvt0I0WRd0RqRYSh2p-Qv/view). *Information Sciences*. Volume 647, November 2023, 119444 (JCR Q1, IF=8.1)
 
+* DIO: 10.1016/j.ins.2023.119444
+
 * **Abstract:** The field of intelligent multimedia systems, which rely heavily on multimodal models trained on large amounts of high-quality data, has been revolutionized by deep learning. One promising approach to collecting such multimodal data is Mobile Crowd Sensing (MCS). However, MCS platforms face a significant challenge in selecting both high-credit and high-quality workers at low cost due to the Post-Unknown Worker Recruitment (PUWR) problem. The PUWR problem makes it difficult to determine the credits and qualities of workers in advance, which can lead to the recruitment of dishonest or low-quality workers. This problem severely affects the quality and quantity of MCS data collection, posing a serious threat to the security and robustness of large-scale multimedia models. To address this issue, we propose a Credit and Quality Learning based Multi-Armed Bandit (CQL-MAB) scheme, which consists of a novel credit identification algorithm, a fine-grained worker quality calculation method, and a two-stage reward-based Multi-Armed Bandit (MAB) for worker selection in reverse auction. The theoretical proof shows that the CQL-MAB scheme achieves the truthfulness, [individual rationality](https://www.sciencedirect.com/topics/engineering/individual-rationality), and efficiency of the auction mechanism. A large number of simulation experiments on real data traces are conducted to demonstrate the outstanding performance of CQL-MAB.
 
 <center class="half">
@@ -155,7 +157,7 @@ J. Tang, K. Fan, W. Xie, **F. Han**, Y. Zhai, T. Su, Anfeng Liu, Neal N. Xiong, 
 
 
 
-l  K. Fan, J. Tang, W. Xie, **F. Han**, Y. Huang, Qu Zhenzhe, Anfeng Liu, [CRL-MABA: A Completion Rate Learning based Accurate Data Collection Scheme in Large-scale Energy Internet](https://drive.google.com/file/d/1M_sdZweWia-u0r8_FpO6wgYzi3skcCyd/view?usp=sharing), *IEEE Internet of Things Journal* (**Accepted**)
+Fan, Kejia; Tang, Jianheng; Xie, Wenxuan; **Han, Feijiang**; Huang, Yajiang; Qu, Zhenzhe; Liu, Anfeng; Xiong, Naixue; Wang, Tian; Zhang, Shaobo, [CRL-MABA: A Completion Rate Learning based Accurate Data Collection Scheme in Large-scale Energy Internet](https://drive.google.com/file/d/1M_sdZweWia-u0r8_FpO6wgYzi3skcCyd/view?usp=sharing), *IEEE Internet of Things Journal*, DOI: 10.1109/JIOT.2023.3347746 (IF=10.238)
 
 <center class="half">
     <img src="markdown/assets/image-20231215233636284.png" width="20%"/><img src="markdown/assets/image-20231215233713887.png" width="60%"/> </center>
