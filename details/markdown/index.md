@@ -5,14 +5,14 @@
   - [Table of Contents](#table-of-contents)
   - [About Me](#about-me)
   - [Skills](#skills)
-  - [My Opinion and Way of Studying](#my-opinion-and-way-of-studying)
+- [My Opinion and Way of Studying](#my-opinion-and-way-of-studying)
   - [Research List](#research-list)
   - [Patents](#patents)
   - [Projects](#projects)
     - [EasyView - Profiling Tool for Golang Applications](#easyview---profiling-tool-for-golang-applications)
     - [Dead Code Analyzer](#dead-code-analyzer)
     - [Web Shell Detection and Visualization](#web-shell-detection-and-visualization)
-    - [Innovative Function Call Visualization](#innovative-function-call-visualization-paper-pdf)
+    - [Innovative Function Call Visualization \[Paper PDF\]](#innovative-function-call-visualization-paper-pdf)
     - [Pulmonary Embolism Detection System](#pulmonary-embolism-detection-system)
     - [Trie Performance Optmization](#trie-performance-optmization)
     - [Teaching Assistant Notes](#teaching-assistant-notes)
@@ -46,7 +46,7 @@ I've done an introductory slide, if you're interested you can read this document
 
 * **Research topics:** HCI, Visualization, High-Performance Systems (distributed & parallel platform), Crowdsourcing, Internet of Things, Deep learning (Computer version)
 * **Interests:**  HCI, Computer Education, Software System, High-Performance System, AI, Internet of Things, Crowdsourcing
-* **Supervisor:** Prof. Xu Liu (NCSU), Prof. Ying Zhao (CSU), Prof. Anfeng Liu (CSU), Dr. Qidong Zhao (NCSU)
+* **Supervisor:** [Prof. Xu Liu (NCSU)](https://xl10.github.io/), [Prof. Ying Zhao (CSU)](https://faculty.csu.edu.cn/zhaoying/en/index.htm), [Prof. Anfeng Liu (CSU)](https://faculty.csu.edu.cn/liuanfeng/en/index/4266/list/), Dr. Qidong Zhao (NCSU)
 * **Our IoT Team Website**:   https://feijiang.info/team-en/
 * **My Github Link:** https://github.com/FeijiangHan
 * **Sincere self-analysis:** 
