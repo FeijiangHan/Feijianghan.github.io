@@ -28,32 +28,22 @@
 
 I am a final-year computer science student at Central South University with a strong academic background and practical experience in software development and data science. 
 
-I've done an introductory slide, if you're interested you can read this document, **but the content is mostly the same as below**：[Click here to see slide](https://docs.google.com/presentation/d/1VUGfG8Gexeikz-J4mJliqujFif8x3kMJ/edit?usp=sharing&ouid=106857639894919772271&rtpof=true&sd=true)
-
 * **Academic Performance**
-  * Lastly Year (Junior Year) Performance in Computer Science：
-    * Weighted GPA: 94.09
-    * comprehensive performance GPA: 97.448
-    * Major Ranking: 5/248 (3rd out of 248 in the second term)
-  * **The Historical Highest Major Ranking:** 1/240, 2020-2021, major in materials engineering
+  * **Totle GPA:** 91.77/100 (3.95/4.0)
+  * **The Historical Highest Major Ranking:** 1/240, 2020-2021
   * **A total of 20 courses scored above 95, and 48 courses scored above 90.**
     * = 99: Object-Oriented Programming (C++)
-    * = 98: Advanced Mathematics A2 (Part 1), Data Warehousing and Data Mining
-    * = 97: Advanced Mathematics A2 (Part 2), Linux System and Applications, Introduction to Innovation and Entrepreneurship
-    * = 96: Computer Architecture, Embedded Systems, Data Structures, Distributed Systems and Cloud Computing, Analog Electronic Technology B
+    * = 98: Advanced Mathematics (Part 1), Data Warehousing and Data Mining
+    * = 97: Advanced Mathematics (Part 2), Linux System and Applications, Introduction to Innovation and Entrepreneurship
+    * = 96: Computer Architecture, Embedded Systems, Data Structures, Distributed Systems and Cloud Computing, Analog Electronic Technology 
     * = 95: Software Architecture
-    * = 94: Human-Computer Interaction, Web Technology, Parallel Computing, Data Analysis And Fusion, Training of Career Planning, Database Principle, Computer Network, Linear Algebra, Fundamental of Engineering Drawing A
-
-* **Research topics:** HCI, Visualization, High-Performance Systems (distributed & parallel platform), Crowdsourcing, Internet of Things, Deep learning (Computer version)
-* **Interests:**  HCI, Computer Education, Software System, High-Performance System, AI, Internet of Things, Crowdsourcing
-* **Supervisor:** [Prof. Xu Liu (NCSU)](https://xl10.github.io/), [Prof. Ying Zhao (CSU)](https://faculty.csu.edu.cn/zhaoying/en/index.htm), [Prof. Anfeng Liu (CSU)](https://faculty.csu.edu.cn/liuanfeng/en/index/4266/list/), Dr. Qidong Zhao (NCSU)
+    * = 94: Human-Computer Interaction, Web Technology, Parallel Computing, Data Analysis And Fusion, Training of Career Planning, Database Principle, Computer Network, Linear Algebra, Fundamental of Engineering Drawing
+* **Research topics:** Software Optimization, HCI, Data Science, Visualization, High-Performance Systems (distributed & parallel platform), Crowdsourcing, Internet of Things, Deep learning (Computer version)
+* **Interests:**  Software Developing, HCI, Data Science, Computer Education, High-Performance System, AI, Internet of Things, Crowdsourcing
+* **Supervisor:** [Prof. Xu Liu (NCSU HPC Lab)](https://xl10.github.io/), [Prof. Ying Zhao (CSU Visualization Lab)](https://faculty.csu.edu.cn/zhaoying/en/index.htm), [Prof. Anfeng Liu (CSU IoT Lab)](https://faculty.csu.edu.cn/liuanfeng/en/index/4266/list/), Dr. Qidong Zhao (NCSU)
 * **Our IoT Team Website**:   https://feijiang.info/team-en/
 * **My Github Link:** https://github.com/FeijiangHan
-* **Sincere self-analysis:** 
 
-<center class="half">
-    <img src="markdown/assets/image-20231225175009812.png" width="80%"/>
-</center>
 
 
 ## Skills
@@ -84,9 +74,9 @@ I've done an introductory slide, if you're interested you can read this document
 
 ## Research List
 
-**View this document for my contributions to all papers**：https://drive.google.com/file/d/1OJgPe5ZpEzGd3xGtLE--e0hMwnk0MY2k/view?usp=sharing
+**View this document for my contributions to all papers**：[Click here to see slide](https://drive.google.com/file/d/1OJgPe5ZpEzGd3xGtLE--e0hMwnk0MY2k/view?usp=sharing)
 
-
+**I've done an introductory slide to my reaserch, if you're interested you can read this document**, **but the content is mostly the same as below**：[Click here to see slide](https://docs.google.com/presentation/d/1VUGfG8Gexeikz-J4mJliqujFif8x3kMJ/edit?usp=sharing&ouid=106857639894919772271&rtpof=true&sd=true)
 
 J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [Credit and Quality Intelligent Learning based Multi-armed Bandit Scheme for Unknown Worker Selection in Multimedia MCS](https://drive.google.com/file/d/1169FD3QCUWwrvt0I0WRd0RqRYSh2p-Qv/view). *Information Sciences*. Volume 647, November 2023, 119444 (JCR Q1, IF=8.1)
 
@@ -109,7 +99,7 @@ J. Tang, **F. Han**, K. Fan, W. Xie, P. Yin, Z. Qu, Anfeng Liu, Neal N. Xiong, [
     <img src="markdown/assets/image-20231111214430989.png" width="50%"/><img src="markdown/assets/image-20231111214537986.png" width="50%"/> </center>
 
 
-J. Tang, **F. Han**, K. Fan, W. Xie, [Minority is all you need: Eliciting the Minority Report in Crowdsourcing](https://drive.google.com/file/d/1Uyv9-2lzSgxMm8mXRTY3Ts7Lh2CTdTw0/view?usp=sharing). (*Expert Systems with Applications*, Under review) [APPENDIX pdf](https://drive.google.com/file/d/1FgCZGGC48Ul7fgdy4OEwID0hqVEEmsH4/view?usp=sharing)
+J. Tang, **F. Han**, K. Fan, W. Xie, [Minority is all you need: Eliciting the Minority Report in Crowdsourcing](https://drive.google.com/file/d/1Uyv9-2lzSgxMm8mXRTY3Ts7Lh2CTdTw0/view?usp=sharing). (*Expert Systems with Applications*, Under review) 
 
 * **Abstract:** Have you ever questioned the assumption that the majority always holds the truth? In the realm of crowdsourcing-based data collection, such as data labeling for supervised ML models, the prevailing practice relies on majority voting to determine the ground truth. However, traditional majoritybased methods suffer from certain inherent flaws that have long been overlooked. Specifically, majority voting has already been proven to be inadequate when the truth is held by a minority, which can lead to inaccurate labeling. Additionally, traditional majority-based methods predominantly depend on redundant workers to improve accuracy, not only causing high and inefficient costs but also introducing potential biases. To address the issues of majority-based methods, we propose a novel Minority Learning-based Worker Recruitment (MiLWR) scheme, consisting of Minority Report Elicitation (MRE), Minority Worker Discovery (MWD), and Minority Winner Recruitment (MWR). Through extensive simulations, we demonstrate that our MiLWR scheme effectively reduces system overhead and eliminates wasteful redundancy while improving accuracy. To the best of our knowledge, we are the first to propose a minority-based worker recruitment scheme, providing an effective approach to crowdsourcing by harnessing the wisdom of the minority.
 
@@ -342,7 +332,7 @@ A few days ago at work, I encountered the following problem:
 
 * M Award, The International Mathematical Contest in Modeling (MCM), 2023
 * Silver Medal, Kaggle Competition in Pulmonary Embolism Detection, 2023 (rank 126/2745)
-* National 1st Prize, Chinese College Students Computer Design Contest, 2023 (top 5%)
+* National 1st Prize, Chinese College Students Computer Design Contest, 2023 
 * National 2st Prize, Competition of Service Outsourcing and Entrepreneurship Innovation, 2022
 * National 2st Prize, “Internet+” Innovation and Entrepreneurship Competition, 2022
 * Most popular paper award, National Training Program of Innovation and Entrepreneurship, 2021 (top 3%)
