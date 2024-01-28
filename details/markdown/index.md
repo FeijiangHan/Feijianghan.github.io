@@ -2,7 +2,6 @@
 
 ## Table of Contents
 - [Feijiang Han's Portfolio](#feijiang-hans-portfolio)
-  - [Table of Contents](#table-of-contents)
   - [About Me](#about-me)
   - [Skills](#skills)
 - [My Opinion and Way of Studying](#my-opinion-and-way-of-studying)
