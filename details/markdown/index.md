@@ -33,8 +33,8 @@ I am a final-year computer science student at Central South University with a st
   * **The Historical Highest Major Ranking:** 1/240, 2020-2021
   * **A total of 20 courses scored above 95, and 48 courses scored above 90.**
     * = 99: Object-Oriented Programming (C++)
-    * = 98: Advanced Mathematics (Part 1), Data Warehousing and Data Mining
-    * = 97: Advanced Mathematics (Part 2), Linux System and Applications, Introduction to Innovation and Entrepreneurship
+    * = 98: Advanced Mathematics(Calculus) (Part 1), Data Warehousing and Data Mining
+    * = 97: Advanced Mathematics(Calculus) (Part 2), Linux System and Applications, Introduction to Innovation and Entrepreneurship
     * = 96: Computer Architecture, Embedded Systems, Data Structures, Distributed Systems and Cloud Computing, Analog Electronic Technology 
     * = 95: Software Architecture
     * = 94: Human-Computer Interaction, Web Technology, Parallel Computing, Data Analysis And Fusion, Training of Career Planning, Database Principle, Computer Network, Linear Algebra, Fundamental of Engineering Drawing
