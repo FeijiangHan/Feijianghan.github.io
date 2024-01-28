@@ -29,7 +29,7 @@
 I am a final-year computer science student at Central South University with a strong academic background and practical experience in software development and data science. 
 
 * **Academic Performance**
-  * **Totle GPA:** 91.77/100 (3.95/4.0)
+  * **Totle GPA:** 92.17/100 (3.95/4.0)
   * **The Historical Highest Major Ranking:** 1/240, 2020-2021
   * **A total of 20 courses scored above 95, and 48 courses scored above 90.**
     * = 99: Object-Oriented Programming (C++)
