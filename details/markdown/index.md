@@ -42,6 +42,7 @@ I am a final-year computer science student at Central South University with a st
 * **Supervisor:** [Prof. Xu Liu (NCSU HPC Lab)](https://xl10.github.io/), [Prof. Ying Zhao (CSU Visualization Lab)](https://faculty.csu.edu.cn/zhaoying/en/index.htm), [Prof. Anfeng Liu (CSU IoT Lab)](https://faculty.csu.edu.cn/liuanfeng/en/index/4266/list/), Dr. Qidong Zhao (NCSU)
 * **Our IoT Team Website**:   https://feijiang.info/team-en/
 * **My Github Link:** https://github.com/FeijiangHan
+* My Central South University Computer Science Undergraduate Course Repository: Shared Materials and Resources - https://github.com/FeijiangHan/CSU-review-materials/
 
 
 
