@@ -37,11 +37,11 @@ I am a final-year computer science student at Central South University with a st
     * = 96: Computer Architecture, Embedded Systems, Data Structures, Distributed Systems and Cloud Computing, Analog Electronic Technology 
     * = 95: Software Architecture
     * = 94: Human-Computer Interaction, Web Technology, Parallel Computing, Data Analysis And Fusion, Training of Career Planning, Database Principle, Computer Network, Linear Algebra, Fundamental of Engineering Drawing
-* **Research topics:** Software Optimization, HCI, Data Science, Visualization, High-Performance Systems (distributed & parallel platform), Crowdsourcing, Internet of Things, Deep learning (Computer version)
-* **Interests:**  Software Developing, HCI, Data Science, Computer Education, High-Performance System, AI, Internet of Things, Crowdsourcing
-* **Supervisor:** [Prof. Xu Liu (NCSU HPC Lab)](https://xl10.github.io/), [Prof. Ying Zhao (CSU Visualization Lab)](https://faculty.csu.edu.cn/zhaoying/en/index.htm), [Prof. Anfeng Liu (CSU IoT Lab)](https://faculty.csu.edu.cn/liuanfeng/en/index/4266/list/), Dr. Qidong Zhao (NCSU)
-* **Our IoT Team Website**:   https://feijiang.info/team-en/
+* **Interests & Research topics:** AI based Everything, LLM , HCI, Data Science, Visualization, Crowdsourcing, Internet of Things, Computer Education, Deep learning (NLP&CV)
+* **Supervisor:** [Prof. Xu Liu (NCSU HPC Lab)](https://xl10.github.io/), [Prof. Ying Zhao (CSU Visualization Lab)](https://faculty.csu.edu.cn/zhaoying/en/index.htm), [Prof. Anfeng Liu (CSU IoT Lab)](https://faculty.csu.edu.cn/liuanfeng/en/index/4266/list/), [Dr. Qidong Zhao (NCSU)](https://www.linkedin.com/in/qidong-zhao)
 * **My Github Link:** https://github.com/FeijiangHan
+* **My Google Scholar:** [scholar.google.com](https://scholar.google.com/citations?user=PEJ5x3EAAAAJ&hl=zh-CN&oi=ao)
+* **Our IoT Team Website**:   https://feijiang.info/team-en/
 * My Central South University Computer Science Undergraduate Course Repository: Shared Materials and Resources - https://github.com/FeijiangHan/CSU-review-materials/
 
 
