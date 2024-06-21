@@ -377,10 +377,10 @@ A few days ago at work, I encountered the following problem:
 
 
 
-## Jun 2024: Happy Graduation! 毕业快乐
+## Jun 2024 Happy Graduation
 
 <center class="half">  
-***Below is a modern poem I wrote in Chinese, which earned the first prize in the essay competition for graduates at Central South University.***
+**Below is a modern poem I wrote in Chinese, which earned the first prize in the essay competition for graduates at Central South University.**
 
 《中南梦轨：岁月如诗》（*去除文章主体部分*）
 
@@ -402,13 +402,15 @@ A few days ago at work, I encountered the following problem:
 
 
 
-<center class="half">  
-    <img src="markdown/assets/314a059080510c9c08b6500a8f6889b.jpg" width="40%"/> 
-<img src="markdown/assets/c937a6043831384705e67ac6255e083.jpg" width="40%"/> </center>
-
 
 
 <center class="half">  
-    <img src="markdown/assets/697ad357a3d3cf9c591fe34b907eaff.jpg" width="40%"/> 
-<img src="markdown/assets/5b0ec8a2cba84fc1c10ef1880c6ec9c.jpg" width="40%"/> </center>
+    <img src="markdown/assets/c937a6043831384705e67ac6255e083.png" width="40%"/> 
+<img src="markdown/assets/314a059080510c9c08b6500a8f6889b.png" width="40%"/> </center>
+
+
+
+<center class="half">  
+    <img src="markdown/assets/697ad357a3d3cf9c591fe34b907eaff.png" width="40%"/> 
+<img src="markdown/assets/5b0ec8a2cba84fc1c10ef1880c6ec9c.png" width="40%"/> </center>
 
