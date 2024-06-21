@@ -20,7 +20,7 @@
   - [Student Affairs](#student-affairs)
   - [Leaderships And Activities](#leaderships-and-activities)
   - [Voluntary Activity](#voluntary-activity)
-  - [Latest News](#Jun-2024:-Happy-Graduation!-毕业快乐)
+  - [Latest News](#Jun-2024-Happy-Graduation)
 
 
 ## About Me
