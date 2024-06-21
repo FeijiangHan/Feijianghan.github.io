@@ -25,24 +25,19 @@
 
 ## About Me
 
-I am a final-year computer science student at Central South University with a strong academic background and practical experience in software development and data science. 
+I recently graduated from Central South University with a strong academic background and practical experience in Deep Learning, Data Science and Software Development. This fall, I'll begin studying Data Science at the University of Pennsylvania.
 
 * **Academic Performance**
-  * **Totle GPA:** 92.17/100 (3.95/4.0)
-  * **The Historical Highest Major Ranking:** 1/240, 2020-2021
+  * **Totle GPA:** 92.31/100
+  * **Ranked 1st** out of 240 students in the 2020-2021 academic year
   * **A total of 20 courses scored above 95, and 48 courses scored above 90.**
-    * = 99: Object-Oriented Programming (C++)
-    * = 98: Advanced Mathematics(Calculus) (Part 1), Data Warehousing and Data Mining
-    * = 97: Advanced Mathematics(Calculus) (Part 2), Linux System and Applications, Introduction to Innovation and Entrepreneurship
-    * = 96: Computer Architecture, Embedded Systems, Data Structures, Distributed Systems and Cloud Computing, Analog Electronic Technology 
-    * = 95: Software Architecture
-    * = 94: Human-Computer Interaction, Web Technology, Parallel Computing, Data Analysis And Fusion, Training of Career Planning, Database Principle, Computer Network, Linear Algebra, Fundamental of Engineering Drawing
+    * Object-Oriented Programming (C++) 99, Calculus 98, Data Warehousing and Data Mining 98, Advanced Mathematics 97, Linux System and Applications 97, Introduction to Innovation and Entrepreneurship 97, Computer Architecture 96, Embedded Systems 96, Data Structures 96, Distributed Systems and Cloud Computing 96, Analog Electronic Technology 96, Software Architecture 95, Human-Computer Interaction 94, Web Technology 94, Parallel Computing 94, Data Analysis And Fusion 94, Training of Career Planning 94, Database Principle 94, Computer Network 94, Linear Algebra 94, Fundamental of Engineering Drawing 94, ……
 * **Interests & Research topics:** AI based Everything, LLM , HCI, Data Science, Visualization, Crowdsourcing, Internet of Things, Computer Education, Deep learning (NLP&CV)
 * **Supervisor:** [Prof. Xu Liu (NCSU HPC Lab)](https://xl10.github.io/), [Prof. Ying Zhao (CSU Visualization Lab)](https://faculty.csu.edu.cn/zhaoying/en/index.htm), [Prof. Anfeng Liu (CSU IoT Lab)](https://faculty.csu.edu.cn/liuanfeng/en/index/4266/list/), [Dr. Qidong Zhao (NCSU)](https://www.linkedin.com/in/qidong-zhao)
 * **My Github Link:** https://github.com/FeijiangHan
 * **My Google Scholar:** [scholar.google.com](https://scholar.google.com/citations?user=PEJ5x3EAAAAJ&hl=zh-CN&oi=ao)
 * **Our IoT Team Website**:   https://feijiang.info/team-en/
-* My Central South University Computer Science Undergraduate Course Repository: Shared Materials and Resources - https://github.com/FeijiangHan/CSU-review-materials/
+* CSU-CSE Undergraduate Course Review Repository: Shared Materials and Resources - https://github.com/FeijiangHan/CSU-review-materials/
 
 
 
@@ -73,8 +68,6 @@ I am a final-year computer science student at Central South University with a st
 
 
 ## Research List
-
-**View this document for my contributions to all papers**：[Click here to see slide](https://drive.google.com/file/d/1OJgPe5ZpEzGd3xGtLE--e0hMwnk0MY2k/view?usp=sharing)
 
 **I've done an introductory slide to my reaserch, if you're interested you can read this document**, **but the content is mostly the same as below**：[Click here to see slide](https://docs.google.com/presentation/d/1VUGfG8Gexeikz-J4mJliqujFif8x3kMJ/edit?usp=sharing&ouid=106857639894919772271&rtpof=true&sd=true)
 
@@ -376,61 +369,46 @@ A few days ago at work, I encountered the following problem:
 
 **70 hours volunteering during the COVID-19 pandemic**
 
-- Inventory management and headcount tracking of supplies
-- Notification and distribution of supplies to households
-- Participation in organizing COVID-19 vaccinations for residents in the community
-
-
-
-**Funding Member & Lead Tutor of Student Service Organization**
+**Lead Tutor of Student Service Organization**
 
 * Offered in-person and video lectures on courses including Calculus, Linear Algebra, Probability and Statistics, Discrete Mathematics, College Physics, Digital Circuits, and Inorganic Chemistry to help students pass final exams
 * Provided individually tailored tutoring sessions to help students grasp challenging concepts
-* Organized social and educational events: Fall Dating Meet-up, Spring Carnival, Mental Health Awareness Drama Contest
 * Hosted three experience-sharing sessions and webinars for computer science students to discuss study strategies, programming experiences, and study abroad experiences
 
 
 
-## My Peaceful Life
+## Jun 2024: Happy Graduation! 毕业快乐
 
 <center class="half">  
+***Below is a modern poem I wrote in Chinese, which earned the first prize in the essay competition for graduates at Central South University.***
 
- I love nature's embrace,
-Where stress finds its solace,
-In harmony with nature, I find my place.
+《中南梦轨：岁月如诗》（*去除文章主体部分*）
 
-Beneath the azure sky so wide,
-Where gentle breezes softly glide,
-Nature's beauty, my heart can't hide.
+星河璀璨映中南，梦逐流光步未停。 化生情缘始初绽，材料光芒引我行。
 
-Amidst the rustling leaves and trees,
-I find tranquility and inner peace,
-Nature's symphony puts my mind at ease.
+探索迷途觉风寒，夜望苍穹思前程。 纸上勾勒优劣势，计算机梦启新征。
 
-The vibrant colors of flora and fauna,
-Inspire awe and fill me with wonder,
-In nature's presence, I feel no ponder.
+荣光褪尽从头起，智海泛舟启新篇。 图书馆内探幽径，编程世界绘蓝图。
 
-From mountains tall to rivers deep,
-Nature's wonders, a treasure to keep,
-In its embrace, my soul finds its leap.
+实习科研相辉映，保研留学路迢迢。 赵师实验室中悟，哲思程序两相融。
 
-With each step on the earth's lush ground,
-I connect with nature, profound,
-Love for the natural world, I have found.
+背水一战绩点升，留学梦想日渐明。 托福GRE高分过，科研论文共辉煌。
 
-For in nature's realm, I find my release,
-A sanctuary where my spirit finds peace,
-In harmony with nature, my joy will never cease.  </center>
+舍弃保研签誓言，留学之路终启程。 名校青睐喜讯至，宾大深造志坚贞。
+
+中南岁月成追忆，转折飞跃铸辉煌。 愿为母校增光辉，归来仍是少年狂。
+
+  </center>
 
 
 
 <center class="half">  
-    <img src="markdown/assets/c5680fe0faaedc71c96ec7ebb2e6793.jpg" width="40%"/> 
-<img src="markdown/assets/a6cfd3284e7af3e2728a44fe70e1e8b.jpg" width="40%"/> </center>
+    <img src="markdown/assets/314a059080510c9c08b6500a8f6889b.jpg" width="40%"/> 
+<img src="markdown/assets/c937a6043831384705e67ac6255e083.jpg" width="40%"/> </center>
 
 
 
 <center class="half">  
-    <img src="markdown/assets/86605494738e1555b4a0ae022a57081.jpg" width="40%"/> 
-<img src="markdown/assets/9a05a185aea939da00c2068215d2d32.jpg" width="40%"/> </center>
+    <img src="markdown/assets/697ad357a3d3cf9c591fe34b907eaff.jpg" width="40%"/> 
+<img src="markdown/assets/5b0ec8a2cba84fc1c10ef1880c6ec9c.jpg" width="40%"/> </center>
+
