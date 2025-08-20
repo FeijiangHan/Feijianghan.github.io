@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I'm a Computer Science Master's student at the University of Pennsylvania, working on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications. **I'm graduating in Fall 2026 and currently applying for Ph.D. programs.**
+I'm a Computer Science Master's student at the University of Pennsylvania <img src='./images/upenn.png' style="width: 4em;">, working on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications. **I'm graduating in Fall 2026 and currently applying for Ph.D. programs.**
 
 I'm fortunate to be advised by [Prof. Chris Callison-Burch](https://www.linkedin.com/in/chris-callison-burch/), [Prof. Lyle Ungar](http://linkedin.com/in/lyle-ungar-b061474/), and [Delip Rao](https://www.linkedin.com/in/deliprao/) at the University of Pennsylvania. I also collaborate with [Xiaodong Yu](https://www.xiaodongyu.me/) from AMD and Jianheng Tang and [Prof. Yunhuai Liu](https://cs.pku.edu.cn/info/1234/2111.htm) at Peking University.
 
@@ -29,7 +29,7 @@ My research is dedicated to advancing Large Language Models and Multimodal LLMs 
 
 Previously, I worked on reinforcement learning in crowdsensing systems and contributed to HCI research, which shaped my perspective on building practical AI solutions.
 
-You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'>Google Scholar <strong><span id='total_cit'></span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'>Google Scholar</a>.
 
 {% include_relative includes/news.md %}
 

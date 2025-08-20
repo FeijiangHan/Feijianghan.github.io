@@ -102,10 +102,13 @@ Training-free methods for enhancing large language models (LLMs) have attracted 
 
 ## 🌟 Foundation Research
 
-- ``Information Sciences 2023`` [Credit and quality intelligent learning based multi-armed bandit scheme for unknown worker selection in multimedia MCS](https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290)  
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Information Sciences 2023</div><a href="https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290" target="_blank"><img src='images/cqlmab.png' alt="CQL-MAB Overview" class="paper-image-hover" width="100%"></a></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Credit and quality intelligent learning based multi-armed bandit scheme for unknown worker selection in multimedia MCS](https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290)  
 Jianheng Tang, **Feijiang Han**, Kejia Fan, et al.  
 **Key Points**:
-  - Novel CQL-MAB scheme for solving the Post-Unknown Worker Recruitment problem in MCS
+  - Novel Credit and Quality Learning based Multi-Armed Bandit (CQL-MAB) scheme for solving the Post-Unknown Worker Recruitment problem in MCS
   - Integrates credit identification and quality calculation for worker selection
   - Theoretically proven truthfulness and efficiency in reverse auction settings
 <div class="paper-interaction" onclick="toggleAbstract('cql_mab_abstract')">
@@ -114,14 +117,16 @@ Jianheng Tang, **Feijiang Han**, Kejia Fan, et al.
 <div class="paper-abstract" id="cql_mab_abstract">
 The field of intelligent multimedia systems, which rely heavily on multimodal models trained on large amounts of high-quality data, has been revolutionized by the use of deep learning. One promising approach to collect such multimodal data is Mobile Crowd Sensing (MCS). However, MCS platforms face a significant challenge in selecting both high-credit and high-quality workers at low cost due to the Post-Unknown Worker Recruitment (PUWR) problem. The PUWR problem makes it difficult to determine the credits and qualities of workers in advance, which can lead to the recruitment of dishonest or low-quality workers. This problem severely affects the quality and quantity of MCS data collection, posing a serious threat to the security and robustness of large-scale multimedia models. To address this issue, we propose a Credit and Quality Learning based Multi-Armed Bandit (CQL-MAB) scheme, which consists of a novel credit identification algorithm, a fine-grained worker quality calculation method, and a two-stage reward-based Multi-Armed Bandit (MAB) for worker selection in reverse auction. The theoretical proof shows that the CQL-MAB scheme achieves the truthfulness, individual rationality, and efficiency of the auction mechanism. A large number of simulation experiments on real data traces are conducted to demonstrate the outstanding performance of CQL-MAB.
 </div>
+</div>
+</div>
 
-- ``UBICOMP 2025`` [CALM: A Ubiquitous Crowdsourced Analytic Learning Mechanism for Continual Service Construction with Data Privacy Preservation](https://dl.acm.org/doi/abs/10.1145/3729473)  
+<div class="badge">UBICOMP 2025</div> [CALM: A Ubiquitous Crowdsourced Analytic Learning Mechanism for Continual Service Construction with Data Privacy Preservation](https://dl.acm.org/doi/abs/10.1145/3729473)  
 Kejia Fan, Yuwei Huang, Jiayi He, **Feijiang Han**, et al.
 
-- ``Information Sciences 2024`` [MAB-RP: A Multi-Armed Bandit based workers selection scheme for accurate data collection in crowdsensing](https://www.sciencedirect.com/science/article/abs/pii/S0020025524004675)  
+<div class="badge">Information Sciences 2024</div> [MAB-RP: A Multi-Armed Bandit based workers selection scheme for accurate data collection in crowdsensing](https://www.sciencedirect.com/science/article/abs/pii/S0020025524004675)  
 Yuwei Lou, Jianheng Tang, **Feijiang Han**, Anfeng Liu, et al.
 
-- ``IEEE IoT Journal 2023`` [BTV-CMAB: A bi-directional trust verification-based combinatorial multiarmed bandit scheme for mobile crowdsourcing](https://ieeexplore.ieee.org/abstract/document/10302275)  
+<div class="badge">IEEE IoT Journal 2023</div> [BTV-CMAB: A bi-directional trust verification-based combinatorial multiarmed bandit scheme for mobile crowdsourcing](https://ieeexplore.ieee.org/abstract/document/10302275)  
 Jianheng Tang, Kejia Fan, Wenbin Xie, **Feijiang Han**, et al.
 
 <style>
