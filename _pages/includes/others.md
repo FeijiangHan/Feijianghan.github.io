@@ -7,9 +7,3 @@
 <span class='anchor' id='research'></span>
 
 # 💬 Research Experience
-- *2024.01 - Present*, Research Assistant, Natural Language Processing Group, University of Pennsylvania
-  - Advised by Prof. Chris Callison-Burch and Prof. Lyle Ungar
-  - Working on LLMs and VLMs optimization and applications
-- *2022.09 - 2023.12*, Research Assistant, Mobile Computing Group, Peking University
-  - Advised by Prof. Yunhuai Liu
-  - Worked on reinforcement learning in crowdsensing systems
