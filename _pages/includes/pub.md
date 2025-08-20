@@ -4,14 +4,14 @@
 
 ## 🔍 NLP & (M)LLM Applications
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">COLM 2025</div><img src='images/webshell_detection.png' alt="WebShell Detection Framework" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">COLM 2025</div><a href="https://arxiv.org/abs/2504.13811" target="_blank"><img src='images/webshell_detection.png' alt="WebShell Detection Framework" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Can LLMs handle WebShell detection? Overcoming Detection Challenges with Behavioral Function-Aware Framework](https://arxiv.org/abs/2504.13811)
 
 **Feijiang Han**, Jiaming Zhang, Chuyi Deng, Jianheng Tang, Yunhuai Liu
 
-[**Paper**](https://arxiv.org/abs/2504.13811)
+[**Paper**](https://arxiv.org/abs/2504.13811) \| [**Website**](https://github.com/FeijiangHan/LLM-4-Webshell-Detection)
 
 **Key Points**:
 - First comprehensive study of LLMs' capabilities in WebShell detection
@@ -27,14 +27,14 @@ WebShell attacks, where malicious scripts are injected into web servers, pose a 
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><img src='images/latex2layout.png' alt="LaTeX2Layout Pipeline" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><a href="" target="_blank"><img src='images/latex2layout.png' alt="LaTeX2Layout Pipeline" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 [LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for Layout Detection]()
 
 **Feijiang Han**, Zelong Wang, Bowen Wang, Xinxin Liu, Skyler Cheung, Delip Rao, Chris Callison-Burch, Lyle Ungar
 
-[**Paper**]()
+[**Paper**]() \| [**Website**](https://github.com/FeijiangHan/LaTeX2Layout)
 
 **Key Points**:
 - Novel pipeline that extracts layout information directly from LaTeX compilation
@@ -50,12 +50,14 @@ General-purpose Vision-Language Models (VLMs) are increasingly integral to moder
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><img src='images/webshell_family.png' alt="WebShell Family Classification" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><a href="" target="_blank"><img src='images/webshell_family.png' alt="WebShell Family Classification" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Beyond Detection: A Comprehensive Benchmark and Study on Representation Learning for Fine-Grained Webshell Family Classification]()
 
 **Feijiang Han**
+
+[**Paper**]() \| [**Website**](https://github.com/FeijiangHan/WebShell-Family-Classification)
 
 **Key Points**:
 - First systematic study on automating WebShell family classification
@@ -73,14 +75,14 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
 
 ## 🔮 Unlocking and Understanding LLMs
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">MOSS@ICML2025</div><img src='images/ZeroTuning.png' alt="ZeroTuning Overview" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">MOSS@ICML2025</div><a href="https://arxiv.org/abs/2505.11739" target="_blank"><img src='images/ZeroTuning.png' alt="ZeroTuning Overview" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 [ZeroTuning: Unlocking the Initial Token's Power to Enhance Large Language Models Without Training](https://arxiv.org/abs/2505.11739)
 
 **Feijiang Han**, Xiaodong Yu, Jianheng Tang, Delip Rao, Lyle Ungar
 
-[**Paper**](https://arxiv.org/abs/2505.11739)
+[**Paper**](https://arxiv.org/abs/2505.11739) \| [**Website**](https://github.com/FeijiangHan/ZeroTuning)
 
 **Key Points**:
 - Novel training-free optimization through initial token manipulation
@@ -132,6 +134,15 @@ Jianheng Tang, Kejia Fan, Wenbin Xie, **Feijiang Han**, et al.
 
 .paper-interaction:hover {
     background-color: #e0e0e0;
+}
+
+.paper-image-hover {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.paper-image-hover:hover {
+    transform: scale(1.05);
 }
 
 .paper-image, .paper-abstract {
