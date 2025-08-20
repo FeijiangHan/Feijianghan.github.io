@@ -100,7 +100,10 @@ Training-free methods for enhancing large language models (LLMs) have attracted 
 </div>
 </div>
 
-## 🌟 Foundation Research
+- ``arXiv 2025`` [Question Tokens Deserve More Attention: Enhancing Large Language Models without Training through Step-by-Step Reading and Question Attention Recalibration](https://arxiv.org/abs/2504.09402)  
+**Feijiang Han**, Lingfeng Guo, Haotian Cui, Zixuan Lyu
+
+## 🌟 Foundation Research (RL, Unlearning, Crowdsourcing, Federated Learning)
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Information Sciences 2023</div><a href="https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290" target="_blank"><img src='images/cqlmab.png' alt="CQL-MAB Overview" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
@@ -120,49 +123,32 @@ The field of intelligent multimedia systems, which rely heavily on multimodal mo
 </div>
 </div>
 
-<div class="badge">UBICOMP 2025</div> [CALM: A Ubiquitous Crowdsourced Analytic Learning Mechanism for Continual Service Construction with Data Privacy Preservation](https://dl.acm.org/doi/abs/10.1145/3729473)  
-Kejia Fan, Yuwei Huang, Jiayi He, **Feijiang Han**, et al.
 
-<div class="badge">Information Sciences 2024</div> [MAB-RP: A Multi-Armed Bandit based workers selection scheme for accurate data collection in crowdsensing](https://www.sciencedirect.com/science/article/abs/pii/S0020025524004675)  
+- ``UBICOMP 2025`` [CALM: A Ubiquitous Crowdsourced Analytic Learning Mechanism for Continual Service Construction with Data Privacy Preservation](https://dl.acm.org/doi/abs/10.1145/3729473)  
+Kejia Fan, Yuwei Huang, Jiayi He, **Feijiang Han**, Jianheng Tang, et al.
+
+- ``arXiv 2025`` [APFL: Analytic Personalized Federated Learning via Dual-Stream Least Squares](https://arxiv.org/abs/2508.10732)  
+Kejia Fan, Jianheng Tang, Zixuan Yang, **Feijiang Han**, Jiayi Li, et al.
+
+- ``arXiv 2025`` [ACU: Analytic Continual Unlearning for Efficient and Exact Forgetting with Privacy Preservation](https://arxiv.org/abs/2505.12239)  
+Jianheng Tang, Haotian Zhuang, Dongxiao Fang, Jiayi Li, **Feijiang Han**, et al.
+
+- ``Information Sciences 2024`` [MAB-RP: A Multi-Armed Bandit based workers selection scheme for accurate data collection in crowdsensing](https://www.sciencedirect.com/science/article/abs/pii/S0020025524004675)  
 Yuwei Lou, Jianheng Tang, **Feijiang Han**, Anfeng Liu, et al.
 
-<div class="badge">IEEE IoT Journal 2023</div> [BTV-CMAB: A bi-directional trust verification-based combinatorial multiarmed bandit scheme for mobile crowdsourcing](https://ieeexplore.ieee.org/abstract/document/10302275)  
+- ``Information and Software Technology 2024`` [Fctree: Visualization of function calls in execution](https://www.sciencedirect.com/science/article/pii/S0950584924001502)  
+Fei Zhou, Yifan Fan, Shengchao Lv, Lingxiao Jiang, Zhuo Chen, Jingui Yuan, **Feijiang Han**, et al.
+
+- ``IEEE IoT Journal 2023`` [CRL-MABA: a completion rate learning-based accurate data collection scheme in large-scale energy internet](https://ieeexplore.ieee.org/abstract/document/10375700)  
+Kejia Fan, Jianheng Tang, Wenbin Xie, **Feijiang Han**, Yuwei Huang, et al.
+
+- ``IEEE IoT Journal 2023`` [BTV-CMAB: A bi-directional trust verification-based combinatorial multiarmed bandit scheme for mobile crowdsourcing](https://ieeexplore.ieee.org/abstract/document/10302275/)  
 Jianheng Tang, Kejia Fan, Wenbin Xie, **Feijiang Han**, et al.
 
+- ``Computer Communications 2023`` [A Semi-supervised Sensing Rate Learning based CMAB scheme to combat COVID-19 by trustful data collection in the crowd](https://www.sciencedirect.com/science/article/pii/S0140366423001433)  
+Jianheng Tang, Kejia Fan, Wenbin Xie, Lingxiao Zeng, **Feijiang Han**, et al.
+
 <style>
-.paper-box {
-    display: flex;
-    margin-bottom: 2em;
-}
-
-.paper-box-image {
-    flex: 0 0 30%;
-    position: sticky;
-    top: 20px;
-    align-self: flex-start;
-    margin-right: 2em;
-}
-
-.paper-box-text {
-    flex: 1;
-}
-
-.badge {
-    display: inline-block;
-    padding: 0.25em 0.6em;
-    margin-right: 1em;
-    font-size: 0.9em;
-    font-weight: 600;
-    line-height: 1.5;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: 0.25rem;
-    background-color: #f8f9fa;
-    color: #495057;
-    margin-bottom: 0.5em;
-}
-
 .paper-interaction {
     margin-top: 10px;
     padding: 8px;
@@ -179,27 +165,28 @@ Jianheng Tang, Kejia Fan, Wenbin Xie, **Feijiang Han**, et al.
 .paper-image-hover {
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
-    width: 100%;
-    border-radius: 4px;
 }
 
 .paper-image-hover:hover {
     transform: scale(1.05);
 }
 
-.paper-abstract {
+.paper-image, .paper-abstract {
     display: none;
     margin-top: 10px;
     padding: 10px;
     background-color: #f8f9fa;
     border-radius: 4px;
     border: 1px solid #e9ecef;
+}
+
+.paper-abstract {
     font-size: 0.9em;
     line-height: 1.6;
     text-align: justify;
 }
 
-.paper-abstract.active {
+.paper-image.active, .paper-abstract.active {
     display: block;
 }
 </style>
