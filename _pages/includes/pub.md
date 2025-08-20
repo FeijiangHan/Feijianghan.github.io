@@ -189,6 +189,33 @@ Jianheng Tang, Kejia Fan, Wenbin Xie, Lingxiao Zeng, **Feijiang Han**, et al.
 .paper-image.active, .paper-abstract.active {
     display: block;
 }
+
+/* 论文列表样式 */
+li code {
+    background-color: #f8f9fa;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #495057;
+    margin-right: 4px;
+    border: 1px solid #e9ecef;
+}
+
+li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+li a {
+    color: #0366d6;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+li a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
 </style>
 
 <script>
