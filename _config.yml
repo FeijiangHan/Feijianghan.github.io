@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Feijiang Han"
-description              : "Feijiang Han's academic homepage."
+description              : "Feijiang Han (韩非江) - NLP Researcher at UPenn | Research in Large Language Models (LLMs), Vision-Language Models (VLMs), WebShell Detection, Layout Analysis, and Crowdsensing | 自然语言处理 深度学习 机器学习"
 repository               : "Feijianghan/Feijianghan.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -15,8 +15,8 @@ google_scholar_stats_use_cdn : true
 google_analytics_id      : G-XMDWG8RXJ1 # get google_analytics_id from https://analytics.google.com/analytics/
 
 # SEO Related
-google_site_verification :  dMgjss1TidDcPLVvrGR-J8k9sqRdKIkbgKYnfK3G_kU # get google_site_verification from https://search.google.com/search-console/about
-bing_site_verification   :  840E1408A8FBA11C67FA0F1C303FC59F # get bing_site_verification from https://www.bing.com/webmasters/about
+google_site_verification : dMgjss1TidDcPLVvrGR-J8k9sqRdKIkbgKYnfK3G_kU # get google_site_verification from https://search.google.com/search-console/about
+bing_site_verification   : 840E1408A8FBA11C67FA0F1C303FC59F # get bing_site_verification from https://www.bing.com/webmasters/about
 baidu_site_verification  : codeva-Vmc6w9FEF7 # get baidu_site_verification from https://ziyuan.baidu.com/login/index?u=/site/index
 
 # Site Author
