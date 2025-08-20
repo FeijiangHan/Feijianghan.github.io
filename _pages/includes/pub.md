@@ -24,13 +24,6 @@
 <div class="paper-abstract" id="webshell_detection_abstract">
 WebShell attacks, where malicious scripts are injected into web servers, pose a significant cybersecurity threat. Traditional machine learning and deep learning methods are often hampered by challenges such as the need for extensive training data, catastrophic forgetting, and poor generalization. Recently, Large Language Models (LLMs) have emerged as a powerful alternative for code-related tasks, but their potential in WebShell detection remains underexplored. In this paper, we make two major contributions: (1) a comprehensive evaluation of seven LLMs, including GPT-4, LLaMA 3.1 70B, and Qwen 2.5 variants, benchmarked against traditional sequence- and graph-based methods using a dataset of 26.59K PHP scripts, and (2) the Behavioral Function-Aware Detection (BFAD) framework, designed to address the specific challenges of applying LLMs to this domain. Our framework integrates three components: a Critical Function Filter that isolates malicious PHP function calls, a Context-Aware Code Extraction strategy that captures the most behaviorally indicative code segments, and Weighted Behavioral Function Profiling (WBFP) that enhances in-context learning by prioritizing the most relevant demonstrations based on discriminative function-level profiles. Our results show that, stemming from their distinct analytical strategies, larger LLMs achieve near-perfect precision but lower recall, while smaller models exhibit the opposite trade-off. However, all baseline models lag behind previous State-Of-The-Art (SOTA) methods. With the application of BFAD, the performance of all LLMs improves significantly, yielding an average F1 score increase of 13.82%. Notably, larger models like GPT-4, LLaMA-3.1-70B, and Qwen-2.5-Coder-14B now outperform SOTA benchmarks, while smaller models such as Qwen-2.5-Coder-3B achieve performance competitive with traditional methods. This work is the first to explore the feasibility and limitations of LLMs for WebShell detection and provides solutions to address the challenges in this task.
 </div>
-
-<div class="paper-interaction" onclick="toggleImage('webshell_detection_framework')">
-🔍 Click to see the framework architecture
-</div>
-<div class="paper-image" id="webshell_detection_framework">
-<img src="images/webshell_detection.png" alt="BFAD Framework Architecture">
-</div>
 </div>
 </div>
 
@@ -54,15 +47,11 @@ WebShell attacks, where malicious scripts are injected into web servers, pose a 
 <div class="paper-abstract" id="latex2layout_abstract">
 General-purpose Vision-Language Models (VLMs) are increasingly integral to modern AI systems for document understanding, yet their ability to perform fine-grained layout analysis remains severely underdeveloped. Overcoming this requires a large-scale, high-fidelity training dataset. However, current annotation methods, which rely on parsing rendered PDFs, are costly, error-prone, and fail to scale effectively. This work introduces a paradigm shift in data acquisition to resolve this bottleneck. We present LaTeX2Layout, a novel and generalizable procedural pipeline that obtains ground-truth layout information not from the final PDF, but directly from the LaTeX compilation process itself. By instrumenting the compiler, our method produces pixel-perfect bounding boxes and reading order, entirely bypassing the ambiguities of post-rendering parsers. This efficient and accurate pipeline enables us to generate a massive dataset of 140K pages, including 120K programmatically-generated variants that more than double the layout diversity of real-world datasets. This unique dataset allows us to fine-tune a highly efficient 3B parameter VLM, employing a curriculum learning strategy that re-ranks training examples from simple to complex layouts to optimize convergence. Our model establishes a new state-of-the-art, achieving a Kendall's Tau of 0.95 for reading order and a mAP@0.5 of 0.91 for element grounding---a nearly 200% relative improvement over formidable zero-shot baselines like GPT-4o and Claude-3.7.
 </div>
+</div>
+</div>
 
-<div class="paper-interaction" onclick="toggleImage('latex2layout_pipeline')">
-🔍 Click to see the pipeline overview
-</div>
-<div class="paper-image" id="latex2layout_pipeline">
-<img src="images/latex2layout.png" alt="LaTeX2Layout Pipeline">
-</div>
-</div>
-</div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><img src='images/webshell_family.png' alt="WebShell Family Classification" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
 
 [Beyond Detection: A Comprehensive Benchmark and Study on Representation Learning for Fine-Grained Webshell Family Classification]()
 
@@ -79,10 +68,12 @@ General-purpose Vision-Language Models (VLMs) are increasingly integral to moder
 <div class="paper-abstract" id="webshell_family_abstract">
 Malicious WebShells represent a severe and evolving threat, compromising critical digital infrastructures and endangering public services in sectors such as healthcare and finance. While the research community has achieved considerable success in WebShell detection (distinguishing malicious from benign samples), we argue it is time to advance from passive detection to a new stage of in-depth analysis and proactive defense. A promising and critical direction is the automation of WebShell family classification: identifying the specific malware lineage to understand an adversary's tactics and enable a precise, rapid response. This crucial task, however, remains a largely unexplored area that currently relies on slow, manual expert analysis. To address this gap, we present the first systematic study to automate WebShell family classification. Our method begins with extracting dynamic function call traces to capture inherent behaviors that are resistant to common encryption and obfuscation. To enhance the scale and diversity of our dataset for a more stable evaluation, we augment these real-world traces with new variants synthesized by a Large Language Model (LLM). These augmented traces are then abstracted into sequences, graphs, and trees, providing a foundation to benchmark a comprehensive suite of representation methods. Our evaluation spans classic sequence-based embeddings (CBOW, GloVe), transformers (BERT, SimCSE), and a range of structure-aware algorithms, including Graph Kernels, Graph Edit Distance, Graph2Vec, and various Graph Neural Networks.
 </div>
+</div>
+</div>
 
 ## 🔮 Unlocking and Understanding LLMs
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">MOSS@ICML2025</div><img src='images/zerotuning.png' alt="ZeroTuning Overview" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">MOSS@ICML2025</div><img src='images/ZeroTuning.png' alt="ZeroTuning Overview" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [ZeroTuning: Unlocking the Initial Token's Power to Enhance Large Language Models Without Training](https://arxiv.org/abs/2505.11739)
@@ -102,26 +93,17 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
 <div class="paper-abstract" id="zerotuning_abstract">
 Training-free methods for enhancing large language models (LLMs) have attracted growing interest recently, with token-level attention tuning emerging as an interpretable and promising direction. However, existing methods typically rely on auxiliary mechanisms to identify important or irrelevant task-specific tokens, introducing potential bias and limiting applicability. In this work, we uncover a surprising and elegant alternative: the semantically empty initial token (e.g., <BOS> in Llama) serves as a powerful and underexplored control point for optimizing model behavior. Through theoretical analysis, we show that tuning the initial token's attention sharpens or flattens the attention distribution over subsequent tokens, and its role as an attention sink amplifies this effect. Empirically, we find that: (1) tuning its attention improves LLM performance across tasks more effectively than tuning other task-specific tokens; (2) the effect follows a consistent trend across layers, with earlier layers having greater impact, but varies across attention heads, with different heads showing distinct preferences in how they attend to this token. Based on these findings, we propose ZeroTuning, a training-free approach that improves LLM performance by applying head-specific attention adjustments to this special token. Despite tuning only one token, ZeroTuning achieves higher average performance on text classification, multiple-choice QA, and multi-turn conversation tasks across models such as LLama, Qwen, and DeepSeek.
 </div>
-
-<div class="paper-interaction" onclick="toggleImage('zerotuning_mechanism')">
-🔍 Click to see how ZeroTuning works
-</div>
-<div class="paper-image" id="zerotuning_mechanism">
-<img src="images/zerotuning.png" alt="ZeroTuning Mechanism">
-</div>
 </div>
 </div>
 
 ## 🌟 Foundation Research
 
-``Information Sciences 2023`` [Credit and quality intelligent learning based multi-armed bandit scheme for unknown worker selection in multimedia MCS](https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290)
-Jianheng Tang, **Feijiang Han**, Kejia Fan, et al.
-
+- ``Information Sciences 2023`` [Credit and quality intelligent learning based multi-armed bandit scheme for unknown worker selection in multimedia MCS](https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290)  
+Jianheng Tang, **Feijiang Han**, Kejia Fan, et al.  
 **Key Points**:
-- Novel CQL-MAB scheme for solving the Post-Unknown Worker Recruitment problem in MCS
-- Integrates credit identification and quality calculation for worker selection
-- Theoretically proven truthfulness and efficiency in reverse auction settings
-
+  - Novel CQL-MAB scheme for solving the Post-Unknown Worker Recruitment problem in MCS
+  - Integrates credit identification and quality calculation for worker selection
+  - Theoretically proven truthfulness and efficiency in reverse auction settings
 <div class="paper-interaction" onclick="toggleAbstract('cql_mab_abstract')">
 📑 Click to see abstract
 </div>
@@ -129,13 +111,13 @@ Jianheng Tang, **Feijiang Han**, Kejia Fan, et al.
 The field of intelligent multimedia systems, which rely heavily on multimodal models trained on large amounts of high-quality data, has been revolutionized by the use of deep learning. One promising approach to collect such multimodal data is Mobile Crowd Sensing (MCS). However, MCS platforms face a significant challenge in selecting both high-credit and high-quality workers at low cost due to the Post-Unknown Worker Recruitment (PUWR) problem. The PUWR problem makes it difficult to determine the credits and qualities of workers in advance, which can lead to the recruitment of dishonest or low-quality workers. This problem severely affects the quality and quantity of MCS data collection, posing a serious threat to the security and robustness of large-scale multimedia models. To address this issue, we propose a Credit and Quality Learning based Multi-Armed Bandit (CQL-MAB) scheme, which consists of a novel credit identification algorithm, a fine-grained worker quality calculation method, and a two-stage reward-based Multi-Armed Bandit (MAB) for worker selection in reverse auction. The theoretical proof shows that the CQL-MAB scheme achieves the truthfulness, individual rationality, and efficiency of the auction mechanism. A large number of simulation experiments on real data traces are conducted to demonstrate the outstanding performance of CQL-MAB.
 </div>
 
-- ``UBICOMP 2025`` [CALM: A Ubiquitous Crowdsourced Analytic Learning Mechanism for Continual Service Construction with Data Privacy Preservation](https://dl.acm.org/doi/abs/10.1145/3729473)
+- ``UBICOMP 2025`` [CALM: A Ubiquitous Crowdsourced Analytic Learning Mechanism for Continual Service Construction with Data Privacy Preservation](https://dl.acm.org/doi/abs/10.1145/3729473)  
 Kejia Fan, Yuwei Huang, Jiayi He, **Feijiang Han**, et al.
 
-- ``Information Sciences 2024`` [MAB-RP: A Multi-Armed Bandit based workers selection scheme for accurate data collection in crowdsensing](https://www.sciencedirect.com/science/article/abs/pii/S0020025524004675) 
+- ``Information Sciences 2024`` [MAB-RP: A Multi-Armed Bandit based workers selection scheme for accurate data collection in crowdsensing](https://www.sciencedirect.com/science/article/abs/pii/S0020025524004675)  
 Yuwei Lou, Jianheng Tang, **Feijiang Han**, Anfeng Liu, et al.
 
-- ``IEEE IoT Journal 2023`` [BTV-CMAB: A bi-directional trust verification-based combinatorial multiarmed bandit scheme for mobile crowdsourcing](https://ieeexplore.ieee.org/abstract/document/10302275)
+- ``IEEE IoT Journal 2023`` [BTV-CMAB: A bi-directional trust verification-based combinatorial multiarmed bandit scheme for mobile crowdsourcing](https://ieeexplore.ieee.org/abstract/document/10302275)  
 Jianheng Tang, Kejia Fan, Wenbin Xie, **Feijiang Han**, et al.
 
 <style>
@@ -173,13 +155,6 @@ Jianheng Tang, Kejia Fan, Wenbin Xie, **Feijiang Han**, et al.
 </style>
 
 <script>
-function toggleImage(imageId) {
-    const image = document.getElementById(imageId);
-    if (image) {
-        image.classList.toggle('active');
-    }
-}
-
 function toggleAbstract(abstractId) {
     const abstract = document.getElementById(abstractId);
     if (abstract) {
