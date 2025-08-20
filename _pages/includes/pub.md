@@ -130,6 +130,39 @@ Yuwei Lou, Jianheng Tang, **Feijiang Han**, Anfeng Liu, et al.
 Jianheng Tang, Kejia Fan, Wenbin Xie, **Feijiang Han**, et al.
 
 <style>
+.paper-box {
+    display: flex;
+    margin-bottom: 2em;
+}
+
+.paper-box-image {
+    flex: 0 0 30%;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+    margin-right: 2em;
+}
+
+.paper-box-text {
+    flex: 1;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.6em;
+    margin-right: 1em;
+    font-size: 0.9em;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    background-color: #f8f9fa;
+    color: #495057;
+    margin-bottom: 0.5em;
+}
+
 .paper-interaction {
     margin-top: 10px;
     padding: 8px;
@@ -146,28 +179,27 @@ Jianheng Tang, Kejia Fan, Wenbin Xie, **Feijiang Han**, et al.
 .paper-image-hover {
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
 }
 
 .paper-image-hover:hover {
     transform: scale(1.05);
 }
 
-.paper-image, .paper-abstract {
+.paper-abstract {
     display: none;
     margin-top: 10px;
     padding: 10px;
     background-color: #f8f9fa;
     border-radius: 4px;
     border: 1px solid #e9ecef;
-}
-
-.paper-abstract {
     font-size: 0.9em;
     line-height: 1.6;
     text-align: justify;
 }
 
-.paper-image.active, .paper-abstract.active {
+.paper-abstract.active {
     display: block;
 }
 </style>
