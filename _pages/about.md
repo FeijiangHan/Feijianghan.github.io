@@ -32,33 +32,9 @@ You can find my publications on <a href='https://scholar.google.com.hk/citations
 - *July 2025*: &nbsp;🎉 Paper accepted to **COLM 2025** - "LLMs for WebShell Detection"
 - *June 2025*: &nbsp;🎉 Paper accepted to **MOSS@ICML2025** - "ZeroTuning: Enhancing LLMs Without Training"
 
-# 📝 Selected Publications 
+# 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">MOSS@ICML2025</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[ZeroTuning: Unlocking the Initial Token's Power to Enhance Large Language Models Without Training](https://arxiv.org/abs/2505.11739)
-
-**Feijiang Han**, Xiaodong Yu, Jianheng Tang, Delip Rao, Lyle Ungar
-
-[**Paper**](https://arxiv.org/abs/2505.11739) <strong><span class='show_paper_citations' data='PEJ5x3EAAAAJ:ALROH1vI_8AC'></span></strong>
-- A novel training-free optimization method for enhancing LLMs through initial token manipulation
-</div>
-</div>
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">COLM 2025</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Can LLMs handle WebShell detection? Overcoming Detection Challenges with Behavioral Function-Aware Framework](https://arxiv.org/abs/2504.13811)
-
-**Feijiang Han**, Jiaming Zhang, Chuyi Deng, Jianheng Tang, Yunhuai Liu
-
-[**Paper**](https://arxiv.org/abs/2504.13811) <strong><span class='show_paper_citations' data='PEJ5x3EAAAAJ:2osOgNQ5qMEC'></span></strong>
-- Innovative application of LLMs in cybersecurity, focusing on WebShell detection
-</div>
-</div>
-
-For a complete list of publications, please visit my [Google Scholar](https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ)
+{% include paper_list.html %}
 
 # 🎖 Honors and Awards
 - *2024* Xiaomi Special Scholarship (Top 10 university-wide)
