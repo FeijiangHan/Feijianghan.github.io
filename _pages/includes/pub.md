@@ -124,87 +124,31 @@ The field of intelligent multimedia systems, which rely heavily on multimodal mo
 </div>
 
 
-<div class='paper-box'><div class='paper-box-text-only'><div class="badge">UBICOMP 2025</div>
-
-[CALM: A Ubiquitous Crowdsourced Analytic Learning Mechanism for Continual Service Construction with Data Privacy Preservation](https://dl.acm.org/doi/abs/10.1145/3729473)  
+- ``UBICOMP 2025`` [CALM: A Ubiquitous Crowdsourced Analytic Learning Mechanism for Continual Service Construction with Data Privacy Preservation](https://dl.acm.org/doi/abs/10.1145/3729473)  
 Kejia Fan, Yuwei Huang, Jiayi He, **Feijiang Han**, Jianheng Tang, et al.
-</div></div>
 
-<div class='paper-box'><div class='paper-box-text-only'><div class="badge">arXiv 2025</div>
-
-[APFL: Analytic Personalized Federated Learning via Dual-Stream Least Squares](https://arxiv.org/abs/2508.10732)  
+- ``arXiv 2025`` [APFL: Analytic Personalized Federated Learning via Dual-Stream Least Squares](https://arxiv.org/abs/2508.10732)  
 Kejia Fan, Jianheng Tang, Zixuan Yang, **Feijiang Han**, Jiayi Li, et al.
-</div></div>
 
-<div class='paper-box'><div class='paper-box-text-only'><div class="badge">arXiv 2025</div>
-
-[ACU: Analytic Continual Unlearning for Efficient and Exact Forgetting with Privacy Preservation](https://arxiv.org/abs/2505.12239)  
+- ``arXiv 2025`` [ACU: Analytic Continual Unlearning for Efficient and Exact Forgetting with Privacy Preservation](https://arxiv.org/abs/2505.12239)  
 Jianheng Tang, Haotian Zhuang, Dongxiao Fang, Jiayi Li, **Feijiang Han**, et al.
-</div></div>
 
-<div class='paper-box'><div class='paper-box-text-only'><div class="badge">Information Sciences 2024</div>
-
-[MAB-RP: A Multi-Armed Bandit based workers selection scheme for accurate data collection in crowdsensing](https://www.sciencedirect.com/science/article/abs/pii/S0020025524004675)  
+- ``Information Sciences 2024`` [MAB-RP: A Multi-Armed Bandit based workers selection scheme for accurate data collection in crowdsensing](https://www.sciencedirect.com/science/article/abs/pii/S0020025524004675)  
 Yuwei Lou, Jianheng Tang, **Feijiang Han**, Anfeng Liu, et al.
-</div></div>
 
-<div class='paper-box'><div class='paper-box-text-only'><div class="badge">Information and Software Technology 2024</div>
-
-[Fctree: Visualization of function calls in execution](https://www.sciencedirect.com/science/article/pii/S0950584924001502)  
+- ``Information and Software Technology 2024`` [Fctree: Visualization of function calls in execution](https://www.sciencedirect.com/science/article/pii/S0950584924001502)  
 Fei Zhou, Yifan Fan, Shengchao Lv, Lingxiao Jiang, Zhuo Chen, Jingui Yuan, **Feijiang Han**, et al.
-</div></div>
 
-<div class='paper-box'><div class='paper-box-text-only'><div class="badge">IEEE IoT Journal 2023</div>
-
-[CRL-MABA: a completion rate learning-based accurate data collection scheme in large-scale energy internet](https://ieeexplore.ieee.org/abstract/document/10375700)  
+- ``IEEE IoT Journal 2023`` [CRL-MABA: a completion rate learning-based accurate data collection scheme in large-scale energy internet](https://ieeexplore.ieee.org/abstract/document/10375700)  
 Kejia Fan, Jianheng Tang, Wenbin Xie, **Feijiang Han**, Yuwei Huang, et al.
-</div></div>
 
-<div class='paper-box'><div class='paper-box-text-only'><div class="badge">IEEE IoT Journal 2023</div>
-
-[BTV-CMAB: A bi-directional trust verification-based combinatorial multiarmed bandit scheme for mobile crowdsourcing](https://ieeexplore.ieee.org/abstract/document/10302275/)  
+- ``IEEE IoT Journal 2023`` [BTV-CMAB: A bi-directional trust verification-based combinatorial multiarmed bandit scheme for mobile crowdsourcing](https://ieeexplore.ieee.org/abstract/document/10302275/)  
 Jianheng Tang, Kejia Fan, Wenbin Xie, **Feijiang Han**, et al.
-</div></div>
 
-<div class='paper-box'><div class='paper-box-text-only'><div class="badge">Computer Communications 2023</div>
-
-[A Semi-supervised Sensing Rate Learning based CMAB scheme to combat COVID-19 by trustful data collection in the crowd](https://www.sciencedirect.com/science/article/pii/S0140366423001433)  
+- ``Computer Communications 2023`` [A Semi-supervised Sensing Rate Learning based CMAB scheme to combat COVID-19 by trustful data collection in the crowd](https://www.sciencedirect.com/science/article/pii/S0140366423001433)  
 Jianheng Tang, Kejia Fan, Wenbin Xie, Lingxiao Zeng, **Feijiang Han**, et al.
-</div></div>
 
 <style>
-.paper-box-text-only {
-    background-color: #ffffff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #e9ecef;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-.paper-box-text-only .badge {
-    display: inline-block;
-    padding: 4px 8px;
-    margin-bottom: 10px;
-    font-size: 0.9em;
-    font-weight: 500;
-    color: #0366d6;
-    background-color: #f1f8ff;
-    border: 1px solid #c8e1ff;
-    border-radius: 4px;
-}
-
-.paper-box-text-only a {
-    color: #0366d6;
-    text-decoration: none;
-    transition: color 0.2s ease-in-out;
-}
-
-.paper-box-text-only a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
 .paper-interaction {
     margin-top: 10px;
     padding: 8px;

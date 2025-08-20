@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I'm a Computer Science Master's student at the University of Pennsylvania <img src='./images/upenn.png' style="width: 1em;">, working on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications. **I'm graduating in Fall 2026 and currently applying for Ph.D. programs.**
+I'm a Computer Science Master's student at the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.3em;">, working on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications. **I'm graduating in Fall 2026 and currently applying for Ph.D. programs.**
 
 I'm fortunate to be advised by [Prof. Chris Callison-Burch](https://www.linkedin.com/in/chris-callison-burch/), [Prof. Lyle Ungar](http://linkedin.com/in/lyle-ungar-b061474/), and [Delip Rao](https://www.linkedin.com/in/deliprao/) at the University of Pennsylvania. I also collaborate with [Xiaodong Yu](https://www.xiaodongyu.me/) from AMD and Jianheng Tang and [Prof. Yunhuai Liu](https://cs.pku.edu.cn/info/1234/2111.htm) at Peking University.
 
