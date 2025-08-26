@@ -84,7 +84,7 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
 
 **Feijiang Han**, Xiaodong Yu, Jianheng Tang, Delip Rao, Lyle Ungar
 
-[**Paper**](https://arxiv.org/abs/2505.11739) 
+[**Paper**](https://arxiv.org/abs/2505.11739) \| [**Code Demo**](https://github.com/FeijiangHan/MOSS_ZeroTuning)
 
 **Key Points**:
 - Novel training-free optimization through initial token manipulation
