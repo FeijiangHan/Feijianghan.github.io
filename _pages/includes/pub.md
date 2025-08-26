@@ -32,11 +32,11 @@ WebShell attacks, where malicious scripts are injected into web servers, pose a 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><a href="" target="_blank"><img src='images/latex2layout.png' alt="LaTeX2Layout Pipeline" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
-[LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for Layout Detection]()
+[LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for Layout Detection] (Coming Soon)
 
 **Feijiang Han**, Zelong Wang, Bowen Wang, Xinxin Liu, Skyler Cheung, Delip Rao, Chris Callison-Burch, Lyle Ungar
 
-[**Paper**]() \| [**Website**](https://feijianghan.github.io/LaTeX2Layout)
+[**Paper**] \| [**Code & Dataset**] (Coming Soon)
 
 **Key Points**:
 - Novel pipeline that extracts layout information directly from LaTeX compilation
@@ -55,11 +55,11 @@ General-purpose Vision-Language Models (VLMs) are increasingly integral to moder
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><a href="" target="_blank"><img src='images/webshell_family.png' alt="WebShell Family Classification" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Beyond Detection: A Comprehensive Benchmark and Study on Representation Learning for Fine-Grained Webshell Family Classification]()
+[Beyond Detection: A Comprehensive Benchmark and Study on Representation Learning for Fine-Grained Webshell Family Classification] (Coming Soon)
 
 **Feijiang Han**
 
-[**Paper**]() \| [**Website**](https://feijianghan.github.io/WebShell-Family-Classification)
+[**Paper**] \| [**Code & Dataset**] (Coming Soon)
 
 **Key Points**:
 - First systematic study on automating WebShell family classification
@@ -84,7 +84,7 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
 
 **Feijiang Han**, Xiaodong Yu, Jianheng Tang, Delip Rao, Lyle Ungar
 
-[**Paper**](https://arxiv.org/abs/2505.11739) \| [**Website**](https://feijianghan.github.io/ZeroTuning)
+[**Paper**](https://arxiv.org/abs/2505.11739) 
 
 **Key Points**:
 - Novel training-free optimization through initial token manipulation
