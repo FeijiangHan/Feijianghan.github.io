@@ -27,12 +27,10 @@ My research is dedicated to advancing Large Language Models and Multimodal LLMs 
 - **Pushing LLM Application Boundaries**: Developing innovative applications and benchmarking in security, code understanding, and scientific research automation
 - **Advancing Model Evolution**: Building novel approaches for data synthesis and training optimization
 
-I'm also passionate about applying AI to solve real-world problems and create positive societal impact. As the Co-Founder of [Savable AI](https://www.savable.ai/) <img srof Pennsylvania c='./images/savableai.png' style="width: 1.3em;">, I'm leading the development of an advanced AI system for e-commerce. 1/ Our AI technology continuously scans and verifies Amazon promo codes and discounts, ensuring users always get the best deals. 2/ The system tracks price drops in real-time and uses sophisticated algorithms to predict future price trends. 3/ By analyzing user preferences and shopping patterns, we provide personalized product recommendations, helping users discover products they truly need while saving money.
-
-Previously, I worked on reinforcement learning in crowdsensing systems and contributed to HCI research, which shaped my perspective on building interesting and practical AI solutions.
-
+Previously, I worked on reinforcement learning in crowdsensing systems and contributed to HCI research, which shaped my perspective on building interesting and practical AI solutions. This drive led me to co-found [Savable AI](https://www.savable.ai/)<img src='./images/savableai.png' style="width: 1.3em;">, where we're developing intelligent systems to revolutionize e-commerce. Our AI technology 1/ discovers and validates the best deals through advanced price tracking, 2/ leverages LLMs to analyze product information and verify coupons, and 3/ powers a smart recommendation system that helps users find exactly what they need at the best price.
 
 You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'>Google Scholar</a>.
+
 
 {% include_relative includes/news.md %}
 
