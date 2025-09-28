@@ -4,16 +4,16 @@
 
 *For a complete list of publications, please visit my [Google Scholar](https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ)*
 
-## 🔍 NLP & (M)LLM Applications
+## 🔍 Research Interest 1: NLP & LLM & VLM Application
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">COLM 2025</div><a href="https://arxiv.org/abs/2504.13811" target="_blank"><img src='images/webshell_detection.png' alt="WebShell Detection Framework" class="paper-image-hover" width="100%"></a></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">COLM 2025</div><a href="https://arxiv.org/abs/2504.13811v3" target="_blank"><img src='images/webshell_detection.png' alt="WebShell Detection Framework" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Can LLMs handle WebShell detection? Overcoming Detection Challenges with Behavioral Function-Aware Framework](https://arxiv.org/abs/2504.13811)
+[Can LLMs handle WebShell detection? Overcoming Detection Challenges with Behavioral Function-Aware Framework](https://arxiv.org/abs/2504.13811v3)
 
 **Feijiang Han**, Jiaming Zhang, Chuyi Deng, Jianheng Tang, Yunhuai Liu
 
-[**Paper**](https://arxiv.org/abs/2504.13811) \| [**Website**](https://github.com/FeijiangHan/LLM-4-Webshell-Detection)
+[**Paper**](https://arxiv.org/abs/2504.13811v3) \| [**Blog**](https://www.alphaxiv.org/abs/2504.13811v3)
 
 **Key Points**:
 - First comprehensive study of LLMs' capabilities in WebShell detection
@@ -32,14 +32,14 @@ WebShell attacks, where malicious scripts are injected into web servers, pose a 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><a href="" target="_blank"><img src='images/latex2layout.png' alt="LaTeX2Layout Pipeline" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
-[LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for Layout Detection] (Coming Soon)
+LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for Layout Detection
 
 **Feijiang Han**, Zelong Wang, Bowen Wang, Xinxin Liu, Skyler Cheung, Delip Rao, Chris Callison-Burch, Lyle Ungar
 
-[**Paper**] \| [**Code & Dataset**] (Coming Soon)
+[**Paper**](/pdf_viewer/latex2layout/){:target="_blank"} \| [**Code & Dataset**] (Coming Soon)
 
 **Key Points**:
-- Novel pipeline that extracts layout information directly from LaTeX compilation
+- Novel pipeline that extracts PDF layout information directly from LaTeX compilation
 - Custom LaTeX packages for precise element tracking and reading order preservation
 - 200% improvement over zero-shot baselines through curriculum learning and data augmentation
 
@@ -55,11 +55,11 @@ General-purpose Vision-Language Models (VLMs) are increasingly integral to moder
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><a href="" target="_blank"><img src='images/webshell_family.png' alt="WebShell Family Classification" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Beyond Detection: A Comprehensive Benchmark and Study on Representation Learning for Fine-Grained Webshell Family Classification] (Coming Soon)
+Beyond Detection: A Comprehensive Benchmark and Study on Representation Learning for Fine-Grained Webshell Family Classification
 
 **Feijiang Han**
 
-[**Paper**] \| [**Code & Dataset**] (Coming Soon)
+[**Paper**](/pdf_viewer/webshell/){:target="_blank"}
 
 **Key Points**:
 - First systematic study on automating WebShell family classification
@@ -75,16 +75,16 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
 </div>
 </div>
 
-## 🔮 Unlocking and Understanding LLMs
+## 🔮 Research Interest 2: Uncovering NLP & LLM Internal Mechanism and Interpretability
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">MOSS@ICML2025</div><a href="https://arxiv.org/abs/2505.11739" target="_blank"><img src='images/ZeroTuning.png' alt="ZeroTuning Overview" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 [ZeroTuning: Unlocking the Initial Token's Power to Enhance Large Language Models Without Training](https://arxiv.org/abs/2505.11739)
 
-**Feijiang Han**, Xiaodong Yu, Jianheng Tang, Delip Rao, Lyle Ungar
+**Feijiang Han**, Xiaodong Yu, Jianheng Tang, Delip Rao, Weihua Du, Lyle Ungar
 
-[**Paper**](https://arxiv.org/abs/2505.11739) \| [**Code Demo**](https://github.com/FeijiangHan/MOSS_ZeroTuning)
+[**Paper**](https://arxiv.org/abs/2505.11739) \| [**Code & Demo**](https://github.com/FeijiangHan/ZeroTuning) \| [**Blog**](https://www.alphaxiv.org/abs/2505.11739)
 
 **Key Points**:
 - Novel training-free optimization through initial token manipulation
@@ -100,10 +100,29 @@ Training-free methods for enhancing large language models (LLMs) have attracted 
 </div>
 </div>
 
-- ``arXiv 2025`` [Question Tokens Deserve More Attention: Enhancing Large Language Models without Training through Step-by-Step Reading and Question Attention Recalibration](https://arxiv.org/abs/2504.09402)  
-**Feijiang Han**, Lingfeng Guo, Haotian Cui, Zixuan Lyu
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><a href="https://arxiv.org/abs/2504.09402v2" target="_blank"><img src='images/ZeroTuning.png' alt="SSR+" class="paper-image-hover" width="100%"></a></div></div>
+<div class='paper-box-text' markdown="1">
 
-## 🌟 Foundation Research (RL, Unlearning, Crowdsourcing, Federated Learning)
+[Read Before You Think: Mitigating LLM Comprehension Failures with Step-by-Step Reading](https://arxiv.org/abs/2504.09402v2)
+
+**Feijiang Han**, Hengtao Cui, Licheng Guo, Zelong Wang, Zhiyuan Lyu
+
+[**Paper**](https://arxiv.org/abs/2504.09402v2) \| [**Blog**](https://www.alphaxiv.org/abs/2504.09402v2)
+
+**Key Points**:
+- Identified Semantic Misunderstanding as the core bottleneck in LLMs reasoning even with strong methods like CoT
+- Designed SSR Series to resolve this issue by: (1) applying step-by-step reading logic (SSR), (2) enforcing attention on key tokens via self-reference (SSR+), and (3) resolving backward dependencies through iterative re-contextualization (SSR++)
+
+<div class="paper-interaction" onclick="toggleAbstract('ssr_abstract')">
+📑 Click to see abstract
+</div>
+<div class="paper-abstract" id="ssr_abstract">
+Large Language Models (LLMs) often fail on complex reasoning tasks due to flawed question comprehension, not just flawed logic. This paper presents a systematic investigation into these comprehension failures. Our work yields three key insights: (1) the step-by-step principle, effective for calculation, can be migrated to the reading process to enhance comprehension; (2) increasing the proportion of question-related tokens (e.g., via repetition) succeeds by refocusing attention, a mechanism that can be explicitly controlled; and (3) backward dependencies represent a core bottleneck for decoder-only models that persists even with strong methods like Chain-of-Thought. Based on these findings, we introduce the Step-by-Step Reading (SSR) family of prompts. This multi-stage approach culminates in SSR++, a method specifically engineered to deepen model comprehension by guiding it to parse questions with finer granularity, focus attention on critical tokens, and resolve backward dependencies through iterative re-contextualization. SSR++ sets a new state-of-the-art on multiple reasoning benchmarks, and our analysis confirms it works by directly mitigating semantic misunderstanding. These results demonstrate that guiding how a model reads is a powerful and efficient method for improving its reasoning ability.
+</div>
+</div>
+</div>
+
+## 🌟 Research Interest 3: Other Topics (HCI, System, IoT, Federated and Continual Learning)
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Information Sciences 2023</div><a href="https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290" target="_blank"><img src='images/cqlmab.png' alt="CQL-MAB Overview" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
