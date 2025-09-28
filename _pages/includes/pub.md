@@ -36,7 +36,7 @@ LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for La
 
 **Feijiang Han**, Zelong Wang, Bowen Wang, Xinxin Liu, Skyler Cheung, Delip Rao, Chris Callison-Burch, Lyle Ungar
 
-[**Paper**](/pdf_viewer/latex2layout/){:target="_blank"} \| [**Code & Dataset**] (Coming Soon)
+[**Paper**](../pdf_viewer/latex2layout/){:target="_blank"} \| [**Code & Dataset**] (Coming Soon)
 
 **Key Points**:
 - Novel pipeline that extracts PDF layout information directly from LaTeX compilation
@@ -59,7 +59,7 @@ Beyond Detection: A Comprehensive Benchmark and Study on Representation Learning
 
 **Feijiang Han**
 
-[**Paper**](/pdf_viewer/webshell/){:target="_blank"}
+[**Paper**](../pdf_viewer/webshell/){:target="_blank"}
 
 **Key Points**:
 - First systematic study on automating WebShell family classification
@@ -100,7 +100,7 @@ Training-free methods for enhancing large language models (LLMs) have attracted 
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><a href="https://arxiv.org/abs/2504.09402v2" target="_blank"><img src='images/ZeroTuning.png' alt="SSR+" class="paper-image-hover" width="100%"></a></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><a href="https://arxiv.org/abs/2504.09402v2" target="_blank"><img src='images/SSR.png' alt="SSR+" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Read Before You Think: Mitigating LLM Comprehension Failures with Step-by-Step Reading](https://arxiv.org/abs/2504.09402v2)
