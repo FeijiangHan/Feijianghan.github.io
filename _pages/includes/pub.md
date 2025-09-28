@@ -36,7 +36,7 @@ LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for La
 
 **Feijiang Han**, Zelong Wang, Bowen Wang, Xinxin Liu, Skyler Cheung, Delip Rao, Chris Callison-Burch, Lyle Ungar
 
-[**Paper**](../pdf_viewer/pdf_viewer.html?pdf=../../papers/LaTeX2Layout_High_Fidelity_Scalable_Document_Layout_Annotation_Pipeline_for_Layout_Detection.pdf){:target="_blank"} \| [**Code & Dataset**] (Coming Soon)
+[**Paper**](/papers/LaTeX2Layout_High_Fidelity_Scalable_Document_Layout_Annotation_Pipeline_for_Layout_Detection.pdf){:target="_blank"} \| [**Code & Dataset**] (Coming Soon)
 
 **Key Points**:
 - Novel pipeline that extracts PDF layout information directly from LaTeX compilation
@@ -59,7 +59,7 @@ Beyond Detection: A Comprehensive Benchmark and Study on Representation Learning
 
 **Feijiang Han**
 
-[**Paper**](../pdf_viewer/pdf_viewer.html?pdf=../../papers/Beyond_Detection_A_Comprehensive_Benchmark_on_Representation_Learning_for_Fine_Grained_Webshell_Family_Classification.pdf){:target="_blank"}
+[**Paper**](/papers/Beyond_Detection_A_Comprehensive_Benchmark_on_Representation_Learning_for_Fine_Grained_Webshell_Family_Classification.pdf){:target="_blank"}
 
 **Key Points**:
 - First systematic study on automating WebShell family classification
