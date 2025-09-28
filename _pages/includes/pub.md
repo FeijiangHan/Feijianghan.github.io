@@ -77,7 +77,7 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
 
 ## 🔮 Research Interest 2: Uncovering NLP & LLM Internal Mechanism and Interpretability
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">MOSS@ICML2025</div><a href="https://arxiv.org/abs/2505.11739" target="_blank"><img src='images/ZeroTuning2.png' alt="ZeroTuning Overview" class="paper-image-hover" width="100%"></a></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">MOSS@ICML2025</div><a href="https://arxiv.org/abs/2505.11739" target="_blank"><img src='images/ZeroTuningcode.png' alt="ZeroTuning Overview" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 [ZeroTuning: Unlocking the Initial Token's Power to Enhance Large Language Models Without Training](https://arxiv.org/abs/2505.11739)
