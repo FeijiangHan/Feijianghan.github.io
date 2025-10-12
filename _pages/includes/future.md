@@ -1,6 +1,6 @@
 <span class='anchor' id='future'></span>
 
-# 🔮 Future Research Directions
+# ❤️ Future Research Directions
 
 While Transformer-based architectures have dominated recent years, I see substantial room for progress across several directions:
 
