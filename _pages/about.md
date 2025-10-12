@@ -20,7 +20,7 @@ I'm a Computer Science Master's student at the University of Pennsylvania<img sr
 
 I'm fortunate to be advised by [Prof. Chris Callison-Burch](https://www.linkedin.com/in/chris-callison-burch/), [Prof. Lyle Ungar](http://linkedin.com/in/lyle-ungar-b061474/), and [Delip Rao](https://www.linkedin.com/in/deliprao/) at the University of Pennsylvania. I also collaborate with [Xiaodong Yu](https://www.xiaodongyu.me/) from AMD GenAI and [Prof. Yunhuai Liu](https://cs.pku.edu.cn/info/1234/2111.htm) at Peking University.
 
-My research centers on advancing Large Language Models (LLMs) and Multimodal LLMs through approaches that are <u>**E**ffective</u>, <u>**E**fficient</u>, and <u>**E**xplainable</u>. I currently focus on:
+My research centers on advancing Large Language Models (LLMs) and Multimodal LLMs through approaches that are ***E**ffective*, ***E**fficient*, and ***E**xplainable*. I currently focus on:
 
 - **Unlocking LLMs' Internal Mechanisms**: Designing training-free & inference-time optimization methods grounded in attention patterns, activations, representations, token logits, and prompting mechanisms. I'm particularly interested in making models more interpretable while improving their performance (Where + What + How + Why)
 - **Pushing Application Boundaries**: Building impactful systems in security, code understanding, and scientific automation, with measurable real-world outcomes. I believe in creating practical solutions that address open-end and unexplored real-world challenges.
