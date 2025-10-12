@@ -8,11 +8,7 @@ While Transformer-based architectures have dominated recent years, I see substan
 
 Despite extensive progress in both academia and industry, key opportunities remain for improving foundation models:
 
-- **Capability Gaps**: Create targeted benchmarks to expose human–AI gaps, then close them with explainable methods:
-  - Optimize layer and head interactions
-  - Introduce interpretable decoding control
-  - Enable small models to compete with larger ones (Reasoning)
-  - Orchestrate efficient interactions between reasoning and non‑reasoning modules
+- **Capability Gaps**: Create targeted benchmarks to expose human–AI gaps, then close them with explainable methods, such as: (1) Optimize layer and head interactions (Information Flow); (2) Introduce interpretable decoding control (Token Generation); (3) Enable small models to compete with larger ones (Reasoning); (4) Orchestrate efficient interactions between reasoning and non‑reasoning modules 
 
 - **Training vs. Inference**: Inference-time adaptations are effective, but scaling during training will finally surpass and substitute them. As resources allow, I will shift emphasis from inference-time tweaks to training-time optimization.
 
@@ -34,6 +30,4 @@ The next frontier is applying LLMs to scientific discovery, with focus on:
 - **Targeted Solutions**: Adapt and optimize models for specific scientific domains
 - **Evaluation Framework**: Tackle problems through multiple lenses:
   - Unknown problems (benchmark construction)
-  - Known problems with:
-    * Simple evaluation but challenging solutions (effective methods) or high‑cost evaluation (efficiency)
-    * Easy solutions but complex evaluation requirements (e.g., RLVR)
+  - Known problems with: (1) Simple evaluation but challenging solutions (effective methods) or high‑cost evaluation (efficiency); (2) Easy solutions but complex evaluation requirements (e.g., RLVR)
