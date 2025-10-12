@@ -7,7 +7,6 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
 {% if site.google_scholar_stats_use_cdn %}
 {% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
 {% else %}
@@ -17,20 +16,57 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I'm a Computer Science Master's student at the University of Pennsylvania<img src='./images/upenn.png' style="width: 1.35em;">, working on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications. **I'm graduating in Fall 2026 and currently applying for Ph.D. programs.**
+I'm a Computer Science Master's student at the University of Pennsylvania`<img src='./images/upenn.png' style="width: 1.35em;">`, working on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications. **I'm graduating in Fall 2026 and currently applying for Ph.D. programs.**
 
-I'm fortunate to be advised by [Prof. Chris Callison-Burch](https://www.linkedin.com/in/chris-callison-burch/), [Prof. Lyle Ungar](http://linkedin.com/in/lyle-ungar-b061474/), and [Delip Rao](https://www.linkedin.com/in/deliprao/) at the University of Pennsylvania. I also collaborate with [Xiaodong Yu](https://www.xiaodongyu.me/) from AMD and Jianheng Tang and [Prof. Yunhuai Liu](https://cs.pku.edu.cn/info/1234/2111.htm) at Peking University.
+I'm fortunate to be advised by [Prof. Chris Callison-Burch](https://www.linkedin.com/in/chris-callison-burch/), [Prof. Lyle Ungar](http://linkedin.com/in/lyle-ungar-b061474/), and [Delip Rao](https://www.linkedin.com/in/deliprao/) at the University of Pennsylvania. I also collaborate with [Xiaodong Yu](https://www.xiaodongyu.me/) from AMD GenAI and [Prof. Yunhuai Liu](https://cs.pku.edu.cn/info/1234/2111.htm) at Peking University.
 
-My research is dedicated to advancing Large Language Models and Multimodal LLMs through **E**ffective, **E**fficient, and **E**xplainable approaches. I'm particularly focused on:
+My research centers on advancing Large Language Models (LLMs) and Multimodal LLMs through approaches that are **E**ffective, **E**fficient, and **E**xplainable. I currently focus on:
 
-- **Unlocking LLMs' Internal Mechanisms**: Developing training-free optimization methods by understanding and enhancing attention patterns, representations, logits, and prompting mechanisms
-- **Pushing LLM Application Boundaries**: Developing innovative applications and benchmarking in security, code understanding, and scientific research automation
-- **Advancing Model Evolution**: Building novel approaches for data synthesis and training optimization
+- **Unlocking LLMs' Internal Mechanisms**: Designing training-free & inference-time optimization methods grounded in attention patterns, activations, representations, token logits, and prompting mechanisms. I'm particularly interested in making models more interpretable while improving their performance (Where + What + How + Why)
+- **Pushing Application Boundaries**: Building impactful systems in security, code understanding, and scientific automation, with measurable real-world outcomes. I believe in creating practical solutions that address open-end and unexplored real-world challenges.
+- **Advancing Model Evolution**: Developing data synthesis and curation pipelines to overcome annotation & data collection bottlenecks, and exploring post-training optimization (SFT, RL) and distillation to make smaller models competitive (data, training, distillation, pruning)
 
-Previously, I worked on reinforcement learning in crowdsensing systems and contributed to HCI research, which shaped my perspective on building interesting and practical AI solutions. This drive led me to co-found [Savable Koupon AI](https://www.koupon.ai/)<img src='./images/savableai.png' style="width: 4em;">, where we're developing intelligent systems to revolutionize e-commerce. Our AI technology 1/ discovers and validates the best deals through advanced price tracking, 2/ leverages LLMs to analyze product information and verify coupons, and 3/ powers a smart recommendation system that helps users find exactly what they need at the best price.
+Previously, I worked on reinforcement learning in crowdsensing systems and contributed to HCI research, which shaped my perspective on building practical AI solutions. This experience led me to co-found [Savable Koupon AI](https://www.koupon.ai/), where we're revolutionizing e-commerce through AI-powered price tracking, LLM-based product analysis, and intelligent recommendation systems.
 
-You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'>Google Scholar</a>.
+## Future Research Directions
 
+While Transformer-based architectures have dominated recent years, I see substantial room for progress across several directions:
+
+### 1. Fundamental Model Enhancement
+
+Despite extensive progress in both academia and industry, key opportunities remain for improving foundation models:
+
+- **Capability Gaps**: Create targeted benchmarks to expose human–AI gaps, then close them with explainable methods:
+  - Optimize layer and head interactions
+  - Introduce interpretable decoding control
+  - Enable small models to compete with larger ones (Reasoning)
+  - Orchestrate efficient interactions between reasoning and non‑reasoning modules
+
+- **Training vs. Inference**: Inference-time adaptations are effective, but scaling during training will finally surpass and substitute them. As resources allow, I will shift emphasis from inference-time tweaks to training-time optimization.
+
+- **Interpretability for Innovation**: Use interpretability not only to explain but to improve training. For example, insights from the attention‑sink mechanism (since 2022) have informed KV‑cache optimization, extensions to VLMs, and quantization-aware training.
+
+### 2. Multimodal Evolution
+
+As LLM research has outpaced multimodal progress, I am especially interested in:
+
+- Identifying and addressing limitations in current MLLM architectures
+- Developing more efficient architectures for processing multimodal information, considering visual redundancy and modality alignment challenges
+- Exploring novel architectural paradigms beyond current conventions
+
+### 3. AI for Scientific Discovery
+
+The next frontier is applying LLMs to scientific discovery, with focus on:
+
+- **Problem Identification**: Discover valuable new application areas as LLM capabilities expand
+- **Targeted Solutions**: Adapt and optimize models for specific scientific domains
+- **Evaluation Framework**: Tackle problems through multiple lenses:
+  - Unknown problems (benchmark construction)
+  - Known problems with:
+    * Simple evaluation but challenging solutions (effective methods) or high‑cost evaluation (efficiency)
+    * Easy solutions but complex evaluation requirements (e.g., RLVR)
+
+You can find my publications on `<a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'>`Google Scholar`</a>`.
 
 {% include_relative includes/news.md %}
 
