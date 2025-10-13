@@ -22,9 +22,6 @@ I'm a Computer Science Master's student at the University of Pennsylvania<img sr
 
 At Penn, I'm fortunate to be advised by [Prof. Chris Callison-Burch](https://www.linkedin.com/in/chris-callison-burch/), [Prof. Lyle Ungar](http://linkedin.com/in/lyle-ungar-b061474/), and [Delip Rao](https://www.linkedin.com/in/deliprao/). I also collaborate with [Dr. Xiaodong Yu](https://www.xiaodongyu.me/) from AMD GenAI and [Prof. Yunhuai Liu](https://cs.pku.edu.cn/info/1234/2111.htm) from Peking University.
 
-My journey through diverse areas of computer science: backend engineering (Cpp, 2021) -> high-performance computing research (with Prof. Xu Liu from NCSU, 2022-2023) -> front end and human-computer interaction (with Prof. Ying Zhao from CSU, 2023-2024) -> IoT, reinforcement learning in crowdsensing systems (with Prof. Anfeng Liu from CSU, 2023-2024).
-In my senior year (2024), I fell in love with NLP, and throughout my master's program (2025), I have been researching full-time on LLMs/VLMs. All NLP work listed below was completed in 2025.
-
 My journey through diverse areas of computer science: Backend Engineering (C++, 2021) -> High-Performance Computing (with [Prof. Xu Liu, NCSU](https://xl10.github.io/), 2022-2023) -> Human-Computer Interaction (with [Prof. Ying Zhao, CSU](https://faculty.csu.edu.cn/zhaoying/en/index.htm), 2023-2024) -> IoT & Reinforcement Learning (with [Prof. Anfeng Liu, CSU](https://faculty.csu.edu.cn/liuanfeng/en/index.htm), 2023-2024).
 
 In my senior year (2024), I fell in love with NLP and have since dedicated my master's program to research on Large Language Models (LLMs) and Vision-Language Models (VLMs). All NLP work listed below was completed in 2024-2025.
