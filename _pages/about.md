@@ -23,7 +23,7 @@ At Penn, I'm fortunate to be advised by [Prof. Chris Callison-Burch](https://www
 
 My journey through diverse areas of computer science: Backend Engineering (C++, 2021) -> High-Performance Computing (with [Prof. Xu Liu, NCSU](https://xl10.github.io/), 2022-2023) -> Human-Computer Interaction (with [Prof. Ying Zhao, CSU](https://faculty.csu.edu.cn/zhaoying/en/index.htm), 2023-2024) -> IoT & Reinforcement Learning (with [Prof. Anfeng Liu, CSU](https://faculty.csu.edu.cn/liuanfeng/en/index.htm), 2023-2024). In my senior year (2024), I fell in love with NLP and have since dedicated my master's program to research on Large Language Models (LLMs) and Vision-Language Models (VLMs). All NLP work listed below was completed in 2024-2025.
 
-My research centers on advancing LLMs and Multimodal LLMs through approaches that are ***E**ffective*, ***E**fficient*, and ***E**xplainable*. I currently focus on:
+My research centers on advancing LLMs and Multimodal LLMs through ***E**ffective*, ***E**fficient*, and ***E**xplainable* methods. I currently focus on:
 
 - **Unlocking LLMs' Internal Mechanisms**: Designing training-free & inference-time optimization methods grounded in attention patterns, activations, representations, token logits, and prompting mechanisms. I'm particularly interested in making models more interpretable while improving their performance (Where + What + How + Why)
 - **Pushing Application Boundaries**: Building impactful systems in security, code understanding, and scientific automation, with measurable real-world outcomes. I believe in creating practical solutions that address open-end and unexplored real-world challenges.
