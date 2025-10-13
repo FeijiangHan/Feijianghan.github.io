@@ -17,14 +17,11 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 I'm a Computer Science Master's student at the University of Pennsylvania<img src='./images/upenn.png' style="width: 1.35em;">, working on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications.
-
 **[Note] I am actively applying for Ph.D. programs for Fall 2026 admission.**
 
 At Penn, I'm fortunate to be advised by [Prof. Chris Callison-Burch](https://www.linkedin.com/in/chris-callison-burch/), [Prof. Lyle Ungar](http://linkedin.com/in/lyle-ungar-b061474/), and [Delip Rao](https://www.linkedin.com/in/deliprao/). I also collaborate with [Dr. Xiaodong Yu](https://www.xiaodongyu.me/) from AMD GenAI and [Prof. Yunhuai Liu](https://cs.pku.edu.cn/info/1234/2111.htm) from Peking University.
 
-My journey through diverse areas of computer science: Backend Engineering (C++, 2021) -> High-Performance Computing (with [Prof. Xu Liu, NCSU](https://xl10.github.io/), 2022-2023) -> Human-Computer Interaction (with [Prof. Ying Zhao, CSU](https://faculty.csu.edu.cn/zhaoying/en/index.htm), 2023-2024) -> IoT & Reinforcement Learning (with [Prof. Anfeng Liu, CSU](https://faculty.csu.edu.cn/liuanfeng/en/index.htm), 2023-2024).
-
-In my senior year (2024), I fell in love with NLP and have since dedicated my master's program to research on Large Language Models (LLMs) and Vision-Language Models (VLMs). All NLP work listed below was completed in 2024-2025.
+My journey through diverse areas of computer science: Backend Engineering (C++, 2021) -> High-Performance Computing (with [Prof. Xu Liu, NCSU](https://xl10.github.io/), 2022-2023) -> Human-Computer Interaction (with [Prof. Ying Zhao, CSU](https://faculty.csu.edu.cn/zhaoying/en/index.htm), 2023-2024) -> IoT & Reinforcement Learning (with [Prof. Anfeng Liu, CSU](https://faculty.csu.edu.cn/liuanfeng/en/index.htm), 2023-2024). In my senior year (2024), I fell in love with NLP and have since dedicated my master's program to research on Large Language Models (LLMs) and Vision-Language Models (VLMs). All NLP work listed below was completed in 2024-2025.
 
 My research centers on advancing LLMs and Multimodal LLMs through approaches that are ***E**ffective*, ***E**fficient*, and ***E**xplainable*. I currently focus on:
 
