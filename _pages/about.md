@@ -20,6 +20,8 @@ I'm a Computer Science Master's student at the University of Pennsylvania<img sr
 
 I'm fortunate to be advised by [Prof. Chris Callison-Burch](https://www.linkedin.com/in/chris-callison-burch/), [Prof. Lyle Ungar](http://linkedin.com/in/lyle-ungar-b061474/), and [Delip Rao](https://www.linkedin.com/in/deliprao/) at the University of Pennsylvania. I also collaborate with [Xiaodong Yu](https://www.xiaodongyu.me/) from AMD GenAI and [Prof. Yunhuai Liu](https://cs.pku.edu.cn/info/1234/2111.htm) at Peking University.
 
+My journey has been hands-on and interdisciplinary: I started with backend engineering (C++ 2021), then moved into high-performance computing (HPC 2022-2023) and systems optimization, and then shifted toward frontend development and HCI/visualization research (2023). In my senior year (2024), I fell in love with NLP, and throughout my master's program (2025), I have been working full-time on LLMs. Most of the NLP work listed below was completed in this and the previous year.
+
 My research centers on advancing Large Language Models (LLMs) and Multimodal LLMs through approaches that are ***E**ffective*, ***E**fficient*, and ***E**xplainable*. I currently focus on:
 
 - **Unlocking LLMs' Internal Mechanisms**: Designing training-free & inference-time optimization methods grounded in attention patterns, activations, representations, token logits, and prompting mechanisms. I'm particularly interested in making models more interpretable while improving their performance (Where + What + How + Why)
@@ -28,7 +30,7 @@ My research centers on advancing Large Language Models (LLMs) and Multimodal LLM
 
 Previously, I worked on reinforcement learning in crowdsensing systems and contributed to HCI research, which shaped my perspective on building practical AI solutions. This experience led me to co-found [Savable Koupon AI](https://www.koupon.ai/), where we're revolutionizing e-commerce through AI-powered price tracking, LLM-based product analysis, and intelligent recommendation systems.
 
-You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'>Google Scholar</a>.
+You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'>`Google Scholar`</a>.
 
 {% include_relative includes/future.md %}
 
