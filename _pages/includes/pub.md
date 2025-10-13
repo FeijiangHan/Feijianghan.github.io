@@ -13,7 +13,7 @@
 
 **Feijiang Han**, Jiaming Zhang, Chuyi Deng, Jianheng Tang, Yunhuai Liu
 
-[**Paper**](https://arxiv.org/abs/2504.13811v3) \| [**Blog**](https://www.alphaxiv.org/abs/2504.13811v3)
+[**Paper**](https://arxiv.org/abs/2504.13811v3) \| [**Blog**](https://www.alphaxiv.org/abs/2504.13811v3) \| [**Poster**](/papers/LLM_Webshell_Poster.pdf){:target="_blank"}
 
 **Key Points**:
 - First comprehensive study of LLMs' capabilities in WebShell detection
@@ -84,7 +84,7 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
 
 **Feijiang Han**, Xiaodong Yu, Jianheng Tang, Delip Rao, Weihua Du, Lyle Ungar
 
-[**Paper**](https://arxiv.org/abs/2505.11739) \| [**Code & Demo**](https://github.com/FeijiangHan/ZeroTuning) \| [**Blog**](https://www.alphaxiv.org/abs/2505.11739)
+[**Paper**](https://arxiv.org/abs/2505.11739) \| [**Code & Demo**](https://github.com/FeijiangHan/ZeroTuning) \| [**Blog**](https://www.alphaxiv.org/abs/2505.11739) \| [**Poster**](/papers/ZeroTuning_Poster.pdf){:target="_blank"}
 
 **Key Points**:
 - Novel training-free optimization through initial token manipulation
