@@ -21,7 +21,6 @@ Previously, I worked on reinforcement learning in crowdsensing systems and contr
 - 📊 [Google Scholar](https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ) | Research publications
 - 💼 [LinkedIn](https://www.linkedin.com/in/feijianghan/) | Professional network
 - 🌐 [Personal Website](https://feijianghan.github.io) | Coming soon
-- 📱 [Xiaohongshu (Red Note)](https://www.xiaohongshu.com/user/profile/5f96bb470000000001009db4) | Tech sharing in Chinese
 
 ### 🎉 Recent News
 
