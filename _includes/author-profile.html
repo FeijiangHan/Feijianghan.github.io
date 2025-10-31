@@ -9,7 +9,12 @@
   </div>
 
   <div class="author__content">
-    <h3 class="author__name">{{ author.name }}</h3>
+    <h3 class="author__name">{{ author.name }}
+      <span class="pronounce-toggle" style="font-size:0.8em; margin-left:6px; cursor:pointer;" onclick="var n=this.nextElementSibling; n.style.display = (n.style.display==='inline') ? 'none' : 'inline';">
+        <i class="fa fa-volume-up" aria-hidden="true"></i> pronunciation
+      </span>
+      <span class="pronounce-text" style="display:none; font-size:0.8em; color:#666; margin-left:6px;">pronounced like "fei-jyong/fei-John"</span>
+    </h3>
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>
 
