@@ -38,8 +38,8 @@ Previously, I worked on reinforcement learning in crowdsensing systems and contr
 **Feijiang Han**, Jiaming Zhang, Chuyi Deng, Jianheng Tang, Yunhuai Liu
 - ``Under Review`` [LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for Layout Detection]() 
 **Feijiang Han**, Zelong Wang, Bowen Wang, Xinxin Liu, Skyler Cheung, Delip Rao, Chris Callison-Burch, Lyle Ungar
-- ``Under Review`` [Beyond Detection: A Comprehensive Benchmark and Study on Representation Learning for Fine-Grained Webshell Family Classification]()
-**Feijiang Han**
+- ``AAAI 2026`` [Beyond Detection: A Comprehensive Benchmark and Study on Representation Learning for Fine-Grained Webshell Family Classification](https://arxiv.org/abs/2504.13812)
+  **Feijiang Han**
 
 #### 🔮 Unlocking and Understanding LLMs
 
