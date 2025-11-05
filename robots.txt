@@ -1,0 +1,15 @@
+# Disallow search engines from crawling specific paths
+User-agent: *
+Disallow: /_pages/includes/
+
+# Allow access to other directories
+Allow: /
+
+# Specific rules for Google
+User-agent: Googlebot
+Disallow: /_pages/includes/
+
+# Specific rules for Bing
+User-agent: Bingbot
+Disallow: /_pages/includes/
+
