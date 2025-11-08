@@ -6,7 +6,15 @@
 
 ## 🔍 Research Interest 1: Domain-Adapted Language Models for Code, Document, and Scientific Automation
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">COLM 2025</div><a href="https://arxiv.org/abs/2504.13811v3" target="_blank"><img src='images/webshell_detection.png' alt="WebShell Detection Framework" class="paper-image-hover" width="100%"></a></div></div>
+<div class='paper-box'> 
+
+<div class='paper-box-image'>
+<div>
+<div class="badge">COLM 2025</div>
+<a href="https://arxiv.org/abs/2504.13811v3" target="_blank"><img src='images/webshell_detection.png' alt="WebShell Detection Framework" class="paper-image-hover" width="100%"></a>
+</div>
+</div>
+
 <div class='paper-box-text' markdown="1">
 
 [Can LLMs handle WebShell detection? Overcoming Detection Challenges with Behavioral Function-Aware Framework](https://arxiv.org/abs/2504.13811v3)
@@ -26,6 +34,7 @@
 <div class="paper-abstract" id="webshell_detection_abstract">
 WebShell attacks, where malicious scripts are injected into web servers, pose a significant cybersecurity threat. Traditional machine learning and deep learning methods are often hampered by challenges such as the need for extensive training data, catastrophic forgetting, and poor generalization. Recently, Large Language Models (LLMs) have emerged as a powerful alternative for code-related tasks, but their potential in WebShell detection remains underexplored. In this paper, we make two major contributions: (1) a comprehensive evaluation of seven LLMs, including GPT-4, LLaMA 3.1 70B, and Qwen 2.5 variants, benchmarked against traditional sequence- and graph-based methods using a dataset of 26.59K PHP scripts, and (2) the Behavioral Function-Aware Detection (BFAD) framework, designed to address the specific challenges of applying LLMs to this domain. Our framework integrates three components: a Critical Function Filter that isolates malicious PHP function calls, a Context-Aware Code Extraction strategy that captures the most behaviorally indicative code segments, and Weighted Behavioral Function Profiling (WBFP) that enhances in-context learning by prioritizing the most relevant demonstrations based on discriminative function-level profiles. Our results show that, stemming from their distinct analytical strategies, larger LLMs achieve near-perfect precision but lower recall, while smaller models exhibit the opposite trade-off. However, all baseline models lag behind previous State-Of-The-Art (SOTA) methods. With the application of BFAD, the performance of all LLMs improves significantly, yielding an average F1 score increase of 13.82%. Notably, larger models like GPT-4, LLaMA-3.1-70B, and Qwen-2.5-Coder-14B now outperform SOTA benchmarks, while smaller models such as Qwen-2.5-Coder-3B achieve performance competitive with traditional methods. This work is the first to explore the feasibility and limitations of LLMs for WebShell detection and provides solutions to address the challenges in this task.
 </div>
+
 </div>
 </div>
 
@@ -53,6 +62,7 @@ General-purpose Vision-Language Models (VLMs) are increasingly integral to moder
 </div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><a href="" target="_blank"><img src='images/webshell_family.png' alt="WebShell Family Classification" class="paper-image-hover" width="100%"></a></div></div>
+
 <div class='paper-box-text' markdown="1">
 
 Beyond Detection: A Comprehensive Benchmark and Study on Representation Learning for Fine-Grained Webshell Family Classification
@@ -77,7 +87,11 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
 
 ## 🔮 Research Interest 2: Uncovering NLP & LLM Internal Mechanism and Interpretability
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">MOSS@ICML2025</div><a href="https://arxiv.org/abs/2505.11739" target="_blank"><img src='images/ZeroTuningcode.png' alt="ZeroTuning Overview" class="paper-image-hover" width="100%"></a></div></div>
+<!-- <div class='paper-box'>
+
+<div class='paper-box-image'>
+<div><div class="badge">MOSS@ICML2025</div><a href="https://arxiv.org/abs/2505.11739" target="_blank"><img src='images/ZeroTuningcode.png' alt="ZeroTuning Overview" class="paper-image-hover" width="100%"></a></div></div>
+
 <div class='paper-box-text' markdown="1">
 
 [ZeroTuning: Unlocking the Initial Token's Power to Enhance Large Language Models Without Training](https://arxiv.org/abs/2505.11739)
@@ -90,9 +104,7 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
 - Novel training-free optimization through initial token manipulation
 - Improves LLM performance by up to 11.71% without any training
 - Theoretical insights into attention mechanisms and layer/head-specific impacts
-
-</div>
-
+- 
 <div class="paper-interaction" onclick="toggleAbstract('zerotuning_abstract')">
 📑 Click to see abstract
 </div>
@@ -100,10 +112,13 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
 Token-level attention tuning, a class of training-free methods including Post-hoc Attention Steering (PASTA, AutoPASTA) and Attention Calibration (ACT), has emerged as a promising way to improve frozen LLMs with interpretable interventions. However, these methods depend on auxiliary heuristics to identify "important" task-specific tokens, which can introduce bias and limit applicability when token importance is unclear or when using optimized kernels where attention maps are inaccessible. We propose a simpler and more elegant alternative: acting only on the initial token (e.g., <BOS> in LLaMA). We show theoretically that adding lightweight biases to this token's attention logits monotonically controls the entropy of the downstream attention distribution--an effect amplified by its natural function as an attention sink. Our empirical analysis reveals that this tuning process can positively affect LLMs and better unlock their pretrained knowledge, with stronger effects in early layers and distinct scaling preferences across attention heads. Building on these insights, we introduce ZeroTuning: a training-free method that improves LLM performance by applying head-specific attention adjustments to the initial token, requiring zero parameter updates. We present two variants: a supervised mode that calibrates on validation examples, and a novel unsupervised mode that directly minimizes the model's output entropy. Our method requires no KV‑cache or decoding changes, and is kernel‑agnostic (works with SDPA and FlashAttention). The method is lightweight and requires only four lines of modification to the standard LlamaAttention code. It achieves broad gains across 15 datasets and outperforms previous, more complex methods; for instance, with Llama-3.1-8B, it yields relative improvements of 19.9% on classification, 4.5% on question answering, and 2.1% on dialogue. ZeroTuning also works out-of-the-box with quantized inference and maintains its performance improvements with increasing context lengths. Our code and runnable demo are available at https://anonymous.4open.science/r/ZeroTuning.
 </div>
 </div>
-</div>
+</div> -->
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><a href="https://arxiv.org/abs/2504.09402v2" target="_blank"><img src='images/SSR.png' alt="SSR+" class="paper-image-hover" width="100%"></a></div></div>
+<div class='paper-box'>
+
+<div class='paper-box-image'><div><div class="badge">Arxiv</div><a href="https://arxiv.org/abs/2504.09402v2" target="_blank"><img src='images/SSR.png' alt="SSR+" class="paper-image-hover" width="100%"></a></div></div>
+
 <div class='paper-box-text' markdown="1">
 
 [Read Before You Think: Mitigating LLM Comprehension Failures with Step-by-Step Reading](https://arxiv.org/abs/2504.09402v2)
