@@ -29,19 +29,19 @@ WebShell attacks, where malicious scripts are injected into web servers, pose a 
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><a href="" target="_blank"><img src='images/latex2layout.png' alt="LaTeX2Layout Pipeline" class="paper-image-hover" width="100%"></a></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><a href="" target="_blank"><img src='images/latex2layout.png' alt="LaTeX2Layout Pipeline" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for Layout Detection
 
 **Feijiang Han**, Zelong Wang, Bowen Wang, Xinxin Liu, Skyler Cheung, Delip Rao, Chris Callison-Burch, Lyle Ungar
 
-[**Paper**](/papers/LaTeX2Layout_High_Fidelity_Scalable_Document_Layout_Annotation_Pipeline_for_Layout_Detection.pdf){:target="_blank"} \| [**Code & Dataset**] (Coming Soon)
+[**Paper**] \| [**Code & Dataset**] (Coming Soon)
 
 **Key Points**:
-- Novel pipeline that extracts PDF layout information directly from LaTeX compilation
-- Custom LaTeX packages for precise element tracking and reading order preservation
-- 200% improvement over zero-shot baselines through curriculum learning and data augmentation
+- Novel pipeline extracting PDF layout information directly from LaTeX compilation (~~Human annotations and PDF Parsers~~)
+- Custom LaTeX packages for precise element tracking and accurate layout extraction
+- 200% relative improvement over zero-shot baselines through curriculum learning and synthetic data augmentation
 
 <div class="paper-interaction" onclick="toggleAbstract('latex2layout_abstract')">
 📑 Click to see abstract
@@ -52,19 +52,19 @@ General-purpose Vision-Language Models (VLMs) are increasingly integral to moder
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><a href="" target="_blank"><img src='images/webshell_family.png' alt="WebShell Family Classification" class="paper-image-hover" width="100%"></a></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><a href="" target="_blank"><img src='images/webshell_family.png' alt="WebShell Family Classification" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 Beyond Detection: A Comprehensive Benchmark and Study on Representation Learning for Fine-Grained Webshell Family Classification
 
 **Feijiang Han**
 
-[**Paper**](/papers/Beyond_Detection_A_Comprehensive_Benchmark_on_Representation_Learning_for_Fine_Grained_Webshell_Family_Classification.pdf){:target="_blank"}
+[**Paper**] (Coming Soon)
 
 **Key Points**:
-- First systematic study on automating WebShell family classification
-- Novel dynamic function call trace extraction for behavior analysis
-- Comprehensive evaluation of representation methods across multiple datasets
+- First systematic study automating WebShell family classification through representation learning
+- Novel dynamic function call trace extraction and LLM-based synthetic trace generation for behavioral analysis
+- Comprehensive evaluation of representation methods (sequence, graph, and tree-based models) across multiple datasets with practical insights for optimal model selection
 
 <div class="paper-interaction" onclick="toggleAbstract('webshell_family_abstract')">
 📑 Click to see abstract
@@ -95,7 +95,7 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
 📑 Click to see abstract
 </div>
 <div class="paper-abstract" id="zerotuning_abstract">
-Training-free methods for enhancing large language models (LLMs) have attracted growing interest recently, with token-level attention tuning emerging as an interpretable and promising direction. However, existing methods typically rely on auxiliary mechanisms to identify important or irrelevant task-specific tokens, introducing potential bias and limiting applicability. In this work, we uncover a surprising and elegant alternative: the semantically empty initial token (e.g., &lt;BOS&gt; in Llama) serves as a powerful and underexplored control point for optimizing model behavior. Through theoretical analysis, we show that tuning the initial token's attention sharpens or flattens the attention distribution over subsequent tokens, and its role as an attention sink amplifies this effect. Empirically, we find that: (1) tuning its attention improves LLM performance across tasks more effectively than tuning other task-specific tokens; (2) the effect follows a consistent trend across layers, with earlier layers having greater impact, but varies across attention heads, with different heads showing distinct preferences in how they attend to this token. Based on these findings, we propose ZeroTuning, a training-free approach that improves LLM performance by applying head-specific attention adjustments to this special token. Despite tuning only one token, ZeroTuning achieves higher average performance on text classification, multiple-choice QA, and multi-turn conversation tasks across models such as LLama, Qwen, and DeepSeek.
+Token-level attention tuning, a class of training-free methods including Post-hoc Attention Steering (PASTA, AutoPASTA) and Attention Calibration (ACT), has emerged as a promising way to improve frozen LLMs with interpretable interventions. However, these methods depend on auxiliary heuristics to identify "important" task-specific tokens, which can introduce bias and limit applicability when token importance is unclear or when using optimized kernels where attention maps are inaccessible. We propose a simpler and more elegant alternative: acting only on the initial token (e.g., <BOS> in LLaMA). We show theoretically that adding lightweight biases to this token's attention logits monotonically controls the entropy of the downstream attention distribution--an effect amplified by its natural function as an attention sink. Our empirical analysis reveals that this tuning process can positively affect LLMs and better unlock their pretrained knowledge, with stronger effects in early layers and distinct scaling preferences across attention heads. Building on these insights, we introduce ZeroTuning: a training-free method that improves LLM performance by applying head-specific attention adjustments to the initial token, requiring zero parameter updates. We present two variants: a supervised mode that calibrates on validation examples, and a novel unsupervised mode that directly minimizes the model's output entropy. Our method requires no KV‑cache or decoding changes, and is kernel‑agnostic (works with SDPA and FlashAttention). The method is lightweight and requires only four lines of modification to the standard LlamaAttention code. It achieves broad gains across 15 datasets and outperforms previous, more complex methods; for instance, with Llama-3.1-8B, it yields relative improvements of 19.9% on classification, 4.5% on question answering, and 2.1% on dialogue. ZeroTuning also works out-of-the-box with quantized inference and maintains its performance improvements with increasing context lengths. Our code and runnable demo are available at https://anonymous.4open.science/r/ZeroTuning.
 </div>
 </div>
 </div>

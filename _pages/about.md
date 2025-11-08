@@ -16,12 +16,17 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I'm a Computer Science Master's student at the University of Pennsylvania<img src='./images/upenn.png' style="width: 1.35em;">, working on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications (AI4Science).
-**[Note] I am actively applying for Ph.D. programs for Fall 2026 admission.**
+I'm a Computer Science Master's student at the University of Pennsylvania<img src='./images/upenn.png' style="width: 1.35em;">, working on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications in AI for Science.
+**[Note] I am actively applying for Fall 2026 CS Ph.D. programs.**
+
+
+My academic interests and journey have been driven by a persistent question: *How* and *Why* do complex systems work? 
+
+I have explored this across systems (OS internals with [Prof. Xu Liu, NCSU](https://xl10.github.io/)), HCI/Visualization (human cognition with [Prof. Ying Zhao, CSU](https://faculty.csu.edu.cn/zhaoying/en/index.htm)), and IoT/Crowdsourcing (collective intelligence with [Prof. Anfeng Liu, CSU](https://faculty.csu.edu.cn/liuanfeng/en/index.htm)). 
+
+This consistent search for an underlying method, whether in machines or the human mind, has ultimately led me to **natural language processing (NLP)**. My commitment to NLP was solidified during my senior year, after leading multiple research projects and founding my AI startup. I found in language models the ultimate synthesis of my interests: complex systems grounded in both computational structure and human cognition. I was captivated not just by their capabilities, but by the intellectual challenge of looking under the hood and adapting them to solve real-world problems. This passion fuels my core research ambition: to move beyond treating LLMs as black boxes and instead enhance them through **principled, effective, efficient, and explainable methods**.
 
 At Penn, I'm fortunate to be advised by [Prof. Chris Callison-Burch](https://www.linkedin.com/in/chris-callison-burch/), [Prof. Lyle Ungar](http://linkedin.com/in/lyle-ungar-b061474/), and [Delip Rao](https://www.linkedin.com/in/deliprao/). I also collaborate with [Dr. Xiaodong Yu](https://www.xiaodongyu.me/) from AMD GenAI and [Prof. Yunhuai Liu](https://cs.pku.edu.cn/info/1234/2111.htm) from Peking University.
-
-My journey through diverse areas of computer science: Backend Engineering (C++, 2021) -> High-Performance Computing (with [Prof. Xu Liu, NCSU](https://xl10.github.io/), 2022-2023) -> Human-Computer Interaction (with [Prof. Ying Zhao, CSU](https://faculty.csu.edu.cn/zhaoying/en/index.htm), 2023-2024) -> IoT & Reinforcement Learning (with [Prof. Anfeng Liu, CSU](https://faculty.csu.edu.cn/liuanfeng/en/index.htm), 2023-2024). In my senior year (2024), I fell in love with NLP and have since dedicated my master's program to research on LLMs and VLMs. All NLP work listed below was completed in 2024-2025.
 
 My research centers on advancing LLMs and Multimodal LLMs through ***E**ffective*, ***E**fficient*, and ***E**xplainable* methods. I currently focus on:
 
@@ -31,6 +36,7 @@ My research centers on advancing LLMs and Multimodal LLMs through ***E**ffective
 
 I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where we build AI-driven price tracking, LLM-based product analysis, and recommendation systems for e-commerce.
 
+All NLP work listed below was completed in 2024-2025. 
 You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'>Google Scholar</a>.
 
 {% include_relative includes/future.md %}
