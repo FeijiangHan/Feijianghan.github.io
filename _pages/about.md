@@ -51,4 +51,4 @@ You can find my publications on <a href='https://scholar.google.com.hk/citations
 
 {% include_relative includes/notes.md %}
 
-<!-- {% include_relative includes/schedule.md %} -->
+{% include_relative includes/schedule.md %}
