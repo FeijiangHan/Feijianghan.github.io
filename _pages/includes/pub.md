@@ -4,7 +4,62 @@
 
 *For a complete list of publications, please visit my [Google Scholar](https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ)*
 
-## 🔍 Research Interest 1: Domain-Adapted Language Models for Code, Document, and Scientific Automation
+## 🔮 Research Interest 1: Uncovering NLP & LLM Internal Mechanism and Interpretability
+
+<div class='paper-box'>
+
+<div class='paper-box-image'>
+<div><div class="badge">MOSS@ICML2025</div><a href="https://arxiv.org/abs/2505.11739" target="_blank"><img src='images/ZeroTuningcode.png' alt="ZeroTuning Overview" class="paper-image-hover" width="100%"></a></div></div>
+
+<div class='paper-box-text' markdown="1">
+
+[ZeroTuning: Unlocking the Initial Token's Power to Enhance Large Language Models Without Training](https://arxiv.org/abs/2505.11739)
+
+**Feijiang Han**, Xiaodong Yu, Jianheng Tang, Delip Rao, Weihua Du, Lyle Ungar
+
+[**Paper**](https://arxiv.org/abs/2505.11739) \| [**Code & Demo**](https://github.com/FeijiangHan/ZeroTuning) \| [**Blog**](https://www.alphaxiv.org/abs/2505.11739) \| [**Poster**](/papers/ZeroTuning_Poster.pdf){:target="_blank"}
+
+**Key Points**:
+- Novel training-free optimization via initial token attention steering, supporting both supervised and unsupervised calibrations
+- Lightweight implementation (four lines of code modification) achieves substantial gains: 19.9% on classification, 4.5% on QA, and 2.1% on multi-turn dialogue
+- Explains why this method works through: (1) theoretical analysis; (2) output entropy and accuracy analysis; (3) error pattern analysis; (4) fine-grained layer/head analysis
+
+<div class="paper-interaction" onclick="toggleAbstract('zerotuning_abstract')">
+📑 Click to see abstract
+</div>
+<div class="paper-abstract" id="zerotuning_abstract">
+Token-level attention tuning, a class of training-free methods including Post-hoc Attention Steering (PASTA, AutoPASTA) and Attention Calibration (ACT), has emerged as a promising way to improve frozen LLMs with interpretable interventions. However, these methods depend on auxiliary heuristics to identify "important" task-specific tokens, which can introduce bias and limit applicability when token importance is unclear or when using optimized kernels where attention maps are inaccessible. We propose a simpler and more elegant alternative: acting only on the initial token (e.g., &lt;BOS&gt; in LLaMA). We show theoretically that adding lightweight biases to this token's attention logits monotonically controls the entropy of the downstream attention distribution--an effect amplified by its natural function as an attention sink. Our empirical analysis reveals that this tuning process can positively affect LLMs and better unlock their pretrained knowledge, with stronger effects in early layers and distinct scaling preferences across attention heads. Building on these insights, we introduce ZeroTuning: a training-free method that improves LLM performance by applying head-specific attention adjustments to the initial token, requiring zero parameter updates. We present two variants: a supervised mode that calibrates on validation examples, and a novel unsupervised mode that directly minimizes the model's output entropy. Our method requires no KV‑cache or decoding changes, and is kernel‑agnostic (works with SDPA and FlashAttention). The method is lightweight and requires only four lines of modification to the standard LlamaAttention code. It achieves broad gains across 15 datasets and outperforms previous, more complex methods; for instance, with Llama-3.1-8B, it yields relative improvements of 19.9% on classification, 4.5% on question answering, and 2.1% on dialogue. ZeroTuning also works out-of-the-box with quantized inference and maintains its performance improvements with increasing context lengths. Our code and runnable demo are available at https://anonymous.4open.science/r/ZeroTuning.
+</div>
+</div>
+</div>
+
+
+<div class='paper-box'>
+
+<div class='paper-box-image'><div><div class="badge">Arxiv</div><a href="https://arxiv.org/abs/2504.09402v2" target="_blank"><img src='images/SSR.png' alt="SSR+" class="paper-image-hover" width="100%"></a></div></div>
+
+<div class='paper-box-text' markdown="1">
+
+[Read Before You Think: Mitigating LLM Comprehension Failures with Step-by-Step Reading](https://arxiv.org/abs/2504.09402v2)
+
+**Feijiang Han**, Hengtao Cui, Licheng Guo, Zelong Wang, Zhiyuan Lyu
+
+[**Paper**](https://arxiv.org/abs/2504.09402v2) \| [**Blog**](https://www.alphaxiv.org/abs/2504.09402v2)
+
+**Key Points**:
+- Identified Semantic Misunderstanding as the core bottleneck in LLMs reasoning even with strong methods like CoT
+- Designed SSR Series to resolve this issue by: (1) applying step-by-step reading logic (SSR), (2) enforcing attention on key tokens via self-reference (SSR+), and (3) resolving backward dependencies through iterative re-contextualization (SSR++)
+
+<div class="paper-interaction" onclick="toggleAbstract('ssr_abstract')">
+📑 Click to see abstract
+</div>
+<div class="paper-abstract" id="ssr_abstract">
+Large Language Models (LLMs) often fail on complex reasoning tasks due to flawed question comprehension, not just flawed logic. This paper presents a systematic investigation into these comprehension failures. Our work yields three key insights: (1) the step-by-step principle, effective for calculation, can be migrated to the reading process to enhance comprehension; (2) increasing the proportion of question-related tokens (e.g., via repetition) succeeds by refocusing attention, a mechanism that can be explicitly controlled; and (3) backward dependencies represent a core bottleneck for decoder-only models that persists even with strong methods like Chain-of-Thought. Based on these findings, we introduce the Step-by-Step Reading (SSR) family of prompts. This multi-stage approach culminates in SSR++, a method specifically engineered to deepen model comprehension by guiding it to parse questions with finer granularity, focus attention on critical tokens, and resolve backward dependencies through iterative re-contextualization. SSR++ sets a new state-of-the-art on multiple reasoning benchmarks, and our analysis confirms it works by directly mitigating semantic misunderstanding. These results demonstrate that guiding how a model reads is a powerful and efficient method for improving its reasoning ability.
+</div>
+</div>
+</div>
+
+## 🔍 Research Interest 2: Domain-Adapted Language Models for Code, Document, and Scientific Automation
 
 <div class='paper-box'> 
 
@@ -48,7 +103,7 @@ LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for La
 [**Paper**] \| [**Code & Dataset**] (Coming Soon)
 
 **Key Points**:
-- Novel pipeline extracting PDF layout information directly from LaTeX compilation (~~Human annotations and PDF Parsers~~)
+- Novel pipeline extracting PDF layout information directly from LaTeX compilation (~~No Human annotations and PDF Parsers~~)
 - Custom LaTeX packages for precise element tracking and accurate layout extraction
 - 200% relative improvement over zero-shot baselines through curriculum learning and synthetic data augmentation
 
@@ -85,60 +140,7 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
 </div>
 </div>
 
-## 🔮 Research Interest 2: Uncovering NLP & LLM Internal Mechanism and Interpretability
 
-<div class='paper-box'>
-
-<div class='paper-box-image'>
-<div><div class="badge">MOSS@ICML2025</div><a href="https://arxiv.org/abs/2505.11739" target="_blank"><img src='images/ZeroTuningcode.png' alt="ZeroTuning Overview" class="paper-image-hover" width="100%"></a></div></div>
-
-<div class='paper-box-text' markdown="1">
-
-[ZeroTuning: Unlocking the Initial Token's Power to Enhance Large Language Models Without Training](https://arxiv.org/abs/2505.11739)
-
-**Feijiang Han**, Xiaodong Yu, Jianheng Tang, Delip Rao, Weihua Du, Lyle Ungar
-
-[**Paper**](https://arxiv.org/abs/2505.11739) \| [**Code & Demo**](https://github.com/FeijiangHan/ZeroTuning) \| [**Blog**](https://www.alphaxiv.org/abs/2505.11739) \| [**Poster**](/papers/ZeroTuning_Poster.pdf){:target="_blank"}
-
-**Key Points**:
-- Novel training-free optimization via initial token attention steering, supporting both supervised and unsupervised calibrations
-- Lightweight implementation (four lines of code modification) achieves substantial gains: 19.9% on classification, 4.5% on QA, and 2.1% on multi-turn dialogue
-- Explains why this method works through: (1) theoretical analysis; (2) output entropy and accuracy analysis; (3) error pattern analysis; (4) fine-grained layer/head analysis
-
-<div class="paper-interaction" onclick="toggleAbstract('zerotuning_abstract')">
-📑 Click to see abstract
-</div>
-<div class="paper-abstract" id="zerotuning_abstract">
-Token-level attention tuning, a class of training-free methods including Post-hoc Attention Steering (PASTA, AutoPASTA) and Attention Calibration (ACT), has emerged as a promising way to improve frozen LLMs with interpretable interventions. However, these methods depend on auxiliary heuristics to identify "important" task-specific tokens, which can introduce bias and limit applicability when token importance is unclear or when using optimized kernels where attention maps are inaccessible. We propose a simpler and more elegant alternative: acting only on the initial token (e.g., <BOS> in LLaMA). We show theoretically that adding lightweight biases to this token's attention logits monotonically controls the entropy of the downstream attention distribution--an effect amplified by its natural function as an attention sink. Our empirical analysis reveals that this tuning process can positively affect LLMs and better unlock their pretrained knowledge, with stronger effects in early layers and distinct scaling preferences across attention heads. Building on these insights, we introduce ZeroTuning: a training-free method that improves LLM performance by applying head-specific attention adjustments to the initial token, requiring zero parameter updates. We present two variants: a supervised mode that calibrates on validation examples, and a novel unsupervised mode that directly minimizes the model's output entropy. Our method requires no KV‑cache or decoding changes, and is kernel‑agnostic (works with SDPA and FlashAttention). The method is lightweight and requires only four lines of modification to the standard LlamaAttention code. It achieves broad gains across 15 datasets and outperforms previous, more complex methods; for instance, with Llama-3.1-8B, it yields relative improvements of 19.9% on classification, 4.5% on question answering, and 2.1% on dialogue. ZeroTuning also works out-of-the-box with quantized inference and maintains its performance improvements with increasing context lengths. Our code and runnable demo are available at https://anonymous.4open.science/r/ZeroTuning.
-</div>
-</div>
-</div>
-
-
-<div class='paper-box'>
-
-<div class='paper-box-image'><div><div class="badge">Arxiv</div><a href="https://arxiv.org/abs/2504.09402v2" target="_blank"><img src='images/SSR.png' alt="SSR+" class="paper-image-hover" width="100%"></a></div></div>
-
-<div class='paper-box-text' markdown="1">
-
-[Read Before You Think: Mitigating LLM Comprehension Failures with Step-by-Step Reading](https://arxiv.org/abs/2504.09402v2)
-
-**Feijiang Han**, Hengtao Cui, Licheng Guo, Zelong Wang, Zhiyuan Lyu
-
-[**Paper**](https://arxiv.org/abs/2504.09402v2) \| [**Blog**](https://www.alphaxiv.org/abs/2504.09402v2)
-
-**Key Points**:
-- Identified Semantic Misunderstanding as the core bottleneck in LLMs reasoning even with strong methods like CoT
-- Designed SSR Series to resolve this issue by: (1) applying step-by-step reading logic (SSR), (2) enforcing attention on key tokens via self-reference (SSR+), and (3) resolving backward dependencies through iterative re-contextualization (SSR++)
-
-<div class="paper-interaction" onclick="toggleAbstract('ssr_abstract')">
-📑 Click to see abstract
-</div>
-<div class="paper-abstract" id="ssr_abstract">
-Large Language Models (LLMs) often fail on complex reasoning tasks due to flawed question comprehension, not just flawed logic. This paper presents a systematic investigation into these comprehension failures. Our work yields three key insights: (1) the step-by-step principle, effective for calculation, can be migrated to the reading process to enhance comprehension; (2) increasing the proportion of question-related tokens (e.g., via repetition) succeeds by refocusing attention, a mechanism that can be explicitly controlled; and (3) backward dependencies represent a core bottleneck for decoder-only models that persists even with strong methods like Chain-of-Thought. Based on these findings, we introduce the Step-by-Step Reading (SSR) family of prompts. This multi-stage approach culminates in SSR++, a method specifically engineered to deepen model comprehension by guiding it to parse questions with finer granularity, focus attention on critical tokens, and resolve backward dependencies through iterative re-contextualization. SSR++ sets a new state-of-the-art on multiple reasoning benchmarks, and our analysis confirms it works by directly mitigating semantic misunderstanding. These results demonstrate that guiding how a model reads is a powerful and efficient method for improving its reasoning ability.
-</div>
-</div>
-</div>
 
 ## 🌟 Research Interest 3: Other Topics (HCI, Big Data Visualization, IoT, Federated and Continual Learning)
 
