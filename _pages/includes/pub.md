@@ -87,7 +87,7 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
 
 ## 🔮 Research Interest 2: Uncovering NLP & LLM Internal Mechanism and Interpretability
 
-<!-- <div class='paper-box'>
+<div class='paper-box'>
 
 <div class='paper-box-image'>
 <div><div class="badge">MOSS@ICML2025</div><a href="https://arxiv.org/abs/2505.11739" target="_blank"><img src='images/ZeroTuningcode.png' alt="ZeroTuning Overview" class="paper-image-hover" width="100%"></a></div></div>
@@ -101,10 +101,10 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
 [**Paper**](https://arxiv.org/abs/2505.11739) \| [**Code & Demo**](https://github.com/FeijiangHan/ZeroTuning) \| [**Blog**](https://www.alphaxiv.org/abs/2505.11739) \| [**Poster**](/papers/ZeroTuning_Poster.pdf){:target="_blank"}
 
 **Key Points**:
-- Novel training-free optimization through initial token manipulation
-- Improves LLM performance by up to 11.71% without any training
-- Theoretical insights into attention mechanisms and layer/head-specific impacts
-- 
+- Novel training-free optimization via initial token attention steering, supporting both supervised and unsupervised calibrations
+- Lightweight implementation (four lines of code modification) achieves substantial gains: 19.9% on classification, 4.5% on QA, and 2.1% on multi-turn dialogue
+- Explains why this method works through: (1) theoretical analysis; (2) output entropy and accuracy analysis; (3) error pattern analysis; (4) fine-grained layer/head analysis
+
 <div class="paper-interaction" onclick="toggleAbstract('zerotuning_abstract')">
 📑 Click to see abstract
 </div>
@@ -112,7 +112,7 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
 Token-level attention tuning, a class of training-free methods including Post-hoc Attention Steering (PASTA, AutoPASTA) and Attention Calibration (ACT), has emerged as a promising way to improve frozen LLMs with interpretable interventions. However, these methods depend on auxiliary heuristics to identify "important" task-specific tokens, which can introduce bias and limit applicability when token importance is unclear or when using optimized kernels where attention maps are inaccessible. We propose a simpler and more elegant alternative: acting only on the initial token (e.g., <BOS> in LLaMA). We show theoretically that adding lightweight biases to this token's attention logits monotonically controls the entropy of the downstream attention distribution--an effect amplified by its natural function as an attention sink. Our empirical analysis reveals that this tuning process can positively affect LLMs and better unlock their pretrained knowledge, with stronger effects in early layers and distinct scaling preferences across attention heads. Building on these insights, we introduce ZeroTuning: a training-free method that improves LLM performance by applying head-specific attention adjustments to the initial token, requiring zero parameter updates. We present two variants: a supervised mode that calibrates on validation examples, and a novel unsupervised mode that directly minimizes the model's output entropy. Our method requires no KV‑cache or decoding changes, and is kernel‑agnostic (works with SDPA and FlashAttention). The method is lightweight and requires only four lines of modification to the standard LlamaAttention code. It achieves broad gains across 15 datasets and outperforms previous, more complex methods; for instance, with Llama-3.1-8B, it yields relative improvements of 19.9% on classification, 4.5% on question answering, and 2.1% on dialogue. ZeroTuning also works out-of-the-box with quantized inference and maintains its performance improvements with increasing context lengths. Our code and runnable demo are available at https://anonymous.4open.science/r/ZeroTuning.
 </div>
 </div>
-</div> -->
+</div>
 
 
 <div class='paper-box'>
