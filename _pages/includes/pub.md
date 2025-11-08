@@ -29,7 +29,7 @@ WebShell attacks, where malicious scripts are injected into web servers, pose a 
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><a href="" target="_blank"><img src='images/latex2layout.png' alt="LaTeX2Layout Pipeline" class="paper-image-hover" width="100%"></a></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><a href="" target="_blank"><img src='images/latex2layout.png' alt="LaTeX2Layout Pipeline" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for Layout Detection
