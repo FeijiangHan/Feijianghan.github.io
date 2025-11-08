@@ -36,7 +36,7 @@ LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for La
 
 **Feijiang Han**, Zelong Wang, Bowen Wang, Xinxin Liu, Skyler Cheung, Delip Rao, Chris Callison-Burch, Lyle Ungar
 
-[**Paper**] \| [**Code & Dataset**] (Coming Soon)
+[**Paper**](/papers/LaTeX2Layout_High_Fidelity_Scalable_Document_Layout_Annotation_Pipeline_for_Layout_Detection.pdf){:target="_blank"} \| [**Code & Dataset**] (Coming Soon)
 
 **Key Points**:
 - Novel pipeline that extracts PDF layout information directly from LaTeX compilation
@@ -52,12 +52,14 @@ General-purpose Vision-Language Models (VLMs) are increasingly integral to moder
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><a href="" target="_blank"><img src='images/webshell_family.png' alt="WebShell Family Classification" class="paper-image-hover" width="100%"></a></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><a href="" target="_blank"><img src='images/webshell_family.png' alt="WebShell Family Classification" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 Beyond Detection: A Comprehensive Benchmark and Study on Representation Learning for Fine-Grained Webshell Family Classification
 
 **Feijiang Han**
+
+[**Paper**](/papers/Beyond_Detection_A_Comprehensive_Benchmark_on_Representation_Learning_for_Fine_Grained_Webshell_Family_Classification.pdf){:target="_blank"}
 
 **Key Points**:
 - First systematic study on automating WebShell family classification
