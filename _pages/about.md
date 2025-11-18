@@ -36,6 +36,8 @@ My research centers on advancing LLMs and Multimodal LLMs through ***E**ffective
 
 I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where we build AI-driven price tracking, LLM-based product analysis, and recommendation systems for e-commerce.
 
+I serve as a reviewer for top-tier venues including **ACL**, **CVPR**, and **AAAI**.
+
 All NLP work listed below was completed in 2024-2025. 
 You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'>Google Scholar</a>.
 
