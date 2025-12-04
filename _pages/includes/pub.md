@@ -157,7 +157,7 @@ ThinknCheck: Grounded Claim Verification with Compact, Reasoning-Driven, and Int
 
 Delip Rao, **Feijiang Han**, Chris Callison-Burch
 
-[**Poster**](/papers/ThinknCheck-Poster-printv2.pdf){:target="_blank"} | [**Paper**] (Coming Soon)
+[**Poster**](/papers/ThinknCheck-Poster-printv2.pdf){:target="_blank"} \| [**Paper**] (Coming Soon)
 
 **Key Points**:
 - 1B-scale, 4-bit **ThinknCheck** verifier trained to “reason first, then decide” for scientific claim verification
