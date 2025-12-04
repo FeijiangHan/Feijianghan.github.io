@@ -141,6 +141,39 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
 </div>
 
 
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">Project</div>
+      <a href="/papers/ThinknCheck-Poster-printv2.pdf" target="_blank">
+        <img src='images/thinkncheck.png' alt="ThinknCheck: Grounded Claim Verification" class="paper-image-hover" width="100%">
+      </a>
+    </div>
+  </div>
+
+  <div class='paper-box-text' markdown="1">
+
+ThinknCheck: Grounded Claim Verification with Compact, Reasoning-Driven, and Interpretable Models
+
+Delip Rao, **Feijiang Han**, Chris Callison-Burch
+
+[**Poster**](/papers/ThinknCheck-Poster-printv2.pdf){:target="_blank"} | [**Paper**] (Coming Soon)
+
+**Key Points**:
+- 1B-scale, 4-bit **ThinknCheck** verifier trained to “reason first, then decide” for scientific claim verification
+- New reasoning-augmented datasets **LLMAggreFact-Think** and **GSMClaims** for document-grounded scientific and arithmetic claims
+- Small model **matches or surpasses** larger specialized verifiers (e.g., MiniCheck-7B) while providing short, interpretable rationales
+
+<div class="paper-interaction" onclick="toggleAbstract('thinkncheck_abstract')">
+📑 Click to see abstract
+</div>
+<div class="paper-abstract" id="thinkncheck_abstract">
+We present ThinknCheck, a 1B-parameter verifier for grounded claim verification that first produces a short, structured rationale and then a binary verdict. We construct LLMAggreFact-Think, a 24.1k reasoning-augmented training set derived from LLMAggreFact, and fine-tune a 4-bit Gemma3 model to follow this format. On LLMAggreFact, ThinknCheck attains 78.1 balanced accuracy (BAcc), surpassing MiniCheck-7B (77.4) with 7x fewer parameters; removing the reasoning step reduces BAcc to 57.5. On SciFact, ThinknCheck reaches 64.7 BAcc, a +14.7 absolute gain over MiniCheck-7B. By contrast, zero-shot chain-of-thought on the base Gemma3-1B harms accuracy relative to direct answers, and preference optimization with a simple format+accuracy reward underperforms supervised reasoning. A qualitative audit of generated rationales indicates current verification datasets over-reward lexical overlap and under-test multi-sentence and numerical reasoning. To probe the latter, we introduce GSMClaims and a domain-specialized variant, ThinknCheck-Science, which improves across benchmarks, including 61.0\% accuracy on GSMClaims. Overall, explicit, supervised reasoning enables compact verifiers that are competitive while remaining resource-efficient and interpretable.
+</div>
+
+</div>
+</div>
+
 
 ## 🌟 Research Interest 3: Other Topics (HCI, Big Data Visualization, IoT, Federated and Continual Learning)
 
