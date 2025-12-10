@@ -30,17 +30,17 @@ This desire has shaped my Master’s studies and motivates my goal of making a l
 
 My research centers on advancing (M)LLMs through ***E**ffective*, ***E**fficient*, and ***E**xplainable* methods. I currently focus on:
 
-- **Unlocking LLMs' Internal Mechanisms**: Designing training and inference-time optimization methods grounded in internal mechanisms (e.g., attention patterns, residuals, activations, representations, and token logits). I am particularly interested in making models more interpretable while also improving their task-agnostic performance.
+- **1. Unlocking LLMs' Internal Mechanisms**: Designing training and inference-time optimization methods grounded in internal mechanisms (e.g., attention patterns, residuals, activations, representations, and token logits). I am particularly interested in making models more interpretable while also improving their task-agnostic performance.
 
-> **Note.** I do not view training-free methods as an end in themselves, but as byproducts of interpretability-driven analysis that surfaces new insights into model behavior. In the long run, I believe sufficiently scaled training-based approaches can internalize many of these optimization patterns, but current black-box practices often slow our ability to understand and guide them.
+  - > **Note 1.** I do not view training-free methods as an end in themselves, but as byproducts of interpretability-driven analysis that surfaces new insights into model behavior. In the long run, I believe sufficiently scaled training-based approaches can internalize many of these optimization patterns, but current black-box practices often slow our ability to understand and guide them.
 
-- **Pushing Application Boundaries**: Building impactful systems (e.g., for security, code understanding, and scientific automation) with measurable real-world impact. I believe in creating practical solutions that tackle open-ended and underexplored real-world challenges.
+- **2. Pushing Application Boundaries**: Building impactful systems (e.g., for security, code understanding, and scientific automation) with measurable real-world impact. I believe in creating practical solutions that tackle open-ended and underexplored real-world challenges.
 
-> **Note.** I am interested in introducing genuine novelty—new tasks and datasets, new annotation pipelines, new methods, and new evaluation metrics—and in developing insights that generalize beyond a single application domain.
+  - > **Note 2.** I am interested in introducing genuine novelty—new tasks and datasets, new annotation pipelines, new methods, and new evaluation metrics—and in developing insights that generalize beyond a single application domain.
 
-- **Advancing Model Evolution**: Developing data synthesis and curation pipelines to overcome annotation and data collection bottlenecks, and exploring post-training optimization (SFT, RL) and distillation to make smaller models competitive through better data, training, distillation, and pruning.
+- **3. Advancing Model Evolution**: Developing data synthesis and curation pipelines to overcome annotation and data collection bottlenecks, and exploring post-training optimization (SFT, RL) and distillation to make smaller models competitive through better data, training, distillation, and pruning.
 
-> **Note.** I am also deeply interested in agentic systems and model self-evolution. As AI-generated content increasingly dominates the web, I aim to understand how models can continually evolve and acquire new capabilities by learning from their own generated outputs.
+  - > **Note 3.** I am also deeply interested in agentic systems and model self-evolution. As AI-generated content increasingly dominates the web, I aim to understand how models can continually evolve and acquire new capabilities by learning from their own generated outputs.
 
 I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where we build AI-driven price tracking, LLM-based product analysis, and recommendation systems for e-commerce.
 
