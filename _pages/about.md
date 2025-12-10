@@ -16,7 +16,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I'm a computer science graduate student at the University of Pennsylvania `<img src='./images/upenn.png' style="width: 1.35em;">`, working on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications in AI for Science.
+I'm a computer science graduate student at the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, working on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications in AI for Science.
 
 <!-- **[Note] I am actively applying for Fall 2026 CS Ph.D. programs.** -->
 
@@ -47,7 +47,7 @@ I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where w
 I serve as a reviewer for top-tier venues including **ACL**, **CVPR**, **AAAI**
 
 All NLP work listed below was completed in 2025-2026.
-You can find my publications on `<a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'>`Google Scholar`</a>`.
+You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'>Google Scholar</a>.
 
 {% include_relative includes/future.md %}
 
