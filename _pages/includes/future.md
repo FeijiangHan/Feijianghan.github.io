@@ -4,14 +4,24 @@
 
 In addition to continuing my current research interests, I am also eager to explore several new directions.
 
-## 1. Fundamental Model Enhancement
+## 1. Fundamental Model Enhancement.
 
-First, while inference-time adaptations are effective, I believe that scaling or optimizing models during training will eventually surpass these approaches. As resources allow, I plan to shift my focus from inference-time tweaks to optimizing models during training. 
+I believe that training-time optimization ultimately has a deeper and longer-term impact than purely inference-time adaptations, even though the latter are often more interpretable. As resources allow, I hope to transition from inference-time tweaks toward training procedures that are explicitly informed by mechanistic insights, using interpretability not only to explain model behavior but to shape how we train and structure models. 
 
-Second, I aim to use interpretability not only to explain model behavior but also to improve training processes. For instance, insights from the attention-sink mechanism (since 2022) have led to advancements in KV-cache optimization, quantization-aware training, and extensions to VLMs. I intend to develop explainable methods in the following areas: (1) Understanding how information flows within the model—e.g., optimizing layer and head interactions; (2) Understanding how token generation works—e.g., introducing interpretable decoding control; (3) Understanding how reasoning functions—e.g., enabling smaller models to compete with larger ones and orchestrating efficient interactions between reasoning and non-reasoning components.
+**For example**, recent work on attention sinks hints at how low-level observations about model internals can inform KV-cache optimization, quantization strategies, training recipes, and multimodal extensions; I see these as early examples of a broader research direction.
 
-Finally, as LLM research has advanced more rapidly than multimodal research, I am also particularly interested in Multimodal LLMs. This includes identifying and addressing limitations in current MLLM architectures, and developing more effective and efficient methods for processing multimodal information, especially in addressing challenges like visual redundancy and modality alignment.
+Concretely, I hope to develop interpretable methods in three areas:
 
-## 2. AI for Scientific Discovery
+- (1) understanding how information flows within a model, and then training models that explicitly optimize interactions across layers and heads (e.g., parameter/token pruning, dynamic layer-skipping, routing, and improved coordination between bidirectional and unidirectional attention);
+- (2) understanding how token generation works, and then introducing interpretable controls over decoding (e.g., learning how models should choose decoding hyperparameters, enabling reliable multi-token prediction); and
+- (3) understanding how reasoning emerges, so that smaller models can better compete with larger ones (e.g., via reinforcement learning, improved distillation, and logits-level optimization), and so that reasoning and non-reasoning components can be coordinated more efficiently.
 
-The next frontier is applying (M)LLMs to scientific discovery and applications, focusing on: (1) Discovering valuable new application areas as LLM capabilities continue to expand; (2) Adapting and optimizing models for specific scientific domains; (3) Tackling problems from multiple perspectives: (a) Unknown problems (building new benchmarks); (b) Known problems with: simple evaluation but challenging solutions (developing effective methods), or high-cost evaluation (developing efficient methods); easy solutions but complex evaluation requirements (e.g., designing reward for RLVR).
+Because progress on LLMs has outpaced advances in MLLMs, I am also particularly interested in multimodal LLMs: bringing insights and mechanisms from LLM studies into VLMs, systematically diagnosing limitations in current architectures, and developing more effective approaches to multimodal inputs, especially challenges such as hallucination, visual redundancy, cross-modal alignment, and how different modalities should contribute to intermediate representations and final predictions.
+
+## 2. AI for Science and Scientific Research.
+
+I am also motivated by applying (M)LLMs to scientific discovery and research. Building on my work in document understanding, claim verification, and code analysis, I hope to:
+
+- (1) formulate real scientific problems as well-defined tasks and benchmarks that reflect the structure and uncertainty of actual scientific workflows;
+- (2) adapt and optimize models for specific scientific domains through tailored post-training pipelines (e.g., SFT, RL, and distillation), with attention to deployability under realistic computational and reliability constraints; and
+- (3) design robust evaluation and feedback mechanisms for settings where ground truth is expensive, delayed, or ambiguous (e.g., human-in-the-loop protocols in RL-style verification-and-reasoning setups).
