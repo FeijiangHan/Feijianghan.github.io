@@ -8,7 +8,7 @@ In addition to continuing my current research interests, I am also eager to expl
 
 I believe that training-time optimization ultimately has a deeper and longer-term impact than purely inference-time adaptations, even though the latter are often more interpretable. As resources allow, I hope to transition from inference-time tweaks toward training procedures that are explicitly informed by mechanistic insights, using interpretability not only to explain model behavior but to shape how we train and structure models. 
 
-**For example**, recent work on attention sinks hints at how low-level observations about model internals can inform KV-cache optimization, quantization strategies, training recipes, and multimodal extensions; I see these as early examples of a broader research direction.
+> **For example**, recent work on attention sinks hints at how low-level observations about model internals can inform KV-cache optimization, quantization strategies, training recipes, and multimodal extensions; I see these as early examples of a broader research direction.
 
 Concretely, I hope to develop interpretable methods in three areas:
 
