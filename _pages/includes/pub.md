@@ -59,7 +59,7 @@ Large Language Models (LLMs) often fail on complex reasoning tasks due to flawed
 </div>
 </div>
 
-## 🔍 Research Interest 2: Domain-Adapted Language Models for Code, Document, and Scientific Automation
+## 🔍 Research Interest 2: Model Adaptation
 
 <div class='paper-box'> 
 

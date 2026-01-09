@@ -22,7 +22,12 @@ At Penn, I'm fortunate to be advised by [Prof. Chris Callison-Burch](https://www
 
 My research centers on advancing (M)LLMs with **Effective, Efficient, and Explainable** methods. I care about building models that work better, run cheaper, and fail more predictably. Just as importantly, I want to understand why they work, when they break, and how we can steer them with confidence.
 
-Today, a lot of progress comes from large-scale training and black-box iteration. It works, but it often hides the reasons behind progress and makes reliability harder to reason about. At the same time, scaling alone is starting to feel more incremental. That’s why I focus on two complementary directions:
+Today, a lot of progress comes from large-scale training and black-box iteration. It works, but it often hides the reasons behind progress and makes reliability harder to reason about. At the same time, scaling alone is starting to feel more incremental. That's why I focus on two complementary directions:
+
+<div style="text-align: center; margin: 2em 0;">
+  <img src="/images/research-pipeline.png" alt="Research Pipeline: Effective • Efficient • Explainable" style="max-width: 90%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <p style="margin-top: 0.5em; color: #666; font-size: 0.9em; font-style: italic;">From understanding → to reliable impact → to continual improvement</p>
+</div>
 
 - **1. Mechanism-driven Understanding (Interpretability + optimization)**: I study what is happening inside LLMs and VLMs, and how those internal signals can be used to improve models. I look at attention patterns, residual streams, activations, representations, and logits. My goal is not interpretability as a visualization layer. My goal is interpretability that changes how we optimize and control models.
 (More: [Why I care about interpretability](#why-i-care-about-interpretability))
@@ -34,6 +39,9 @@ I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where w
 
 You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'>Google Scholar</a>.
 
+<!-- {% include_relative includes/future.md %} -->
+
+{% include_relative includes/news.md %}
 
 # ❤️ Why Interpretability and LLMs Adaptation
 
@@ -79,9 +87,6 @@ Sometimes the novelty is how you get data when data is scarce. Sometimes it is h
 
 In the long run, I am optimistic about a system view of intelligence. If we can build many strong, efficient specialists, and let them collaborate as agents, we may reach broad capability in a way that is easier to maintain, easier to adapt, and easier to interpret than betting everything on a single monolithic model.
 
-<!-- {% include_relative includes/future.md %} -->
-
-{% include_relative includes/news.md %}
 
 {% include_relative includes/pub.md %}
 
