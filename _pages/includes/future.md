@@ -1,7 +1,7 @@
 <span class='anchor' id='future'></span>
 
 
-# ❤️ Why I LOVE Interpretability and LLMs Adaptation
+# Why I’m excited about these problems
 
 ## Why I care about interpretability
 
