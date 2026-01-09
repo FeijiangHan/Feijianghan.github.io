@@ -24,25 +24,34 @@ My research centers on advancing (M)LLMs with **Effective, Efficient, and Explai
 
 Today, a lot of progress comes from large-scale training and black-box iteration. It works, but it often hides the reasons behind progress and makes reliability harder to reason about. At the same time, scaling alone is starting to feel more incremental. That's why I focus on two complementary directions:
 
-<div style="text-align: center; margin: 2em 0;">
-  <img src="/images/research-pipeline.png" alt="Research Pipeline: Effective • Efficient • Explainable" style="max-width: 90%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-  <p style="margin-top: 0.5em; color: #666; font-size: 0.9em; font-style: italic;">From understanding → to reliable impact → to continual improvement</p>
+<div style="display: flex; gap: 2em; align-items: flex-start; margin: 2em 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 300px; max-width: 500px;">
+    <img src="/images/research-pipeline.png" alt="Research Pipeline: Effective • Efficient • Explainable" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <p style="margin-top: 0.5em; color: #666; font-size: 0.9em; font-style: italic; text-align: center;">From understanding → to reliable impact → to continual improvement</p>
+  </div>
+  <div style="flex: 1; min-width: 300px;">
+    <ul style="list-style: none; padding-left: 0; margin: 0;">
+      <li style="margin-bottom: 1.5em;">
+        <strong>1. Mechanism-driven Understanding (Interpretability + optimization)</strong>: I study what is happening inside LLMs and VLMs, and how those internal signals can be used to improve models. I look at attention patterns, residual streams, activations, representations, and logits. My goal is not interpretability as a visualization layer. My goal is interpretability that changes how we optimize and control models.<br>
+        <span style="font-size: 0.9em;">(More: <a href="#why-i-care-about-interpretability">Why I care about interpretability</a>)</span>
+      </li>
+      <li>
+        <strong>2. Model Adaptation (From base models to real experts)</strong>: I work on adapting foundation models to specific domains and building systems with measurable impact. I'm interested in task-agnostic adaptation pipelines where we can inject real scientific novelty, including post-training (SFT, RL, distillation), efficiency methods (quantization, pruning, layer skipping, routing), and system-level tooling like retrieval and evaluation. I also like going deep into real domains, where novelty often comes from new tasks, synthetic data, and sometimes further architecture optimization.<br>
+        <span style="font-size: 0.9em;">(More: <a href="#why-i-care-about-model-adaptation">Why I care about model adaptation</a>)</span>
+      </li>
+    </ul>
+  </div>
 </div>
-
-- **1. Mechanism-driven Understanding (Interpretability + optimization)**: I study what is happening inside LLMs and VLMs, and how those internal signals can be used to improve models. I look at attention patterns, residual streams, activations, representations, and logits. My goal is not interpretability as a visualization layer. My goal is interpretability that changes how we optimize and control models.
-  (More: [Why I care about interpretability](#why-i-care-about-interpretability))
-- **2. Model Adaptation (From base models to real experts)**: I work on adapting foundation models to specific domains and building systems with measurable impact. I’m interested in task-agnostic adaptation pipelines where we can inject real scientific novelty, including post-training (SFT, RL, distillation), efficiency methods (quantization, pruning, layer skipping, routing), and system-level tooling like retrieval and evaluation. I also like going deep into real domains, where novelty often comes from new tasks, synthetic data, and sometimes further architecture optimization.
-  (More: [Why I care about model adaptation](#why-i-care-about-model-adaptation))
 
 I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where we build AI-driven price tracking, LLM-based product analysis, and recommendation systems for e-commerce. I serve as a reviewer for top-tier venues including **ICLR**, **ACL**, **CVPR**, **AAAI**.
 
-You can find my publications on `<a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'>`Google Scholar`</a>`.
+You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'>Google Scholar</a>.
 
 <!-- {% include_relative includes/future.md %} -->
 
 {% include_relative includes/news.md %}
 
-# ❤️ Why I'm excited about these problems
+# Why I'm excited about these problems
 
 `<span id="why-i-care-about-interpretability">`
 
