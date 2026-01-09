@@ -16,7 +16,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I'm a computer science graduate student at the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, working on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications in AI for Science.
+I'm a computer science graduate student at the University of Pennsylvania `<img src='./images/upenn.png' style="width: 1.35em;">`, working on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications in AI for Science.
 
 At Penn, I'm fortunate to be advised by [Prof. Chris Callison-Burch](https://www.linkedin.com/in/chris-callison-burch/), [Prof. Lyle Ungar](http://linkedin.com/in/lyle-ungar-b061474/), and [Delip Rao](https://www.linkedin.com/in/deliprao/). I also collaborate with [Dr. Xiaodong Yu](https://www.xiaodongyu.me/) (AMD GenAI) and [Prof. Yunhuai Liu](https://cs.pku.edu.cn/info/1234/2111.htm) (Peking University).
 
@@ -30,22 +30,22 @@ Today, a lot of progress comes from large-scale training and black-box iteration
 </div>
 
 - **1. Mechanism-driven Understanding (Interpretability + optimization)**: I study what is happening inside LLMs and VLMs, and how those internal signals can be used to improve models. I look at attention patterns, residual streams, activations, representations, and logits. My goal is not interpretability as a visualization layer. My goal is interpretability that changes how we optimize and control models.
-(More: [Why I care about interpretability](#why-i-care-about-interpretability))
-
+  (More: [Why I care about interpretability](#why-i-care-about-interpretability))
 - **2. Model Adaptation (From base models to real experts)**: I work on adapting foundation models to specific domains and building systems with measurable impact. I’m interested in task-agnostic adaptation pipelines where we can inject real scientific novelty, including post-training (SFT, RL, distillation), efficiency methods (quantization, pruning, layer skipping, routing), and system-level tooling like retrieval and evaluation. I also like going deep into real domains, where novelty often comes from new tasks, synthetic data, and sometimes further architecture optimization.
-(More: [Why I care about model adaptation](#why-i-care-about-model-adaptation))
+  (More: [Why I care about model adaptation](#why-i-care-about-model-adaptation))
 
 I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where we build AI-driven price tracking, LLM-based product analysis, and recommendation systems for e-commerce. I serve as a reviewer for top-tier venues including **ICLR**, **ACL**, **CVPR**, **AAAI**.
 
-You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'>Google Scholar</a>.
+You can find my publications on `<a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'>`Google Scholar`</a>`.
 
 <!-- {% include_relative includes/future.md %} -->
 
 {% include_relative includes/news.md %}
 
-# ❤️ Why Interpretability and LLMs Adaptation
+# ❤️ Why I'm excited about these problems
 
-<span id="why-i-care-about-interpretability"></span>
+`<span id="why-i-care-about-interpretability">`
+
 ## Why I care about interpretability
 
 Interpretability, for me, begins with curiosity. I like watching a system and asking: *why did that happen?* It feels like being a kid observing insects. You stare long enough, and suddenly a pattern shows up. That moment of “wait, that’s weird” makes me happy.
@@ -65,8 +65,8 @@ Why do compositional features and circuits appear at all? Why do we sometimes se
 
 My hope is that interpretability can slowly move from biology-style observation to physics-style reasoning. If that shift happens, it will feel like a real change of era.
 
+`<span id="why-i-care-about-model-adaptation">`
 
-<span id="why-i-care-about-model-adaptation"></span>
 ## Why I care about model adaptation
 
 I also spend a lot of energy thinking about adaptation. Partly because I do not believe “general” intelligence comes for free.
@@ -86,7 +86,6 @@ Some people see this direction as “just engineering.” I get why. It often in
 Sometimes the novelty is how you get data when data is scarce. Sometimes it is how you design synthetic data that teaches the right behavior. Sometimes it is how you change representations or architectures when the base model cannot capture a key dependency. Sometimes it is how a new industrial need becomes a new research question.
 
 In the long run, I am optimistic about a system view of intelligence. If we can build many strong, efficient specialists, and let them collaborate as agents, we may reach broad capability in a way that is easier to maintain, easier to adapt, and easier to interpret than betting everything on a single monolithic model.
-
 
 {% include_relative includes/pub.md %}
 
