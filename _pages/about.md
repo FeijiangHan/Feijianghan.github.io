@@ -18,38 +18,68 @@ redirect_from:
 
 I'm a computer science graduate student at the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, working on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications in AI for Science.
 
-<!-- **[Note] I am actively applying for Fall 2026 CS Ph.D. programs.** -->
+At Penn, I'm fortunate to be advised by [Prof. Chris Callison-Burch](https://www.linkedin.com/in/chris-callison-burch/), [Prof. Lyle Ungar](http://linkedin.com/in/lyle-ungar-b061474/), and [Delip Rao](https://www.linkedin.com/in/deliprao/). I also collaborate with [Dr. Xiaodong Yu](https://www.xiaodongyu.me/) (AMD GenAI) and [Prof. Yunhuai Liu](https://cs.pku.edu.cn/info/1234/2111.htm) (Peking University).
 
-My academic interests and journey have been driven by a persistent question: *How* and *Why* do complex systems work?
+My research centers on advancing (M)LLMs with **Effective, Efficient, and Explainable** methods. I care about building models that work better, run cheaper, and fail more predictably. Just as importantly, I want to understand why they work, when they break, and how we can steer them with confidence.
 
-I first explored this in systems research (OS internal mechanisms), then in HCI (human cognitive principles), and later in IoT and crowdsourcing (collective intelligence), before realizing that **Natural Language Processing** is where I am most excited to pursue these questions.
+Today, a lot of progress comes from large-scale training and black-box iteration. It works, but it often hides the reasons behind progress and makes reliability harder to reason about. At the same time, scaling alone is starting to feel more incremental. That’s why I focus on two complementary directions:
 
-Since 2024, I have led multiple LLM/VLM research projects as first or primary author and founded my first AI product with over 100K users. These experiences convinced me that language models sit at the intersection of my interests in complex systems, computation, and human cognition. I am captivated not only by what these models can do, but also by the challenge of looking under the hood and adapting them to solve real-world problems using **principled, effective, efficient, and explainable methods.**
+- **1. Mechanism-driven Understanding (Interpretability + optimization)**: I study what is happening inside LLMs and VLMs, and how those internal signals can be used to improve models. I look at attention patterns, residual streams, activations, representations, and logits. My goal is not interpretability as a visualization layer. My goal is interpretability that changes how we optimize and control models.
+(More: [Why I care about interpretability](#why-i-care-about-interpretability))
 
-This desire has shaped my Master’s studies and motivates my goal of making a long-term contribution to the field. At Penn, I'm fortunate to be advised by [Prof. Chris Callison-Burch](https://www.linkedin.com/in/chris-callison-burch/), [Prof. Lyle Ungar](http://linkedin.com/in/lyle-ungar-b061474/), and [Delip Rao](https://www.linkedin.com/in/deliprao/). I also collaborate with [Dr. Xiaodong Yu](https://www.xiaodongyu.me/) from AMD GenAI and [Prof. Yunhuai Liu](https://cs.pku.edu.cn/info/1234/2111.htm) from Peking University.
+- **2. Model Adaptation (From base models to real experts)**: I work on adapting foundation models to specific domains and building systems with measurable impact. I’m interested in task-agnostic adaptation pipelines where we can inject real scientific novelty, including post-training (SFT, RL, distillation), efficiency methods (quantization, pruning, layer skipping, routing), and system-level tooling like retrieval and evaluation. I also like going deep into real domains, where novelty often comes from new tasks, synthetic data, and sometimes further architecture optimization.
+(More: [Why I care about model adaptation](#why-i-care-about-model-adaptation))
 
-My research centers on advancing (M)LLMs through ***E**ffective*, ***E**fficient*, and ***E**xplainable* methods. I currently focus on:
+I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where we build AI-driven price tracking, LLM-based product analysis, and recommendation systems for e-commerce. I serve as a reviewer for top-tier venues including **ICLR**, **ACL**, **CVPR**, **AAAI**.
 
-- **1. Unlocking LLMs' Internal Mechanisms**: Designing training and inference-time optimization methods grounded in internal mechanisms (e.g., attention patterns, residuals, activations, representations, and token logits). I am particularly interested in making models more interpretable while also improving their task-agnostic performance.
-
-  - > **Note 1.** I do not view training-free methods as an end in themselves, but as byproducts of interpretability-driven analysis that surfaces new insights into model behavior. In the long run, I believe sufficiently scaled training-based approaches can internalize many of these optimization patterns, but current black-box practices often slow our ability to understand and guide them.
-
-- **2. Pushing Application Boundaries**: Building impactful systems (e.g., for security, code understanding, and scientific automation) with measurable real-world impact. I believe in creating practical solutions that tackle open-ended and underexplored real-world challenges.
-
-  - > **Note 2.** I am interested in introducing genuine novelty—new tasks and datasets, new annotation pipelines, new methods, and new evaluation metrics—and in developing insights that generalize beyond a single application domain.
-
-- **3. Advancing Model Evolution**: Developing data synthesis and curation pipelines to overcome annotation and data collection bottlenecks, and exploring post-training optimization (SFT, RL) and distillation to make smaller models competitive through better data, training, distillation, and pruning.
-
-  - > **Note 3.** I am also deeply interested in agentic systems and model self-evolution. As AI-generated content increasingly dominates the web, I aim to understand how models can continually evolve and acquire new capabilities by learning from their own generated outputs.
-
-I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where we build AI-driven price tracking, LLM-based product analysis, and recommendation systems for e-commerce.
-
-I serve as a reviewer for top-tier venues including **ACL**, **CVPR**, **AAAI**
-
-All NLP work listed below was completed in 2025-2026.
 You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'>Google Scholar</a>.
 
-{% include_relative includes/future.md %}
+
+# ❤️ Why Interpretability and LLMs Adaptation
+
+<span id="why-i-care-about-interpretability"></span>
+## Why I care about interpretability
+
+Interpretability, for me, begins with curiosity. I like watching a system and asking: *why did that happen?* It feels like being a kid observing insects. You stare long enough, and suddenly a pattern shows up. That moment of “wait, that’s weird” makes me happy.
+
+More rationally, interpretability also serves a long-term goal: building AI systems that are truly reliable, possibly all the way to AGI or even ASI.
+
+- If scaling eventually leads to AGI, we may get extremely capable black-box systems. Then the key question becomes safety and alignment. How do we ensure a superintelligent model consistently acts in good faith, and does not quietly deceive people to do harm?
+- If scaling alone still fails to reach AGI, we will need deeper answers. Why do these models work at all? What factors truly drive their performance?
+
+Good explanations help us trust models in practice. They also guide us to design better models based on principles, not just trial and error.
+
+I often think about how physics matured. First came careful observations (Tycho Brahe). Then hypotheses (Kepler). Then principles (Newton). In AI, we have made huge empirical progress, many interpretability papers open a trained model and hunt for circuits. I respect that work. But we still lack “Newton-style” first principles.
+
+I want to ask questions that start from the training process and the architecture.
+
+Why do compositional features and circuits appear at all? Why do we sometimes see sparsity, low-rank structure, or neatly separated factors after training? Can we connect those outcomes to the equations of gradient-based learning, instead of only collecting evidence after the fact?
+
+My hope is that interpretability can slowly move from biology-style observation to physics-style reasoning. If that shift happens, it will feel like a real change of era.
+
+
+<span id="why-i-care-about-model-adaptation"></span>
+## Why I care about model adaptation
+
+I also spend a lot of energy thinking about adaptation. Partly because I do not believe “general” intelligence comes for free.
+
+Scaling has worked, but the returns can slow down. It is unlikely that every new GPT-n will feel as shocking as the earlier jump from GPT-4. At the same time, we have already had LLMs in the real world for several years, but there are still many specialized tasks they cannot do well. Pretraining will never perfectly cover every niche, every workflow, or every kind of expertise.
+
+So I care about a practical question. How do we turn a strong base model into a model that is genuinely useful for a specific need?
+
+I think about this in two layers.
+
+First, I want to improve the general “base-to-expert” pipeline. That includes post-training methods like SFT, RL, and distillation. It also includes inference efficiency, such as quantization, pruning, layer skipping, and routing. I also care about retrieval, evaluation, and benchmarks, because the workflow around a model often matters as much as the model itself.
+
+Second, I want to take these tools into real domains and make them work end-to-end. This idea is not new. It was central in the BERT era, and it is still central now. Beyond popular areas like coding and document analysis, I think many domains that rely on careful human judgment could benefit from LLM-based specialists. Malware or virus detection is one example.
+
+Some people see this direction as “just engineering.” I get why. It often involves messy data and lots of iteration. But I am drawn to it because I believe engineering can carry real scientific novelty.
+
+Sometimes the novelty is how you get data when data is scarce. Sometimes it is how you design synthetic data that teaches the right behavior. Sometimes it is how you change representations or architectures when the base model cannot capture a key dependency. Sometimes it is how a new industrial need becomes a new research question.
+
+In the long run, I am optimistic about a system view of intelligence. If we can build many strong, efficient specialists, and let them collaborate as agents, we may reach broad capability in a way that is easier to maintain, easier to adapt, and easier to interpret than betting everything on a single monolithic model.
+
+<!-- {% include_relative includes/future.md %} -->
 
 {% include_relative includes/news.md %}
 
