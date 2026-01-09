@@ -16,7 +16,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I'm a computer science graduate student at the University of Pennsylvania `<img src='./images/upenn.png' style="width: 1.35em;">`, working on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications in AI for Science.
+I'm a computer science graduate student at the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, working on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications in AI for Science.
 
 At Penn, I'm fortunate to be advised by [Prof. Chris Callison-Burch](https://www.linkedin.com/in/chris-callison-burch/), [Prof. Lyle Ungar](http://linkedin.com/in/lyle-ungar-b061474/), and [Delip Rao](https://www.linkedin.com/in/deliprao/). I also collaborate with [Dr. Xiaodong Yu](https://www.xiaodongyu.me/) (AMD GenAI) and [Prof. Yunhuai Liu](https://cs.pku.edu.cn/info/1234/2111.htm) (Peking University).
 
@@ -53,7 +53,7 @@ You can find my publications on <a href='https://scholar.google.com.hk/citations
 
 # Why I'm excited about these problems
 
-`<span id="why-i-care-about-interpretability">`
+<span id="why-i-care-about-interpretability">
 
 ## Why I care about interpretability
 
@@ -74,7 +74,7 @@ Why do compositional features and circuits appear at all? Why do we sometimes se
 
 My hope is that interpretability can slowly move from biology-style observation to physics-style reasoning. If that shift happens, it will feel like a real change of era.
 
-`<span id="why-i-care-about-model-adaptation">`
+<span id="why-i-care-about-model-adaptation">
 
 ## Why I care about model adaptation
 
