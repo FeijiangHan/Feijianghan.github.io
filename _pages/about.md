@@ -64,11 +64,13 @@ More rationally, interpretability also serves a long-term goal: building AI syst
 
 Good explanations help us trust models in practice. They also guide us to design better models based on principles, not just trial and error.
 
-I often think about how physics matured. First came careful observations (Tycho Brahe). Then hypotheses (Kepler). Then principles (Newton). In AI, we have made huge empirical progress, many interpretability papers open a trained model and hunt for circuits. I respect that work. But we still lack “Newton-style” first principles.
+I often think about how physics matured. First came careful observations (Tycho Brahe). Then hypotheses (Kepler). Then principles (Newton). In AI, we have made huge empirical progress, many interpretability papers open a trained model and hunt for circuits. I love and respect that line of work, such as logit-lens analyses for LLMs/VLMs, sparse autoencoders (SAEs), and recent mechanistic interpretability work from Anthropic. But we still lack “Newton-style” first principles.
 
-I want to ask questions that start from the training process and the architecture.
+I want to ask questions that begin at the level of training processes and model architecture. 
 
 Why do compositional features and circuits appear at all? Why do we sometimes see sparsity, low-rank structure, or neatly separated factors after training? Can we connect those outcomes to the equations of gradient-based learning, instead of only collecting evidence after the fact?
+
+For example, I like the ICLR 2025 oral paper [Learning Dynamics of LLM Finetuning](https://openreview.net/forum?id=tPNHOoZFl9), which offers explanations for why SFT can lead to hallucinations and why DPO performance may degrade over time.
 
 My hope is that interpretability can slowly move from biology-style observation to physics-style reasoning. If that shift happens, it will feel like a real change of era.
 
