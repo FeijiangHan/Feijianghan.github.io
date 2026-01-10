@@ -47,8 +47,6 @@ I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where w
 
 You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'> Google Scholar</a>
 
-<!-- {% include_relative includes/future.md %} -->
-
 {% include_relative includes/news.md %}
 
 # Why I'm excited about these problems
