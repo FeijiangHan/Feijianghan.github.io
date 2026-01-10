@@ -90,7 +90,7 @@ First, I want to improve the general “base-to-expert” pipeline. That include
 
 Second, I want to take these tools into real domains and make them work end-to-end. This idea is not new. It was central in the BERT era, and it is still central now. Beyond popular areas like coding and document analysis, I think many domains that rely on careful human judgment could benefit from LLM-based specialists. Malware or virus detection is one example.
 
-Some people see this direction as “just engineering.” I get why. It often involves messy data and lots of iteration. But I am drawn to it because I believe engineering can carry real scientific novelty.
+Some people see this direction as just engineering (data+training). But I am drawn to it because I believe engineering can carry real scientific novelty.
 
 Sometimes the novelty is how you get data when data is scarce. Sometimes it is how you design synthetic data that teaches the right behavior. Sometimes it is how you change representations or architectures when the base model cannot capture a key dependency. Sometimes it is how a new industrial need becomes a new research question.
 
