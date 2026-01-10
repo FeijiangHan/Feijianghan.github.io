@@ -33,11 +33,11 @@ Today, a lot of progress comes from large-scale training and black-box iteration
     <ul style="list-style: none; padding-left: 0; margin: 0;">
       <li style="margin-bottom: 1.5em;">
         <strong>1. Mechanism-driven Understanding (Interpretability + optimization)</strong>: I study what is happening inside LLMs and VLMs, and how those internal signals can be used to improve models. I look at attention patterns, residual streams, activations, representations, and logits. My goal is not interpretability as a visualization layer. My goal is interpretability that changes how we optimize and control models.<br>
-        <span style="color: red;">(**More:** <a href="#why-i-care-about-interpretability">Why I care about interpretability</a>)</span>
+        <span style="color: red;">(More: <a href="#why-i-care-about-interpretability" style="color: red;">Why I care about interpretability</a>)</span>
       </li>
       <li>
         <strong>2. Model Adaptation (From base models to real experts)</strong>: I work on adapting foundation models to specific domains and building systems with measurable impact. I'm interested in task-agnostic adaptation pipelines where we can inject real scientific novelty, including post-training (SFT, RL, distillation), efficiency methods (quantization, pruning, layer skipping, routing), and system-level tooling like retrieval and evaluation. I also like going deep into real domains, where novelty often comes from new tasks, synthetic data, and sometimes further architecture optimization.<br>
-        <span style="color: red;">(**More:** <a href="#why-i-care-about-model-adaptation" style="color: red;">Why I care about model adaptation</a>)</span>
+        <span style="color: red;">(More: <a href="#why-i-care-about-model-adaptation" style="color: red;">Why I care about model adaptation</a>)</span>
       </li>
     </ul>
   </div>
