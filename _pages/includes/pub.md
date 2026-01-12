@@ -124,7 +124,7 @@ General-purpose Vision-Language Models (VLMs) are increasingly integral to moder
 
 **Feijiang Han**
 
-[**Paper**](https://arxiv.org/abs/2512.05288) \| [**Video (AI)**](https://drive.google.com/file/d/1PAljf0YjWgnBRUHhmDZDvjU-CmAcglqr/view?usp=sharing) \| [**Slide (AI)**](https://drive.google.com/file/d/1YrrzfL2gEvcymzA6_-9aXFe88qeCNrRU/view?usp=sharing)
+[**Paper**](https://arxiv.org/abs/2512.05288) \| [**Video (AI)**](https://drive.google.com/file/d/1PAljf0YjWgnBRUHhmDZDvjU-CmAcglqr/view?usp=sharing) \| [**Slide (AI)**](https://drive.google.com/file/d/1I3xKf1_lf8VIGlwMGgqWWxTUvFnNW3Po/view?usp=sharing)
 
 **Key Points**:
 - First systematic study automating WebShell family classification through representation learning
