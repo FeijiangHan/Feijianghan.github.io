@@ -47,8 +47,10 @@ Token-level attention tuning, a class of training-free methods including Post-ho
 [**Paper**](https://arxiv.org/abs/2504.09402v2) \| [**Blog**](https://www.alphaxiv.org/abs/2504.09402v2)
 
 **Key Points**:
-- Identified Semantic Misunderstanding as the core bottleneck in LLMs reasoning even with strong methods like CoT
-- Designed SSR Series to resolve this issue by: (1) applying step-by-step reading logic (SSR), (2) enforcing attention on key tokens via self-reference (SSR+), and (3) resolving backward dependencies through iterative re-contextualization (SSR++)
+
+- Explained the effectiveness of prompt repetition through the lens of Attention: it helps models suppress focus on low-semantic tokens (e.g., punctuation) and redistribute attention to critical information.
+- Identified *Semantic Misunderstanding* as a core reasoning bottleneck that persists even with CoT, stemming from the inherent constraints of the unidirectional attention mechanism.
+- Proposed a training-free framework to resolve these issues by: (1) applying step-by-step reading logic, (2) automatically steering attention to key tokens via self-reference, and (3) resolving backward dependencies through iterative re-contextualization. 
 
 <div class="paper-interaction" onclick="toggleAbstract('ssr_abstract')">
 📑 Click to see abstract
@@ -100,7 +102,7 @@ LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for La
 
 **Feijiang Han**, Zelong Wang, Bowen Wang, Xinxin Liu, Skyler Cheung, Delip Rao, Chris Callison-Burch, Lyle Ungar
 
-[**Paper**] \| [**Code & Dataset**] (Release Due: 2026.3.1)
+[**Paper**] (Release Due: 2026.2.1) \| [**Code & Dataset**] (Release Due: 2026.3.1)
 
 **Key Points**:
 - Novel pipeline extracting PDF layout information directly from LaTeX compilation (~~No Human annotations and PDF Parsers~~)
@@ -124,7 +126,7 @@ General-purpose Vision-Language Models (VLMs) are increasingly integral to moder
 
 **Feijiang Han**
 
-[**Paper**](https://arxiv.org/abs/2512.05288) \| [**Video (AI)**](https://drive.google.com/file/d/1PAljf0YjWgnBRUHhmDZDvjU-CmAcglqr/view?usp=sharing) \| [**Slide (AI)**](https://drive.google.com/file/d/1I3xKf1_lf8VIGlwMGgqWWxTUvFnNW3Po/view?usp=sharing)
+[**Paper**](https://arxiv.org/abs/2512.05288) \| [**Video (AI)**](https://drive.google.com/file/d/1PAljf0YjWgnBRUHhmDZDvjU-CmAcglqr/view?usp=sharing) \| [**Slide (AI)**](https://drive.google.com/file/d/1I3xKf1_lf8VIGlwMGgqWWxTUvFnNW3Po/view?usp=sharing) \| [**Code & Dataset**] (Release Due: 2026.3.1)
 
 **Key Points**:
 - First systematic study automating WebShell family classification through representation learning
