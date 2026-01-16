@@ -36,7 +36,7 @@ Token-level attention tuning, a class of training-free methods including Post-ho
 
 <div class='paper-box'>
 
-<div class='paper-box-image'><div><div class="badge">Arxiv</div><a href="https://arxiv.org/abs/2504.09402v2" target="_blank"><img src='images/SSR.png' alt="SSR+" class="paper-image-hover" width="100%"></a></div></div>
+<div class='paper-box-image'><div><div class="badge">ICASSP 2026</div><a href="https://arxiv.org/abs/2504.09402v2" target="_blank"><img src='images/SSR.png' alt="SSR+" class="paper-image-hover" width="100%"></a></div></div>
 
 <div class='paper-box-text' markdown="1">
 
