@@ -9,7 +9,7 @@
 <div class='paper-box'>
 
 <div class='paper-box-image'>
-<div><div class="badge">MOSS@ICML2025</div><a href="https://arxiv.org/abs/2505.11739" target="_blank"><img src='images/ZeroTuningcode.png' alt="ZeroTuning Overview" class="paper-image-hover" width="100%"></a></div></div>
+<div><div class="badge">ICLR 2026 | MOSS@ICML2025</div><a href="https://arxiv.org/abs/2505.11739" target="_blank"><img src='images/ZeroTuningcode.png' alt="ZeroTuning Overview" class="paper-image-hover" width="100%"></a></div></div>
 
 <div class='paper-box-text' markdown="1">
 
