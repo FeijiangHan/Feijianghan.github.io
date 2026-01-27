@@ -16,9 +16,9 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I'm a computer science graduate student at the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, working on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications in AI for Science.
+I'm a computer science graduate student at the University of Pennsylvania `<img src='./images/upenn.png' style="width: 1.35em;">`, working on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications in AI for Science.
 
-At Penn, I'm fortunate to be advised by [Prof. Chris Callison-Burch](https://www.linkedin.com/in/chris-callison-burch/), [Prof. Lyle Ungar](http://linkedin.com/in/lyle-ungar-b061474/), and [Delip Rao](https://www.linkedin.com/in/deliprao/). I also collaborate with [Dr. Xiaodong Yu](https://www.xiaodongyu.me/) (AMD GenAI) and [Prof. Yunhuai Liu](https://cs.pku.edu.cn/info/1234/2111.htm) (Peking University).
+At UPenn, I'm fortunate to be advised by [Prof. Chris Callison-Burch](https://www.linkedin.com/in/chris-callison-burch/), [Prof. Lyle Ungar](http://linkedin.com/in/lyle-ungar-b061474/), and [Delip Rao](https://www.linkedin.com/in/deliprao/). I also collaborate with [Dr. Xiaodong Yu](https://www.xiaodongyu.me/) (AMD GenAI) and [Prof. Yunhuai Liu](https://cs.pku.edu.cn/info/1234/2111.htm) (Peking University).
 
 My research centers on advancing (M)LLMs with **Effective, Efficient, and Explainable** methods. I care about building models that work better, run cheaper, and fail more predictably. Just as importantly, I want to understand why they work, when they break, and how we can steer them with confidence.
 
@@ -45,7 +45,7 @@ Today, a lot of progress comes from large-scale training and black-box iteration
 
 I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where we build AI-driven price tracking, LLM-based product analysis, and recommendation systems for e-commerce. I serve as a reviewer for top-tier conferences like **ICLR**, **ACL**, **CVPR**, **AAAI**.
 
-You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'> Google Scholar</a>
+You can find my publications on `<a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'>` Google Scholar`</a>`
 
 {% include_relative includes/news.md %}
 
@@ -66,7 +66,7 @@ Good explanations help us trust models in practice. They also guide us to design
 
 I often think about how physics matured. First came careful observations (Tycho Brahe). Then hypotheses (Kepler). Then principles (Newton). In AI, we have made huge empirical progress, many interpretability papers open a trained model and hunt for circuits. I love and respect that line of work, such as logit-lens analyses for LLMs/VLMs, sparse autoencoders (SAEs), and recent mechanistic interpretability work from Anthropic. But we still lack “Newton-style” first principles.
 
-I want to ask questions that begin at the level of training processes and model architecture. 
+I want to ask questions that begin at the level of training processes and model architecture.
 
 Why do compositional features and circuits appear at all? Why do we sometimes see sparsity, low-rank structure, or neatly separated factors after training? Can we connect those outcomes to the equations of gradient-based learning, instead of only collecting evidence after the fact?
 
