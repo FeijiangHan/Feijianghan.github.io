@@ -74,6 +74,13 @@ For example, I like the ICLR 2025 oral paper [Learning Dynamics of LLM Finetunin
 
 My hope is that interpretability can slowly move from biology-style observation to physics-style reasoning. If that shift happens, it will feel like a real change of era.
 
+For the near term (the next 3-5 years), I believe a key priority is turning insights into actionable model improvements—making interpretability more than just criticized as useless analysis.
+
+<div style="margin: 2em 0; text-align: center;">
+  <img src="/images/llm_interpretability_overview.png" alt="Actionable Mechanistic Interpretability Framework" style="width: 100%; max-width: 900px; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <p style="margin-top: 0.8em; color: #666; font-size: 0.9em; font-style: italic; max-width: 900px; margin-left: auto; margin-right: auto;">Actionable Mechanistic Interpretability: From Localizing and Steering to Model Improvement<br><span style="font-size: 0.85em;">(Figure from the survey "Locate, Steer, and Improve: A Practical Survey of Actionable Mechanistic Interpretability in Large Language Models")</span></p>
+</div>
+
 <span id="why-i-care-about-model-adaptation">
 
 ## Why I care about model adaptation
@@ -84,15 +91,20 @@ Scaling has worked, but the returns can slow down. It is unlikely that every new
 
 So I care about a practical question. How do we turn a strong base model into a model that is genuinely useful for a specific need?
 
-I think about this in two layers.
+I think about this in two layers, as illustrated below:
 
-First, I want to improve the general “base-to-expert” pipeline. That includes post-training methods like SFT, RL, and distillation. It also includes inference efficiency, such as quantization, pruning, layer skipping, and routing. I also care about retrieval, evaluation, and benchmarks, because the workflow around a model often matters as much as the model itself.
+<div style="margin: 2em 0; text-align: center;">
+  <img src="/images/model_adaptation_overview.png" alt="Model Adaptation Overview" style="width: 100%; max-width: 900px; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <p style="margin-top: 0.8em; color: #666; font-size: 0.9em; font-style: italic; max-width: 900px; margin-left: auto; margin-right: auto;">Novelty in Model Adaptation: Task-Specific vs Task-Agnostic Approaches</p>
+</div>
+
+First, I want to improve the general “base-to-expert” pipeline (task-agnostic). That includes post-training methods like SFT, RL, and distillation. It also includes inference efficiency, such as quantization, pruning, layer skipping, and routing. I also care about retrieval, evaluation, and benchmarks, because the workflow around a model often matters as much as the model itself.
 
 Second, I want to take these tools into real domains and make them work end-to-end. This idea is not new. It was central in the BERT era, and it is still central now. Beyond popular areas like coding and document analysis, I think many domains that rely on careful human judgment could benefit from LLM-based specialists. Malware or virus detection is one example.
 
 Some people see this direction as just engineering (data+training). But I am drawn to it because I believe engineering can carry real scientific novelty.
 
-Sometimes the novelty is how you get data when data is scarce. Sometimes it is how you design synthetic data that teaches the right behavior. Sometimes it is how you change representations or architectures when the base model cannot capture a key dependency. Sometimes it is how a new industrial need becomes a new research question.
+Sometimes the novelty is how you get data when data is scarce. Sometimes it is how you design synthetic data that teaches the right behavior. Sometimes it is how you change representations or architectures when the base model cannot capture a key dependency. Sometimes it is how a new industrial need becomes a new research question. 
 
 In the long run, I am optimistic about a system view of intelligence. If we can build many strong, efficient specialists, and let them collaborate as agents, we may reach broad capability in a way that is easier to maintain, easier to adapt, and easier to interpret than betting everything on a single monolithic model.
 
