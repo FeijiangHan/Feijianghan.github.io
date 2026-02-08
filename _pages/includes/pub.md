@@ -100,11 +100,11 @@ WebShell attacks, where malicious scripts are injected into web servers, pose a 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><a href="" target="_blank"><img src='images/latex2layout.png' alt="LaTeX2Layout Pipeline" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
-LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for Layout Detection
+[LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for Layout Detection](https://www.cis.upenn.edu/~ccb/publications/latex2layout.pdf)
 
 **Feijiang Han**, Zelong Wang, Bowen Wang, Xinxin Liu, Skyler Cheung, Delip Rao, Chris Callison-Burch, Lyle Ungar
 
-[**Paper**] (Release Due: 2026.2.1) \| [**Code & Dataset**] (Release Due: 2026.3.1)
+[**Paper**](https://www.cis.upenn.edu/~ccb/publications/latex2layout.pdf) \| [**Code & Dataset**] (Release Due: 2026.3.1)
 
 **TL;DR.** Layout detection turns a PDF into structured page understanding (bounding boxes + reading order), but current VLMs struggle mainly because high-fidelity supervision is scarce and PDF-parser-based labels are noisy and expensive. We introduce LaTeX2Layout, a scalable data-centric pipeline that extracts pixel-accurate layout ground truth directly from the LaTeX compilation process, enabling large-scale training without manual annotation.
 
