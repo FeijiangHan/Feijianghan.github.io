@@ -193,10 +193,19 @@ We present ThinknCheck, a 1B-parameter verifier for grounded claim verification 
 
 [Credit and quality intelligent learning based multi-armed bandit scheme for unknown worker selection in multimedia MCS](https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290)  
 Jianheng Tang, **Feijiang Han**, Kejia Fan, et al.  
-**Key Points**:
-  - Novel Credit and Quality Learning based Multi-Armed Bandit (CQL-MAB) scheme for solving the Post-Unknown Worker Recruitment problem in MCS
-  - Integrates credit identification and quality calculation for worker selection
-  - Theoretically proven truthfulness and efficiency in reverse auction settings
+
+
+**TL;DR.** High-quality training data is the bottleneck for modern multimodal and foundation models, and mobile crowd sensing (MCS) is a scalable way to collect it—but platforms must recruit workers before knowing who is trustworthy or produces high-quality data. We formulate this as an online decision-making problem under uncertainty and propose CQL-MAB, a bandit-style RL scheme that learns workers’ credit (honesty) and quality (data utility) from feedback and selects workers cost-effectively with incentive guarantees.
+
+**Why this is RL:** it’s a contextual multi-armed bandit: repeatedly choose “arms” (workers), observe stochastic rewards (credit/quality), and minimize regret while respecting budget/auction constraints.
+
+**Task:** input = {workers’ bids + streaming feedback from their submitted data} → output = {selected worker set (and payments) each round}.
+
+**Key Points:**
+- CQL-MAB: jointly models credit (trustworthiness) and quality (data utility) as rewards for bandit-based recruitment under budget.
+- Two-stage / two-level reward UCB to pick workers while continuously updating beliefs about unknown workers.
+- Proven properties in reverse auctions: truthfulness, individual rationality, and computational efficiency, plus strong empirical performance (revenue/regret).
+
 <div class="paper-interaction" onclick="toggleAbstract('cql_mab_abstract')">
 📑 Click to see abstract
 </div>
