@@ -9,7 +9,7 @@
 <div class='paper-box'>
 
 <div class='paper-box-image'>
-<div><div class="badge">ICLR 2026 | MOSS@ICML2025</div><a href="https://arxiv.org/abs/2505.11739" target="_blank"><img src='images/ZeroTuningcode.png' alt="ZeroTuning Overview" class="paper-image-hover" width="100%"></a></div></div>
+<div><div class="badge">ICLR 2026</div><a href="https://arxiv.org/abs/2505.11739" target="_blank"><img src='images/ZeroTuningcode.png' alt="ZeroTuning Overview" class="paper-image-hover" width="100%"></a></div></div>
 
 <div class='paper-box-text' markdown="1">
 
@@ -19,10 +19,12 @@
 
 [**Paper**](https://arxiv.org/abs/2505.11739) \| [**Code & Demo**](https://github.com/FeijiangHan/ZeroTuning) \| [**Blog**](https://www.alphaxiv.org/abs/2505.11739) \| [**Poster**](/papers/ZeroTuning_Poster.pdf){:target="_blank"}
 
-**Key Points**:
-- Novel training-free optimization via initial token attention steering, supporting both supervised and unsupervised calibrations
-- Lightweight implementation (four lines of code modification) achieves substantial gains: 19.9% on classification, 4.5% on QA, and 2.1% on multi-turn dialogue
-- Explains why this method works through: (1) theoretical analysis; (2) output entropy and accuracy analysis; (3) error pattern analysis; (4) fine-grained layer/head analysis
+**TL;DR.** Training-free attention tuning can boost frozen LLMs, but prior methods often depend on fragile heuristics to find “important” task tokens. ZeroTuning shows a simpler universal control lever: tune only the initial token (e.g., &lt;BOS&gt;). With tiny head-specific biases on BOS attention logits, we can reshape downstream attention (sharpen/flatten), lower output entropy, and unlock pretrained knowledge—without any parameter updates.
+
+**Key Points:**
+- Lightweight + practical: ~4-line change, no KV-cache / decoding changes, kernel-agnostic (works with SDPA & FlashAttention), and works with quantized inference.
+- Strong, broad gains: across 15 datasets, e.g., on Llama-3.1-8B: +19.9% (classification), +4.5% (QA), +2.1% (dialogue); MT-Bench improves 7.804 → 7.966.
+- Why it works (mechanism insights): BOS acts as an attention sink, so tuning it gives monotonic control of attention entropy; effects are stronger in earlier layers and heterogeneous across heads (up-effective vs. down-effective). Includes supervised calibration and an unsupervised entropy-minimization variant.
 
 <div class="paper-interaction" onclick="toggleAbstract('zerotuning_abstract')">
 📑 Click to see abstract
@@ -46,10 +48,11 @@ Token-level attention tuning, a class of training-free methods including Post-ho
 
 [**Paper**](https://arxiv.org/abs/2504.09402v2) \| [**Blog**](https://www.alphaxiv.org/abs/2504.09402v2)
 
-**Key Points**:
+**TL;DR.** Many “reasoning” failures in LLMs are actually comprehension failures—the model misreads the question (semantic misunderstanding), so even Chain-of-Thought can’t reliably help. We introduce Step-by-Step Reading (SSR), a training-free framework that makes models read before they think: parse the question incrementally, keep each reasoning step grounded to the text, and fix backward dependencies via iterative re-contextualization.
 
-- Explained the effectiveness of prompt repetition through the lens of Attention: it helps models suppress focus on low-semantic tokens (e.g., punctuation) and redistribute attention to critical information.
+**Key Points**:
 - Identified *Semantic Misunderstanding* as a core reasoning bottleneck that persists even with CoT, stemming from the inherent constraints of the unidirectional attention mechanism.
+- Explained the effectiveness of prompt repetition through the lens of Attention: it helps models suppress focus on low-semantic tokens (e.g., punctuation) and redistribute attention to critical information.
 - Proposed a training-free framework to resolve these issues by: (1) applying step-by-step reading logic, (2) automatically steering attention to key tokens via self-reference, and (3) resolving backward dependencies through iterative re-contextualization. 
 
 <div class="paper-interaction" onclick="toggleAbstract('ssr_abstract')">
@@ -80,10 +83,9 @@ Large Language Models (LLMs) often fail on complex reasoning tasks due to flawed
 
 [**Paper**](https://arxiv.org/abs/2504.13811v3) \| [**Blog**](https://www.alphaxiv.org/abs/2504.13811v3) \| [**Poster**](/papers/LLM_Webshell_Poster.pdf){:target="_blank"}
 
-**Key Points**:
-- First comprehensive study of LLMs' capabilities in WebShell detection
-- Novel BFAD framework improves LLM detection by 13.82% through function-aware analysis
-- Enables both large and small LLMs to outperform traditional SOTA methods
+**TL;DR.** WebShell detection is hard for LLMs because a server-side script can span millions of tokens while the truly malicious logic is often just a tiny, obfuscated fragment—so naïvely feeding the whole file dilutes the signal and breaks context limits. We provide the first comprehensive evaluation of LLMs for WebShell detection and introduce BFAD, a behavior-driven, function-aware pipeline that helps LLMs focus on the most indicative code, yielding a +13.82% average F1 improvement and pushing both large and small LLMs toward (or beyond) prior SOTA.
+
+**Task:** input = {server-side script / PHP file} → output = {WebShell / Benign}.
 
 <div class="paper-interaction" onclick="toggleAbstract('webshell_detection_abstract')">
 📑 Click to see abstract
@@ -104,10 +106,9 @@ LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for La
 
 [**Paper**] (Release Due: 2026.2.1) \| [**Code & Dataset**] (Release Due: 2026.3.1)
 
-**Key Points**:
-- Novel pipeline extracting PDF layout information directly from LaTeX compilation (~~No Human annotations and PDF Parsers~~)
-- Custom LaTeX packages for precise element tracking and accurate layout extraction
-- 200% relative improvement over zero-shot baselines through curriculum learning and synthetic data augmentation
+**TL;DR.** Layout detection turns a PDF into structured page understanding (bounding boxes + reading order), but current VLMs struggle mainly because high-fidelity supervision is scarce and PDF-parser-based labels are noisy and expensive. We introduce LaTeX2Layout, a scalable data-centric pipeline that extracts pixel-accurate layout ground truth directly from the LaTeX compilation process, enabling large-scale training without manual annotation.
+
+**Task:** input = {PDF document} → output = {page elements’ bounding boxes + reading order (optionally OCR)}.
 
 <div class="paper-interaction" onclick="toggleAbstract('latex2layout_abstract')">
 📑 Click to see abstract
@@ -128,10 +129,14 @@ General-purpose Vision-Language Models (VLMs) are increasingly integral to moder
 
 [**Paper**](https://arxiv.org/abs/2512.05288) \| [**Video (AI)**](https://drive.google.com/file/d/1PAljf0YjWgnBRUHhmDZDvjU-CmAcglqr/view?usp=sharing) \| [**Slide (AI)**](https://drive.google.com/file/d/1I3xKf1_lf8VIGlwMGgqWWxTUvFnNW3Po/view?usp=sharing) \| [**Code & Dataset**] (Release Due: 2026.3.1)
 
+**TL;DR.** While WebShell detection answers “malicious or not,” real-world defense also needs attribution and tracking: WebShells come in diverse families with different behaviors and variants. We are the first to systematically study representation learning for automated WebShell family classification.
+
+**Task:** given a WebShell → predict its family ID.
+
 **Key Points**:
-- First systematic study automating WebShell family classification through representation learning
-- Novel dynamic function call trace extraction and LLM-based synthetic trace generation for behavioral analysis
-- Comprehensive evaluation of representation methods (sequence, graph, and tree-based models) across multiple datasets with practical insights for optimal model selection
+- Benchmark: the first systematic study of representation learning for fine-grained WebShell family classification.
+- Behavioral view: dynamic function-call traces + LLM-augmented variants for robust behavioral analysis.
+- Key finding: structural representations (especially tree-based GNNs / Tree-GAT) consistently outperform sequence models for family attribution.
 
 <div class="paper-interaction" onclick="toggleAbstract('webshell_family_abstract')">
 📑 Click to see abstract
@@ -160,6 +165,10 @@ ThinknCheck: Grounded Claim Verification with Compact, Reasoning-Driven, and Int
 Delip Rao, **Feijiang Han**, Chris Callison-Burch
 
 [**Poster**](/papers/ThinknCheck-Poster-printv2.pdf){:target="_blank"} \| [**Paper**] (Coming Soon)
+
+**TL;DR.** Efficient scientific claim verification is essential for trustworthy literature review and retrieval—but most strong verifiers are large, expensive, and hard to interpret. We develop ThinknCheck, a compact “reason first, then decide” verifier, and summarize best practices for making small LLMs reliable and interpretable on document-grounded claim verification.
+
+**Task:** input = {Document, Claim} → output = {True / False}.
 
 **Key Points**:
 - 1B-scale, 4-bit **ThinknCheck** verifier trained to “reason first, then decide” for scientific claim verification
