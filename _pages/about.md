@@ -117,3 +117,9 @@ In the long run, I am optimistic about a system view of intelligence. If we can 
 {% include_relative includes/notes.md %}
 
 {% include_relative includes/schedule.md %}
+
+# Misc
+
+Beyond research, I enjoy writing and sharing knowledge. I maintain a blog on [Xiaohongshu](https://www.xiaohongshu.com/user/profile/5f96bb470000000001009db4){:target="_blank"} where I share research experiences, lecture summaries, insights, and paper discussions. I find that writing helps me think more clearly and connect with others in the community.
+
+I also practice traditional Chinese martial arts, including [Tai Chi](https://en.wikipedia.org/wiki/Tai_chi){:target="_blank"}, and health qigong practices such as [Mawangdui Daoyin](https://en.wikipedia.org/wiki/Yangsheng_(Daoism)){:target="_blank"}. These practices help me maintain balance and focus, both physically and mentally.
