@@ -45,7 +45,32 @@ Today, a lot of progress comes from large-scale training and black-box iteration
 
 I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where we build AI-driven price tracking, LLM-based product analysis, and recommendation systems for e-commerce. I serve as a reviewer for top conferences like **ICLR**, **ICML**, **ACL**, **CVPR**, **AAAI**.
 
-You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'> Google Scholar</a>
+You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'> Google Scholar</a>.
+
+Feel free to reach out for collaboration or just to say hi—shoot me an <a href="mailto:{{ site.author.email }}">email</a> (it's <span id="contact-local-time" data-timezone="{{ site.contact_timezone | default: 'America/New_York' }}">—</span> for me right now).
+
+<script>
+(function() {
+  var el = document.getElementById('contact-local-time');
+  if (!el) return;
+  var tz = el.getAttribute('data-timezone') || 'America/New_York';
+  function update() {
+    try {
+      var formatter = new Intl.DateTimeFormat('en-US', {
+        timeZone: tz,
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+      });
+      el.textContent = formatter.format(new Date());
+    } catch (e) {
+      el.textContent = '—';
+    }
+  }
+  update();
+  setInterval(update, 60000);
+})();
+</script>
 
 {% include_relative includes/news.md %}
 

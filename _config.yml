@@ -19,6 +19,10 @@ google_site_verification : dMgjss1TidDcPLVvrGR-J8k9sqRdKIkbgKYnfK3G_kU # get goo
 bing_site_verification   : 840E1408A8FBA11C67FA0F1C303FC59F # get bing_site_verification from https://www.bing.com/webmasters/about
 baidu_site_verification  : codeva-Vmc6w9FEF7 # get baidu_site_verification from https://ziyuan.baidu.com/login/index?u=/site/index
 
+# Contact: display local time for visitors
+# Use IANA timezone: "America/New_York" for Eastern US, "Asia/Shanghai" for Beijing
+contact_timezone: "America/New_York"
+
 # Site Author
 author:
   name             : "Feijiang Han"
