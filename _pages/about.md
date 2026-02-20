@@ -45,7 +45,7 @@ Today, a lot of progress comes from large-scale training and black-box iteration
 
 I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where we build AI-driven price tracking, LLM-based product analysis, and recommendation systems for e-commerce. I serve as a reviewer for top conferences like **ICLR**, **ICML**, **ACL**, **CVPR**, **AAAI**.
 
-You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'> Google Scholar</a>.
+<!-- You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'> Google Scholar</a>. -->
 
 Feel free to reach out for collaboration or just to say hi—shoot me an email: feijianghan@gmail.com (it's <span id="contact-local-time" data-timezone="{{ site.contact_timezone | default: 'America/New_York' }}">—</span> for me right now).
 
