@@ -47,7 +47,7 @@ I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where w
 
 You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'> Google Scholar</a>.
 
-Feel free to reach out for collaboration or just to say hi—shoot me an <a href="mailto:{{ site.author.email }}">email</a> (it's <span id="contact-local-time" data-timezone="{{ site.contact_timezone | default: 'America/New_York' }}">—</span> for me right now).
+Feel free to reach out for collaboration or just to say hi—shoot me an email: feijianghan@gmail.com (it's <span id="contact-local-time" data-timezone="{{ site.contact_timezone | default: 'America/New_York' }}">—</span> for me right now).
 
 <script>
 (function() {
