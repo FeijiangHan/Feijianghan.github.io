@@ -123,11 +123,11 @@ I think about this in two layers, as illustrated below:
   <p style="margin-top: 0.8em; color: #666; font-size: 0.9em; font-style: italic; max-width: 900px; margin-left: auto; margin-right: auto;">Novelty in Model Adaptation: Task-Specific vs Task-Agnostic Approaches</p>
 </div>
 
-First, I want to improve the general “base-to-expert” pipeline (task-agnostic). That includes post-training methods like SFT, RL, and distillation. It also includes inference efficiency, such as quantization, pruning, layer skipping, and routing. I also care about retrieval, evaluation, and benchmarks, because the workflow around a model often matters as much as the model itself.
+Rich Sutton's ["The Bitter Lesson"](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) keeps proving true in the LLM era: general methods that leverage compute—search and learning—consistently outperform methods that rely on human priors and hand-crafted knowledge. With that in mind, First, I want to improve the general “base-to-expert” pipeline (task-agnostic). That includes post-training methods like SFT, RL, and distillation; inference efficiency, such as quantization, pruning, layer skipping, and routing; and retrieval, evaluation, and benchmarks—because the workflow around a model often matters as much as the model itself. 
 
-Second, I want to take these tools into real domains and make them work end-to-end. This idea is not new. It was central in the BERT era, and it is still central now. Beyond popular areas like coding and document analysis, I think many domains that rely on careful human judgment could benefit from LLM-based specialists. Malware or virus detection is one example.
+Second, I want to take these tools into real domains and make them work end-to-end. This idea is not new—it was central in the BERT era and remains central now. Beyond popular areas like coding and document analysis, I think many domains that rely on careful human judgment could benefit from LLM-based specialists. Malware or virus detection is one example.
 
-Some people see this direction as just engineering (data+training). But I am drawn to it because I believe engineering can carry real scientific novelty.
+Some see this direction as "just engineering" (data + training). I am drawn to it because I believe that kind of engineering can carry real scientific novelty.
 
 Sometimes the novelty is how you get data when data is scarce. Sometimes it is how you design synthetic data that teaches the right behavior. Sometimes it is how you change representations or architectures when the base model cannot capture a key dependency. Sometimes it is how a new industrial need becomes a new research question. 
 
