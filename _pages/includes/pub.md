@@ -104,7 +104,7 @@ WebShell attacks, where malicious scripts are injected into web servers, pose a 
 
 **Feijiang Han**, Zelong Wang, Bowen Wang, Xinxin Liu, Skyler Cheung, Delip Rao, Chris Callison-Burch, Lyle Ungar
 
-[**Paper**](https://www.cis.upenn.edu/~ccb/publications/latex2layout.pdf) \| [**Code & Dataset**] (Release Due: 2026.3.1)
+[**Paper**](https://www.cis.upenn.edu/~ccb/publications/latex2layout.pdf) \| [**Code & Dataset**] (Release Due: 2026.4.1)
 
 **TL;DR.** Layout detection turns a PDF into structured page understanding (bounding boxes + reading order), but current VLMs struggle mainly because high-fidelity supervision is scarce and PDF-parser-based labels are noisy and expensive. We introduce LaTeX2Layout, a scalable data-centric pipeline that extracts pixel-accurate layout ground truth directly from the LaTeX compilation process, enabling large-scale training without manual annotation.
 
@@ -127,7 +127,7 @@ General-purpose Vision-Language Models (VLMs) are increasingly integral to moder
 
 **Feijiang Han**
 
-[**Paper**](https://arxiv.org/abs/2512.05288) \| [**Video (AI)**](https://drive.google.com/file/d/1PAljf0YjWgnBRUHhmDZDvjU-CmAcglqr/view?usp=sharing) \| [**Slide (AI)**](https://drive.google.com/file/d/1I3xKf1_lf8VIGlwMGgqWWxTUvFnNW3Po/view?usp=sharing) \| [**Code & Dataset**] (Release Due: 2026.3.1)
+[**Paper**](https://arxiv.org/abs/2512.05288) \| [**Video (AI)**](https://drive.google.com/file/d/1PAljf0YjWgnBRUHhmDZDvjU-CmAcglqr/view?usp=sharing) \| [**Slide (AI)**](https://drive.google.com/file/d/1I3xKf1_lf8VIGlwMGgqWWxTUvFnNW3Po/view?usp=sharing) \| [**Code & Dataset**] (Release Due: 2026.4.1)
 
 **TL;DR.** While WebShell detection answers “malicious or not,” real-world defense also needs attribution and tracking: WebShells come in diverse families with different behaviors and variants. We are the first to systematically study representation learning for automated WebShell family classification.
 
