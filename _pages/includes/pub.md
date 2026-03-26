@@ -151,7 +151,7 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
 <div class='paper-box'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge">Project</div>
+      <div class="badge">NLDB 2026</div>
       <a href="/papers/ThinknCheck-Poster-printv2.pdf" target="_blank">
         <img src='images/thinkncheck.png' alt="ThinknCheck: Grounded Claim Verification" class="paper-image-hover" width="100%">
       </a>

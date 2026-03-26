@@ -1,7 +1,8 @@
 <span class='anchor' id='news'></span>
 
 # 🔥 News
-- *March 2026*: &nbsp;🎉 Thrilled to share that I will be starting my PhD journey in Computer Science!
+- *March 2026*: **NLDB 2026 x 1**
+- *March 2026*: &nbsp;🎉 I will be starting my PhD journey in Computer Science!
 - *January 2026*: &nbsp;🎉 **ICLR 2026 x 2**
 - *January 2026*: &nbsp;🎉 **ICASSP 2026**
 - *November 2025*: &nbsp;🎉 **AAAI 2026 x 2**
