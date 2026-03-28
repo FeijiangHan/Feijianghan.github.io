@@ -81,7 +81,7 @@ Large Language Models (LLMs) often fail on complex reasoning tasks due to flawed
 
 **Feijiang Han**, Jiaming Zhang, Chuyi Deng, Jianheng Tang, Yunhuai Liu
 
-[**Paper**](https://arxiv.org/abs/2504.13811v3) \| [**Blog**](https://www.alphaxiv.org/abs/2504.13811v3) \| [**Poster**](/papers/LLM_Webshell_Poster.pdf){:target="_blank"}
+[**Paper**](https://arxiv.org/abs/2504.13811v3) \| [**Resources**](https://github.com/FeijiangHan/LLM-for-Webshell-Detection) \| [**Blog**](https://www.alphaxiv.org/abs/2504.13811v3) \| [**Poster**](/papers/LLM_Webshell_Poster.pdf){:target="_blank"}
 
 **TL;DR.** WebShell detection is hard for LLMs because a server-side script can span millions of tokens while the truly malicious logic is often just a tiny, obfuscated fragment—so naïvely feeding the whole file dilutes the signal and breaks context limits. We provide the first comprehensive evaluation of LLMs for WebShell detection and introduce BFAD, a behavior-driven, function-aware pipeline that helps LLMs focus on the most indicative code, yielding a +13.82% average F1 improvement and pushing both large and small LLMs toward (or beyond) prior SOTA.
 
@@ -104,7 +104,7 @@ WebShell attacks, where malicious scripts are injected into web servers, pose a 
 
 **Feijiang Han**, Zelong Wang, Bowen Wang, Xinxin Liu, Skyler Cheung, Delip Rao, Chris Callison-Burch, Lyle Ungar
 
-[**Paper**](https://www.cis.upenn.edu/~ccb/publications/latex2layout.pdf) \| [**Code & Dataset**] (Release Due: 2026.4.1)
+[**Paper**](https://www.cis.upenn.edu/~ccb/publications/latex2layout.pdf) 
 
 **TL;DR.** Layout detection turns a PDF into structured page understanding (bounding boxes + reading order), but current VLMs struggle mainly because high-fidelity supervision is scarce and PDF-parser-based labels are noisy and expensive. We introduce LaTeX2Layout, a scalable data-centric pipeline that extracts pixel-accurate layout ground truth directly from the LaTeX compilation process, enabling large-scale training without manual annotation.
 

@@ -16,7 +16,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I'm a computer science graduate student at the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, where I work on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications in AI for Science. I previously interned at Google and SINA, and some of my work has been adopted in production by Alibaba, TikTok, and Baidu.
+I'm a computer science graduate student at the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, where I work on Large Language Models (LLMs), Vision-Language Models (VLMs), and NLP applications in AI for Science. I previously interned at Google and SINA, and I enjoy collaborating with people in industry to tackle real-world challenges.
 
 At UPenn, I'm fortunate to be advised by [Prof. Chris Callison-Burch](https://www.linkedin.com/in/chris-callison-burch/), [Prof. Lyle Ungar](http://linkedin.com/in/lyle-ungar-b061474/), and [Delip Rao](https://www.linkedin.com/in/deliprao/). I also collaborate with [Dr. Xiaodong Yu](https://www.xiaodongyu.me/) (AMD GenAI) and [Prof. Yunhuai Liu](https://cs.pku.edu.cn/info/1234/2111.htm) (Peking University). 
 
