@@ -127,7 +127,7 @@ General-purpose Vision-Language Models (VLMs) are increasingly integral to moder
 
 **Feijiang Han**
 
-[**Paper**](https://arxiv.org/abs/2512.05288) \| [**Video (AI)**](https://drive.google.com/file/d/1PAljf0YjWgnBRUHhmDZDvjU-CmAcglqr/view?usp=sharing) \| [**Slide (AI)**](https://drive.google.com/file/d/1I3xKf1_lf8VIGlwMGgqWWxTUvFnNW3Po/view?usp=sharing) \| [**Code & Dataset**] (Release Due: 2026.4.1)
+[**Paper**](https://arxiv.org/abs/2512.05288) \| [**Video (AI)**](https://drive.google.com/file/d/1PAljf0YjWgnBRUHhmDZDvjU-CmAcglqr/view?usp=sharing) \| [**Slide (AI)**](https://drive.google.com/file/d/1I3xKf1_lf8VIGlwMGgqWWxTUvFnNW3Po/view?usp=sharing) \| [**Code & Dataset**]
 
 **TL;DR.** While WebShell detection answers “malicious or not,” real-world defense also needs attribution and tracking: WebShells come in diverse families with different behaviors and variants. We are the first to systematically study representation learning for automated WebShell family classification.
 
@@ -164,7 +164,7 @@ ThinknCheck: Grounded Claim Verification with Compact, Reasoning-Driven, and Int
 
 Delip Rao, **Feijiang Han**, Chris Callison-Burch
 
-[**Poster**](/papers/ThinknCheck-Poster-printv2.pdf){:target="_blank"} \| [**Paper**] (Coming Soon)
+[**Paper**](https://arxiv.org/abs/2604.01652) \| [**Poster**](/papers/ThinknCheck-Poster-printv2.pdf){:target="_blank"}
 
 **TL;DR.** Efficient scientific claim verification is essential for trustworthy literature review and retrieval—but most strong verifiers are large, expensive, and hard to interpret. We develop ThinknCheck, a compact “reason first, then decide” verifier, and summarize best practices for making small LLMs reliable and interpretable on document-grounded claim verification.
 

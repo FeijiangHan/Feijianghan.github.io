@@ -36,7 +36,7 @@ Today, a lot of progress comes from large-scale training and black-box iteration
         <span style="color: red;">(More: <a href="#why-i-care-about-interpretability" style="color: red;">Why I care about interpretability</a>)</span>
       </li>
       <li>
-        <strong>2. Model Adaptation (From base models to real experts)</strong>: I work on adapting foundation models to specific domains and building systems with measurable impact. I'm interested in task-agnostic adaptation pipelines where we can inject real scientific novelty, including post-training (SFT, RL, distillation), efficiency methods (quantization, pruning, layer skipping, routing), and system-level tooling like retrieval and evaluation. I also like going deep into real domains, where novelty often comes from new tasks, synthetic data, and sometimes further architecture optimization.<br>
+        <strong>2. Model Adaptation/Alignment (From base models to real experts)</strong>: I work on adapting foundation models to specific domains and building systems with measurable impact. I'm interested in task-agnostic adaptation pipelines where we can inject real scientific novelty, including post-training (SFT, RL, distillation), efficiency methods (quantization, pruning, layer skipping, routing), and system-level tooling like retrieval and evaluation. I also like going deep into real domains, where novelty often comes from new tasks, synthetic data, and sometimes further architecture optimization.<br>
         <span style="color: red;">(More: <a href="#why-i-care-about-model-adaptation" style="color: red;">Why I care about model adaptation</a>)</span>
       </li>
     </ul>
