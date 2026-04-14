@@ -21,10 +21,10 @@
 
 **TL;DR.** Token-level attention steering can boost frozen LLMs, but prior methods often depend on fragile heuristics to find “important” task tokens. ZeroTuning shows a simpler universal control lever: tune only the initial token (e.g., &lt;BOS&gt;). With tiny head-specific biases on BOS attention logits, we can reshape downstream attention (sharpen/flatten), lower output entropy, and unlock pretrained knowledge—without any parameter updates.
 
-**Key Points:**
+<!-- **Key Points:**
 - Lightweight + practical: ~4-line change, no KV-cache / decoding changes, kernel-agnostic (works with SDPA & FlashAttention), and works with quantized inference.
 - Strong, broad gains: across 15 datasets, e.g., on Llama-3.1-8B: +19.9% (classification), +4.5% (QA), +2.1% (dialogue); MT-Bench improves 7.804 → 7.966.
-- Why it works (mechanism insights): BOS acts as an attention sink, so tuning it gives monotonic control of attention entropy; effects are stronger in earlier layers and heterogeneous across heads (up-effective vs. down-effective). Includes supervised calibration and an unsupervised entropy-minimization variant.
+- Why it works (mechanism insights): BOS acts as an attention sink, so tuning it gives monotonic control of attention entropy; effects are stronger in earlier layers and heterogeneous across heads (up-effective vs. down-effective). Includes supervised calibration and an unsupervised entropy-minimization variant. -->
 
 <div class="paper-interaction" onclick="toggleAbstract('zerotuning_abstract')">
 📑 Click to see abstract
@@ -49,11 +49,11 @@ Hengyuan Zhang et al. *Feijiang Han contributed to the latest version.*
 [**Paper**](https://arxiv.org/abs/2601.14004)
 
 **TL;DR.** This survey reframes mechanistic interpretability as an actionable pipeline, not just a diagnostic tool: first locate where behaviors live, then steer those components, and finally use the intervention to improve alignment, capability, and efficiency in LLMs.
-
+<!-- 
 **Key Points:**
 - Organizes mechanistic interpretability into a practical workflow: **Locate, Steer, and Improve**.
 - Connects interpretable objects and intervention methods into a more usable framework for real model control.
-- Emphasizes that interpretability can support downstream gains in alignment, capability, and efficiency, rather than only post-hoc analysis.
+- Emphasizes that interpretability can support downstream gains in alignment, capability, and efficiency, rather than only post-hoc analysis. -->
 
 <div class="paper-interaction" onclick="toggleAbstract('locate_steer_improve_abstract')">
 📑 Click to see abstract
@@ -78,10 +78,10 @@ Mechanistic Interpretability (MI) has emerged as a vital approach to demystify t
 
 **TL;DR.** Many “reasoning” failures in LLMs are actually comprehension failures—the model misreads the question (semantic misunderstanding), so even Chain-of-Thought can’t reliably help. We introduce Step-by-Step Reading (SSR), a training-free framework that makes models read before they think: parse the question incrementally, keep each reasoning step grounded to the text, and fix backward dependencies via iterative re-contextualization.
 
-**Key Points**:
+<!-- **Key Points**:
 - Identified *Semantic Misunderstanding* as a core reasoning bottleneck that persists even with CoT, stemming from the inherent constraints of the unidirectional attention mechanism.
 - Explained the effectiveness of prompt repetition through the lens of Attention: it helps models suppress focus on low-semantic tokens (e.g., punctuation) and redistribute attention to critical information.
-- Proposed a training-free framework to resolve these issues by: (1) applying step-by-step reading logic, (2) automatically steering attention to key tokens via self-reference, and (3) resolving backward dependencies through iterative re-contextualization. 
+- Proposed a training-free framework to resolve these issues by: (1) applying step-by-step reading logic, (2) automatically steering attention to key tokens via self-reference, and (3) resolving backward dependencies through iterative re-contextualization.  -->
 
 <div class="paper-interaction" onclick="toggleAbstract('ssr_abstract')">
 📑 Click to see abstract
@@ -163,10 +163,10 @@ General-purpose Vision-Language Models (VLMs) are increasingly integral to moder
 
 **Task:** given a WebShell → predict its family ID.
 
-**Key Points**:
+<!-- **Key Points**:
 - Benchmark: the first systematic study of representation learning for fine-grained WebShell family classification.
 - Behavioral view: dynamic function-call traces + LLM-augmented variants for robust behavioral analysis.
-- Key finding: structural representations (especially tree-based GNNs / Tree-GAT) consistently outperform sequence models for family attribution.
+- Key finding: structural representations (especially tree-based GNNs / Tree-GAT) consistently outperform sequence models for family attribution. -->
 
 <div class="paper-interaction" onclick="toggleAbstract('webshell_family_abstract')">
 📑 Click to see abstract
@@ -200,10 +200,10 @@ Delip Rao, **Feijiang Han**, Chris Callison-Burch
 
 **Task:** input = {Document, Claim} → output = {True / False}.
 
-**Key Points**:
+<!-- **Key Points**:
 - 1B-scale, 4-bit **ThinknCheck** verifier trained to “reason first, then decide” for scientific claim verification
 - New reasoning-augmented datasets **LLMAggreFact-Think** and **GSMClaims** for document-grounded scientific and arithmetic claims
-- Small model **matches or surpasses** larger specialized verifiers (e.g., MiniCheck-7B) while providing short, interpretable rationales
+- Small model **matches or surpasses** larger specialized verifiers (e.g., MiniCheck-7B) while providing short, interpretable rationales -->
 
 <div class="paper-interaction" onclick="toggleAbstract('thinkncheck_abstract')">
 📑 Click to see abstract
@@ -231,10 +231,10 @@ Jianheng Tang, **Feijiang Han**, Kejia Fan, et al.
 
 **Task:** input = {workers’ bids + streaming feedback from their submitted data} → output = {selected worker set (and payments) each round}.
 
-**Key Points:**
+<!-- **Key Points:**
 - CQL-MAB: jointly models credit (trustworthiness) and quality (data utility) as rewards for bandit-based recruitment under budget.
 - Two-stage / two-level reward UCB to pick workers while continuously updating beliefs about unknown workers.
-- Proven properties in reverse auctions: truthfulness, individual rationality, and computational efficiency, plus strong empirical performance (revenue/regret).
+- Proven properties in reverse auctions: truthfulness, individual rationality, and computational efficiency, plus strong empirical performance (revenue/regret). -->
 
 <div class="paper-interaction" onclick="toggleAbstract('cql_mab_abstract')">
 📑 Click to see abstract
