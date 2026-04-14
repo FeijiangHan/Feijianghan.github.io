@@ -64,6 +64,35 @@ Large Language Models (LLMs) often fail on complex reasoning tasks due to flawed
 </div>
 </div>
 
+<div class='paper-box'>
+
+<div class='paper-box-image'>
+<div><div class="badge">arXiv 2026</div><a href="https://arxiv.org/abs/2601.14004" target="_blank"><img src='/images/llm_interpretability_overview.png' alt="Locate, Steer, and Improve" class="paper-image-hover" width="100%"></a></div></div>
+
+<div class='paper-box-text' markdown="1">
+
+[Locate, Steer, and Improve: A Practical Survey of Actionable Mechanistic Interpretability in Large Language Models](https://arxiv.org/abs/2601.14004)
+
+Hengyuan Zhang et al. *Feijiang Han contributed to the latest version.*
+
+[**Paper**](https://arxiv.org/abs/2601.14004)
+
+**TL;DR.** This survey reframes mechanistic interpretability as an actionable pipeline, not just a diagnostic tool: first locate where behaviors live, then steer those components, and finally use the intervention to improve alignment, capability, and efficiency in LLMs.
+
+**Key Points:**
+- Organizes mechanistic interpretability into a practical workflow: **Locate, Steer, and Improve**.
+- Connects interpretable objects and intervention methods into a more usable framework for real model control.
+- Emphasizes that interpretability can support downstream gains in alignment, capability, and efficiency, rather than only post-hoc analysis.
+
+<div class="paper-interaction" onclick="toggleAbstract('locate_steer_improve_abstract')">
+📑 Click to see abstract
+</div>
+<div class="paper-abstract" id="locate_steer_improve_abstract">
+Mechanistic Interpretability (MI) has emerged as a vital approach to demystify the opaque decision-making of Large Language Models (LLMs). However, existing reviews primarily treat MI as an observational science, summarizing analytical insights while lacking a systematic framework for actionable intervention. To bridge this gap, we present a practical survey structured around the pipeline: "Locate, Steer, and Improve." We formally categorize Localizing (diagnosis) and Steering (intervention) methods based on specific Interpretable Objects to establish a rigorous intervention protocol. Furthermore, we demonstrate how this framework enables tangible improvements in Alignment, Capability, and Efficiency, effectively operationalizing MI as an actionable methodology for model optimization. With actionable mechanistic interpretability evolving at a fast pace, we pledge to keep this survey up to date, ensuring it reflects the cutting-edge advances in this area.
+</div>
+</div>
+</div>
+
 ## 🔍 Research Interest 2: Model Adaptation
 
 <div class='paper-box'> 
@@ -152,7 +181,7 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
   <div class='paper-box-image'>
     <div>
       <div class="badge">NLDB 2026</div>
-      <a href="/papers/ThinknCheck-Poster-printv2.pdf" target="_blank">
+      <a href="https://arxiv.org/abs/2604.01652" target="_blank">
         <img src='images/thinkncheck.png' alt="ThinknCheck: Grounded Claim Verification" class="paper-image-hover" width="100%">
       </a>
     </div>
@@ -160,7 +189,7 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
 
   <div class='paper-box-text' markdown="1">
 
-ThinknCheck: Grounded Claim Verification with Compact, Reasoning-Driven, and Interpretable Models
+[ThinknCheck: Grounded Claim Verification with Compact, Reasoning-Driven, and Interpretable Models](https://arxiv.org/abs/2604.01652)
 
 Delip Rao, **Feijiang Han**, Chris Callison-Burch
 
