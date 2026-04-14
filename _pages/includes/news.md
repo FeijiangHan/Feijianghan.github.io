@@ -1,7 +1,8 @@
 <span class='anchor' id='news'></span>
 
 # 🔥 News
-- *March 2026*: **NLDB 2026 x 1**
+- *April 2026*: &nbsp;🎉 **ACL 2026 x 1**
+- *March 2026*: &nbsp;🎉 **NLDB 2026 x 1**
 - *March 2026*: &nbsp;🎉 I will be starting my PhD journey in Computer Science!
 - *January 2026*: &nbsp;🎉 **ICLR 2026 x 2**
 - *January 2026*: &nbsp;🎉 **ICASSP 2026**

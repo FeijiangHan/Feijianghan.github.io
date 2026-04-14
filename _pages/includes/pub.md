@@ -38,7 +38,7 @@ Token-level attention tuning, a class of training-free methods including Post-ho
 <div class='paper-box'>
 
 <div class='paper-box-image'>
-<div><div class="badge">arXiv 2026</div><a href="https://arxiv.org/abs/2601.14004" target="_blank"><img src='/images/llm_interpretability_overview.png' alt="Locate, Steer, and Improve" class="paper-image-hover" width="100%"></a></div></div>
+<div><div class="badge">ACL 2026</div><a href="https://arxiv.org/abs/2601.14004" target="_blank"><img src='/images/llm_interpretability_overview.png' alt="Locate, Steer, and Improve" class="paper-image-hover" width="100%"></a></div></div>
 
 <div class='paper-box-text' markdown="1">
 
