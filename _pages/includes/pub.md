@@ -4,7 +4,7 @@
 
 *For a complete list of publications, please visit my [Google Scholar](https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ)*
 
-## 🔮 Research Interest 1: Uncovering NLP & LLM Internal Mechanism and Interpretability
+## 🔮 Research Interest 1: Actionable Mechanistic Interpretability in Large Language Models
 
 <div class='paper-box'>
 
@@ -46,7 +46,7 @@ Token-level attention tuning, a class of training-free methods including Post-ho
 
 Hengyuan Zhang, Zhihao Zhang, Mingyang Wang, Zunhai Su, Yiwei Wang, Qianli Wang, Shuzhou Yuan, Ercong Nie, Xufeng Duan, **Feijiang Han**, Qibo Xue, Zeping Yu, Chenming Shang, Xiao Liang, Jing Xiong, Hui Shen, Chaofan Tao, Zhengwu Liu, Senjie Jin, Zhiheng Xi, Dongdong Zhang, Sophia Ananiadou, Tao Gui, Ruobing Xie, Hayden Kwok-Hay So, Hinrich Schütze, Xuanjing Huang, Qi Zhang, Ngai Wong
 
-[**Paper**](https://arxiv.org/abs/2601.14004)
+[**Paper**](https://arxiv.org/abs/2601.14004) \| [**Github Repo**](https://github.com/rattlesnakey/Awesome-Actionable-MI-Survey)
 
 **TL;DR.** This survey reframes mechanistic interpretability as an actionable pipeline, not just a diagnostic tool: first locate where behaviors live, then steer those components, and finally use the intervention to improve alignment, capability, and efficiency in LLMs.
 
