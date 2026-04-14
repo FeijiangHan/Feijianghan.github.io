@@ -49,6 +49,7 @@ Hengyuan Zhang et al. *Feijiang Han contributed to the latest version.*
 [**Paper**](https://arxiv.org/abs/2601.14004)
 
 **TL;DR.** This survey reframes mechanistic interpretability as an actionable pipeline, not just a diagnostic tool: first locate where behaviors live, then steer those components, and finally use the intervention to improve alignment, capability, and efficiency in LLMs.
+
 <!-- 
 **Key Points:**
 - Organizes mechanistic interpretability into a practical workflow: **Locate, Steer, and Improve**.
