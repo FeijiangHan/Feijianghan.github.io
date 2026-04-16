@@ -16,7 +16,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am an incoming PhD student in the [Department of Computer Science at the University of Maryland](https://www.cs.umd.edu/) <img src='./images/umd.png' style="width: 1.35em;">, where I will be advised by [Prof. Furong Huang](https://furong-huang.com/). Previously, I earned my master's degree in computer science from the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, where I had the privilege of collaborating with [Prof. Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/), [Prof. Lyle Ungar](https://www.cis.upenn.edu/~ungar/), [Delip Rao](https://deliprao.com/), and [Dr. Xiaodong Yu](https://www.xiaodongyu.me/) (AMD GenAI).
+I am an incoming PhD student in the Department of Computer Science at the University of Maryland <img src='./images/umd.png' style="width: 1.35em;">, where I will be advised by [Prof. Furong Huang](https://furong-huang.com/). Previously, I earned my master's degree in computer science from the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, where I had the privilege of collaborating with [Prof. Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/), [Prof. Lyle Ungar](https://www.cis.upenn.edu/~ungar/), [Delip Rao](https://deliprao.com/), and [Dr. Xiaodong Yu](https://www.xiaodongyu.me/).
 
 My research centers on advancing (M)LLMs with **Effective, Efficient, and Explainable** methods. I care about building models that work better, run cheaper, and fail more predictably. I want to understand why they work, when they break, and how we can steer them with confidence.
 
@@ -31,11 +31,16 @@ Today, a lot of progress comes from large-scale black-box scaling. It works, but
     <ul style="list-style: none; padding-left: 0; margin: 0;">
       <li style="margin-bottom: 1.5em;">
         <strong>1. Mechanism-driven Understanding (Interpretability + optimization)</strong>: I study what is happening inside LLMs and VLMs, and how those internal signals can be used to improve them. I look at attention patterns, residual streams, activations, representations, and logits. My goal is not interpretability as a visualization layer, but interpretability that changes how we optimize and control models.<br>
-        <span style="color: red;">(More: <a href="#why-i-care-about-interpretability" style="color: red;">Why I care about interpretability</a>)</span>
+        <!-- <span style="color: red;">(More: <a href="#why-i-care-about-interpretability" style="color: red;">Why I care about interpretability</a>)</span> -->
+         <span style="font-size: 0.95em; color: #6B7280;">
+          (<a href="#why-i-care-about-interpretability" style="color: #5B6E91;">Why I care about interpretability</a>)
+        </span>
       </li>
       <li>
         <strong>2. Model Adaptation/Alignment (From base models to real experts)</strong>: I work on adapting foundation models to specific domains and building systems with measurable impact. I'm interested in task-agnostic adaptation pipelines where we can introduce real scientific novelty, including post-training (SFT, RL, self-distillation), efficiency methods (quantization, pruning, layer skipping, routing), and system-level tools like retrieval and evaluation. I also like going deep into specific scientific problems, where novelty often comes from new tasks, synthetic data, automated agent systems, and sometimes further architectural optimization.<br>
-        <span style="color: red;">(More: <a href="#why-i-care-about-model-adaptation" style="color: red;">Why I care about model adaptation</a>)</span>
+        <span style="font-size: 0.95em; color: #6B7280;">
+          (<a href="#why-i-care-about-model-adaptation" style="color: #5B6E91;">Why I care about model adaptation</a>)
+        </span>
       </li>
     </ul>
   </div>
