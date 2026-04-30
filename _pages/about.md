@@ -99,7 +99,7 @@ I want to ask questions that start at the level of training dynamics and model a
 
 Why do compositional features and circuits appear at all? Why do we sometimes see sparsity, low-rank structure, or neatly separated factors after training? Can we connect those outcomes to the dynamics of gradient-based learning, instead of only collecting evidence after the fact?
 
-For example, I like the ICLR 2025 oral paper [Learning Dynamics of LLM Finetuning](https://openreview.net/forum?id=tPNHOoZFl9), which helps explain why SFT can lead to hallucinations and why DPO performance may degrade over time.
+For example, I like the ICLR 2025 oral paper [Learning Dynamics of LLM Finetuning](https://openreview.net/forum?id=tPNHOoZFl9) and ICLR 2026 oral paper [Why DPO is a Misspecified Estimator and How to Fix It](https://openreview.net/forum?id=btEiAfnLsX), which helps explain why SFT can lead to hallucinations and why DPO performance may degrade over time.
 
 My hope is that interpretability can slowly move from biology-style observation to physics-style reasoning. If that shift happens, it will feel like a real change of era.
 
