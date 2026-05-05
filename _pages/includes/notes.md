@@ -1,5 +1,6 @@
 # 📝 Notes & Experiences
 
+- [Where do AI models agree — and disagree — on the world's top CS schools?](https://feijianghan.com/reports/llm_cs_rankings){:target="_blank"} - We asked 11 leading large language models to rank the top 50 computer science universities worldwide, using only their internal knowledge and intuition. Here's what they said.
 - [A Comprehensive Guide to the Computer Science PhD Journey: A Survey of Collected Wisdom](https://github.com/FeijiangHan/A-Comprehensive-Guide-to-the-Computer-Science-PhD-Journey) - This survey distills hard-won CS PhD advice from nearly 20 well-known researchers’ essays and talks into one practical, end-to-end guide. It covers the full arc—from applying and choosing an advisor to building a sustainable research workflow, publishing effectively, and planning your post-PhD path.
 - [A curated list of **Best Paper Award** winners from top ML/NLP venues (ICLR, NeurIPS, ICML, ACL, EMNLP, NAACL, AAAI, and more), covering **2022–2026**](https://github.com/FeijiangHan/Top-Conference-Best-Papers){:target="_blank"} - A resource for developing research taste.
 <!-- - [Prompt Papers Are Dead: Embracing Scaling Training (Prompt论文已死，拥抱Scaling Training)](/papers\prompts_have_dead.pdf){:target="_blank"} - 从 Scaling 与 Training 视角讨论 Prompt 论文的局限与未来研究方向 (Chinese Version) -->

@@ -1,6 +1,7 @@
 <span class='anchor' id='news'></span>
 
 # 🔥 News
+- *April 2026*: &nbsp;🏅 Honored to receive the **Outstanding Research Award** from the University of Pennsylvania!
 - *April 2026*: &nbsp;🎉 **ACL 2026 x 1**
 - *March 2026*: &nbsp;🎉 **NLDB 2026 x 1**
 - *March 2026*: &nbsp;🎉 I will be starting my PhD journey in Computer Science!
