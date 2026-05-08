@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Better AI-Assisted Paper Review — A Practical Guide</title>
+  <style>
+    /* ── Reset & Base ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: #f8f7f4;
+      color: #1a1a2e;
+      line-height: 1.75;
+      font-size: 17px;
+    }
+
+    /* ── Top Bar ──────────────────────────────────────────────── */
+    .topbar {
+      background: #1a1a2e;
+      color: #f0f0f0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      text-align: center;
+      padding: 9px 0;
+    }
+    .topbar a { color: #9bb8f5; text-decoration: none; }
+    .topbar a:hover { text-decoration: underline; }
+
+    /* ── Hero ─────────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, #e8eef8 0%, #f3f0fa 60%, #edf5f0 100%);
+      border-bottom: 1px solid #d4d0e4;
+      padding: 60px 24px 50px;
+      text-align: center;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: #dce8fb;
+      color: #2a55a0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.9rem);
+      font-weight: 700;
+      color: #0f1b40;
+      line-height: 1.25;
+      max-width: 760px;
+      margin: 0 auto 16px;
+    }
+    .hero h1 em { font-style: normal; color: #2a55a0; }
+    .hero p.subtitle {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 1.05rem;
+      color: #444;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    /* ── Layout ───────────────────────────────────────────────── */
+    .page { max-width: 820px; margin: 0 auto; padding: 0 24px 80px; }
+
+    /* ── Section headings ─────────────────────────────────────── */
+    .section-label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #2a55a0;
+      margin: 56px 0 10px;
+    }
+    h2 {
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #0f1b40;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    h3 {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin: 28px 0 8px;
+    }
+    p { margin-bottom: 14px; color: #333; }
+
+    /* ── Divider ──────────────────────────────────────────────── */
+    hr.section-divider {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 50px 0;
+    }
+
+    /* ── Step cards ───────────────────────────────────────────── */
+    .steps { display: flex; flex-direction: column; gap: 0; margin: 28px 0; }
+    .step {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 20px 0;
+      border-bottom: 1px solid #e8e8e8;
+    }
+    .step:last-child { border-bottom: none; }
+    .step-num {
+      flex-shrink: 0;
+      width: 36px; height: 36px;
+      background: #2a55a0;
+      color: #fff;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .step-body { flex: 1; padding-top: 4px; }
+    .step-body strong {
+      display: block;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0f1b40;
+      margin-bottom: 4px;
+    }
+    .step-body p { margin: 0; font-size: 0.95rem; color: #555; }
+
+    /* ── Prompt boxes ─────────────────────────────────────────── */
+    .prompt-card {
+      background: #fff;
+      border: 1.5px solid #d6dff5;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 2px 12px rgba(42,85,160,0.06);
+      overflow: hidden;
+    }
+    .prompt-card-header {
+      background: linear-gradient(90deg, #2a55a0 0%, #3a6ec8 100%);
+      color: #fff;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      padding: 11px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .prompt-card-header .prompt-tag {
+      background: rgba(255,255,255,0.22);
+      border-radius: 4px;
+      padding: 2px 10px;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+    }
+    .prompt-card pre {
+      margin: 0;
+      padding: 22px 24px;
+      font-family: 'Menlo', 'Consolas', 'Courier New', monospace;
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: #1a1a2e;
+      background: #fff;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .prompt-card-footer {
+      background: #f4f6fb;
+      border-top: 1px solid #dde3f2;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .prompt-card-footer .hint {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 12px;
+      color: #666;
+    }
+    .copy-btn {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #2a55a0;
+      background: #dce8fb;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 16px;
+      cursor: pointer;
+      transition: background 0.18s;
+    }
+    .copy-btn:hover { background: #c2d5f5; }
+    .copy-btn.copied { background: #d4edda; color: #1a6b3a; }
+
+    /* ── Highlight callout ────────────────────────────────────── */
+    .callout {
+      background: #eef3fd;
+      border-left: 4px solid #2a55a0;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 24px 0;
+      font-size: 0.95rem;
+      color: #2a3a6e;
+    }
+    .callout strong { color: #1a2a5e; }
+
+    /* ── Persona grid ─────────────────────────────────────────── */
+    .persona-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 28px 0;
+    }
+    @media (max-width: 580px) {
+      .persona-grid { grid-template-columns: 1fr; }
+    }
+    .persona-card {
+      background: #fff;
+      border: 1px solid #dde3f2;
+      border-radius: 10px;
+      padding: 18px 20px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+    }
+    .persona-card .p-label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #2a55a0;
+      margin-bottom: 6px;
+    }
+    .persona-card .p-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f1b40;
+      margin-bottom: 6px;
+    }
+    .persona-card .p-desc {
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .persona-card .p-accent {
+      display: inline-block;
+      background: #f0f4fc;
+      color: #2a55a0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 9px;
+      border-radius: 4px;
+      margin-top: 8px;
+    }
+
+    /* ── Usage instruction ────────────────────────────────────── */
+    .usage-box {
+      background: #fff;
+      border: 1px solid #dde3f2;
+      border-radius: 10px;
+      padding: 24px 26px;
+      margin: 28px 0;
+    }
+    .usage-box .usage-title {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #0f1b40;
+      margin-bottom: 14px;
+    }
+    .usage-box ol {
+      padding-left: 22px;
+      color: #444;
+      font-size: 0.95rem;
+    }
+    .usage-box ol li { margin-bottom: 10px; }
+    .usage-box ol li strong { color: #0f1b40; }
+    .tag-code {
+      display: inline-block;
+      background: #f3f0fa;
+      color: #5b3ea8;
+      font-family: 'Menlo', 'Consolas', monospace;
+      font-size: 12px;
+      padding: 1px 7px;
+      border-radius: 4px;
+    }
+
+    /* ── Footer ───────────────────────────────────────────────── */
+    footer {
+      background: #1a1a2e;
+      color: #aaa;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 13px;
+      text-align: center;
+      padding: 28px 24px;
+    }
+    footer a { color: #9bb8f5; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="topbar">
+  Research Practice Note &nbsp;·&nbsp;
+  Dynamic Persona Reviewer Project &nbsp;·&nbsp;
+  <a href="https://openreview.net" target="_blank">OpenReview</a>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="badge">Practical Guide</div>
+  <h1>Better <em>AI-Assisted</em> Paper Review<br>with Dynamic Reviewer Personas</h1>
+  <p class="subtitle">
+    A step-by-step workflow to simulate multiple expert perspectives on your paper
+    using two simple prompts — no code required.
+  </p>
+</div>
+
+<!-- Page Body -->
+<div class="page">
+
+  <!-- ── Why ────────────────────────────────────────────────── -->
+  <p class="section-label">The Idea</p>
+  <h2>Real reviewers are matched by expertise. Your AI reviewer should be too.</h2>
+
+  <p>
+    When a program chair assigns reviewers to a submission, they look for people whose
+    prior work is directly relevant to the paper's methods, claims, and technical context.
+    A reviewer of an efficient-attention paper, for example, brings a completely different lens
+    than one who studies long-context reasoning or model compression.
+  </p>
+  <p>
+    Most AI-assisted review workflows skip this step entirely.
+    They ask a generic LLM prompt to "review this paper," producing a single, uniform perspective.
+    The two-prompt workflow below replicates the <strong>expertise-matching step</strong>
+    that makes human review panels effective.
+  </p>
+
+  <div class="callout">
+    <strong>Core idea:</strong> Use your paper's own reference list to identify
+    4 realistic expert reviewers, build a short persona for each, and then let each
+    persona review your paper independently.  You get four distinct technical perspectives
+    in one session.
+  </div>
+
+  <!-- ── Prompt 1 ────────────────────────────────────────────── -->
+  <p class="section-label">Step 1 — Prompt 1</p>
+  <h2>Identify 4 Candidate Reviewers</h2>
+
+  <p>
+    Paste this prompt into a new chat with your paper PDF already attached.
+    The model will analyze the reference list to find researchers whose prior work is
+    most technically relevant, covering different angles of your paper.
+  </p>
+
+  <div class="prompt-card">
+    <div class="prompt-card-header">
+      <span>PROMPT 1 &mdash; Reviewer Matching</span>
+      <span class="prompt-tag">Copy &amp; paste to GPT</span>
+    </div>
+    <pre id="prompt1">I have uploaded my research paper as a PDF above. Please help me identify 4 ideal reviewers for this paper.
+
+Your task:
+1. Read through the paper's reference list, related work section, and key technical claims.
+2. Identify researchers whose prior work is directly cited and covers different aspects of this paper — for example: the core method, the evaluation benchmarks, theoretical foundations, or deployment concerns.
+3. Each reviewer should bring a distinct perspective. Aim for diversity across: methodology, empirical rigor, application domain, and efficiency or practicality.
+4. Strictly exclude any co-authors of this paper.
+
+For each of the 4 recommended reviewers, output:
+- **Name**: the researcher's full name
+- **Key cited paper**: the most relevant paper of theirs that this submission cites
+- **Review angle**: a 1–2 sentence description of the technical perspective they would bring
+
+Format your response as a numbered list.</pre>
+    <div class="prompt-card-footer">
+      <span class="hint">📄 Attach your paper PDF before running this prompt</span>
+      <button class="copy-btn" onclick="copyPrompt('prompt1', this)">Copy Prompt</button>
+    </div>
+  </div>
+
+  <hr class="section-divider" />
+
+  <!-- ── Prompt 2 ────────────────────────────────────────────── -->
+  <p class="section-label">Step 2 — Prompt 2</p>
+  <h2>Build a Reviewing Persona for Each Candidate</h2>
+
+  <p>
+    Run this in the <strong>same conversation</strong> immediately after Prompt 1.
+    The model will use web knowledge of each candidate's research to synthesize a
+    concise reviewing persona — focused on <em>how they review</em>, not just
+    who they are.
+  </p>
+
+  <div class="prompt-card">
+    <div class="prompt-card-header">
+      <span>PROMPT 2 &mdash; Persona Generation</span>
+      <span class="prompt-tag">Copy &amp; paste to GPT</span>
+    </div>
+    <pre id="prompt2">Now, for each of the 4 reviewers you identified, write a reviewing persona I can use to simulate their feedback on my paper.
+
+For each reviewer, your persona should describe:
+- Their primary research focus and the technical areas they know deeply
+- What they tend to pay close attention to when reviewing — e.g., novelty relative to prior work, strength of baselines, reproducibility, theoretical soundness, practical efficiency, or clarity of claims
+- Specific questions or concerns they are likely to raise about this particular paper based on their background
+- Their typical reviewing style (e.g., constructive but demanding, skeptical of incremental work, focused on empirical evidence)
+
+Guidelines:
+- The persona should describe reviewing behavior, not a biography. Focus on what they notice and what they push back on.
+- Keep each persona to 150–200 words.
+- Write in second person: "You are a reviewer whose expertise is in..."
+- Do not include the reviewer's real name inside the persona text itself — treat the name only as a label.
+
+Output 4 clearly labeled persona descriptions, one per reviewer.</pre>
+    <div class="prompt-card-footer">
+      <span class="hint">💬 Run this in the same conversation as Prompt 1</span>
+      <button class="copy-btn" onclick="copyPrompt('prompt2', this)">Copy Prompt</button>
+    </div>
+  </div>
+
+  <hr class="section-divider" />
+
+  <!-- ── Step 3 ───────────────────────────────────────────────── -->
+  <p class="section-label">Step 3 — Using the Personas</p>
+  <h2>Review Your Paper Through 4 Independent Lenses</h2>
+
+  <div class="usage-box">
+    <div class="usage-title">How to use each persona</div>
+    <ol>
+      <li>
+        <strong>Open a new chat.</strong>
+        Start a fresh conversation for each reviewer to avoid cross-contamination.
+      </li>
+      <li>
+        <strong>Paste the persona as the first message.</strong>
+        Copy the persona text from Step 2 and paste it at the top of the new conversation.
+      </li>
+      <li>
+        <strong>Upload your paper and ask for a full review.</strong>
+        Use a simple instruction like:<br>
+        <span class="tag-code">Please review the attached paper fully. Follow the persona above when writing your review.</span>
+      </li>
+      <li>
+        <strong>Compare all 4 reviews side by side.</strong>
+        Look for weaknesses that multiple reviewers flag independently — those are your highest-priority revision targets.
+        Pay special attention to concerns that only one reviewer raises — those are likely blind spots in your current coverage of related work.
+      </li>
+    </ol>
+  </div>
+
+  <!-- ── What to look for ─────────────────────────────────────── -->
+  <h3>What to look for across the four reviews</h3>
+
+  <div class="persona-grid">
+    <div class="persona-card">
+      <div class="p-label">Signal</div>
+      <div class="p-name">Repeated concerns</div>
+      <p class="p-desc">If 3 or 4 reviewers raise the same weakness, it is a strong
+        signal that the paper does not adequately address that point.
+        Prioritize these in your revision.</p>
+      <span class="p-accent">High priority</span>
+    </div>
+    <div class="persona-card">
+      <div class="p-label">Signal</div>
+      <div class="p-name">Lens-specific critiques</div>
+      <p class="p-desc">A concern raised by only one reviewer reflects the unique
+        perspective of that expertise area — often a gap in your related work
+        or an underexplored baseline.</p>
+      <span class="p-accent">Worth addressing</span>
+    </div>
+    <div class="persona-card">
+      <div class="p-label">Signal</div>
+      <div class="p-name">Verdict disagreement</div>
+      <p class="p-desc">If different reviewers reach opposite accept/reject conclusions,
+        your paper likely sits on the decision boundary.
+        Strengthening the key experiments or contributions may tip the balance.</p>
+      <span class="p-accent">Refine your story</span>
+    </div>
+    <div class="persona-card">
+      <div class="p-label">Signal</div>
+      <div class="p-name">Questions for authors</div>
+      <p class="p-desc">Collect all "questions for authors" from the 4 reviews.
+        If you cannot answer a question clearly in a rebuttal, add the clarification
+        directly into the paper.</p>
+      <span class="p-accent">Rebuttal prep</span>
+    </div>
+  </div>
+
+  <hr class="section-divider" />
+
+  <!-- ── Tips ────────────────────────────────────────────────── -->
+  <p class="section-label">Tips</p>
+  <h2>Getting the most out of this workflow</h2>
+
+  <h3>Use a model that supports file upload</h3>
+  <p>
+    ChatGPT, Claude, or Gemini with PDF support work well.
+    The model needs to read your full paper, not just a pasted abstract.
+    Upload the camera-ready or latest draft PDF.
+  </p>
+
+  <h3>Run Prompt 1 and Prompt 2 in the same session</h3>
+  <p>
+    Keeping both prompts in one conversation lets the model carry context about
+    which papers each reviewer wrote and how they relate to your submission.
+    Start fresh only for the individual review step (Step 3).
+  </p>
+
+  <h3>Check the reviewer candidates for plausibility</h3>
+  <p>
+    Before running Step 3, skim the 4 candidates the model identified.
+    If a name is unfamiliar or seems unrelated, ask the model to explain why
+    it chose that person, or ask it to suggest an alternative.
+    The quality of the personas depends on the quality of the candidates.
+  </p>
+
+  <h3>Use the reviews as a structured checklist, not as ground truth</h3>
+  <p>
+    AI-generated reviews are not a substitute for human expert feedback.
+    Think of them as a structured pre-submission audit: they help you find
+    obvious gaps before real reviewers do.
+    The most valuable output is often the list of questions — use it to
+    strengthen your weaknesses section and rebuttal strategy.
+  </p>
+
+  <div class="callout">
+    <strong>Estimated time:</strong> ~10 minutes total for the two prompts plus persona generation.
+    Individual review sessions take roughly 3–5 minutes each depending on paper length.
+    Total cost with a paid API: typically under $1 for all four reviews.
+  </div>
+
+</div><!-- /page -->
+
+<!-- Footer -->
+<footer>
+  Dynamic Persona Reviewer &mdash; Research Practice Note &nbsp;·&nbsp;
+  Based on work evaluating LLM agent reviewer panels on ICLR 2025 submissions &nbsp;·&nbsp;
+  <a href="https://openreview.net/forum?id=ICLR2025" target="_blank">OpenReview</a>
+</footer>
+
+<script>
+  function copyPrompt(id, btn) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = 'Copy Prompt';
+        btn.classList.remove('copied');
+      }, 2000);
+    }).catch(() => {
+      // fallback
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = 'Copy Prompt';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+</script>
+
+</body>
+</html>
