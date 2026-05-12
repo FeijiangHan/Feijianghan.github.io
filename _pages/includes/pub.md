@@ -228,9 +228,8 @@ Jianheng Tang, **Feijiang Han**, Kejia Fan, et al.
 
 **TL;DR.** High-quality training data is the bottleneck for modern multimodal and foundation models, and mobile crowd sensing (MCS) is a scalable way to collect it—but platforms must recruit workers before knowing who is trustworthy or produces high-quality data. We formulate this as an online decision-making problem under uncertainty and propose CQL-MAB, a bandit-style RL scheme that learns workers’ credit (honesty) and quality (data utility) from feedback and selects workers cost-effectively with incentive guarantees.
 
-**Why this is RL:** it’s a contextual multi-armed bandit: repeatedly choose “arms” (workers), observe stochastic rewards (credit/quality), and minimize regret while respecting budget/auction constraints.
-
-**Task:** input = {workers’ bids + streaming feedback from their submitted data} → output = {selected worker set (and payments) each round}.
+<!-- 
+**Task:** input = {workers’ bids + streaming feedback from their submitted data} → output = {selected worker set (and payments) each round}. -->
 
 <!-- **Key Points:**
 - CQL-MAB: jointly models credit (trustworthiness) and quality (data utility) as rewards for bandit-based recruitment under budget.

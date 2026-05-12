@@ -20,7 +20,7 @@ I am an incoming CS Ph.D. student at the University of Maryland <img src='./imag
 
 **Goal:** Build mechanism-guided AI systems that can understand the world, improve themselves, and still remain understandable and controllable to people. 
 
-**Research Interest:** Actionable mechanistic interpretability as a principled lens for model optimization, at the intersection of LLMs,vision, and NeuroAI.
+**Research Interest:** {LLMs, VLMs, VLAs, Cognitive Science}
 
 **Research Question:** How can we more accurately understand models (e.g., how knowledge is stored, how training dynamics shape representations, how fine-tuning changes behavior, how attention, representations, and circuits interact)? Can these insights serve as first principles for designing better AI systems (e.g., better training, collaboration, and self-evolution)?
 
@@ -35,14 +35,14 @@ My work spans two complementary directions:
   <div style="flex: 1; min-width: 300px;">
     <ul style="list-style: none; padding-left: 0; margin: 0;">
       <li style="margin-bottom: 1.5em;">
-        <strong>1. Mechanism-driven Understanding and Optimization</strong>: I study the internals of LLMs and VLMs with a practical goal: interpretability should help us optimize and control models, not just describe them after the fact. Recent work includes understanding why attention sinks emerge and how to exploit them (<a href="https://arxiv.org/abs/2505.11739">ZeroTuning, ICLR 2026</a>), diagnosing comprehension failures through the lens of attention (<a href="https://arxiv.org/abs/2504.09402v2">SSR, ICASSP 2026</a>), and building the first unified actionable framework for actionable MI (<a href="https://arxiv.org/abs/2601.14004">Locate, Steer, and Improve, ACL 2026</a>).<br>
+        <strong>1. Mechanism-driven Understanding and Optimization</strong>: I study the internals of LLMs and VLMs. I believe interpretability should help us optimize and control models, not just describe them after the fact. Recent work includes understanding why attention sinks emerge and how to exploit them (<a href="https://arxiv.org/abs/2505.11739">ZeroTuning, ICLR 2026</a>), diagnosing comprehension failures through the lens of attention (<a href="https://arxiv.org/abs/2504.09402v2">SSR, ICASSP 2026</a>), and building the first unified actionable framework for actionable MI (<a href="https://arxiv.org/abs/2601.14004">Locate, Steer, and Improve, ACL 2026</a>).<br>
         <!-- <span style="color: red;">(More: <a href="#why-i-care-about-interpretability" style="color: red;">Why I care about interpretability</a>)</span> -->
          <span style="font-size: 0.95em; color: #6B7280;">
           (<a href="#why-i-care-about-interpretability" style="color: #5B6E91;">Why I care about interpretability</a>)
         </span>
       </li>
       <li>
-        <strong>2. Model Adaptation/Alignment (From base models to real experts)</strong>: I adapt foundation models into domain experts for settings where general models still struggle. Recent work includes the first fully LaTeX-derived layout annotation pipeline for large-scale document understanding (<a href="https://www.cis.upenn.edu/~ccb/publications/latex2layout.pdf">LaTeX2Layout, AAAI 2026</a>), LLM-based systems for million-token malicious code analysis (<a href="https://arxiv.org/abs/2504.13811v3">WebShell Detection, COLM 2025</a>; <a href="https://arxiv.org/abs/2512.05288">WebShell Classification, AAAI 2026</a>), and a compact yet effective verifier for scientific claim verification (<a href="https://arxiv.org/abs/2604.01652">ThinknCheck, NLDB 2026</a>).<br>
+        <strong>2. Model Adaptation and Alignment</strong>: I adapt foundation models into domain experts for settings where general models still struggle. Recent work includes the first fully LaTeX-derived layout annotation pipeline for large-scale document understanding (<a href="https://www.cis.upenn.edu/~ccb/publications/latex2layout.pdf">LaTeX2Layout, AAAI 2026</a>), LLM-based systems for million-token malicious code analysis (<a href="https://arxiv.org/abs/2504.13811v3">WebShell Detection, COLM 2025</a>; <a href="https://arxiv.org/abs/2512.05288">WebShell Classification, AAAI 2026</a>), and efficient and effective verifier for scientific claim verification (<a href="https://arxiv.org/abs/2604.01652">ThinknCheck, NLDB 2026</a>).<br>
         <span style="font-size: 0.95em; color: #6B7280;">
           (<a href="#why-i-care-about-model-adaptation" style="color: #5B6E91;">Why I care about model adaptation</a>)
         </span>
@@ -89,6 +89,8 @@ Feel free to reach out for collaboration or just to say hi. Shoot me an email: f
 <summary><strong>Why I care about interpretability</strong></summary>
 <div markdown="1">
 
+TLDR: I care about explanations because they can do two things: (1) help us trust models in practice, (2) help us design better models without relying only on trial and error.
+
 For me, interpretability starts with curiosity. I like looking at a model and asking: why did that happen?
 
 There is a small joy in that moment. It feels a bit like watching insects as a kid. You stare for long enough, something weird happens, and suddenly there is a pattern you did not see before.
@@ -98,18 +100,13 @@ More practically, interpretability also serves a long-term goal: building AI sys
 - If scaling eventually leads to AGI, we may get extremely capable black-box systems. Then the key question becomes safety and alignment. How do we ensure a superintelligent model consistently acts in good faith and does not quietly deceive people or cause harm?
 - If scaling alone is not enough, interpretability becomes a scientific problem. Why do these models work at all? What actually drives their behavior? Which parts come from data, architecture, training dynamics, or post-training?
 
-I care about explanations because they can do two things: (1) help us trust models in practice, (2) help us design better models without relying only on trial and error.
-
 I often think about how physics matured. First came careful observations (Tycho Brahe). Then hypotheses (Kepler). Then principles (Newton). AI has made huge empirical progress, and I really like the current mechanistic interpretability line of work: logit lens analyses, sparse autoencoders, circuit discovery, and the recent work from Anthropic. But we are still far from that Newton stage.
 
-The questions I want to ask are closer to training dynamics and model architecture.
-
-Why do compositional features and circuits appear after training? Why do we sometimes see sparsity, low-rank structure, or cleanly separated factors inside a model? Can we explain these outcomes from gradient-based learning, instead of only opening the model after training and collecting evidence?
+The questions I want to ask are closer to training dynamics and model architecture. Why do compositional features and circuits appear after training? Why do we sometimes see sparsity, low-rank structure, or cleanly separated factors inside a model? Can we explain these outcomes from gradient-based learning, instead of only opening the model after training and collecting evidence?
 
 This is why I like papers such as [Learning Dynamics of LLM Finetuning](https://openreview.net/forum?id=tPNHOoZFl9) and [Why DPO is a Misspecified Estimator and How to Fix It](https://openreview.net/forum?id=btEiAfnLsX). They try to explain concrete failure modes in post-training, such as why SFT can increase hallucination and why DPO can degrade over time.
 
-My hope is that interpretability can slowly move from biology-style observation to physics-style reasoning. If that shift happens, it will feel like a real change of era.
-
+My hope is that interpretability can slowly move from biology-style observation to physics-style reasoning. 
 In the near term, I care most about making interpretability actionable. A good explanation should help us localize the issue, steer the behavior, and improve the model.
 
 <div style="margin: 2em 0; text-align: center;">
