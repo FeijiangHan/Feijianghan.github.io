@@ -116,7 +116,7 @@ Large Language Models (LLMs) often fail on complex reasoning tasks due to flawed
 
 **TL;DR.** WebShell detection is hard for LLMs because a server-side script can span millions of tokens while the truly malicious logic is often just a tiny, obfuscated fragment—so naïvely feeding the whole file dilutes the signal and breaks context limits. We provide the first comprehensive evaluation of LLMs for WebShell detection and introduce BFAD, a behavior-driven, function-aware pipeline that helps LLMs focus on the most indicative code, yielding a +13.82% average F1 improvement and pushing both large and small LLMs toward (or beyond) prior SOTA.
 
-**Task:** input = {server-side script / PHP file} → output = {WebShell / Benign}.
+<!-- **Task:** input = {server-side script / PHP file} → output = {WebShell / Benign}. -->
 
 <div class="paper-interaction" onclick="toggleAbstract('webshell_detection_abstract')">
 📑 Click to see abstract
@@ -139,7 +139,7 @@ WebShell attacks, where malicious scripts are injected into web servers, pose a 
 
 **TL;DR.** Layout detection turns a PDF into structured page understanding (bounding boxes + reading order), but current VLMs struggle mainly because high-fidelity supervision is scarce and PDF-parser-based labels are noisy and expensive. We introduce LaTeX2Layout, a scalable data-centric pipeline that extracts pixel-accurate layout ground truth directly from the LaTeX compilation process, enabling large-scale training without manual annotation.
 
-**Task:** input = {PDF document} → output = {page elements’ bounding boxes + reading order (optionally OCR)}.
+<!-- **Task:** input = {PDF document} → output = {page elements’ bounding boxes + reading order (optionally OCR)}. -->
 
 <div class="paper-interaction" onclick="toggleAbstract('latex2layout_abstract')">
 📑 Click to see abstract
@@ -162,7 +162,7 @@ General-purpose Vision-Language Models (VLMs) are increasingly integral to moder
 
 **TL;DR.** While WebShell detection answers “malicious or not,” real-world defense also needs attribution and tracking: WebShells come in diverse families with different behaviors and variants. We are the first to systematically study representation learning for automated WebShell family classification.
 
-**Task:** given a WebShell → predict its family ID.
+<!-- **Task:** given a WebShell → predict its family ID. -->
 
 <!-- **Key Points**:
 - Benchmark: the first systematic study of representation learning for fine-grained WebShell family classification.
@@ -199,7 +199,7 @@ Delip Rao, **Feijiang Han**, Chris Callison-Burch
 
 **TL;DR.** Efficient scientific claim verification is essential for trustworthy literature review and retrieval—but most strong verifiers are large, expensive, and hard to interpret. We develop ThinknCheck, a compact “reason first, then decide” verifier, and summarize best practices for making small LLMs reliable and interpretable on document-grounded claim verification.
 
-**Task:** input = {Document, Claim} → output = {True / False}.
+<!-- **Task:** input = {Document, Claim} → output = {True / False}. -->
 
 <!-- **Key Points**:
 - 1B-scale, 4-bit **ThinknCheck** verifier trained to “reason first, then decide” for scientific claim verification
@@ -217,7 +217,7 @@ We present ThinknCheck, a 1B-parameter verifier for grounded claim verification 
 </div>
 
 
-## 🌟 Research Interest 3: Other Topics (HCI, Big Data Visualization, IoT, Federated and Continual Learning)
+## 🌟 Earlier Work: Crowdsourcing, Federated & Continual Learning, HCI
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Information Sciences 2023</div><a href="https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290" target="_blank"><img src='images/cqlmab.png' alt="CQL-MAB Overview" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
