@@ -55,7 +55,10 @@ I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where w
 
 <!-- You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'> Google Scholar</a>. -->
 
-Feel free to reach out for collaboration or just to say hi. Shoot me an email: feijianghan [dot] gmail.com (it's <span id="contact-local-time" data-timezone="{{ site.contact_timezone | default: 'America/New_York' }}">—</span> for me right now).
+I enjoy mentoring undergraduate and master's students on research projects. I also offer free guidance to Chinese students applying to master's and PhD programs in the US — feel free to check out my [Xiaohongshu](https://www.xiaohongshu.com/user/profile/5f96bb470000000001009db4){:target="_blank"} where I share application tips and research advice.
+
+Feel free to reach out for collaboration or just to say hi. Email me at feijianghan [at] gmail [dot] com (it's <span id="contact-local-time" data-timezone="{{ site.contact_timezone | default: 'America/New_York' }}">—</span> for me right now).
+
 
 <script>
 (function() {
