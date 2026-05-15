@@ -4,7 +4,14 @@
 
 *For a complete list of publications, please visit my [Google Scholar](https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ)*
 
-## 🔮 Research Interest 1: Actionable Mechanistic Interpretability in Large Language Models
+<div class="pub-filter" id="pub-filter">
+  <button class="pf-btn pf-active" data-filter="all">All</button>
+  <button class="pf-btn" data-filter="1">🔮 Mechanistic Interpretability</button>
+  <button class="pf-btn" data-filter="2">🔍 Model Adaptation</button>
+  <button class="pf-btn" data-filter="3">🌟 Earlier Work</button>
+</div>
+
+<h2 class="interest-heading" data-interest="1">🔮 Research Interest 1: Actionable Mechanistic Interpretability in Large Language Models</h2>
 
 <div class='paper-box'>
 
@@ -95,7 +102,7 @@ Large Language Models (LLMs) often fail on complex reasoning tasks due to flawed
 
 
 
-## 🔍 Research Interest 2: Model Adaptation
+<h2 class="interest-heading" data-interest="2">🔍 Research Interest 2: Model Adaptation</h2>
 
 <div class='paper-box'> 
 
@@ -217,7 +224,7 @@ We present ThinknCheck, a 1B-parameter verifier for grounded claim verification 
 </div>
 
 
-## 🌟 Earlier Work: Crowdsourcing, Federated & Continual Learning, HCI
+<h2 class="interest-heading" data-interest="3">🌟 Earlier Work: Crowdsourcing, Federated & Continual Learning, HCI</h2>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Information Sciences 2023</div><a href="https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290" target="_blank"><img src='images/cqlmab.png' alt="CQL-MAB Overview" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
@@ -246,6 +253,8 @@ The field of intelligent multimedia systems, which rely heavily on multimodal mo
 </div>
 
 
+<div id="earlier-work-list" markdown="1">
+
 - ``UBICOMP 2025`` [CALM: A Ubiquitous Crowdsourced Analytic Learning Mechanism for Continual Service Construction with Data Privacy Preservation](https://dl.acm.org/doi/abs/10.1145/3729473)  
 Kejia Fan, Yuwei Huang, Jiayi He, **Feijiang Han**, Jianheng Tang, et al.
 
@@ -270,7 +279,56 @@ Jianheng Tang, Kejia Fan, Wenbin Xie, **Feijiang Han**, et al.
 - ``Computer Communications 2023`` [A Semi-supervised Sensing Rate Learning based CMAB scheme to combat COVID-19 by trustful data collection in the crowd](https://www.sciencedirect.com/science/article/pii/S0140366423001433)  
 Jianheng Tang, Kejia Fan, Wenbin Xie, Lingxiao Zeng, **Feijiang Han**, et al.
 
+</div>
+
 <style>
+/* ── Publication filter panel ── */
+.pub-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45em;
+  margin: 1.2em 0 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #e5e7eb;
+}
+.pf-btn {
+  padding: .32em .95em;
+  border-radius: 999px;
+  font-size: .84em;
+  font-weight: 500;
+  border: 1.5px solid #d1d5db;
+  background: transparent;
+  color: #4b5563;
+  cursor: pointer;
+  line-height: 1.6;
+  transition: background .2s ease, border-color .2s ease,
+              color .2s ease, transform .18s ease, box-shadow .2s ease;
+}
+.pf-btn:hover:not(.pf-active) {
+  border-color: #9ca3af;
+  background: rgba(0,0,0,.04);
+  transform: translateY(-1px);
+}
+.pf-btn.pf-active { color: #fff; }
+.pf-btn.pf-active[data-filter="all"] { background: #374151; border-color: #374151; box-shadow: 0 2px 8px rgba(55,65,81,.3); }
+.pf-btn.pf-active[data-filter="1"]   { background: #7C3AED; border-color: #7C3AED; box-shadow: 0 2px 8px rgba(124,58,237,.3); }
+.pf-btn.pf-active[data-filter="2"]   { background: #2563EB; border-color: #2563EB; box-shadow: 0 2px 8px rgba(37,99,235,.3); }
+.pf-btn.pf-active[data-filter="3"]   { background: #D97706; border-color: #D97706; box-shadow: 0 2px 8px rgba(217,119,6,.3); }
+
+/* Filter result count badge */
+.pub-filter-count {
+  font-size: .8em;
+  color: #6b7280;
+  margin-left: .5em;
+  align-self: center;
+}
+
+/* Hidden items */
+.pub-hidden { display: none !important; }
+
+/* Heading visibility transition */
+.interest-heading { margin-top: 1.8em; }
+
 .paper-interaction {
     margin-top: 10px;
     padding: 8px;
@@ -360,10 +418,55 @@ function toggleAbstract(abstractId) {
     var abstract = document.getElementById(abstractId);
     if (!abstract) return;
     var isOpen = abstract.classList.toggle('active');
-    // Update button label
     var btn = abstract.previousElementSibling;
     if (btn && btn.classList.contains('paper-interaction')) {
         btn.textContent = isOpen ? '📑 Hide abstract' : '📑 Click to see abstract';
     }
 }
+
+// ── Publication interest filter ──
+(function () {
+  // Auto-assign data-interest to each paper-box based on the preceding interest-heading
+  var curInterest = null;
+  document.querySelectorAll('.interest-heading, .paper-box').forEach(function (el) {
+    if (el.classList.contains('interest-heading')) {
+      curInterest = el.dataset.interest;
+    } else if (curInterest) {
+      el.dataset.interest = curInterest;
+    }
+  });
+
+  function updateCount(filter) {
+    var badge = document.getElementById('pub-filter-count');
+    if (!badge) return;
+    var total = document.querySelectorAll('.paper-box[data-interest]').length;
+    var visible = filter === 'all'
+      ? total
+      : document.querySelectorAll('.paper-box[data-interest="' + filter + '"]').length;
+    badge.textContent = visible + (visible === 1 ? ' paper' : ' papers');
+  }
+
+  function applyFilter(filter) {
+    // Headings
+    document.querySelectorAll('.interest-heading').forEach(function (el) {
+      el.classList.toggle('pub-hidden', filter !== 'all' && el.dataset.interest !== filter);
+    });
+    // Paper boxes
+    document.querySelectorAll('.paper-box[data-interest]').forEach(function (el) {
+      el.classList.toggle('pub-hidden', filter !== 'all' && el.dataset.interest !== filter);
+    });
+    // Earlier work list
+    var ewList = document.getElementById('earlier-work-list');
+    if (ewList) ewList.classList.toggle('pub-hidden', filter !== 'all' && filter !== '3');
+    updateCount(filter);
+  }
+
+  document.querySelectorAll('.pf-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.pf-btn').forEach(function (b) { b.classList.remove('pf-active'); });
+      this.classList.add('pf-active');
+      applyFilter(this.dataset.filter);
+    });
+  });
+})();
 </script>

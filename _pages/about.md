@@ -17,11 +17,6 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 <style>
-/* ─── ① Typewriter cursor ─── */
-.tw-cursor { display: inline-block; animation: tw-blink .8s step-end infinite; }
-.tw-cursor::after { content: '|'; }
-@keyframes tw-blink { 50% { opacity: 0; } }
-
 /* ─── ② Scroll fade-in ─── */
 .fi-hidden {
   opacity: 0;
@@ -92,13 +87,13 @@ details > div {
 .rtag-amber:hover  { background: rgba(217,119,6,.14); box-shadow: 0 0 10px rgba(217,119,6,.28); }
 </style>
 
-<span id="bio-para-start"></span>I am an incoming CS Ph.D. student at the University of Maryland <img src='./images/umd.png' style="width: 1.35em;">, where I will be advised by [Prof. Furong Huang](https://furong-huang.com/). I received my master's degree from the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, where I worked with [Prof. Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/), [Prof. Lyle Ungar](https://www.cis.upenn.edu/~ungar/), [Delip Rao](https://deliprao.com/), and [Dr. Xiaodong Yu](https://www.xiaodongyu.me/).
+I am an incoming CS Ph.D. student at the University of Maryland <img src='./images/umd.png' style="width: 1.35em;">, where I will be advised by [Prof. Furong Huang](https://furong-huang.com/). I received my master's degree from the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, where I worked with [Prof. Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/), [Prof. Lyle Ungar](https://www.cis.upenn.edu/~ungar/), [Delip Rao](https://deliprao.com/), and [Dr. Xiaodong Yu](https://www.xiaodongyu.me/).
 
 **Goal:** Build mechanism-guided AI systems that can understand the world, improve themselves, and still remain understandable and controllable to people. 
 
-**Research Interest:** <span class="research-tags"><span class="rtag rtag-purple">LLMs</span><span class="rtag rtag-blue">VLMs</span><span class="rtag rtag-green">VLAs</span><span class="rtag rtag-amber">Cognitive Science</span></span>
+**Research Interest:** {<span class="research-tags"><span class="rtag rtag-purple">LLMs</span><span class="rtag rtag-blue">VLMs</span><span class="rtag rtag-green">VLAs</span><span class="rtag rtag-amber">Cognitive Science</span></span>}
 
-**Research Question:** How can we more accurately understand models (e.g., how knowledge is stored, how <span class="aw" data-w="high">training dynamics</span> shape <span class="aw">representations</span>, how <span class="aw">fine-tuning</span> changes behavior, how <span class="aw" data-w="high">attention</span>, <span class="aw">circuits</span>, and internal structures interact)? Can these insights serve as first principles for designing better AI systems (e.g., better training, collaboration, and self-evolution)?
+**Research Question:** How can we more accurately understand models (e.g., how knowledge is stored, how training dynamics shape representations, how fine-tuning changes behavior, how attention, circuits, and internal structures interact)? Can these insights serve as first principles for designing better AI systems (e.g., better training, collaboration, and self-evolution)?
 
 My work spans two complementary directions:
 
@@ -161,53 +156,6 @@ Feel free to reach out for collaboration or just to say hi. Email me at research
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-
-  /* ══ ① Typewriter — bio opening paragraph ══ */
-  !function () {
-    // Use explicit marker so we don't depend on kramdown's P-tag rendering
-    var marker = document.getElementById('bio-para-start');
-    if (!marker) return;
-    var el = marker.closest('p') || marker.parentElement;
-    if (!el) return;
-
-    // Tokenize innerHTML into chars vs. HTML tags vs. entities
-    function tokenize(html) {
-      var t = [], i = 0, end;
-      while (i < html.length) {
-        if (html[i] === '<') {
-          end = html.indexOf('>', i);
-          if (end < 0) { t.push({ h: 0, v: html[i++] }); continue; }
-          t.push({ h: 1, v: html.slice(i, end + 1) }); i = end + 1;
-        } else if (html[i] === '&') {
-          end = html.indexOf(';', i);
-          if (end < 0) { t.push({ h: 0, v: html[i++] }); continue; }
-          t.push({ h: 0, v: html.slice(i, end + 1) }); i = end + 1;
-        } else {
-          t.push({ h: 0, v: html[i++] });
-        }
-      }
-      return t;
-    }
-
-    var tokens = tokenize(el.innerHTML);
-    el.innerHTML = '<span class="tw-t"></span><span class="tw-cursor" aria-hidden="true"></span>';
-    var txt = el.querySelector('.tw-t'), cur = el.querySelector('.tw-cursor');
-    var i = 0, buf = '';
-
-    function step() {
-      if (i >= tokens.length) {
-        txt.innerHTML = buf;
-        setTimeout(function () { cur.style.animation = 'none'; cur.style.opacity = 0; }, 1800);
-        return;
-      }
-      // HTML tags appear instantly; chars appear one at a time
-      while (i < tokens.length && tokens[i].h) buf += tokens[i++].v;
-      if (i < tokens.length) buf += tokens[i++].v;
-      txt.innerHTML = buf;
-      setTimeout(step, 18);
-    }
-    setTimeout(step, 350);
-  }();
 
   /* ══ ② Scroll fade-in for sections and paper cards ══ */
   !function () {
