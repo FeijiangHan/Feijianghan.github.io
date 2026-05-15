@@ -16,6 +16,47 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
+<style>
+/* ─── ① Typewriter cursor ─── */
+.tw-cursor { display: inline-block; animation: tw-blink .8s step-end infinite; }
+.tw-cursor::after { content: '|'; }
+@keyframes tw-blink { 50% { opacity: 0; } }
+
+/* ─── ② Scroll fade-in ─── */
+.fi-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .6s ease, transform .55s ease;
+  will-change: opacity, transform;
+}
+.fi-visible { opacity: 1 !important; transform: translateY(0) !important; }
+
+/* ─── ③ Smooth <details> ─── */
+details > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: .45em;
+  padding: .4em 0;
+  user-select: none;
+}
+details > summary::-webkit-details-marker,
+details > summary::marker { display: none; content: ''; }
+details > summary::before {
+  content: '▶';
+  font-size: .6em;
+  color: #5B6E91;
+  transition: transform .3s cubic-bezier(.4,0,.2,1);
+  flex-shrink: 0;
+}
+details[open] > summary::before { transform: rotate(90deg); }
+details > div {
+  overflow: hidden;
+  transition: max-height .42s cubic-bezier(.4,0,.2,1), opacity .35s ease;
+}
+</style>
+
 I am an incoming CS Ph.D. student at the University of Maryland <img src='./images/umd.png' style="width: 1.35em;">, where I will be advised by [Prof. Furong Huang](https://furong-huang.com/). I received my master's degree from the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, where I worked with [Prof. Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/), [Prof. Lyle Ungar](https://www.cis.upenn.edu/~ungar/), [Delip Rao](https://deliprao.com/), and [Dr. Xiaodong Yu](https://www.xiaodongyu.me/).
 
 **Goal:** Build mechanism-guided AI systems that can understand the world, improve themselves, and still remain understandable and controllable to people. 
@@ -81,6 +122,123 @@ Feel free to reach out for collaboration or just to say hi. Email me at feijiang
   update();
   setInterval(update, 60000);
 })();
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  /* ══ ① Typewriter — bio opening paragraph ══ */
+  !function () {
+    var anchor = document.getElementById('about-me');
+    if (!anchor) return;
+    var el = anchor.nextElementSibling;
+    while (el && el.tagName !== 'P') el = el.nextElementSibling;
+    if (!el) return;
+
+    // Tokenize innerHTML into chars vs. HTML tags vs. entities
+    function tokenize(html) {
+      var t = [], i = 0, end;
+      while (i < html.length) {
+        if (html[i] === '<') {
+          end = html.indexOf('>', i);
+          if (end < 0) { t.push({ h: 0, v: html[i++] }); continue; }
+          t.push({ h: 1, v: html.slice(i, end + 1) }); i = end + 1;
+        } else if (html[i] === '&') {
+          end = html.indexOf(';', i);
+          if (end < 0) { t.push({ h: 0, v: html[i++] }); continue; }
+          t.push({ h: 0, v: html.slice(i, end + 1) }); i = end + 1;
+        } else {
+          t.push({ h: 0, v: html[i++] });
+        }
+      }
+      return t;
+    }
+
+    var tokens = tokenize(el.innerHTML);
+    el.innerHTML = '<span class="tw-t"></span><span class="tw-cursor" aria-hidden="true"></span>';
+    var txt = el.querySelector('.tw-t'), cur = el.querySelector('.tw-cursor');
+    var i = 0, buf = '';
+
+    function step() {
+      if (i >= tokens.length) {
+        txt.innerHTML = buf;
+        setTimeout(function () { cur.style.animation = 'none'; cur.style.opacity = 0; }, 1800);
+        return;
+      }
+      // HTML tags appear instantly; chars appear one at a time
+      while (i < tokens.length && tokens[i].h) buf += tokens[i++].v;
+      if (i < tokens.length) buf += tokens[i++].v;
+      txt.innerHTML = buf;
+      setTimeout(step, 18);
+    }
+    setTimeout(step, 350);
+  }();
+
+  /* ══ ② Scroll fade-in for sections and paper cards ══ */
+  !function () {
+    if (!window.IntersectionObserver) return;
+    var vh = window.innerHeight;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('fi-visible');
+        e.target.classList.remove('fi-hidden');
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -40px 0px', threshold: 0.07 });
+
+    Array.from(document.querySelectorAll('h1, h2, .paper-box, details')).forEach(function (el) {
+      // Skip navigation, sidebar, and masthead elements
+      if (el.closest('nav, header, .masthead, .sidebar')) return;
+      // Skip elements already visible in the initial viewport
+      if (el.getBoundingClientRect().top <= vh) return;
+      el.classList.add('fi-hidden');
+      io.observe(el);
+    });
+  }();
+
+  /* ══ ③ Smooth <details> expand / collapse ══ */
+  document.querySelectorAll('details').forEach(function (det) {
+    var sum = det.querySelector('summary'), con = det.querySelector('div');
+    if (!sum || !con) return;
+
+    // Set initial state without transition flash
+    con.style.maxHeight = det.open ? con.scrollHeight + 'px' : '0';
+    con.style.opacity   = det.open ? '1' : '0';
+
+    sum.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (det.open) {
+        // ── Closing ──
+        con.style.maxHeight = con.scrollHeight + 'px';
+        requestAnimationFrame(function () {
+          con.style.maxHeight = '0';
+          con.style.opacity   = '0';
+        });
+        con.addEventListener('transitionend', function h(ev) {
+          if (ev.propertyName !== 'max-height') return;
+          det.removeAttribute('open');
+          con.removeEventListener('transitionend', h);
+        });
+      } else {
+        // ── Opening ──
+        det.setAttribute('open', '');
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            con.style.maxHeight = con.scrollHeight + 'px';
+            con.style.opacity   = '1';
+          });
+        });
+        con.addEventListener('transitionend', function h(ev) {
+          if (ev.propertyName !== 'max-height') return;
+          con.style.maxHeight = 'none'; // allow content to reflow freely
+          con.removeEventListener('transitionend', h);
+        });
+      }
+    });
+  });
+
+});
 </script>
 
 {% include_relative includes/news.md %}
