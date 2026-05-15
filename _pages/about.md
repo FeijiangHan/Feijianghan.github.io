@@ -55,15 +55,50 @@ details > div {
   overflow: hidden;
   transition: max-height .42s cubic-bezier(.4,0,.2,1), opacity .35s ease;
 }
+
+/* ─── ④ Attention keyword glow ─── */
+.aw {
+  border-radius: 3px;
+  padding: 0 2px;
+  cursor: default;
+  transition: background .3s ease, text-shadow .3s ease;
+}
+.aw:hover {
+  background: linear-gradient(120deg, rgba(91,110,145,.18), rgba(139,92,246,.14));
+  text-shadow: 0 0 8px rgba(91,110,145,.45);
+}
+.aw[data-w="high"]:hover {
+  background: linear-gradient(120deg, rgba(91,110,145,.26), rgba(139,92,246,.22));
+  text-shadow: 0 0 12px rgba(91,110,145,.65);
+  box-shadow: 0 1px 0 rgba(91,110,145,.3);
+}
+
+/* ─── ⑤ Research tag chips ─── */
+.research-tags { display: inline-flex; flex-wrap: wrap; gap: .35em; vertical-align: middle; }
+.rtag {
+  display: inline-block; padding: .18em .65em;
+  border-radius: 999px; font-size: .82em; font-weight: 500;
+  border: 1.5px solid; cursor: default;
+  transition: background .25s, box-shadow .25s, transform .2s;
+}
+.rtag:hover { transform: translateY(-1px); }
+.rtag-purple { color: #7C3AED; border-color: rgba(124,58,237,.45); background: rgba(124,58,237,.06); }
+.rtag-purple:hover { background: rgba(124,58,237,.14); box-shadow: 0 0 10px rgba(124,58,237,.28); }
+.rtag-blue   { color: #2563EB; border-color: rgba(37,99,235,.45);  background: rgba(37,99,235,.06); }
+.rtag-blue:hover   { background: rgba(37,99,235,.14); box-shadow: 0 0 10px rgba(37,99,235,.28); }
+.rtag-green  { color: #059669; border-color: rgba(5,150,105,.45);  background: rgba(5,150,105,.06); }
+.rtag-green:hover  { background: rgba(5,150,105,.14); box-shadow: 0 0 10px rgba(5,150,105,.28); }
+.rtag-amber  { color: #D97706; border-color: rgba(217,119,6,.45);  background: rgba(217,119,6,.06); }
+.rtag-amber:hover  { background: rgba(217,119,6,.14); box-shadow: 0 0 10px rgba(217,119,6,.28); }
 </style>
 
-I am an incoming CS Ph.D. student at the University of Maryland <img src='./images/umd.png' style="width: 1.35em;">, where I will be advised by [Prof. Furong Huang](https://furong-huang.com/). I received my master's degree from the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, where I worked with [Prof. Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/), [Prof. Lyle Ungar](https://www.cis.upenn.edu/~ungar/), [Delip Rao](https://deliprao.com/), and [Dr. Xiaodong Yu](https://www.xiaodongyu.me/).
+<span id="bio-para-start"></span>I am an incoming CS Ph.D. student at the University of Maryland <img src='./images/umd.png' style="width: 1.35em;">, where I will be advised by [Prof. Furong Huang](https://furong-huang.com/). I received my master's degree from the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, where I worked with [Prof. Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/), [Prof. Lyle Ungar](https://www.cis.upenn.edu/~ungar/), [Delip Rao](https://deliprao.com/), and [Dr. Xiaodong Yu](https://www.xiaodongyu.me/).
 
 **Goal:** Build mechanism-guided AI systems that can understand the world, improve themselves, and still remain understandable and controllable to people. 
 
-**Research Interest:** {LLMs, VLMs, VLAs, Cognitive Science}
+**Research Interest:** <span class="research-tags"><span class="rtag rtag-purple">LLMs</span><span class="rtag rtag-blue">VLMs</span><span class="rtag rtag-green">VLAs</span><span class="rtag rtag-amber">Cognitive Science</span></span>
 
-**Research Question:** How can we more accurately understand models (e.g., how knowledge is stored, how training dynamics shape representations, how fine-tuning changes behavior, how attention, representations, and circuits interact)? Can these insights serve as first principles for designing better AI systems (e.g., better training, collaboration, and self-evolution)?
+**Research Question:** How can we more accurately understand models (e.g., how knowledge is stored, how <span class="aw" data-w="high">training dynamics</span> shape <span class="aw">representations</span>, how <span class="aw">fine-tuning</span> changes behavior, how <span class="aw" data-w="high">attention</span>, <span class="aw">circuits</span>, and internal structures interact)? Can these insights serve as first principles for designing better AI systems (e.g., better training, collaboration, and self-evolution)?
 
 My work spans two complementary directions:
 
@@ -98,7 +133,7 @@ I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where w
 
 I enjoy mentoring undergraduate and master's students on research projects. I also offer free guidance to Chinese students applying to master's and PhD programs in the US — feel free to check out my [Xiaohongshu](https://www.xiaohongshu.com/user/profile/5f96bb470000000001009db4){:target="_blank"} where I share application tips and research advice.
 
-Feel free to reach out for collaboration or just to say hi. Email me at feijianghan [at] gmail [dot] com (it's <span id="contact-local-time" data-timezone="{{ site.contact_timezone | default: 'America/New_York' }}">—</span> for me right now).
+Feel free to reach out for collaboration or just to say hi. Email me at research@feijianghan.com (it's <span id="contact-local-time" data-timezone="{{ site.contact_timezone | default: 'America/New_York' }}">—</span> for me right now).
 
 
 <script>
@@ -129,10 +164,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* ══ ① Typewriter — bio opening paragraph ══ */
   !function () {
-    var anchor = document.getElementById('about-me');
-    if (!anchor) return;
-    var el = anchor.nextElementSibling;
-    while (el && el.tagName !== 'P') el = el.nextElementSibling;
+    // Use explicit marker so we don't depend on kramdown's P-tag rendering
+    var marker = document.getElementById('bio-para-start');
+    if (!marker) return;
+    var el = marker.closest('p') || marker.parentElement;
     if (!el) return;
 
     // Tokenize innerHTML into chars vs. HTML tags vs. entities

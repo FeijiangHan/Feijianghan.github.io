@@ -288,7 +288,7 @@ Jianheng Tang, Kejia Fan, Wenbin Xie, Lingxiao Zeng, **Feijiang Han**, et al.
     cursor: pointer;
 }
 
-.paper-image, .paper-abstract {
+.paper-image {
     display: none;
     margin-top: 10px;
     padding: 10px;
@@ -296,15 +296,35 @@ Jianheng Tang, Kejia Fan, Wenbin Xie, Lingxiao Zeng, **Feijiang Han**, et al.
     border-radius: 4px;
     border: 1px solid #e9ecef;
 }
+.paper-image.active { display: block; }
 
+/* ⑧ Smooth abstract expand — max-height animation */
 .paper-abstract {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+    padding: 0 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border: 1px solid transparent;
     font-size: 0.9em;
     line-height: 1.6;
     text-align: justify;
+    transition:
+        max-height .45s cubic-bezier(.4,0,.2,1),
+        opacity    .35s ease,
+        margin-top .35s ease,
+        padding-top .35s ease,
+        padding-bottom .35s ease,
+        border-color .35s ease;
 }
-
-.paper-image.active, .paper-abstract.active {
-    display: block;
+.paper-abstract.active {
+    max-height: 900px;
+    opacity: 1;
+    margin-top: 10px;
+    padding: 10px;
+    border-color: #e9ecef;
 }
 
 /* 论文列表样式 */
@@ -337,9 +357,13 @@ li a:hover {
 
 <script>
 function toggleAbstract(abstractId) {
-    const abstract = document.getElementById(abstractId);
-    if (abstract) {
-        abstract.classList.toggle('active');
+    var abstract = document.getElementById(abstractId);
+    if (!abstract) return;
+    var isOpen = abstract.classList.toggle('active');
+    // Update button label
+    var btn = abstract.previousElementSibling;
+    if (btn && btn.classList.contains('paper-interaction')) {
+        btn.textContent = isOpen ? '📑 Hide abstract' : '📑 Click to see abstract';
     }
 }
 </script>
