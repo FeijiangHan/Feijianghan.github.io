@@ -17,15 +17,6 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 <style>
-/* ─── ② Scroll fade-in ─── */
-.fi-hidden {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity .6s ease, transform .55s ease;
-  will-change: opacity, transform;
-}
-.fi-visible { opacity: 1 !important; transform: translateY(0) !important; }
-
 /* ─── ③ Smooth <details> ─── */
 details > summary {
   cursor: pointer;
@@ -91,12 +82,11 @@ I am an incoming CS Ph.D. student at the University of Maryland <img src='./imag
 
 **Goal:** Build mechanism-guided AI systems that can understand the world, improve themselves, and still remain understandable and controllable to people. 
 
-**Research Interest:** {<span class="research-tags"><span class="rtag rtag-purple">LLMs</span><span class="rtag rtag-blue">VLMs</span><span class="rtag rtag-green">VLAs</span><span class="rtag rtag-amber">Cognitive Science</span></span>}
+**Research Topics:** {LLMs, VLMs, VLAs, Cognitive Science}
 
 **Research Question:** How can we more accurately understand models (e.g., how knowledge is stored, how training dynamics shape representations, how fine-tuning changes behavior, how attention, circuits, and internal structures interact)? Can these insights serve as first principles for designing better AI systems (e.g., better training, collaboration, and self-evolution)?
 
 My work spans two complementary directions:
-
 
 <div style="display: flex; gap: 2em; align-items: flex-start; margin: 2em 0; flex-wrap: wrap;">
   <div style="flex: 1; min-width: 300px; max-width: 500px;">
@@ -128,7 +118,7 @@ I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where w
 
 I enjoy mentoring undergraduate and master's students on research projects. I also offer free guidance to Chinese students applying to master's and PhD programs in the US — feel free to check out my [Xiaohongshu](https://www.xiaohongshu.com/user/profile/5f96bb470000000001009db4){:target="_blank"} where I share application tips and research advice.
 
-Feel free to reach out for collaboration or just to say hi. Email me at research@feijianghan.com (it's <span id="contact-local-time" data-timezone="{{ site.contact_timezone | default: 'America/New_York' }}">—</span> for me right now).
+Feel free to reach out for collaboration or just to say hi. Email me at **research[at]feijianghan[dot]com** (it's <span id="contact-local-time" data-timezone="{{ site.contact_timezone | default: 'America/New_York' }}">—</span> for me right now).
 
 
 <script>
@@ -156,29 +146,6 @@ Feel free to reach out for collaboration or just to say hi. Email me at research
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-
-  /* ══ ② Scroll fade-in for sections and paper cards ══ */
-  !function () {
-    if (!window.IntersectionObserver) return;
-    var vh = window.innerHeight;
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        e.target.classList.add('fi-visible');
-        e.target.classList.remove('fi-hidden');
-        io.unobserve(e.target);
-      });
-    }, { rootMargin: '0px 0px -40px 0px', threshold: 0.07 });
-
-    Array.from(document.querySelectorAll('h1, h2, .paper-box, details')).forEach(function (el) {
-      // Skip navigation, sidebar, and masthead elements
-      if (el.closest('nav, header, .masthead, .sidebar')) return;
-      // Skip elements already visible in the initial viewport
-      if (el.getBoundingClientRect().top <= vh) return;
-      el.classList.add('fi-hidden');
-      io.observe(el);
-    });
-  }();
 
   /* ══ ③ Smooth <details> expand / collapse ══ */
   document.querySelectorAll('details').forEach(function (det) {
