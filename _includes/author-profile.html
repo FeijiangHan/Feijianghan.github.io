@@ -9,9 +9,93 @@
   </div>
 
   <div class="author__content">
-    <h3 class="author__name">{{ author.name }}</h3>
+    <h3 class="author__name">
+      {{ author.name }}
+      <button class="name-say-btn" id="name-say-btn"
+              aria-label="Play name pronunciation"
+              data-tip="Hear my name">🔊</button>
+      <audio id="name-say-audio" src="/images/name.m4a" preload="none"></audio>
+    </h3>
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>
+
+<style>
+.name-say-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5em; height: 1.5em;
+  margin-left: .3em;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: .62em;
+  vertical-align: middle;
+  border-radius: 50%;
+  color: #9ca3af;
+  transition: color .2s ease, transform .2s ease;
+  position: relative;
+  padding: 0;
+}
+.name-say-btn:hover { color: #4b5563; transform: scale(1.18); }
+.name-say-btn.is-playing {
+  color: #5B6E91;
+  animation: say-pulse .55s ease-in-out infinite alternate;
+}
+@keyframes say-pulse {
+  from { transform: scale(1); }
+  to   { transform: scale(1.22); }
+}
+/* Tooltip */
+.name-say-btn::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 7px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f2937;
+  color: #f9fafb;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.55em;
+  font-weight: 400;
+  white-space: nowrap;
+  padding: .22em .6em;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .18s ease;
+  z-index: 999;
+}
+.name-say-btn::before {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 2px);
+  left: 50%; transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #1f2937;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .18s ease;
+}
+.name-say-btn:hover::after,
+.name-say-btn:hover::before { opacity: 1; }
+</style>
+
+<script>
+(function () {
+  var btn   = document.getElementById('name-say-btn');
+  var audio = document.getElementById('name-say-audio');
+  if (!btn || !audio) return;
+  btn.addEventListener('click', function () {
+    audio.currentTime = 0;
+    audio.play();
+    btn.classList.add('is-playing');
+    audio.addEventListener('ended', function () {
+      btn.classList.remove('is-playing');
+    }, { once: true });
+  });
+})();
+</script>
 
   <div class="author__urls-wrapper">
     <!-- <button class="btn btn--inverse">More Info & Contact</button> -->
