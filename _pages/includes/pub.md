@@ -2,7 +2,7 @@
 
 # 📝 Selected Publications 
 
-*For a complete list of publications, please visit my [Google Scholar](https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ)*
+<!-- *For a complete list of publications, please visit my [Google Scholar](https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ)* -->
 
 <div class="pub-filter" id="pub-filter">
   <button class="pf-btn pf-active" data-filter="all">All</button>
@@ -24,7 +24,7 @@
 
 Sida Liu\*, **Feijiang Han**\*
 
-[**Paper**](https://arxiv.org/pdf/2606.11722) \| [**Website**](https://liusida.github.io/ica-lens-paper/) \| [**Code**](https://github.com/liusida/ica-lens-paper) \| [**Blog**](https://www.alphaxiv.org/abs/2606.11722) \| [**Hugging Face**](https://huggingface.co/papers/2606.11722)
+[**Paper**](https://arxiv.org/pdf/2606.11722) \| [**Website**](https://liusida.github.io/ica-lens-paper/) \| [**Code**](https://github.com/liusida/ica-lens-paper) \| [**Alphaxiv Chat**](https://www.alphaxiv.org/abs/2606.11722) \| [**Hugging Face**](https://huggingface.co/papers/2606.11722) \| [**小红书**](https://www.xiaohongshu.com/discovery/item/6a2788ef000000002003b63b?source=webshare&xhsshare=pc_web&xsec_token=YB-efQkinworgcwkutTbIZHdIWjlM4ZUsScM2fsc2AQac=&xsec_source=pc_share)[**²**](https://www.xiaohongshu.com/discovery/item/6a2a34a00000000022022716?source=webshare&xhsshare=pc_web&xsec_token=YBOwlRa_zqd0GcxNPGwJGztNrmrgVuIQ28QpM9zeB1mjY=&xsec_source=pc_share)
 
 **TL;DR.** We introduce ICALens, a stable and auditable workflow for using ICA as a compact first lens on LLM representations. Instead of training another overcomplete dictionary, ICALens fits a GPU-parallel FastICA basis and exposes signed non-Gaussian directions for inspection, annotation, and evaluation. Across GPT-2 Small, Gemma 2 2B, and Qwen 3.5 2B Base, these directions recover human-interpretable components, reveal a link between non-Gaussianity and context dependence through ERF, and provide useful feature coordinates under sparse probing and targeted perturbation. ICALens is not a replacement for SAEs; it is a cheaper first pass for discovering where interpretable structure is already visible before heavier dictionary learning is worth the cost.
 
