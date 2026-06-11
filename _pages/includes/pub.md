@@ -16,6 +16,30 @@
 <div class='paper-box'>
 
 <div class='paper-box-image'>
+<div><div class="badge">arXiv 2026</div><a href="https://arxiv.org/abs/2606.11722" target="_blank"><img src='images/ICALens.png' alt="ICA Lens Overview" class="paper-image-hover" width="100%"></a></div></div>
+
+<div class='paper-box-text' markdown="1">
+
+[ICA Lens: Interpreting Language Models Without Training Another Dictionary](https://arxiv.org/abs/2606.11722)
+
+Sida Liu\*, **Feijiang Han**\*
+
+[**Paper**](https://arxiv.org/pdf/2606.11722) \| [**Website**](https://liusida.github.io/ica-lens-paper/) \| [**Code**](https://github.com/liusida/ica-lens-paper) \| [**Blog**](https://www.alphaxiv.org/abs/2606.11722) \| [**Hugging Face**](https://huggingface.co/papers/2606.11722)
+
+**TL;DR.** We introduced ICALens, a practical workflow for using ICA as a stable, efficient, and auditable lens on LLM representations. Rather than training another overcomplete dictionary, ICALens normalizes activations, fits a compact GPU-parallel FastICA basis, and supports inspection, annotation, and evaluation of signed non-Gaussian directions. Across GPT-2 Small, Gemma 2 2B, and Qwen 3.5 2B Base, this workflow recovers human-interpretable components, links non-Gaussianity to context dependence through ERF, and yields useful feature coordinates under sparse probing and targeted probe perturbation. Our results position ICA as a compact first lens for language-model activations, rather than as a replacement for sparse autoencoders. SAEs learn large overcomplete dictionaries optimized for sparse reconstruction, making them well suited for high-resolution feature discovery. ICALens asks how much interpretable structure is already visible from activation geometry, helping analysts decide where heavier dictionary learning is worth the cost.
+
+<div class="paper-interaction" onclick="toggleAbstract('icalens_abstract')">
+📑 Click to see abstract
+</div>
+<div class="paper-abstract" id="icalens_abstract">
+Finding interpretable directions in language-model representations is a critical step toward understanding model behavior and enabling more precise control over model internals. Sparse autoencoders (SAEs) have become the standard tool for this purpose, but using them as the default first lens often requires training, tuning, storing, and evaluating large overcomplete dictionaries for every layer, activation site, and sparsity setting. This computational bottleneck limits rapid exploration and motivates a fundamental question: how much interpretable structure is already visible from activation geometry before training another neural dictionary? Our intuition is simple: many interpretable directions are selective on tokens, and selective directions should look less Gaussian than typical random directions. We therefore revisit independent component analysis (ICA), a classical method for finding non-Gaussian directions, as a compact lens for language-model interpretability. We find that ICA has been underestimated for LLM interpretability because prior uses often relied on off-the-shelf ICA implementations that are brittle on LLM activations and lacked systematic tools for inspecting, annotating, and evaluating the recovered directions. To bridge these gaps, we introduce ICALens, the first practical workflow for stable, efficient, and auditable ICA analysis of LLM representations. ICALens combines an optimized GPU-parallel FastICA pipeline with LLM-specific stability recipes and better fitting diagnostics, enabling efficient and reliable layer-wise analysis across modern LLMs. Across GPT-2 Small, Gemma 2 2B, and Qwen 3.5 2B Base, ICALens efficiently recovers compact, human-interpretable directions without per-layer gradient-based dictionary training. On SAEBench, ICA is competitive with public SAEs in sparse probing and outperforms them in targeted probe perturbation under small-to-medium component budgets. These results suggest that ICA should not be viewed as a weak classical baseline, but as an efficient and complementary first lens for exploring language-model representations. To support reproducible analysis, we release all fitted ICA checkpoints, the ICA explorer, and human annotations.
+</div>
+</div>
+</div>
+
+<div class='paper-box'>
+
+<div class='paper-box-image'>
 <div><div class="badge">ICLR 2026</div><a href="https://arxiv.org/abs/2505.11739" target="_blank"><img src='images/ZeroTuningcode.png' alt="ZeroTuning Overview" class="paper-image-hover" width="100%"></a></div></div>
 
 <div class='paper-box-text' markdown="1">
