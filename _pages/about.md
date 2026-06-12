@@ -222,8 +222,17 @@ In the near term, I care most about making interpretability actionable. A good e
   <p style="margin-top: 0.8em; color: #666; font-size: 0.9em; font-style: italic; max-width: 900px; margin-left: auto; margin-right: auto;">Actionable Mechanistic Interpretability: From Localizing and Steering to Model Improvement<br><span style="font-size: 0.85em;">(Figure from the survey "Locate, Steer, and Improve: A Practical Survey of Actionable Mechanistic Interpretability in Large Language Models")</span></p>
 </div>
 
+<div style="margin: 1.2em 0; padding: 1em 1.4em; background: #f8f9fb; border-left: 3px solid #d1d5db; border-radius: 6px; color: #4b5563; font-size: 0.95em; line-height: 1.7;">
+<strong>A personal note:</strong> I am not a fan of SAEs or LLM steering.
+SAEs feel too heavyweight as a <em>first lens</em> for understanding models---yet too weak as a downstream application tool compared to simpler baselines.
+My view is: if the goal is to <em>understand</em> a model, we should reach for lighter-weight tools first; if the goal is to <em>control</em> a model, we should pick the baseline that actually fits the task.
+On steering specifically, I suspect it is not a genuine application need in most settings---it is better treated as a <em>diagnostic tool</em> for probing interpretability, rather than a deployable solution.
+</div>
+
 </div>
 </details>
+
+
 
 <span id="why-i-care-about-model-adaptation"></span>
 <details>
