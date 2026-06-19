@@ -132,7 +132,7 @@ I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where w
 
 <!-- You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'> Google Scholar</a>. -->
 
-If our research interests align and you would like to collaborate, ask for advice, or explore mentorship, please fill out this short form: [Collaboration Interest Form](https://docs.google.com/forms/d/e/1FAIpQLSeUfc4z7PmxMBpZXNxAfFWDkB-N1iA-ouQqrFH_1AIVKLhYYg/viewform), and send me an email at **feijhan[at]umd.edu** (it's <span id="contact-local-time" data-timezone="{{ site.contact_timezone | default: 'America/New_York' }}">—</span> for me right now).
+If our research interests align and you would like to collaborate, ask for advice, or explore mentorship, please fill out this short form: [Collaboration Interest Form](https://docs.google.com/forms/d/e/1FAIpQLSeUfc4z7PmxMBpZXNxAfFWDkB-N1iA-ouQqrFH_1AIVKLhYYg/viewform), and send me an email at **feijhan[at]umd.edu** (it's <span id="contact-local-time" data-timezone="{{ site.contact_timezone | default: 'China' }}">—</span> for me right now).
 
 <p style="color: #DC2626; margin-top: 0.8em;"><strong>I am actively looking for a 2027 Summer internship.</strong> If you think my work aligns with your team's, please feel free to reach out by email!</p>
 

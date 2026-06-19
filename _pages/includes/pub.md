@@ -24,7 +24,7 @@
 
 Sida Liu\*, **Feijiang Han**\*
 
-[**Paper**](https://arxiv.org/pdf/2606.11722) \| [**Website**](https://liusida.github.io/ica-lens-paper/) \| [**Code**](https://github.com/liusida/ica-lens-paper) \| [**Alphaxiv Chat**](https://www.alphaxiv.org/abs/2606.11722) \| [**Hugging Face**](https://huggingface.co/papers/2606.11722)
+[**Paper**](https://arxiv.org/pdf/2606.11722) \| [**Website**](https://liusida.github.io/ica-lens-paper/) \| [**Code**](https://github.com/liusida/ica-lens-paper) \| [**Online ICAExplorer Demo**](https://huggingface.co/spaces/EEEAILab/ICAExplorer) \| [**Alphaxiv Chat**](https://www.alphaxiv.org/abs/2606.11722) \| [**Hugging Face**](https://huggingface.co/papers/2606.11722) 
 
 **Relevant Chinese Blogs (RedNote):** [How This Idea Was Born — A Full Retrospective](https://www.xiaohongshu.com/discovery/item/6a2788ef000000002003b63b?source=webshare&xhsshare=pc_web&xsec_token=YB-efQkinworgcwkutTbIZHdIWjlM4ZUsScM2fsc2AQac=&xsec_source=pc_share) \| [Why I'm Skeptical About the Future of SAEs](https://www.xiaohongshu.com/discovery/item/6a2a34a00000000022022716?source=webshare&xhsshare=pc_web&xsec_token=YBOwlRa_zqd0GcxNPGwJGztNrmrgVuIQ28QpM9zeB1mjY=&xsec_source=pc_share)
 
