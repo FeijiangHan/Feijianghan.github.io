@@ -1,8 +1,8 @@
-# 📅 Collaboration
+<!-- # 📅 Collaboration
 
 If you'd like to discuss research collaboration or have any questions, feel free to schedule a meeting with me:
 
-If you feel our backgrounds align and you'd like to collaborate, get help, or seek mentorship, please fill out this short form: [Collaboration Interest Form](https://docs.google.com/forms/d/e/1FAIpQLSeUfc4z7PmxMBpZXNxAfFWDkB-N1iA-ouQqrFH_1AIVKLhYYg/viewform)
+If you feel our backgrounds align and you'd like to collaborate, get help, or seek mentorship, please fill out this short form: [Collaboration Interest Form](https://docs.google.com/forms/d/e/1FAIpQLSeUfc4z7PmxMBpZXNxAfFWDkB-N1iA-ouQqrFH_1AIVKLhYYg/viewform) -->
 
 <!-- Google Calendar Appointment Scheduling begin -->
 

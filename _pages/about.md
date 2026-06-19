@@ -119,7 +119,7 @@ My work spans two complementary directions:
         <details>
         <summary><strong>My current views</strong></summary>
         <div><div style="margin: .8em 0 1.2em; padding: 1em 1.4em; background: #f8f9fb; border-left: 3px solid #d1d5db; border-radius: 6px; color: #4b5563; font-size: 0.95em; line-height: 1.7;">
-        My current interest leans toward scientific understanding with LLMs: processing hundred-page papers, conducting deep research, parsing PDF documents, verifying scientific claims, and building AI scientists and reviewers. I do not think LLMs are always the elegant solution for any application. Traditional deep learning models already handle many of some tasks reasonably well. I prefer to focus on problems where prior methods were nearly unworkable and where LLMs can genuinely move the needle from failing to competitive or strong.
+        My current interest leans toward scientific understanding with LLMs: processing hundred-page papers, conducting deep research, parsing PDF documents, verifying scientific claims, and building AI scientists and reviewers. I do not think LLMs are always the elegant solution for any application. Traditional deep learning models already handle many of tasks reasonably well. I prefer to focus on problems where prior methods were nearly unworkable and where LLMs can genuinely move the needle from failing to competitive or strong.
         </div></div>
         </details>
       </li>
@@ -127,11 +127,14 @@ My work spans two complementary directions:
   </div>
 </div>
 
-I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where we work on AI-powered price tracking, product analysis, and recommendation systems for e-commerce. I also serve as a reviewer for conferences including **ICLR**, **ICML**, **ACL**, **CVPR**, **COLM**, and **AAAI**.
+I am also the co-founder of [Savable Koupon AI](https://www.koupon.ai/), where we work on AI-powered price tracking, product analysis, and recommendation systems for e-commerce. I also serve as a reviewer for conferences including **NIPS**, **ICLR**, **ICML**, **ACL**, **CVPR**, **COLM**, and **AAAI**.
+
 
 <!-- You can find my publications on <a href='https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ'> Google Scholar</a>. -->
 
-Feel free to reach out for collaboration or just to say hi. Email me at **research[at]feijianghan[dot]com** (it's <span id="contact-local-time" data-timezone="{{ site.contact_timezone | default: 'America/New_York' }}">—</span> for me right now).
+If our research interests align and you would like to collaborate, ask for advice, or explore mentorship, please fill out this short form: [Collaboration Interest Form](https://docs.google.com/forms/d/e/1FAIpQLSeUfc4z7PmxMBpZXNxAfFWDkB-N1iA-ouQqrFH_1AIVKLhYYg/viewform), and send me an email at **feijhan[at]umd.edu** (it's <span id="contact-local-time" data-timezone="{{ site.contact_timezone | default: 'America/New_York' }}">—</span> for me right now).
+
+<p style="color: #DC2626; margin-top: 0.8em;"><strong>I am actively looking for a 2027 Summer internship.</strong> If you think my work aligns with your team's, please feel free to reach out by email!</p>
 
 <script>
 (function() {
