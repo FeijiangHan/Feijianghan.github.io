@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>具身智能 3周入门路线图</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg:        #0d0f14;
+    --surface:   #151820;
+    --card:      #1c2030;
+    --border:    #252a38;
+    --border-lit:#2e3550;
+
+    --w1:    #3b82f6;   /* Week 1 — blue  */
+    --w2:    #8b5cf6;   /* Week 2 — violet */
+    --w3:    #10b981;   /* Week 3 — emerald */
+
+    --survey:  #f59e0b;  /* tag: survey */
+    --biglab:  #ec4899;  /* tag: big-lab */
+    --code:    #22d3ee;  /* tag: code */
+    --blog:    #a3e635;  /* tag: blog */
+
+    --text:   #e2e8f0;
+    --muted:  #64748b;
+    --dim:    #94a3b8;
+
+    --radius: 10px;
+    --gap: 18px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 60px 32px 48px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .hero h1 {
+    font-size: clamp(28px, 4vw, 46px);
+    font-weight: 700;
+    line-height: 1.15;
+    background: linear-gradient(135deg, #e2e8f0 30%, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+  }
+  .hero-sub {
+    color: var(--dim);
+    font-size: 15px;
+    max-width: 640px;
+    margin-bottom: 36px;
+  }
+
+  /* ── Legend ── */
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--dim);
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+  /* ── Week meta row ── */
+  .week-tabs {
+    display: flex;
+    gap: 12px;
+    max-width: 1100px;
+    margin: 0 auto 32px;
+    padding: 0 32px;
+    flex-wrap: wrap;
+  }
+  .week-tab {
+    flex: 1;
+    min-width: 240px;
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    cursor: pointer;
+    transition: border-color .2s, transform .15s;
+    text-decoration: none;
+  }
+  .week-tab:hover { transform: translateY(-2px); }
+  .week-tab.w1 { border-top: 3px solid var(--w1); }
+  .week-tab.w2 { border-top: 3px solid var(--w2); }
+  .week-tab.w3 { border-top: 3px solid var(--w3); }
+  .week-tab .wlabel { font-size: 11px; font-weight: 600; letter-spacing:.1em; text-transform:uppercase; margin-bottom:4px; }
+  .week-tab.w1 .wlabel { color: var(--w1); }
+  .week-tab.w2 .wlabel { color: var(--w2); }
+  .week-tab.w3 .wlabel { color: var(--w3); }
+  .week-tab .wtitle { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom:6px; }
+  .week-tab .wdesc  { font-size: 12px; color: var(--muted); }
+
+  /* ── Main layout ── */
+  .main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  /* ── Week section ── */
+  .week-section {}
+  .week-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .week-badge {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+  }
+  .w1 .week-badge { background: rgba(59,130,246,.15); color: var(--w1); }
+  .w2 .week-badge { background: rgba(139,92,246,.15); color: var(--w2); }
+  .w3 .week-badge { background: rgba(16,185,129,.15); color: var(--w3); }
+  .week-title { font-size: 20px; font-weight: 700; }
+  .week-dates { margin-left: auto; font-size: 12px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+
+  /* ── Day grid ── */
+  .day-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--gap);
+  }
+
+  /* ── Day card ── */
+  .day-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .day-card:hover {
+    border-color: var(--border-lit);
+    box-shadow: 0 4px 24px rgba(0,0,0,.35);
+  }
+  .day-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .day-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .effort-badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background: var(--surface);
+    color: var(--dim);
+    border: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  .day-theme {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+
+  /* ── Paper item ── */
+  .paper-list { display: flex; flex-direction: column; gap: 10px; }
+  .paper-item {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    background: var(--surface);
+    transition: border-color .2s, background .2s;
+  }
+  .paper-item:hover { border-color: var(--border-lit); background: #1e2436; }
+  .paper-item-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .paper-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+    text-decoration: none;
+    flex: 1;
+  }
+  .paper-title:hover { color: #a5b4fc; text-decoration: underline; }
+  .paper-org {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .paper-summary {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.55;
+    margin-bottom: 8px;
+  }
+  .paper-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+  .tag {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+  }
+  .tag-survey  { background: rgba(245,158,11,.12); color: var(--survey); }
+  .tag-biglab  { background: rgba(236,72,153,.12);  color: var(--biglab); }
+  .tag-code    { background: rgba(34,211,238,.12);  color: var(--code); }
+  .tag-blog    { background: rgba(163,230,53,.12);   color: var(--blog); }
+  .tag-vla     { background: rgba(59,130,246,.12);  color: var(--w1); }
+  .tag-wm      { background: rgba(139,92,246,.12);  color: var(--w2); }
+  .tag-wam     { background: rgba(16,185,129,.12);  color: var(--w3); }
+  .tag-data    { background: rgba(251,191,36,.1);   color: #fbbf24; }
+  .tag-efficient { background: rgba(248,113,113,.12); color: #f87171; }
+
+  .read-mode {
+    font-size: 11px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    padding-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .read-mode::before { content: '📖'; font-size: 11px; }
+
+  /* ── Outcome box ── */
+  .outcome-box {
+    margin-top: 24px;
+    border: 1px dashed var(--border-lit);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    background: rgba(255,255,255,.02);
+  }
+  .outcome-box h4 {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .outcome-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .outcome-list li {
+    font-size: 13px;
+    color: var(--dim);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .outcome-list li::before { content: '✓'; color: #4ade80; flex-shrink: 0; margin-top: 1px; }
+
+  /* ── Big-lab section ── */
+  .biglab-section { margin-top: 4px; }
+  .biglab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--gap);
+    margin-top: 16px;
+  }
+  .biglab-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--biglab);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    transition: border-color .2s;
+  }
+  .biglab-card:hover { border-color: #ec4899; }
+
+  /* ── Code section ── */
+  .code-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--code);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .code-block .code-title { font-size: 13px; font-weight: 600; color: var(--code); margin-bottom: 10px; }
+  .code-item { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; }
+  .code-name { font-size: 13px; color: var(--text); }
+  .code-desc { font-size: 12px; color: var(--muted); }
+  .code-link { font-size: 11px; color: var(--code); text-decoration: none; }
+  .code-link:hover { text-decoration: underline; }
+
+  /* ── Progress bar ── */
+  .progress-bar-wrap {
+    height: 3px;
+    background: var(--border);
+    border-radius: 3px;
+    margin-bottom: 32px;
+    overflow: hidden;
+  }
+  .progress-bar { height: 100%; border-radius: 3px; }
+  .w1 .progress-bar { background: var(--w1); width: 33%; }
+  .w2 .progress-bar { background: var(--w2); width: 66%; }
+  .w3 .progress-bar { background: var(--w3); width: 100%; }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .hero, .main, .week-tabs { padding-left: 16px; padding-right: 16px; }
+    .day-grid, .biglab-grid { grid-template-columns: 1fr; }
+    .week-dates { display: none; }
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border-lit); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="hero">
+  <p class="hero-eyebrow">LLM/VLM → 具身智能 · 3-Week Curriculum</p>
+  <h1>具身智能入门<br>完整学习路线图</h1>
+  <p class="hero-sub">
+    面向有 LLM/VLM 背景的研究者。从全局视野出发，循序渐进覆盖 VLA → World Model → WAM 三条核心技术路线，辅以大厂标志性论文和动手实现，3 周内建立完整知识体系。
+  </p>
+  <div class="legend">
+    <div class="legend-item"><div class="dot" style="background:var(--survey)"></div>Survey 综述</div>
+    <div class="legend-item"><div class="dot" style="background:var(--biglab)"></div>大厂论文</div>
+    <div class="legend-item"><div class="dot" style="background:var(--code)"></div>动手实现</div>
+    <div class="legend-item"><div class="dot" style="background:var(--blog)"></div>Blog / 视频</div>
+    <div class="legend-item"><div class="dot" style="background:var(--w1)"></div>VLA 方向</div>
+    <div class="legend-item"><div class="dot" style="background:var(--w2)"></div>WM 方向</div>
+    <div class="legend-item"><div class="dot" style="background:var(--w3)"></div>WAM 方向</div>
+  </div>
+</section>
+
+<!-- ══════════════════ WEEK TABS ══════════════════ -->
+<div class="week-tabs">
+  <a class="week-tab w1" href="#week1">
+    <div class="wlabel">Week 1 · 6/24–6/30</div>
+    <div class="wtitle">全局视野 + VLA 核心</div>
+    <div class="wdesc">建立坐标系，从 VLM 顺滑过渡到 VLA；完成第一个动手实验</div>
+  </a>
+  <a class="week-tab w2" href="#week2">
+    <div class="wlabel">Week 2 · 7/1–7/7</div>
+    <div class="wtitle">World Model 体系</div>
+    <div class="wdesc">理解 WM 的三种角色，精读权威综述，大厂 WM 论文横向对比</div>
+  </a>
+  <a class="week-tab w3" href="#week3">
+    <div class="wlabel">Week 3 · 7/8–7/14</div>
+    <div class="wtitle">WAM 融合 + 系统复盘</div>
+    <div class="wdesc">攻克 WAM 范式，读最新大厂进展，动手跑通 WM 实现</div>
+  </a>
+</div>
+
+<!-- ══════════════════ MAIN ══════════════════ -->
+<div class="main">
+
+<!-- ════════════════ WEEK 1 ════════════════ -->
+<section class="week-section w1" id="week1">
+  <div class="week-header">
+    <span class="week-badge">Week 1</span>
+    <span class="week-title">全局视野 + VLA 核心</span>
+    <span class="week-dates">6/24 — 6/30</span>
+  </div>
+  <div class="progress-bar-wrap"><div class="progress-bar"></div></div>
+
+  <div class="day-grid">
+
+    <!-- Day 1 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 1 · 6/24</span>
+        <span class="effort-badge">⏱ 2–3h · 精读</span>
+      </div>
+      <div class="day-theme">🗺️ 建立全局坐标系</div>
+      <div class="paper-list">
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://arxiv.org/pdf/2509.20021v1" target="_blank">
+              Embodied AI: From LLMs to World Models
+            </a>
+            <span class="paper-org">复旦+同济</span>
+          </div>
+          <div class="paper-summary">
+            专为 LLM/VLM 研究者设计的具身智能全景综述。从 LLM 的根本局限出发，系统介绍 VLA、WM、WAM 三条主线及其相互关系，是整个 3 周课程的"地图"。
+          </div>
+          <div class="paper-tags">
+            <span class="tag tag-survey">Survey</span>
+            <span class="tag tag-vla">VLA</span>
+            <span class="tag tag-wm">WM</span>
+          </div>
+          <div class="read-mode">必读全文；重点看 Introduction 和各章节首段，先建全局感</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 2 · 6/25</span>
+        <span class="effort-badge">⏱ 1.5h · 轻读</span>
+      </div>
+      <div class="day-theme">💡 产业视角 + 感性认知</div>
+      <div class="paper-list">
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/" target="_blank">
+              Pretrained to Imagine, Fine-Tuned to Act: The Rise of World-Action Models
+            </a>
+            <span class="paper-org">NVIDIA</span>
+          </div>
+          <div class="paper-summary">
+            Jim Fan（NVIDIA GEAR Lab 负责人）撰写的 WAM 范式宣言。语言流畅，用"DreamZero"等案例直观展示 WM → VLA → WAM 的演进逻辑，是理解业界方向感的最佳入口。
+          </div>
+          <div class="paper-tags">
+            <span class="tag tag-blog">Blog</span>
+            <span class="tag tag-wam">WAM</span>
+            <span class="tag tag-biglab">NVIDIA</span>
+          </div>
+          <div class="read-mode">轻松阅读，不要求记忆细节；建立"为什么 WAM 是下一步"的直觉</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 3 · 6/26</span>
+        <span class="effort-badge">⏱ 3–4h · 精读</span>
+      </div>
+      <div class="day-theme">🤖 VLA 核心综述（上）</div>
+      <div class="paper-list">
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://arxiv.org/pdf/2405.14093v8" target="_blank">
+              A Survey on Vision-Language-Action Models for Embodied AI
+            </a>
+            <span class="paper-org">HKUST · 2024→2026</span>
+          </div>
+          <div class="paper-summary">
+            目前最系统的 VLA 综述，已更新 8 个版本（持续维护至 2026）。三条主线：① VLA 组件（视觉编码器/LLM backbone）② 低层动作策略（离散 token / diffusion / flow matching）③ 高层任务规划。有 VLM 背景可直接上手，大量熟悉模块（CLIP, LLaMA, SigLIP）以新方式组合。
+          </div>
+          <div class="paper-tags">
+            <span class="tag tag-survey">Survey</span>
+            <span class="tag tag-vla">VLA</span>
+          </div>
+          <div class="read-mode">Day 3 读 Sec I–III-B（组件+动作生成），Day 4 读 III-C–V（规划+数据+挑战）</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 4 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 4 · 6/27</span>
+        <span class="effort-badge">⏱ 2–3h · 精读+选读</span>
+      </div>
+      <div class="day-theme">🔑 VLA 架构演进：动作如何 Token 化</div>
+      <div class="paper-list">
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://arxiv.org/abs/2507.01925" target="_blank">
+              A Survey on VLA Models: An Action Tokenization Perspective
+            </a>
+            <span class="paper-org">2025</span>
+          </div>
+          <div class="paper-summary">
+            从动作 Tokenization 视角切入，系统比较三种范式的优劣：离散 token（RT-2/OpenVLA）、连续扩散（Diffusion Policy/Octo）、流匹配（π0）。是理解 VLA 架构差异的最清晰入口，帮助你在读大厂论文时快速定位其技术位置。
+          </div>
+          <div class="paper-tags">
+            <span class="tag tag-survey">Survey</span>
+            <span class="tag tag-vla">VLA</span>
+          </div>
+          <div class="read-mode">重点看分类框架和各类方法对比表，不需要精读每个子方法</div>
+        </div>
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://robotics-transformer2.github.io/assets/rt2.pdf" target="_blank">
+              RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control
+            </a>
+            <span class="paper-org">Google DeepMind · 2023</span>
+          </div>
+          <div class="paper-summary">
+            VLA 范式的奠基论文。首次将预训练 VLM 的动作输出离散化为 token，未见场景成功率从 RT-1 的 32% 跳至 62%，并支持 chain-of-thought 推理。"把动作当词汇"这个核心 idea 读懂即可。
+          </div>
+          <div class="paper-tags">
+            <span class="tag tag-biglab">Google</span>
+            <span class="tag tag-vla">VLA</span>
+          </div>
+          <div class="read-mode">选读：Introduction + Method + 实验结果表；约 45 分钟</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 5 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 5 · 6/28</span>
+        <span class="effort-badge">⏱ 3–4h · 动手</span>
+      </div>
+      <div class="day-theme">💻 动手 Part 1：nanoVLM</div>
+      <div class="paper-list">
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://github.com/huggingface/nanoVLM" target="_blank">
+              HuggingFace nanoVLM
+            </a>
+            <span class="paper-org">HuggingFace · Code</span>
+          </div>
+          <div class="paper-summary">
+            HuggingFace 出品的极简 VLM 实现。代码清晰（&lt;1000行核心），完整覆盖视觉编码器 + LLM backbone + 多模态对齐。利用你的 VLM 背景，跑通后思考："action head 应该插在哪个位置？如何把文本预测改为动作预测？" 这是从 VLM 到 VLA 的关键思维跳跃。
+          </div>
+          <div class="paper-tags">
+            <span class="tag tag-code">Code</span>
+            <span class="tag tag-vla">VLA</span>
+          </div>
+          <div class="read-mode">目标：跑通前向推理，读懂 vision encoder → projector → LLM 的数据流</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 6 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 6 · 6/29</span>
+        <span class="effort-badge">⏱ 2–3h · 精读</span>
+      </div>
+      <div class="day-theme">🌐 具身 AI 全景：感知·交互·Sim2Real</div>
+      <div class="paper-list">
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://arxiv.org/pdf/2407.06886" target="_blank">
+              Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI
+            </a>
+            <span class="paper-org">SYSU · Wen Gao 院士 · IEEE T-MECH</span>
+          </div>
+          <div class="paper-summary">
+            中山大学团队（含 Wen Gao 院士挂名），发表于 IEEE/ASME T-Mechatronics。覆盖具身感知、具身交互、具身 Agent、Sim2Real 四大方向，是"机器人系统视角"的补充，帮你理解 VLA 只是系统中的一个模块，了解整个闭环是什么样的。配套 paper list 持续维护。
+          </div>
+          <div class="paper-tags">
+            <span class="tag tag-survey">Survey</span>
+            <span class="tag tag-vla">VLA</span>
+            <span class="tag tag-wm">WM</span>
+          </div>
+          <div class="read-mode">选读：Sec IV（Embodied Agent）+ Sec V（Sim-to-Real）；约 1.5h</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 7 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 7 · 6/30</span>
+        <span class="effort-badge">⏱ 2h · 复盘</span>
+      </div>
+      <div class="day-theme">📋 Week 1 复盘 + 知识整合</div>
+      <div class="paper-list">
+        <div class="paper-item" style="border-color:var(--border-lit); background: rgba(59,130,246,.05)">
+          <div class="paper-summary" style="color:var(--dim); margin-bottom:0">
+            自测：能否回答以下问题？
+            <ul style="margin-top:8px; margin-left:16px; display:flex; flex-direction:column; gap:4px; font-size:12px;">
+              <li>VLA = VLM + ? 动作生成有哪三种主要方式？</li>
+              <li>RT-1 → RT-2 → OpenVLA → π0 的核心演进是什么？</li>
+              <li>离散 token vs flow matching 分别适合什么场景？</li>
+              <li>nanoVLM 的 vision encoder 输出什么形状的张量？</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /day-grid -->
+
+  <!-- W1 大厂 -->
+  <div class="biglab-section">
+    <h3 style="font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; margin-top:28px; margin-bottom:4px;">📌 Week 1 大厂参考（按需补读，不强制）</h3>
+    <div class="biglab-grid">
+      <div class="biglab-card">
+        <div class="paper-item-top" style="margin-bottom:6px">
+          <a class="paper-title" href="https://arxiv.org/abs/2310.08864" target="_blank">
+            Open X-Embodiment: Robotic Learning Datasets and RT-X Models
+          </a>
+          <span class="paper-org">Google · 2024</span>
+        </div>
+        <div class="paper-summary">22 机构、100 万+ 轨迹、34 个实验室联合数据集。机器人界的"ImageNet 时刻"，理解跨机体泛化的起点。</div>
+        <div class="paper-tags"><span class="tag tag-biglab">Google</span><span class="tag tag-data">Data</span></div>
+      </div>
+      <div class="biglab-card">
+        <div class="paper-item-top" style="margin-bottom:6px">
+          <a class="paper-title" href="https://arxiv.org/abs/2503.20020" target="_blank">
+            Gemini Robotics: Bringing AI into the Physical World
+          </a>
+          <span class="paper-org">Google DeepMind · 2025</span>
+        </div>
+        <div class="paper-summary">基于 Gemini 的 VLA，强调视觉/指令/动作/任务四类泛化，是目前最强的闭源 VLA 代表。了解 SOTA 水平线。</div>
+        <div class="paper-tags"><span class="tag tag-biglab">Google</span><span class="tag tag-vla">VLA</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outcome-box">
+    <h4>Week 1 结束后，你应该能做到</h4>
+    <ul class="outcome-list">
+      <li>解释 VLA 和 VLM 的架构差异，以及 action head 的三种主流实现方式</li>
+      <li>定位 RT-1→RT-2→OpenVLA→π0 在技术演进中的位置</li>
+      <li>跑通 nanoVLM，理解 vision encoder + LLM backbone 的数据流</li>
+      <li>知道具身智能系统的"感知-规划-执行"三层结构</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ════════════════ WEEK 2 ════════════════ -->
+<section class="week-section w2" id="week2">
+  <div class="week-header">
+    <span class="week-badge">Week 2</span>
+    <span class="week-title">World Model 完整体系</span>
+    <span class="week-dates">7/1 — 7/7</span>
+  </div>
+  <div class="progress-bar-wrap"><div class="progress-bar"></div></div>
+
+  <div class="day-grid">
+
+    <!-- Day 8 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 8 · 7/1</span>
+        <span class="effort-badge">⏱ 2–3h · 精读</span>
+      </div>
+      <div class="day-theme">🌍 World Model 入门：三轴分类框架</div>
+      <div class="paper-list">
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://arxiv.org/abs/2510.16732" target="_blank">
+              A Comprehensive Survey on World Models for Embodied AI
+            </a>
+            <span class="paper-org">2025</span>
+          </div>
+          <div class="paper-summary">
+            提出三轴分类框架：① Functionality（决策耦合 vs 通用目的）② Temporal Modeling（序列仿真 vs 全局差分预测）③ Spatial Representation（潜在特征 → 显式几何 → Neural Fields）。篇幅适中，是 WM 入门的最好脚手架。读完你会理解 WM 在具身系统中的三个角色：训练数据生成器 / 策略优化环境 / 机器人大脑。
+          </div>
+          <div class="paper-tags">
+            <span class="tag tag-survey">Survey</span>
+            <span class="tag tag-wm">WM</span>
+          </div>
+          <div class="read-mode">先读 Introduction + 分类框架 + Figure 1，再按兴趣深入各类别</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 9-10 -->
+    <div class="day-card" style="grid-column: span 2">
+      <div class="day-card-header">
+        <span class="day-label">Day 9–10 · 7/2–7/3</span>
+        <span class="effort-badge">⏱ 4–5h · 重点精读</span>
+      </div>
+      <div class="day-theme">📖 WM 权威综述：Abbeel + Malik + Wu 联合出品</div>
+      <div class="paper-list">
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://arxiv.org/abs/2605.00080" target="_blank">
+              World Model for Robot Learning: A Comprehensive Survey
+            </a>
+            <span class="paper-org">MIT · Berkeley · Stanford · ETH · Oxford · 2026</span>
+          </div>
+          <div class="paper-summary">
+            本课程最重要的 WM 文献。作者阵容：Pieter Abbeel（Berkeley）、Jiajun Wu（Stanford）、Jitendra Malik（Berkeley）、Marc Pollefeys（ETH）、Yilun Du（MIT）等顶级学者联合撰写，时间线覆盖至 2026 年 3 月。三条主线：① WM 与策略耦合（predict-then-act / 端到端 / latent-space）② WM 作为 RL 模拟器 ③ 机器人视频世界模型（从想象生成到可控结构化模型）。配套网站持续维护。
+          </div>
+          <div class="paper-tags">
+            <span class="tag tag-survey">Survey</span>
+            <span class="tag tag-wm">WM</span>
+          </div>
+          <div class="read-mode">Day 9：WM-as-policy + WM-as-simulator 部分；Day 10：视频 WM + benchmark 总结</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 11 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 11 · 7/4</span>
+        <span class="effort-badge">⏱ 3–4h · 动手</span>
+      </div>
+      <div class="day-theme">💻 动手 Part 2：nano world model</div>
+      <div class="paper-list">
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://arxiv.org/pdf/2605.23993" target="_blank">
+              Nano World Models（论文，先读）
+            </a>
+            <span class="paper-org">2025</span>
+          </div>
+          <div class="paper-summary">
+            用极简实现讲清楚 WM 的核心组件：latent state encoder + dynamics model + decoder。论文短小精悍，和配套代码一一对应，是从"理解概念"到"能实现"的最好桥梁。
+          </div>
+          <div class="paper-tags">
+            <span class="tag tag-wm">WM</span>
+          </div>
+          <div class="read-mode">先读论文（约 45 分钟），再跑代码</div>
+        </div>
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://github.com/simchowitzlabpublic/nano-world-model" target="_blank">
+              nano-world-model（代码）
+            </a>
+            <span class="paper-org">Code</span>
+          </div>
+          <div class="paper-summary">最小化 world model 实现，跑通前向预测 loop，搞清楚 encode → predict → decode 三段式结构。</div>
+          <div class="paper-tags"><span class="tag tag-code">Code</span></div>
+          <div class="read-mode">目标：修改 dynamics model，观察不同架构（RNN vs Transformer）对预测质量的影响</div>
+        </div>
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://github.com/AlmondGod/tinyworlds" target="_blank">
+              tinyworlds（补充实现）
+            </a>
+            <span class="paper-org">Code</span>
+          </div>
+          <div class="paper-summary">更直觉化的可视化 WM 实现，适合观察"想象"轨迹的质量。</div>
+          <div class="paper-tags"><span class="tag tag-code">Code</span></div>
+          <div class="read-mode">选跑，重点看可视化部分</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 12 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 12 · 7/5</span>
+        <span class="effort-badge">⏱ 2–3h · 选读</span>
+      </div>
+      <div class="day-theme">🔬 WM for VLA：专项 Survey + 横向比较</div>
+      <div class="paper-list">
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.176948355.54623875/v1" target="_blank">
+              Towards Generalist Embodied AI: A Survey on World Models for VLA Agents
+            </a>
+            <span class="paper-org">2025</span>
+          </div>
+          <div class="paper-summary">
+            专注于 WM 和 VLA 如何结合，覆盖 VLA-WM 的三种结合方式：WM 辅助规划、WM 生成训练数据、WM 作为在线奖励信号。是 Week 2 的整合视角，把前几天的 VLA 和 WM 知识接起来。
+          </div>
+          <div class="paper-tags">
+            <span class="tag tag-survey">Survey</span>
+            <span class="tag tag-vla">VLA</span>
+            <span class="tag tag-wm">WM</span>
+          </div>
+          <div class="read-mode">选读核心章节（WM-VLA 结合方式 + 代表工作对比），约 1.5h</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 13 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 13 · 7/6</span>
+        <span class="effort-badge">⏱ 2–3h · 精读</span>
+      </div>
+      <div class="day-theme">🏭 大厂 WM：Genie + Cosmos + V-JEPA 2</div>
+      <div class="paper-list">
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://arxiv.org/abs/2402.15391" target="_blank">
+              Genie: Generative Interactive Environments
+            </a>
+            <span class="paper-org">Google DeepMind · 2024</span>
+          </div>
+          <div class="paper-summary">从无标注网络视频学习可交互环境，用户可通过 latent action 控制。WM 从"状态预测工具"演进为"通用模拟器"的里程碑。</div>
+          <div class="paper-tags"><span class="tag tag-biglab">Google</span><span class="tag tag-wm">WM</span></div>
+          <div class="read-mode">选读：核心架构 + latent action 概念；约 30 分钟</div>
+        </div>
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://arxiv.org/abs/2506.09985" target="_blank">
+              V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning
+            </a>
+            <span class="paper-org">Meta AI · 2025</span>
+          </div>
+          <div class="paper-summary">
+            12 亿参数、100 万+ 小时视频训练的自监督世界模型。仅用 62 小时 DROID 机器人视频后训练，pick-and-place 成功率 80%（对比 Octo 15%）。LeCun JEPA 路线的最新实现，是"在隐空间预测"的最佳案例。
+          </div>
+          <div class="paper-tags"><span class="tag tag-biglab">Meta</span><span class="tag tag-wm">WM</span></div>
+          <div class="read-mode">重点看 action-conditioned 变体（V-JEPA 2-AC）和机器人实验结果</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 14 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 14 · 7/7</span>
+        <span class="effort-badge">⏱ 2h · 复盘</span>
+      </div>
+      <div class="day-theme">📋 Week 2 复盘 + VLA×WM 关系梳理</div>
+      <div class="paper-list">
+        <div class="paper-item" style="border-color:var(--border-lit); background: rgba(139,92,246,.05)">
+          <div class="paper-summary" style="color:var(--dim); margin-bottom:0">
+            自测：能否回答以下问题？
+            <ul style="margin-top:8px; margin-left:16px; display:flex; flex-direction:column; gap:4px; font-size:12px;">
+              <li>WM 在具身系统中的三个角色分别是什么？</li>
+              <li>Dreamer 系列和 V-JEPA 的核心区别在哪？</li>
+              <li>WM 怎么和 VLA 结合？三种结合方式各有什么代表工作？</li>
+              <li>nano world model 的 latent state 维度是多少？dynamics model 用的什么架构？</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /day-grid -->
+
+  <!-- W2 大厂补充 -->
+  <div class="biglab-section">
+    <h3 style="font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; margin-top:28px; margin-bottom:4px;">📌 Week 2 大厂参考（按需补读）</h3>
+    <div class="biglab-grid">
+      <div class="biglab-card">
+        <div class="paper-item-top" style="margin-bottom:6px">
+          <a class="paper-title" href="https://deepmind.google/blog/genie-2-a-large-scale-foundation-world-model/" target="_blank">Genie 2: A Large-Scale Foundation World Model</a>
+          <span class="paper-org">Google DeepMind</span>
+        </div>
+        <div class="paper-summary">Genie 升级版，可从单张图片生成可交互 3D 世界。与 Genie 1 对比阅读，理解 WM 的规模化路径。</div>
+        <div class="paper-tags"><span class="tag tag-biglab">Google</span><span class="tag tag-blog">Blog</span><span class="tag tag-wm">WM</span></div>
+      </div>
+      <div class="biglab-card">
+        <div class="paper-item-top" style="margin-bottom:6px">
+          <a class="paper-title" href="https://arxiv.org/abs/2501.03575" target="_blank">Cosmos World Foundation Model Platform for Physical AI</a>
+          <span class="paper-org">NVIDIA · 2025</span>
+        </div>
+        <div class="paper-summary">NVIDIA 的物理 AI 世界基础模型平台，可在 11 小时内生成 78 万条合成轨迹。理解"WM 作为数据引擎"的最佳案例。</div>
+        <div class="paper-tags"><span class="tag tag-biglab">NVIDIA</span><span class="tag tag-wm">WM</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outcome-box">
+    <h4>Week 2 结束后，你应该能做到</h4>
+    <ul class="outcome-list">
+      <li>用三轴框架（Functionality / Temporal / Spatial）给任意一篇 WM 论文分类</li>
+      <li>解释 Dreamer 系列的 RSSM 结构和 latent imagination 训练方式</li>
+      <li>跑通 nano world model，理解 encode→predict→decode 三段式结构</li>
+      <li>对比 Genie（生成式）、V-JEPA 2（自监督预测）、Cosmos（物理仿真）三种路线的差异</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ════════════════ WEEK 3 ════════════════ -->
+<section class="week-section w3" id="week3">
+  <div class="week-header">
+    <span class="week-badge">Week 3</span>
+    <span class="week-title">WAM 融合范式 + 最新大厂进展 + 系统复盘</span>
+    <span class="week-dates">7/8 — 7/14</span>
+  </div>
+  <div class="progress-bar-wrap"><div class="progress-bar"></div></div>
+
+  <div class="day-grid">
+
+    <!-- Day 15 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 15 · 7/8</span>
+        <span class="effort-badge">⏱ 2–3h · 精读</span>
+      </div>
+      <div class="day-theme">🔗 WAM：VLA + WM 的融合范式</div>
+      <div class="paper-list">
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://arxiv.org/abs/2605.12090" target="_blank">
+              World Action Models: The Next Frontier in Embodied AI
+            </a>
+            <span class="paper-org">2025</span>
+          </div>
+          <div class="paper-summary">
+            正式定义"WAM"术语和范式的论文。核心区别：VLA 学 p(a|o,l) 是反应式的；WM 只建模动态；WAM 学 p(future states, actions) 的联合分布，把"前向预测"嵌入策略。提出两种架构：Cascaded WAM（先预测后行动）vs Joint WAM（联合建模）。读完会有"VLA 和 WM 往深做就是 WAM"的顿悟感。
+          </div>
+          <div class="paper-tags">
+            <span class="tag tag-wam">WAM</span>
+          </div>
+          <div class="read-mode">精读 Introduction + 定义 + 架构分类；约 2h</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 16 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 16 · 7/9</span>
+        <span class="effort-badge">⏱ 2–3h · 精读</span>
+      </div>
+      <div class="day-theme">📊 WAM 全景综述 + 代表工作梳理</div>
+      <div class="paper-list">
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://arxiv.org/pdf/2606.20781" target="_blank">
+              World Action Models: A Survey
+            </a>
+            <span class="paper-org">2026</span>
+          </div>
+          <div class="paper-summary">
+            WAM 领域最系统的综述，汇总了 DreamZero、Fast-WAM、Efficient-WAM、WorldVLN 等代表工作，并深入讨论"推理时是否需要显式生成未来视频"这一核心争论。Fast-WAM 的发现尤其值得关注：训练时的视频共训练有效，但推理时可以完全禁用世界专家，大幅降低延迟。
+          </div>
+          <div class="paper-tags">
+            <span class="tag tag-survey">Survey</span>
+            <span class="tag tag-wam">WAM</span>
+          </div>
+          <div class="read-mode">重点看代表工作对比表 + "是否需要显式推理"的讨论章节</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 17 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 17 · 7/10</span>
+        <span class="effort-badge">⏱ 2–3h · 精读</span>
+      </div>
+      <div class="day-theme">🎯 WAM 实例：DreamZero</div>
+      <div class="paper-list">
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://arxiv.org/abs/2602.15922" target="_blank">
+              DreamZero: World Action Models are Zero-shot Policies
+            </a>
+            <span class="paper-org">NVIDIA · 2026</span>
+          </div>
+          <div class="paper-summary">
+            NVIDIA 14B 参数的 WAM 旗舰论文，也是"WAM"这一名词的原始提出者之一。基于预训练视频扩散模型，联合预测未来视频帧和动作。相比顶尖 VLA π0.5，在未见任务泛化上提升 2× 以上，实现 7Hz 实时闭环控制。代表 WAM 路线的当前最强结果。
+          </div>
+          <div class="paper-tags">
+            <span class="tag tag-biglab">NVIDIA</span>
+            <span class="tag tag-wam">WAM</span>
+          </div>
+          <div class="read-mode">重点看方法架构 + 与 π0.5 的对比实验；理解"视频扩散模型 → 动作"的推导</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 18 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 18 · 7/11</span>
+        <span class="effort-badge">⏱ 2–3h · 选读</span>
+      </div>
+      <div class="day-theme">🚀 最新进展：Qwen 系具身模型</div>
+      <div class="paper-list">
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://arxiv.org/abs/2605.30280" target="_blank">Qwen-VLA</a>
+            <span class="paper-org">Alibaba · 2026</span>
+          </div>
+          <div class="paper-summary">统一跨任务、跨环境、跨机体的 VLA 建模，代表国内顶级工业界在 VLA 方向的最新进展。</div>
+          <div class="paper-tags"><span class="tag tag-biglab">Alibaba</span><span class="tag tag-vla">VLA</span></div>
+          <div class="read-mode">选读 Method + 跨机体泛化实验；约 45 分钟</div>
+        </div>
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://arxiv.org/abs/2606.24597" target="_blank">Qwen-AgentWorld: Language World Models for General Agents</a>
+            <span class="paper-org">Alibaba · 2026</span>
+          </div>
+          <div class="paper-summary">用语言驱动的世界模型支持通用 Agent，是 LLM × WM 的最新融合尝试，代表"语言世界模型"这一新兴方向。</div>
+          <div class="paper-tags"><span class="tag tag-biglab">Alibaba</span><span class="tag tag-wm">WM</span></div>
+          <div class="read-mode">选读：核心 idea + 与纯 VLA 的对比；约 30 分钟</div>
+        </div>
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://arxiv.org/abs/2606.17030" target="_blank">Qwen-RobotWorld: Unifying Embodied World Modeling through Language-Conditioned Video Generation</a>
+            <span class="paper-org">Alibaba · 2026</span>
+          </div>
+          <div class="paper-summary">用语言条件视频生成统一具身世界建模，是视频 WM + 语言 grounding 的最新实践，与 Cosmos 路线对比阅读效果更佳。</div>
+          <div class="paper-tags"><span class="tag tag-biglab">Alibaba</span><span class="tag tag-wm">WM</span><span class="tag tag-wam">WAM</span></div>
+          <div class="read-mode">选读：Architecture + 实验；约 30 分钟</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 19 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 19 · 7/12</span>
+        <span class="effort-badge">⏱ 2h · 选读</span>
+      </div>
+      <div class="day-theme">⚡ 效率与部署：Efficient VLA + Gemini 1.5</div>
+      <div class="paper-list">
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://arxiv.org/abs/2510.24795" target="_blank">
+              A Survey on Efficient Vision-Language-Action Models
+            </a>
+            <span class="paper-org">2025</span>
+          </div>
+          <div class="paper-summary">
+            VLA 落地部署的系统性综述，覆盖推理延迟、量化、蒸馏、硬件协同。了解 VLA 从研究到产品的主要工程瓶颈，对理解"为什么 Fast-WAM 这么重要"有帮助。
+          </div>
+          <div class="paper-tags">
+            <span class="tag tag-survey">Survey</span>
+            <span class="tag tag-efficient">Efficient</span>
+            <span class="tag tag-vla">VLA</span>
+          </div>
+          <div class="read-mode">扫读：只看推理延迟和量化相关章节，约 45 分钟</div>
+        </div>
+        <div class="paper-item">
+          <div class="paper-item-top">
+            <a class="paper-title" href="https://arxiv.org/abs/2510.03342" target="_blank">
+              Gemini Robotics 1.5: Advanced Embodied Reasoning, Thinking, and Motion Transfer
+            </a>
+            <span class="paper-org">Google DeepMind · 2025</span>
+          </div>
+          <div class="paper-summary">Gemini Robotics 的升级版，引入"Thinking"模式（推理时间计算）和 Motion Transfer，是当前 VLA SOTA 的最强代表，也是 on-device 部署的工业标杆。
+          </div>
+          <div class="paper-tags"><span class="tag tag-biglab">Google</span><span class="tag tag-vla">VLA</span></div>
+          <div class="read-mode">选读：Thinking 机制 + Motion Transfer + 部署相关；约 45 分钟</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 20 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 20 · 7/13</span>
+        <span class="effort-badge">⏱ 3h · 整合</span>
+      </div>
+      <div class="day-theme">🗂️ 知识体系整合：画出自己的技术图谱</div>
+      <div class="paper-list">
+        <div class="paper-item" style="border-color:var(--border-lit); background: rgba(16,185,129,.05)">
+          <div class="paper-summary" style="color:var(--dim); margin-bottom:0">
+            <strong style="color:var(--text)">整合任务：</strong>不看任何资料，尝试从记忆中画出以下图谱
+            <ul style="margin-top:10px; margin-left:16px; display:flex; flex-direction:column; gap:5px; font-size:12px;">
+              <li><strong style="color:var(--text)">技术演进图</strong>：RT-1 → RT-2 → OpenVLA → π0 → GR00T → Gemini Robotics 1.5，标注每步的核心创新</li>
+              <li><strong style="color:var(--text)">架构对比表</strong>：VLA / WM / WAM 各自的输入-输出、训练目标、代表模型、主要局限</li>
+              <li><strong style="color:var(--text)">数据飞轮图</strong>：真实数据 + 合成数据（WM/Cosmos）+ 人类演示 + RL 反馈 如何形成闭环</li>
+              <li><strong style="color:var(--text)">大厂格局图</strong>：Google/NVIDIA/Meta/Alibaba 各自的技术路线和代表模型</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 21 -->
+    <div class="day-card">
+      <div class="day-card-header">
+        <span class="day-label">Day 21 · 7/14</span>
+        <span class="effort-badge">⏱ 2h · 总复盘</span>
+      </div>
+      <div class="day-theme">🎓 终极复盘 + 下一步规划</div>
+      <div class="paper-list">
+        <div class="paper-item" style="border-color:var(--border-lit); background: rgba(16,185,129,.05)">
+          <div class="paper-summary" style="color:var(--dim); margin-bottom:0">
+            <strong style="color:var(--text)">终极自测：</strong>
+            <ul style="margin-top:10px; margin-left:16px; display:flex; flex-direction:column; gap:5px; font-size:12px;">
+              <li>拿到一篇新的具身智能论文，能在 5 分钟内判断它属于哪个技术方向、解决什么问题？</li>
+              <li>WAM 和 VLA+WM pipeline 的根本区别是什么？</li>
+              <li>如果你要做一个具身智能研究项目，你会选择哪个方向切入，为什么？</li>
+              <li>你的 ICA/mechanistic interpretability 背景能如何迁移到具身智能？（思考：VLA 的内部表征是否有类似 LLM 的可解释特征？）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /day-grid -->
+
+  <div class="outcome-box">
+    <h4>3周课程结束后，你应该能做到</h4>
+    <ul class="outcome-list">
+      <li>理解 VLA / WM / WAM 三条技术路线的定义、架构、代表模型、核心局限</li>
+      <li>跑通 nanoVLM 和 nano world model，动手感受 VLM→VLA 和 WM 的核心数据流</li>
+      <li>对大厂格局（Google/NVIDIA/Meta/Alibaba）的技术路线有清晰认识</li>
+      <li>能快速阅读新论文并定位其技术位置，建立独立判断</li>
+      <li>形成自己对"下一步研究方向"的判断，能与导师/同学讨论具体切入点</li>
+    </ul>
+  </div>
+</section>
+
+</div><!-- /main -->
+
+<script>
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+</body>
+</html>
