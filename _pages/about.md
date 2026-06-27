@@ -86,6 +86,8 @@ I am an incoming CS Ph.D. student at the University of Maryland <img src='./imag
 
 **Research Question:** How can we more accurately understand models (e.g., how knowledge is stored, how training dynamics shape representations, how fine-tuning changes behavior, how attention, circuits, and internal structures interact)? Can these insights serve as first principles for designing better AI systems (e.g., better training, collaboration, and self-evolution)?
 
+I have recently grown interested in **embodied AI** as well; see my [RedNote post (Chinese)](https://www.xiaohongshu.com/discovery/item/6a3c74d8000000002103ce61?source=webshare&xhsshare=pc_web&xsec_token=ABtyFB4dNL8SGcYBnxmSNhfa8KSn1KW9kwUDJJ08WsRCg=&xsec_source=pc_share){:target="_blank"} for my reasons and current thinking.
+
 My work spans two complementary directions:
 
 <div style="display: flex; gap: 2em; align-items: flex-start; margin: 2em 0; flex-wrap: wrap;">
@@ -101,27 +103,12 @@ My work spans two complementary directions:
          <span style="font-size: 0.95em; color: #6B7280;">
           (<a href="#why-i-care-about-interpretability" style="color: #5B6E91;">Why I care about interpretability</a>)
         </span>
-        <details>
-        <summary><strong>My current views</strong></summary>
-        <div><div style="margin: .8em 0 1.2em; padding: 1em 1.4em; background: #f8f9fb; border-left: 3px solid #d1d5db; border-radius: 6px; color: #4b5563; font-size: 0.95em; line-height: 1.7;">
-        I am not a fan of SAEs or activation steering.
-        SAEs feel too heavyweight as a <em>first lens</em> for understanding models---yet too weak as a downstream application tool compared to simpler baselines.
-        My view is: if the goal is to <em>understand</em> a model, we should reach for lighter-weight tools first; if the goal is to <em>control</em> a model, we should pick the baseline that actually fits the task.
-        On steering specifically, I suspect it is not a genuine application need in most settings---it is better treated as a <em>diagnostic tool</em> for probing interpretability, rather than a deployable solution.
-        </div></div>
-        </details>
       </li>
       <li>
         <strong>2. Model Adaptation and Alignment</strong>: I adapt foundation models into domain experts for settings where general models still struggle. Recent work includes the first fully LaTeX-derived layout annotation pipeline for large-scale document understanding (<a href="https://www.cis.upenn.edu/~ccb/publications/latex2layout.pdf">LaTeX2Layout, AAAI 2026</a>), LLM-based systems for million-token malicious code analysis (<a href="https://arxiv.org/abs/2504.13811v3">WebShell Detection, COLM 2025</a>; <a href="https://arxiv.org/abs/2512.05288">WebShell Classification, AAAI 2026</a>), and efficient and effective verifier for scientific claim verification (<a href="https://arxiv.org/abs/2604.01652">ThinknCheck, NLDB 2026</a>).<br>
         <span style="font-size: 0.95em; color: #6B7280;">
           (<a href="#why-i-care-about-model-adaptation" style="color: #5B6E91;">Why I care about model adaptation</a>)
         </span>
-        <details>
-        <summary><strong>My current views</strong></summary>
-        <div><div style="margin: .8em 0 1.2em; padding: 1em 1.4em; background: #f8f9fb; border-left: 3px solid #d1d5db; border-radius: 6px; color: #4b5563; font-size: 0.95em; line-height: 1.7;">
-        My current interest leans toward scientific understanding with LLMs: processing hundred-page papers, conducting deep research, parsing PDF documents, verifying scientific claims, and building AI scientists and reviewers. I do not think LLMs are always the elegant solution for any application. Traditional deep learning models already handle many of tasks reasonably well. I prefer to focus on problems where prior methods were nearly unworkable and where LLMs can genuinely move the needle from failing to competitive or strong.
-        </div></div>
-        </details>
       </li>
     </ul>
   </div>
@@ -215,6 +202,16 @@ document.addEventListener('DOMContentLoaded', function () {
 <summary><strong>Why I care about interpretability</strong></summary>
 <div markdown="1">
 
+<details>
+        <summary><strong>My current views</strong></summary>
+        <div><div style="margin: .8em 0 1.2em; padding: 1em 1.4em; background: #f8f9fb; border-left: 3px solid #d1d5db; border-radius: 6px; color: #4b5563; font-size: 0.95em; line-height: 1.7;">
+        I am not a fan of SAEs or activation steering.
+        SAEs feel too heavyweight as a <em>first lens</em> for understanding models---yet too weak as a downstream application tool compared to simpler baselines.
+        My view is: if the goal is to <em>understand</em> a model, we should reach for lighter-weight tools first; if the goal is to <em>control</em> a model, we should pick the baseline that actually fits the task.
+        On steering specifically, I suspect it is not a genuine application need in most settings---it is better treated as a <em>diagnostic tool</em> for probing interpretability, rather than a deployable solution.
+        </div></div>
+</details>
+
 TLDR: I care about explanations because they can do two things: (1) help us trust models in practice, (2) help us design better models without relying only on trial and error.
 
 For me, interpretability starts with curiosity. I like looking at a model and asking: why did that happen?
@@ -249,6 +246,13 @@ In the near term, I care most about making interpretability actionable. A good e
 <details>
 <summary><strong>Why I care about model adaptation</strong></summary>
 <div markdown="1">
+
+<details>
+<summary><strong>My current views</strong></summary>
+<div><div style="margin: .8em 0 1.2em; padding: 1em 1.4em; background: #f8f9fb; border-left: 3px solid #d1d5db; border-radius: 6px; color: #4b5563; font-size: 0.95em; line-height: 1.7;">
+My current interest leans toward scientific understanding with LLMs: processing hundred-page papers, conducting deep research, parsing PDF documents, verifying scientific claims, and building AI scientists and reviewers. I do not think LLMs are always the elegant solution for any application. Traditional deep learning models already handle many of tasks reasonably well. I prefer to focus on problems where prior methods were nearly unworkable and where LLMs can genuinely move the needle from failing to competitive or strong.
+</div></div>
+</details>
 
 The other question I keep coming back to is adaptation.
 
