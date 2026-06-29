@@ -8,7 +8,6 @@
 <!-- KaTeX for math rendering -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
 
 <style>
 /* ===== TOKENS ===== */
@@ -205,6 +204,15 @@ a:hover { text-decoration: underline; }
 
 /* inline math */
 .katex { font-size: 1em; }
+/* Explicit rendered math elements */
+.math-d {
+  overflow-x: auto;
+  padding: 4px 0;
+  margin: 4px 0;
+}
+.math-d .katex-display { margin: 0; }
+.math-i { display: inline; }
+.math-i .katex { font-size: 1em; }
 
 /* formula spotlight */
 .fspot {
@@ -419,7 +427,7 @@ footer {
   <p class="ch-lead">在深入每个算法之前，先建立全局视野——理解它们按什么逻辑依次出现，以及每个解决了上一个的哪个瓶颈。</p>
 
   <div class="prose" style="margin-top:28px;">
-    <p>如果你只学过 LLM/VLM，理解扩散模型需要一次思维范式的切换。自回归语言模型把概率分解为逐 token 的条件乘积，每步生成下一个词。扩散模型则完全不同：它把数据分布 \(p(x)\) 理解为一个连续传输过程的终点——从简单高斯噪声 \(\mathcal{N}(0,I)\) 出发，经过若干步去噪，最终落在真实数据分布上。</p>
+    <p>如果你只学过 LLM/VLM，理解扩散模型需要一次思维范式的切换。自回归语言模型把概率分解为逐 token 的条件乘积，每步生成下一个词。扩散模型则完全不同：它把数据分布 <span class="math-i" data-tex="p(x)"></span> 理解为一个连续传输过程的终点——从简单高斯噪声 <span class="math-i" data-tex="\mathcal{N}(0,I)"></span> 出发，经过若干步去噪，最终落在真实数据分布上。</p>
     <p>七个算法形成一条清晰的进化链，每一步解决上一步的核心瓶颈。</p>
   </div>
 
@@ -467,7 +475,7 @@ footer {
 
   <div class="card-insight">
     <span class="card-label">💡 核心统一视角</span>
-    所有七个方法，本质上都在做同一件事：学习一个时变向量场，把高斯噪声运输到真实数据分布上。DDPM 预测噪声 \(\boldsymbol{\epsilon}\)，Flow Matching 预测速度向量 \(\mathbf{v}\)，score-based 方法预测分数 \(\nabla_x \log p_t(x)\)，这三个预测目标可以精确相互转换，理解其中一个就理解了所有方法的本质。
+    所有七个方法，本质上都在做同一件事：学习一个时变向量场，把高斯噪声运输到真实数据分布上。DDPM 预测噪声 <span class="math-i" data-tex="\boldsymbol{\epsilon}"></span>，Flow Matching 预测速度向量 <span class="math-i" data-tex="\mathbf{v}"></span>，score-based 方法预测分数 <span class="math-i" data-tex="\nabla_x \log p_t(x)"></span>，这三个预测目标可以精确相互转换，理解其中一个就理解了所有方法的本质。
   </div>
 </div>
 </section>
@@ -489,72 +497,72 @@ footer {
     <p>与 LLM 对比理解：LLM 逐 token 生成，每步调用模型一次；DDPM 逐步去噪，生成一张图需要调用约 1000 次。两者都把复杂分布的学习分解为一系列更简单的条件预测问题。</p>
 
     <h3>1.2 前向过程：加噪的封闭公式</h3>
-    <p>设原始图像为 \(\mathbf{x}_0\)，定义方差调度表 \(\beta_1 < \beta_2 < \cdots < \beta_T\)，每个 \(\beta_t \in (0,1)\)（例如从 \(0.0001\) 线性增到 \(0.02\)，总步数 \(T=1000\)）。每步前向过程只做一件事：</p>
+    <p>设原始图像为 <span class="math-i" data-tex="\mathbf{x}_0"></span>，定义方差调度表 <span class="math-i" data-tex="\beta_1 < \beta_2 < \cdots < \beta_T"></span>，每个 <span class="math-i" data-tex="\beta_t \in (0,1)"></span>（例如从 <span class="math-i" data-tex="0.0001"></span> 线性增到 <span class="math-i" data-tex="0.02"></span>，总步数 <span class="math-i" data-tex="T=1000"></span>）。每步前向过程只做一件事：</p>
   </div>
 
   <div class="math-wrap"><span class="mlabel">前向单步</span>
-    $$q(\mathbf{x}_t \mid \mathbf{x}_{t-1}) = \mathcal{N}\!\left(\mathbf{x}_t;\, \sqrt{1-\beta_t}\,\mathbf{x}_{t-1},\; \beta_t \mathbf{I}\right)$$
-    <p class="math-note">将上一步稍微"收缩"（乘以 \(\sqrt{1-\beta_t}<1\)），再叠加方差为 \(\beta_t\) 的高斯噪声。</p>
+    <div class="math-d" data-tex="q(\mathbf{x}_t \mid \mathbf{x}_{t-1}) = \mathcal{N}\!\left(\mathbf{x}_t;\, \sqrt{1-\beta_t}\,\mathbf{x}_{t-1},\; \beta_t \mathbf{I}\right)"></div>
+    <p class="math-note">将上一步稍微"收缩"（乘以 <span class="math-i" data-tex="\sqrt{1-\beta_t}<1"></span>），再叠加方差为 <span class="math-i" data-tex="\beta_t"></span> 的高斯噪声。</p>
   </div>
 
   <div class="prose">
-    <p>关键问题：要得到第 500 步的加噪图像，难道要串行累乘 500 次？不需要。定义 \(\alpha_t = 1-\beta_t\) 和 \(\bar{\alpha}_t = \prod_{i=1}^t \alpha_i\)，利用高斯合并性质（两个独立高斯之和仍是高斯）归纳推导，即可得到一步跳转公式。</p>
+    <p>关键问题：要得到第 500 步的加噪图像，难道要串行累乘 500 次？不需要。定义 <span class="math-i" data-tex="\alpha_t = 1-\beta_t"></span> 和 <span class="math-i" data-tex="\bar{\alpha}_t = \prod_{i=1}^t \alpha_i"></span>，利用高斯合并性质（两个独立高斯之和仍是高斯）归纳推导，即可得到一步跳转公式。</p>
   </div>
 
   <div class="steps">
     <div class="step"><div class="step-n">1</div><div class="step-body">
-      <p>两步高斯合并示例：设 \(\mathbf{x}_{t} = \sqrt{\alpha_2}\,\mathbf{x}_{t-1} + \sqrt{1-\alpha_2}\,\boldsymbol{\epsilon}_2\)，代入 \(\mathbf{x}_{t-1} = \sqrt{\alpha_1}\,\mathbf{x}_0 + \sqrt{1-\alpha_1}\,\boldsymbol{\epsilon}_1\)，展开得</p>
-      <div class="math-wrap">$$\mathbf{x}_t = \sqrt{\alpha_1\alpha_2}\,\mathbf{x}_0 + \sqrt{\alpha_2(1-\alpha_1)}\,\boldsymbol{\epsilon}_1 + \sqrt{1-\alpha_2}\,\boldsymbol{\epsilon}_2$$</div>
+      <p>两步高斯合并示例：设 <span class="math-i" data-tex="\mathbf{x}_{t} = \sqrt{\alpha_2}\,\mathbf{x}_{t-1} + \sqrt{1-\alpha_2}\,\boldsymbol{\epsilon}_2"></span>，代入 <span class="math-i" data-tex="\mathbf{x}_{t-1} = \sqrt{\alpha_1}\,\mathbf{x}_0 + \sqrt{1-\alpha_1}\,\boldsymbol{\epsilon}_1"></span>，展开得</p>
+      <div class="math-wrap"><div class="math-d" data-tex="\mathbf{x}_t = \sqrt{\alpha_1\alpha_2}\,\mathbf{x}_0 + \sqrt{\alpha_2(1-\alpha_1)}\,\boldsymbol{\epsilon}_1 + \sqrt{1-\alpha_2}\,\boldsymbol{\epsilon}_2"></div></div>
     </div></div>
     <div class="step"><div class="step-n">2</div><div class="step-body">
-      <p>两个独立高斯 \(\mathcal{N}(0,\sigma_1^2\mathbf{I})\) 和 \(\mathcal{N}(0,\sigma_2^2\mathbf{I})\) 之和等于 \(\mathcal{N}(0,(\sigma_1^2+\sigma_2^2)\mathbf{I})\)。后两项的总方差为 \(\alpha_2(1-\alpha_1)+(1-\alpha_2)=1-\alpha_1\alpha_2\)，因此合并为单个噪声 \(\sqrt{1-\alpha_1\alpha_2}\,\boldsymbol{\epsilon}\)。</p>
+      <p>两个独立高斯 <span class="math-i" data-tex="\mathcal{N}(0,\sigma_1^2\mathbf{I})"></span> 和 <span class="math-i" data-tex="\mathcal{N}(0,\sigma_2^2\mathbf{I})"></span> 之和等于 <span class="math-i" data-tex="\mathcal{N}(0,(\sigma_1^2+\sigma_2^2)\mathbf{I})"></span>。后两项的总方差为 <span class="math-i" data-tex="\alpha_2(1-\alpha_1)+(1-\alpha_2)=1-\alpha_1\alpha_2"></span>，因此合并为单个噪声 <span class="math-i" data-tex="\sqrt{1-\alpha_1\alpha_2}\,\boldsymbol{\epsilon}"></span>。</p>
     </div></div>
     <div class="step"><div class="step-n">3</div><div class="step-body">
-      <p>对任意 \(t\) 步归纳，得到核心封闭公式：</p>
+      <p>对任意 <span class="math-i" data-tex="t"></span> 步归纳，得到核心封闭公式：</p>
       <div class="math-wrap"><span class="mlabel">任意步加噪（核心）</span>
-        $$\mathbf{x}_t = \sqrt{\bar{\alpha}_t}\,\mathbf{x}_0 + \sqrt{1-\bar{\alpha}_t}\,\boldsymbol{\epsilon}, \quad \boldsymbol{\epsilon} \sim \mathcal{N}(0,\mathbf{I})$$
-        $$\text{即} \quad q(\mathbf{x}_t \mid \mathbf{x}_0) = \mathcal{N}\!\left(\mathbf{x}_t;\, \sqrt{\bar{\alpha}_t}\,\mathbf{x}_0,\; (1-\bar{\alpha}_t)\mathbf{I}\right)$$
-        <p class="math-note">给定原图和时间步 \(t\)，可一次采样得到对应的加噪图。\(t\to T\) 时 \(\bar{\alpha}_T\approx 0\)，图像趋近纯高斯噪声；\(t=0\) 时 \(\bar{\alpha}_0=1\)，图像不变。</p>
+        <div class="math-d" data-tex="\mathbf{x}_t = \sqrt{\bar{\alpha}_t}\,\mathbf{x}_0 + \sqrt{1-\bar{\alpha}_t}\,\boldsymbol{\epsilon}, \quad \boldsymbol{\epsilon} \sim \mathcal{N}(0,\mathbf{I})"></div>
+        <div class="math-d" data-tex="\text{即} \quad q(\mathbf{x}_t \mid \mathbf{x}_0) = \mathcal{N}\!\left(\mathbf{x}_t;\, \sqrt{\bar{\alpha}_t}\,\mathbf{x}_0,\; (1-\bar{\alpha}_t)\mathbf{I}\right)"></div>
+        <p class="math-note">给定原图和时间步 <span class="math-i" data-tex="t"></span>，可一次采样得到对应的加噪图。<span class="math-i" data-tex="t\to T"></span> 时 <span class="math-i" data-tex="\bar{\alpha}_T\approx 0"></span>，图像趋近纯高斯噪声；<span class="math-i" data-tex="t=0"></span> 时 <span class="math-i" data-tex="\bar{\alpha}_0=1"></span>，图像不变。</p>
       </div>
     </div></div>
   </div>
 
   <div class="prose">
     <h3>1.3 反向过程与贝叶斯后验</h3>
-    <p>目标是学习 \(p_\theta(\mathbf{x}_{t-1}\mid\mathbf{x}_t)\)。如果已知 \(\mathbf{x}_0\)，后验 \(q(\mathbf{x}_{t-1}\mid\mathbf{x}_t,\mathbf{x}_0)\) 可由贝叶斯公式解析计算：</p>
+    <p>目标是学习 <span class="math-i" data-tex="p_\theta(\mathbf{x}_{t-1}\mid\mathbf{x}_t)"></span>。如果已知 <span class="math-i" data-tex="\mathbf{x}_0"></span>，后验 <span class="math-i" data-tex="q(\mathbf{x}_{t-1}\mid\mathbf{x}_t,\mathbf{x}_0)"></span> 可由贝叶斯公式解析计算：</p>
   </div>
 
   <div class="math-wrap"><span class="mlabel">真实后验（可解析）</span>
-    $$q(\mathbf{x}_{t-1}\mid\mathbf{x}_t,\mathbf{x}_0) = \mathcal{N}\!\left(\mathbf{x}_{t-1};\, \tilde{\boldsymbol{\mu}}_t(\mathbf{x}_t,\mathbf{x}_0),\; \tilde{\beta}_t\mathbf{I}\right)$$
-    $$\tilde{\beta}_t = \frac{1-\bar{\alpha}_{t-1}}{1-\bar{\alpha}_t}\,\beta_t$$
-    $$\tilde{\boldsymbol{\mu}}_t = \frac{\sqrt{\alpha_t}(1-\bar{\alpha}_{t-1})}{1-\bar{\alpha}_t}\,\mathbf{x}_t + \frac{\sqrt{\bar{\alpha}_{t-1}}\,\beta_t}{1-\bar{\alpha}_t}\,\mathbf{x}_0$$
-    <p class="math-note">推导过程：将 \(q(\mathbf{x}_{t-1}\mid\mathbf{x}_t,\mathbf{x}_0) \propto q(\mathbf{x}_t\mid\mathbf{x}_{t-1})\cdot q(\mathbf{x}_{t-1}\mid\mathbf{x}_0)\) 展开指数项，对 \(\mathbf{x}_{t-1}\) 配方即得。</p>
+    <div class="math-d" data-tex="q(\mathbf{x}_{t-1}\mid\mathbf{x}_t,\mathbf{x}_0) = \mathcal{N}\!\left(\mathbf{x}_{t-1};\, \tilde{\boldsymbol{\mu}}_t(\mathbf{x}_t,\mathbf{x}_0),\; \tilde{\beta}_t\mathbf{I}\right)"></div>
+    <div class="math-d" data-tex="\tilde{\beta}_t = \frac{1-\bar{\alpha}_{t-1}}{1-\bar{\alpha}_t}\,\beta_t"></div>
+    <div class="math-d" data-tex="\tilde{\boldsymbol{\mu}}_t = \frac{\sqrt{\alpha_t}(1-\bar{\alpha}_{t-1})}{1-\bar{\alpha}_t}\,\mathbf{x}_t + \frac{\sqrt{\bar{\alpha}_{t-1}}\,\beta_t}{1-\bar{\alpha}_t}\,\mathbf{x}_0"></div>
+    <p class="math-note">推导过程：将 <span class="math-i" data-tex="q(\mathbf{x}_{t-1}\mid\mathbf{x}_t,\mathbf{x}_0) \propto q(\mathbf{x}_t\mid\mathbf{x}_{t-1})\cdot q(\mathbf{x}_{t-1}\mid\mathbf{x}_0)"></span> 展开指数项，对 <span class="math-i" data-tex="\mathbf{x}_{t-1}"></span> 配方即得。</p>
   </div>
 
   <div class="prose">
     <h3>1.4 ELBO 推导：为什么能这样训练？</h3>
-    <p>直接计算 \(\log p_\theta(\mathbf{x}_0)\) 需要对所有可能的噪声路径积分，不可行。利用 Jensen 不等式引入变分下界（ELBO）<a class="cite" href="#ref1">[1]</a>：</p>
+    <p>直接计算 <span class="math-i" data-tex="\log p_\theta(\mathbf{x}_0)"></span> 需要对所有可能的噪声路径积分，不可行。利用 Jensen 不等式引入变分下界（ELBO）<a class="cite" href="#ref1">[1]</a>：</p>
   </div>
 
   <div class="steps">
     <div class="step"><div class="step-n">1</div><div class="step-body">
-      <p>对任意分布 \(q\)，Jensen 不等式给出：</p>
-      <div class="math-wrap">$$\log p_\theta(\mathbf{x}_0) \;\geq\; \mathbb{E}_q\!\left[\log\frac{p_\theta(\mathbf{x}_{0:T})}{q(\mathbf{x}_{1:T}\mid\mathbf{x}_0)}\right] \;:=\; -L_\text{VLB}$$</div>
+      <p>对任意分布 <span class="math-i" data-tex="q"></span>，Jensen 不等式给出：</p>
+      <div class="math-wrap"><div class="math-d" data-tex="\log p_\theta(\mathbf{x}_0) \;\geq\; \mathbb{E}_q\!\left[\log\frac{p_\theta(\mathbf{x}_{0:T})}{q(\mathbf{x}_{1:T}\mid\mathbf{x}_0)}\right] \;:=\; -L_\text{VLB}"></div></div>
     </div></div>
     <div class="step"><div class="step-n">2</div><div class="step-body">
       <p>展开联合分布，利用马尔可夫性质，ELBO 分解为三项：</p>
       <div class="math-wrap">
-        $$L_\text{VLB} = \underbrace{D_\text{KL}\!\left(q(\mathbf{x}_T\mid\mathbf{x}_0)\,\|\,p(\mathbf{x}_T)\right)}_{L_T,\ \text{无参数，丢弃}} + \sum_{t=2}^T \underbrace{D_\text{KL}\!\left(q(\mathbf{x}_{t-1}\mid\mathbf{x}_t,\mathbf{x}_0)\,\|\,p_\theta(\mathbf{x}_{t-1}\mid\mathbf{x}_t)\right)}_{L_{t-1},\ \text{核心训练项}} - \underbrace{\log p_\theta(\mathbf{x}_0\mid\mathbf{x}_1)}_{L_0,\ \text{重建项}}$$
+        <div class="math-d" data-tex="L_\text{VLB} = \underbrace{D_\text{KL}\!\left(q(\mathbf{x}_T\mid\mathbf{x}_0)\,\|\,p(\mathbf{x}_T)\right)}_{L_T,\ \text{无参数，丢弃}} + \sum_{t=2}^T \underbrace{D_\text{KL}\!\left(q(\mathbf{x}_{t-1}\mid\mathbf{x}_t,\mathbf{x}_0)\,\|\,p_\theta(\mathbf{x}_{t-1}\mid\mathbf{x}_t)\right)}_{L_{t-1},\ \text{核心训练项}} - \underbrace{\log p_\theta(\mathbf{x}_0\mid\mathbf{x}_1)}_{L_0,\ \text{重建项}}"></div>
       </div>
     </div></div>
     <div class="step"><div class="step-n">3</div><div class="step-body">
-      <p>两个均值不同、方差相同的高斯分布之间的 KL 有封闭解。令 \(p_\theta\) 的均值参数化为 \(\boldsymbol{\mu}_\theta(\mathbf{x}_t,t)\)，则 \(L_{t-1}\) 简化为：</p>
-      <div class="math-wrap">$$L_{t-1} = \mathbb{E}\!\left[\frac{1}{2\tilde{\beta}_t}\left\|\tilde{\boldsymbol{\mu}}_t(\mathbf{x}_t,\mathbf{x}_0) - \boldsymbol{\mu}_\theta(\mathbf{x}_t,t)\right\|^2\right] + \text{const}$$</div>
+      <p>两个均值不同、方差相同的高斯分布之间的 KL 有封闭解。令 <span class="math-i" data-tex="p_\theta"></span> 的均值参数化为 <span class="math-i" data-tex="\boldsymbol{\mu}_\theta(\mathbf{x}_t,t)"></span>，则 <span class="math-i" data-tex="L_{t-1}"></span> 简化为：</p>
+      <div class="math-wrap"><div class="math-d" data-tex="L_{t-1} = \mathbb{E}\!\left[\frac{1}{2\tilde{\beta}_t}\left\|\tilde{\boldsymbol{\mu}}_t(\mathbf{x}_t,\mathbf{x}_0) - \boldsymbol{\mu}_\theta(\mathbf{x}_t,t)\right\|^2\right] + \text{const}"></div></div>
     </div></div>
     <div class="step"><div class="step-n">4</div><div class="step-body">
-      <p>将 \(\mathbf{x}_0 = \frac{1}{\sqrt{\bar{\alpha}_t}}\!\left(\mathbf{x}_t - \sqrt{1-\bar{\alpha}_t}\,\boldsymbol{\epsilon}\right)\) 代入 \(\tilde{\boldsymbol{\mu}}_t\)，整理得：</p>
-      <div class="math-wrap">$$\tilde{\boldsymbol{\mu}}_t = \frac{1}{\sqrt{\alpha_t}}\!\left(\mathbf{x}_t - \frac{1-\alpha_t}{\sqrt{1-\bar{\alpha}_t}}\,\boldsymbol{\epsilon}\right)$$
-        <p class="math-note">若网络预测 \(\boldsymbol{\epsilon}_\theta(\mathbf{x}_t,t)\) 并令 \(\boldsymbol{\mu}_\theta\) 采用相同结构，则 \(L_{t-1} \propto \|\boldsymbol{\epsilon} - \boldsymbol{\epsilon}_\theta\|^2\)。</p>
+      <p>将 <span class="math-i" data-tex="\mathbf{x}_0 = \frac{1}{\sqrt{\bar{\alpha}_t}}\!\left(\mathbf{x}_t - \sqrt{1-\bar{\alpha}_t}\,\boldsymbol{\epsilon}\right)"></span> 代入 <span class="math-i" data-tex="\tilde{\boldsymbol{\mu}}_t"></span>，整理得：</p>
+      <div class="math-wrap"><div class="math-d" data-tex="\tilde{\boldsymbol{\mu}}_t = \frac{1}{\sqrt{\alpha_t}}\!\left(\mathbf{x}_t - \frac{1-\alpha_t}{\sqrt{1-\bar{\alpha}_t}}\,\boldsymbol{\epsilon}\right)"></div>
+        <p class="math-note">若网络预测 <span class="math-i" data-tex="\boldsymbol{\epsilon}_\theta(\mathbf{x}_t,t)"></span> 并令 <span class="math-i" data-tex="\boldsymbol{\mu}_\theta"></span> 采用相同结构，则 <span class="math-i" data-tex="L_{t-1} \propto \|\boldsymbol{\epsilon} - \boldsymbol{\epsilon}_\theta\|^2"></span>。</p>
       </div>
     </div></div>
     <div class="step"><div class="step-n">5</div><div class="step-body">
@@ -563,34 +571,34 @@ footer {
   </div>
 
   <div class="fspot">
-    <span class="fspot-label">DDPM 核心训练目标 \(L_\text{simple}\)</span>
-    $$L_\text{simple} = \mathbb{E}_{t,\,\mathbf{x}_0,\,\boldsymbol{\epsilon}}\!\left[\left\|\boldsymbol{\epsilon} - \boldsymbol{\epsilon}_\theta\!\left(\sqrt{\bar{\alpha}_t}\,\mathbf{x}_0 + \sqrt{1-\bar{\alpha}_t}\,\boldsymbol{\epsilon},\; t\right)\right\|^2\right]$$
-    <p class="fspot-note">随机选时间步 \(t\)，用封闭式加噪得到 \(\mathbf{x}_t\)，让网络预测所加的噪声 \(\boldsymbol{\epsilon}\)。</p>
+    <span class="fspot-label">DDPM 核心训练目标 <span class="math-i" data-tex="L_\text{simple}"></span></span>
+    <div class="math-d" data-tex="L_\text{simple} = \mathbb{E}_{t,\,\mathbf{x}_0,\,\boldsymbol{\epsilon}}\!\left[\left\|\boldsymbol{\epsilon} - \boldsymbol{\epsilon}_\theta\!\left(\sqrt{\bar{\alpha}_t}\,\mathbf{x}_0 + \sqrt{1-\bar{\alpha}_t}\,\boldsymbol{\epsilon},\; t\right)\right\|^2\right]"></div>
+    <p class="fspot-note">随机选时间步 <span class="math-i" data-tex="t"></span>，用封闭式加噪得到 <span class="math-i" data-tex="\mathbf{x}_t"></span>，让网络预测所加的噪声 <span class="math-i" data-tex="\boldsymbol{\epsilon}"></span>。</p>
   </div>
 
   <div class="prose">
     <h3>1.5 三种等价预测目标</h3>
-    <p>DDPM 默认预测噪声 \(\boldsymbol{\epsilon}\)，但与另外两种目标完全等价，可按需选择。</p>
+    <p>DDPM 默认预测噪声 <span class="math-i" data-tex="\boldsymbol{\epsilon}"></span>，但与另外两种目标完全等价，可按需选择。</p>
   </div>
 
   <div class="tbl-wrap"><table>
     <thead><tr><th>预测目标</th><th>含义</th><th>转换关系</th><th>常见场景</th></tr></thead>
     <tbody>
-      <tr><td>\(\boldsymbol{\epsilon}\)（噪声）</td><td>预测所加入的噪声</td><td>基准定义</td><td>DDPM 默认，大多数图像生成</td></tr>
-      <tr><td>\(\mathbf{x}_0\)（干净图）</td><td>直接预测原始图像</td><td>\(\mathbf{x}_0 = (\mathbf{x}_t - \sqrt{1-\bar\alpha_t}\,\boldsymbol\epsilon)/\sqrt{\bar\alpha_t}\)</td><td>低噪声步骤有时更稳定</td></tr>
-      <tr><td>\(\nabla_x\log q\)（分数）</td><td>噪声概率密度的梯度</td><td>\(\text{score} = -\boldsymbol\epsilon/\sqrt{1-\bar\alpha_t}\)</td><td>理论分析，连接 score matching</td></tr>
-      <tr><td>\(\mathbf{v}\)（速度）</td><td>Flow Matching 速度向量</td><td>\(\mathbf{v} = \sqrt{\bar\alpha_t}\,\boldsymbol\epsilon - \sqrt{1-\bar\alpha_t}\,\mathbf{x}_0\)</td><td>SD v-prediction，Flow Matching</td></tr>
+      <tr><td><span class="math-i" data-tex="\boldsymbol{\epsilon}"></span>（噪声）</td><td>预测所加入的噪声</td><td>基准定义</td><td>DDPM 默认，大多数图像生成</td></tr>
+      <tr><td><span class="math-i" data-tex="\mathbf{x}_0"></span>（干净图）</td><td>直接预测原始图像</td><td><span class="math-i" data-tex="\mathbf{x}_0 = (\mathbf{x}_t - \sqrt{1-\bar\alpha_t}\,\boldsymbol\epsilon)/\sqrt{\bar\alpha_t}"></span></td><td>低噪声步骤有时更稳定</td></tr>
+      <tr><td><span class="math-i" data-tex="\nabla_x\log q"></span>（分数）</td><td>噪声概率密度的梯度</td><td><span class="math-i" data-tex="\text{score} = -\boldsymbol\epsilon/\sqrt{1-\bar\alpha_t}"></span></td><td>理论分析，连接 score matching</td></tr>
+      <tr><td><span class="math-i" data-tex="\mathbf{v}"></span>（速度）</td><td>Flow Matching 速度向量</td><td><span class="math-i" data-tex="\mathbf{v} = \sqrt{\bar\alpha_t}\,\boldsymbol\epsilon - \sqrt{1-\bar\alpha_t}\,\mathbf{x}_0"></span></td><td>SD v-prediction，Flow Matching</td></tr>
     </tbody>
   </table></div>
 
   <div class="prose">
     <h3>1.6 采样（祖先采样）</h3>
-    <p>训练完成后，从纯噪声出发，对 \(t = T, T-1, \ldots, 1\) 依次执行：</p>
+    <p>训练完成后，从纯噪声出发，对 <span class="math-i" data-tex="t = T, T-1, \ldots, 1"></span> 依次执行：</p>
   </div>
 
   <div class="math-wrap"><span class="mlabel">DDPM 祖先采样</span>
-    $$\mathbf{x}_{t-1} = \frac{1}{\sqrt{\alpha_t}}\!\left(\mathbf{x}_t - \frac{1-\alpha_t}{\sqrt{1-\bar{\alpha}_t}}\,\boldsymbol{\epsilon}_\theta(\mathbf{x}_t,t)\right) + \sigma_t\,\mathbf{z}, \quad \mathbf{z}\sim\mathcal{N}(0,\mathbf{I})$$
-    <p class="math-note">其中 \(\sigma_t = \sqrt{\tilde\beta_t}\) 是后验标准差，\(t>1\) 时才加随机项。</p>
+    <div class="math-d" data-tex="\mathbf{x}_{t-1} = \frac{1}{\sqrt{\alpha_t}}\!\left(\mathbf{x}_t - \frac{1-\alpha_t}{\sqrt{1-\bar{\alpha}_t}}\,\boldsymbol{\epsilon}_\theta(\mathbf{x}_t,t)\right) + \sigma_t\,\mathbf{z}, \quad \mathbf{z}\sim\mathcal{N}(0,\mathbf{I})"></div>
+    <p class="math-note">其中 <span class="math-i" data-tex="\sigma_t = \sqrt{\tilde\beta_t}"></span> 是后验标准差，<span class="math-i" data-tex="t>1"></span> 时才加随机项。</p>
   </div>
 
   <div class="card-warn">
@@ -611,49 +619,49 @@ footer {
 
   <div class="prose" style="margin-top:28px;">
     <h3>2.1 马尔可夫结构不是必须的</h3>
-    <p>DDPM 的前向过程是马尔可夫链，每步只依赖上一步。但 Song et al. 指出，训练目标 \(L_\text{simple}\) 只用到了<strong>边际分布</strong> \(q(\mathbf{x}_t\mid\mathbf{x}_0)\)，而不是联合链。只要边际分布不变，训练目标就完全一样——因此可以找到一个更大的前向过程族，保持同样的边际，但允许确定性、可跳步的采样方式。</p>
+    <p>DDPM 的前向过程是马尔可夫链，每步只依赖上一步。但 Song et al. 指出，训练目标 <span class="math-i" data-tex="L_\text{simple}"></span> 只用到了<strong>边际分布</strong> <span class="math-i" data-tex="q(\mathbf{x}_t\mid\mathbf{x}_0)"></span>，而不是联合链。只要边际分布不变，训练目标就完全一样——因此可以找到一个更大的前向过程族，保持同样的边际，但允许确定性、可跳步的采样方式。</p>
 
     <h3>2.2 DDIM 更新公式推导</h3>
-    <p>给定当前 \(\mathbf{x}_t\)，先估计干净图像：</p>
+    <p>给定当前 <span class="math-i" data-tex="\mathbf{x}_t"></span>，先估计干净图像：</p>
   </div>
 
-  <div class="math-wrap"><span class="mlabel">第一步：估计 \(\mathbf{x}_0\)</span>
-    $$\hat{\mathbf{x}}_0 = \frac{\mathbf{x}_t - \sqrt{1-\bar{\alpha}_t}\;\boldsymbol{\epsilon}_\theta(\mathbf{x}_t,t)}{\sqrt{\bar{\alpha}_t}}$$
+  <div class="math-wrap"><span class="mlabel">第一步：估计 <span class="math-i" data-tex="\mathbf{x}_0"></span></span>
+    <div class="math-d" data-tex="\hat{\mathbf{x}}_0 = \frac{\mathbf{x}_t - \sqrt{1-\bar{\alpha}_t}\;\boldsymbol{\epsilon}_\theta(\mathbf{x}_t,t)}{\sqrt{\bar{\alpha}_t}}"></div>
     <p class="math-note">这相当于"给定当前噪声图，猜测原始干净图是什么"。</p>
   </div>
 
   <div class="math-wrap"><span class="mlabel">第二步：DDIM 一步更新</span>
-    $$\mathbf{x}_{t-1} = \sqrt{\bar{\alpha}_{t-1}}\,\hat{\mathbf{x}}_0 + \sqrt{1-\bar{\alpha}_{t-1}-\sigma_t^2}\;\boldsymbol{\epsilon}_\theta(\mathbf{x}_t,t) + \sigma_t\,\mathbf{z}$$
-    <p class="math-note">\(\sigma_t\) 是可调的随机性控制参数，\(\mathbf{z}\sim\mathcal{N}(0,\mathbf{I})\)。</p>
+    <div class="math-d" data-tex="\mathbf{x}_{t-1} = \sqrt{\bar{\alpha}_{t-1}}\,\hat{\mathbf{x}}_0 + \sqrt{1-\bar{\alpha}_{t-1}-\sigma_t^2}\;\boldsymbol{\epsilon}_\theta(\mathbf{x}_t,t) + \sigma_t\,\mathbf{z}"></div>
+    <p class="math-note"><span class="math-i" data-tex="\sigma_t"></span> 是可调的随机性控制参数，<span class="math-i" data-tex="\mathbf{z}\sim\mathcal{N}(0,\mathbf{I})"></span>。</p>
   </div>
 
   <div class="cols2">
     <div class="col-amber">
-      <div class="col-title">🔀 \(\sigma_t > 0\)（随机版本）</div>
-      每步加入随机噪声，退化为类似 DDPM 的随机采样。当 \(\sigma_t = \sqrt{\tilde\beta_t}\) 时完全等价于 DDPM。
+      <div class="col-title">🔀 <span class="math-i" data-tex="\sigma_t > 0"></span>（随机版本）</div>
+      每步加入随机噪声，退化为类似 DDPM 的随机采样。当 <span class="math-i" data-tex="\sigma_t = \sqrt{\tilde\beta_t}"></span> 时完全等价于 DDPM。
     </div>
     <div class="col-green">
-      <div class="col-title">➡️ \(\sigma_t = 0\)（确定性版本）</div>
-      纯确定性 ODE，固定 \(\mathbf{x}_T\) 就固定整条生成路径。支持跳步采样、语义插值和精确图像反演。
+      <div class="col-title">➡️ <span class="math-i" data-tex="\sigma_t = 0"></span>（确定性版本）</div>
+      纯确定性 ODE，固定 <span class="math-i" data-tex="\mathbf{x}_T"></span> 就固定整条生成路径。支持跳步采样、语义插值和精确图像反演。
     </div>
   </div>
 
   <div class="prose">
     <h3>2.3 确定性版本的三大独特能力</h3>
-    <p>当 \(\sigma_t=0\) 时，DDIM 在连续步长极限下对应<strong>概率流 ODE（probability flow ODE）</strong>：</p>
+    <p>当 <span class="math-i" data-tex="\sigma_t=0"></span> 时，DDIM 在连续步长极限下对应<strong>概率流 ODE（probability flow ODE）</strong>：</p>
   </div>
 
   <div class="math-wrap"><span class="mlabel">概率流 ODE（连续极限）</span>
-    $$\mathrm{d}\mathbf{x} = \left[f(\mathbf{x},t) - \tfrac{1}{2}g(t)^2\,\nabla_{\mathbf{x}}\log p_t(\mathbf{x})\right]\mathrm{d}t$$
-    <p class="math-note">其中 \(\nabla_{\mathbf{x}}\log p_t(\mathbf{x}) \approx -\boldsymbol{\epsilon}_\theta(\mathbf{x},t)/\sqrt{1-\bar\alpha_t}\)。可以用大步长积分器（如 PLMS、DPM-Solver）高效求解。</p>
+    <div class="math-d" data-tex="\mathrm{d}\mathbf{x} = \left[f(\mathbf{x},t) - \tfrac{1}{2}g(t)^2\,\nabla_{\mathbf{x}}\log p_t(\mathbf{x})\right]\mathrm{d}t"></div>
+    <p class="math-note">其中 <span class="math-i" data-tex="\nabla_{\mathbf{x}}\log p_t(\mathbf{x}) \approx -\boldsymbol{\epsilon}_\theta(\mathbf{x},t)/\sqrt{1-\bar\alpha_t}"></span>。可以用大步长积分器（如 PLMS、DPM-Solver）高效求解。</p>
   </div>
 
   <div class="card-key">
     <span class="card-label">✅ DDIM 的三大独特能力</span>
     <ol style="margin-top:6px; padding-left:1.4em;">
       <li><strong>快速采样</strong>：10–50 步即可达到接近 1000 步的质量。</li>
-      <li><strong>语义插值</strong>：在噪声空间对两个 \(\mathbf{x}_T\) 线性插值，生成图像在语义上平滑过渡。</li>
-      <li><strong>精确反演</strong>：给定真实图像，可反向积分 ODE 得到对应的 \(\mathbf{x}_T\)，用于图像编辑。</li>
+      <li><strong>语义插值</strong>：在噪声空间对两个 <span class="math-i" data-tex="\mathbf{x}_T"></span> 线性插值，生成图像在语义上平滑过渡。</li>
+      <li><strong>精确反演</strong>：给定真实图像，可反向积分 ODE 得到对应的 <span class="math-i" data-tex="\mathbf{x}_T"></span>，用于图像编辑。</li>
     </ol>
   </div>
 </div>
@@ -670,15 +678,15 @@ footer {
 
   <div class="prose" style="margin-top:28px;">
     <h3>3.1 为什么条件模型会偷懒</h3>
-    <p>训练条件扩散模型 \(p_\theta(\mathbf{x}\mid c)\) 时（\(c\) 是文本或类别），模型往往倾向于忽略条件 \(c\)：即使不看提示词，仅凭数据先验也能得到不错的损失。结果是生成的图像虽然多样，却与提示词关联松散。</p>
+    <p>训练条件扩散模型 <span class="math-i" data-tex="p_\theta(\mathbf{x}\mid c)"></span> 时（<span class="math-i" data-tex="c"></span> 是文本或类别），模型往往倾向于忽略条件 <span class="math-i" data-tex="c"></span>：即使不看提示词，仅凭数据先验也能得到不错的损失。结果是生成的图像虽然多样，却与提示词关联松散。</p>
 
     <h3>3.2 前身：分类器引导</h3>
     <p>Dhariwal & Nichol（2021）用贝叶斯公式对条件分布做梯度分解 <a class="cite" href="#ref8">[8]</a>：</p>
   </div>
 
   <div class="math-wrap"><span class="mlabel">贝叶斯梯度分解</span>
-    $$\nabla_{\mathbf{x}}\log p(\mathbf{x}\mid y) = \underbrace{\nabla_{\mathbf{x}}\log p(\mathbf{x})}_{\text{无条件分数}} + \underbrace{\nabla_{\mathbf{x}}\log p(y\mid\mathbf{x})}_{\text{分类器梯度}}$$
-    <p class="math-note">用一个在<strong>噪声图像</strong>上训练的分类器 \(p_\phi(y\mid\mathbf{x}_t)\) 提供第二项，并放大 \(w\) 倍。缺点是需要额外训练噪声分类器，实现复杂。</p>
+    <div class="math-d" data-tex="\nabla_{\mathbf{x}}\log p(\mathbf{x}\mid y) = \underbrace{\nabla_{\mathbf{x}}\log p(\mathbf{x})}_{\text{无条件分数}} + \underbrace{\nabla_{\mathbf{x}}\log p(y\mid\mathbf{x})}_{\text{分类器梯度}}"></div>
+    <p class="math-note">用一个在<strong>噪声图像</strong>上训练的分类器 <span class="math-i" data-tex="p_\phi(y\mid\mathbf{x}_t)"></span> 提供第二项，并放大 <span class="math-i" data-tex="w"></span> 倍。缺点是需要额外训练噪声分类器，实现复杂。</p>
   </div>
 
   <div class="prose">
@@ -689,34 +697,34 @@ footer {
   <div class="steps">
     <div class="step"><div class="step-n">1</div><div class="step-body">
       <p>将贝叶斯公式反向运用：</p>
-      <div class="math-wrap">$$\nabla_{\mathbf{x}}\log p(y\mid\mathbf{x}_t) = \nabla_{\mathbf{x}}\log p(\mathbf{x}_t\mid y) - \nabla_{\mathbf{x}}\log p(\mathbf{x}_t)$$</div>
+      <div class="math-wrap"><div class="math-d" data-tex="\nabla_{\mathbf{x}}\log p(y\mid\mathbf{x}_t) = \nabla_{\mathbf{x}}\log p(\mathbf{x}_t\mid y) - \nabla_{\mathbf{x}}\log p(\mathbf{x}_t)"></div></div>
     </div></div>
     <div class="step"><div class="step-n">2</div><div class="step-body">
-      <p>用分数与噪声预测的等价关系（\(\text{score} = -\boldsymbol\epsilon/\sqrt{1-\bar\alpha_t}\)）代换两边：</p>
-      <div class="math-wrap">$$\text{隐式分类器梯度} \;\propto\; \boldsymbol{\epsilon}_\theta(\mathbf{x}_t\mid c) - \boldsymbol{\epsilon}_\theta(\mathbf{x}_t)$$</div>
+      <p>用分数与噪声预测的等价关系（<span class="math-i" data-tex="\text{score} = -\boldsymbol\epsilon/\sqrt{1-\bar\alpha_t}"></span>）代换两边：</p>
+      <div class="math-wrap"><div class="math-d" data-tex="\text{隐式分类器梯度} \;\propto\; \boldsymbol{\epsilon}_\theta(\mathbf{x}_t\mid c) - \boldsymbol{\epsilon}_\theta(\mathbf{x}_t)"></div></div>
     </div></div>
-    <div class="step"><div class="step-n">3</div><div class="step-body"><p>代入放大系数 \(w\)，得到 CFG 公式。</p></div></div>
+    <div class="step"><div class="step-n">3</div><div class="step-body"><p>代入放大系数 <span class="math-i" data-tex="w"></span>，得到 CFG 公式。</p></div></div>
   </div>
 
   <div class="fspot">
     <span class="fspot-label">CFG 核心公式</span>
-    $$\tilde{\boldsymbol{\epsilon}} = \boldsymbol{\epsilon}_\theta(\mathbf{x}_t,\,\varnothing) + w\cdot\bigl(\boldsymbol{\epsilon}_\theta(\mathbf{x}_t,\,c) - \boldsymbol{\epsilon}_\theta(\mathbf{x}_t,\,\varnothing)\bigr)$$
-    <p class="fspot-note">\(\boldsymbol{\epsilon}_\theta(\mathbf{x}_t,c)\) 为有条件预测，\(\boldsymbol{\epsilon}_\theta(\mathbf{x}_t,\varnothing)\) 为无条件预测，\(w\) 为引导强度。\(w=0\) 时退化为纯无条件生成，\(w\) 越大越贴合提示词但多样性越低。</p>
+    <div class="math-d" data-tex="\tilde{\boldsymbol{\epsilon}} = \boldsymbol{\epsilon}_\theta(\mathbf{x}_t,\,\varnothing) + w\cdot\bigl(\boldsymbol{\epsilon}_\theta(\mathbf{x}_t,\,c) - \boldsymbol{\epsilon}_\theta(\mathbf{x}_t,\,\varnothing)\bigr)"></div>
+    <p class="fspot-note"><span class="math-i" data-tex="\boldsymbol{\epsilon}_\theta(\mathbf{x}_t,c)"></span> 为有条件预测，<span class="math-i" data-tex="\boldsymbol{\epsilon}_\theta(\mathbf{x}_t,\varnothing)"></span> 为无条件预测，<span class="math-i" data-tex="w"></span> 为引导强度。<span class="math-i" data-tex="w=0"></span> 时退化为纯无条件生成，<span class="math-i" data-tex="w"></span> 越大越贴合提示词但多样性越低。</p>
   </div>
 
   <div class="tbl-wrap"><table>
-    <thead><tr><th>引导强度 \(w\)</th><th>效果</th><th>典型使用场景</th></tr></thead>
+    <thead><tr><th>引导强度 <span class="math-i" data-tex="w"></span></th><th>效果</th><th>典型使用场景</th></tr></thead>
     <tbody>
-      <tr><td>\(w=0\)</td><td>纯无条件生成，忽略文本</td><td>多样性探索</td></tr>
-      <tr><td>\(w=1\)</td><td>普通条件生成，无放大</td><td>自然遵从提示词</td></tr>
-      <tr><td>\(w\approx 3\text{–}8\)</td><td>强调条件，牺牲多样性</td><td>SD 默认区间</td></tr>
-      <tr><td>\(w>10\)</td><td>过度引导，出现饱和伪影</td><td>通常避免</td></tr>
+      <tr><td><span class="math-i" data-tex="w=0"></span></td><td>纯无条件生成，忽略文本</td><td>多样性探索</td></tr>
+      <tr><td><span class="math-i" data-tex="w=1"></span></td><td>普通条件生成，无放大</td><td>自然遵从提示词</td></tr>
+      <tr><td><span class="math-i" data-tex="w\approx 3\text{–}8"></span></td><td>强调条件，牺牲多样性</td><td>SD 默认区间</td></tr>
+      <tr><td><span class="math-i" data-tex="w>10"></span></td><td>过度引导，出现饱和伪影</td><td>通常避免</td></tr>
     </tbody>
   </table></div>
 
   <div class="card-key">
     <span class="card-label">✅ 训练技巧：null-token 随机丢弃</span>
-    CFG 只需训练<strong>一个模型</strong>：每个训练样本以概率约 \(10\%\text{–}20\%\) 将条件 \(c\) 替换为空 token \(\varnothing\)，其余时间正常使用条件。模型自动学会两种模式。推理时每步需要两次前向传播（有条件 + 无条件）并线性组合。
+    CFG 只需训练<strong>一个模型</strong>：每个训练样本以概率约 <span class="math-i" data-tex="10\%\text{–}20\%"></span> 将条件 <span class="math-i" data-tex="c"></span> 替换为空 token <span class="math-i" data-tex="\varnothing"></span>，其余时间正常使用条件。模型自动学会两种模式。推理时每步需要两次前向传播（有条件 + 无条件）并线性组合。
   </div>
 </div>
 </section>
@@ -735,17 +743,17 @@ footer {
     <p>在 512×512 图像上直接做扩散，U-Net 每次前向传播要处理约 786000 个像素值，且每个采样步骤都需要一次。大量算力花在了感知不敏感的高频细节上。Rombach et al. 指出，先将图像压缩到紧凑的潜在表示，再在潜在空间做扩散，可以在几乎不损失感知质量的前提下大幅降低计算量 <a class="cite" href="#ref4">[4]</a>。</p>
 
     <h3>4.2 第一阶段：训练 VAE</h3>
-    <p>变分自编码器（VAE）由编码器 \(\mathcal{E}_\phi\) 和解码器 \(\mathcal{D}_\theta\) 组成。编码器不输出单一向量，而是输出潜变量的分布参数：</p>
+    <p>变分自编码器（VAE）由编码器 <span class="math-i" data-tex="\mathcal{E}_\phi"></span> 和解码器 <span class="math-i" data-tex="\mathcal{D}_\theta"></span> 组成。编码器不输出单一向量，而是输出潜变量的分布参数：</p>
   </div>
 
   <div class="math-wrap"><span class="mlabel">VAE 架构</span>
-    $$q_\phi(\mathbf{z}\mid\mathbf{x}) = \mathcal{N}\!\left(\mathbf{z};\; \boldsymbol{\mu}_\phi(\mathbf{x}),\; \boldsymbol{\sigma}_\phi(\mathbf{x})^2\mathbf{I}\right)$$
-    $$\mathbf{z} = \boldsymbol{\mu}_\phi(\mathbf{x}) + \boldsymbol{\sigma}_\phi(\mathbf{x})\odot\boldsymbol{\epsilon}, \quad \boldsymbol{\epsilon}\sim\mathcal{N}(0,\mathbf{I}) \quad\text{（重参数化技巧）}$$
+    <div class="math-d" data-tex="q_\phi(\mathbf{z}\mid\mathbf{x}) = \mathcal{N}\!\left(\mathbf{z};\; \boldsymbol{\mu}_\phi(\mathbf{x}),\; \boldsymbol{\sigma}_\phi(\mathbf{x})^2\mathbf{I}\right)"></div>
+    <div class="math-d" data-tex="\mathbf{z} = \boldsymbol{\mu}_\phi(\mathbf{x}) + \boldsymbol{\sigma}_\phi(\mathbf{x})\odot\boldsymbol{\epsilon}, \quad \boldsymbol{\epsilon}\sim\mathcal{N}(0,\mathbf{I}) \quad\text{（重参数化技巧）}"></div>
   </div>
 
   <div class="card-insight">
     <span class="card-label">💡 重参数化技巧的必要性</span>
-    若直接对 \(\mathbf{z}\sim\mathcal{N}(\boldsymbol\mu,\boldsymbol\sigma^2\mathbf{I})\) 采样，梯度无法通过随机采样操作传播。将随机性分离出来写成 \(\mathbf{z}=\boldsymbol\mu+\boldsymbol\sigma\odot\boldsymbol\epsilon\)，随机项 \(\boldsymbol\epsilon\) 成为外部随机量（固定），梯度可以正常通过 \(\boldsymbol\mu\) 和 \(\boldsymbol\sigma\) 反向传播。这是 VAE 能用梯度下降训练的关键所在。
+    若直接对 <span class="math-i" data-tex="\mathbf{z}\sim\mathcal{N}(\boldsymbol\mu,\boldsymbol\sigma^2\mathbf{I})"></span> 采样，梯度无法通过随机采样操作传播。将随机性分离出来写成 <span class="math-i" data-tex="\mathbf{z}=\boldsymbol\mu+\boldsymbol\sigma\odot\boldsymbol\epsilon"></span>，随机项 <span class="math-i" data-tex="\boldsymbol\epsilon"></span> 成为外部随机量（固定），梯度可以正常通过 <span class="math-i" data-tex="\boldsymbol\mu"></span> 和 <span class="math-i" data-tex="\boldsymbol\sigma"></span> 反向传播。这是 VAE 能用梯度下降训练的关键所在。
   </div>
 
   <div class="prose">
@@ -755,30 +763,30 @@ footer {
   <div class="steps">
     <div class="step"><div class="step-n">1</div><div class="step-body">
       <p>目标是最大化数据似然的变分下界：</p>
-      <div class="math-wrap">$$L_\text{VAE} = \underbrace{\mathbb{E}_{q_\phi(\mathbf{z}\mid\mathbf{x})}\!\left[\log p_\theta(\mathbf{x}\mid\mathbf{z})\right]}_{\text{重建损失}} - \underbrace{D_\text{KL}\!\left(q_\phi(\mathbf{z}\mid\mathbf{x})\,\|\,p(\mathbf{z})\right)}_{\text{KL 正则，逼近先验 }\mathcal{N}(0,\mathbf{I})}$$</div>
+      <div class="math-wrap"><div class="math-d" data-tex="L_\text{VAE} = \underbrace{\mathbb{E}_{q_\phi(\mathbf{z}\mid\mathbf{x})}\!\left[\log p_\theta(\mathbf{x}\mid\mathbf{z})\right]}_{\text{重建损失}} - \underbrace{D_\text{KL}\!\left(q_\phi(\mathbf{z}\mid\mathbf{x})\,\|\,p(\mathbf{z})\right)}_{\text{KL 正则，逼近先验 }\mathcal{N}(0,\mathbf{I})}"></div></div>
     </div></div>
     <div class="step"><div class="step-n">2</div><div class="step-body">
       <p>高斯 KL 散度有解析式：</p>
-      <div class="math-wrap">$$D_\text{KL}\!\left(\mathcal{N}(\boldsymbol{\mu},\boldsymbol{\sigma}^2\mathbf{I})\,\|\,\mathcal{N}(0,\mathbf{I})\right) = \frac{1}{2}\sum_i\!\left(\mu_i^2 + \sigma_i^2 - \log\sigma_i^2 - 1\right)$$
-        <p class="math-note">KL 项鼓励 \(\boldsymbol\mu\to\mathbf{0},\,\boldsymbol\sigma\to\mathbf{1}\)（正则化），重建项鼓励准确还原（表达力），两者形成经典的正则-表达力权衡。</p>
+      <div class="math-wrap"><div class="math-d" data-tex="D_\text{KL}\!\left(\mathcal{N}(\boldsymbol{\mu},\boldsymbol{\sigma}^2\mathbf{I})\,\|\,\mathcal{N}(0,\mathbf{I})\right) = \frac{1}{2}\sum_i\!\left(\mu_i^2 + \sigma_i^2 - \log\sigma_i^2 - 1\right)"></div>
+        <p class="math-note">KL 项鼓励 <span class="math-i" data-tex="\boldsymbol\mu\to\mathbf{0},\,\boldsymbol\sigma\to\mathbf{1}"></span>（正则化），重建项鼓励准确还原（表达力），两者形成经典的正则-表达力权衡。</p>
       </div>
     </div></div>
     <div class="step"><div class="step-n">3</div><div class="step-body">
       <p>LDM 的 VAE 在像素重建基础上还加入了感知损失和对抗损失：</p>
-      <div class="math-wrap">$$L_\text{LDM-VAE} = L_\text{recon} + \lambda_\text{KL}\,L_\text{KL} + \lambda_\text{perc}\,L_\text{LPIPS} + \lambda_\text{adv}\,L_\text{adversarial}$$
-        <p class="math-note">LPIPS 感知损失用 VGG 特征衡量高频质量；对抗损失（patch-based 判别器）保证图像真实感。\(\lambda_\text{KL}\) 极小（约 \(10^{-6}\)），保留足够的潜在空间表达力。</p>
+      <div class="math-wrap"><div class="math-d" data-tex="L_\text{LDM-VAE} = L_\text{recon} + \lambda_\text{KL}\,L_\text{KL} + \lambda_\text{perc}\,L_\text{LPIPS} + \lambda_\text{adv}\,L_\text{adversarial}"></div>
+        <p class="math-note">LPIPS 感知损失用 VGG 特征衡量高频质量；对抗损失（patch-based 判别器）保证图像真实感。<span class="math-i" data-tex="\lambda_\text{KL}"></span> 极小（约 <span class="math-i" data-tex="10^{-6}"></span>），保留足够的潜在空间表达力。</p>
       </div>
     </div></div>
   </div>
 
   <div class="prose">
     <h3>4.4 第二阶段：在潜在空间做扩散</h3>
-    <p>VAE 训练完成后冻结，扩散过程完全在压缩潜变量 \(\mathbf{z}\) 上进行：</p>
+    <p>VAE 训练完成后冻结，扩散过程完全在压缩潜变量 <span class="math-i" data-tex="\mathbf{z}"></span> 上进行：</p>
   </div>
 
   <div class="math-wrap"><span class="mlabel">LDM 训练目标</span>
-    $$L_\text{LDM} = \mathbb{E}_{\mathbf{z}=\mathcal{E}(\mathbf{x}),\,\boldsymbol{\epsilon},\,t}\!\left[\left\|\boldsymbol{\epsilon} - \boldsymbol{\epsilon}_\theta\!\left(\mathbf{z}_t,\;t,\;\tau_\theta(y)\right)\right\|^2\right]$$
-    <p class="math-note">\(\mathbf{z}_t = \sqrt{\bar\alpha_t}\,\mathbf{z} + \sqrt{1-\bar\alpha_t}\,\boldsymbol\epsilon\) 是在潜变量上加噪；\(\tau_\theta(y)\) 是文本或其他条件的编码，通过交叉注意力注入 U-Net。推理时从 \(\mathbf{z}_T\sim\mathcal{N}(0,\mathbf{I})\) 去噪得到 \(\hat\mathbf{z}_0\)，再解码 \(\hat\mathbf{x} = \mathcal{D}(\hat\mathbf{z}_0)\)。</p>
+    <div class="math-d" data-tex="L_\text{LDM} = \mathbb{E}_{\mathbf{z}=\mathcal{E}(\mathbf{x}),\,\boldsymbol{\epsilon},\,t}\!\left[\left\|\boldsymbol{\epsilon} - \boldsymbol{\epsilon}_\theta\!\left(\mathbf{z}_t,\;t,\;\tau_\theta(y)\right)\right\|^2\right]"></div>
+    <p class="math-note"><span class="math-i" data-tex="\mathbf{z}_t = \sqrt{\bar\alpha_t}\,\mathbf{z} + \sqrt{1-\bar\alpha_t}\,\boldsymbol\epsilon"></span> 是在潜变量上加噪；<span class="math-i" data-tex="\tau_\theta(y)"></span> 是文本或其他条件的编码，通过交叉注意力注入 U-Net。推理时从 <span class="math-i" data-tex="\mathbf{z}_T\sim\mathcal{N}(0,\mathbf{I})"></span> 去噪得到 <span class="math-i" data-tex="\hat\mathbf{z}_0"></span>，再解码 <span class="math-i" data-tex="\hat\mathbf{x} = \mathcal{D}(\hat\mathbf{z}_0)"></span>。</p>
   </div>
 
   <div class="prose">
@@ -787,8 +795,8 @@ footer {
   </div>
 
   <div class="math-wrap"><span class="mlabel">交叉注意力（Cross-Attention）</span>
-    $$\mathbf{Q} = W_Q\,\varphi(\mathbf{z}), \quad \mathbf{K} = W_K\,\tau_\theta(y), \quad \mathbf{V} = W_V\,\tau_\theta(y)$$
-    $$\text{Attention}(\mathbf{Q},\mathbf{K},\mathbf{V}) = \text{softmax}\!\left(\frac{\mathbf{Q}\mathbf{K}^\top}{\sqrt{d}}\right)\mathbf{V}$$
+    <div class="math-d" data-tex="\mathbf{Q} = W_Q\,\varphi(\mathbf{z}), \quad \mathbf{K} = W_K\,\tau_\theta(y), \quad \mathbf{V} = W_V\,\tau_\theta(y)"></div>
+    <div class="math-d" data-tex="\text{Attention}(\mathbf{Q},\mathbf{K},\mathbf{V}) = \text{softmax}\!\left(\frac{\mathbf{Q}\mathbf{K}^\top}{\sqrt{d}}\right)\mathbf{V}"></div>
     <p class="math-note">图像潜在特征提供 Query，文本编码提供 Key 和 Value。这样，每个空间位置的图像特征都可以关注最相关的文本 token。</p>
   </div>
 
@@ -813,37 +821,37 @@ footer {
     <p>U-Net 有很强的空间归纳偏置（卷积、多尺度跳接），在数据量少时表现很好。但它的扩展律不够清晰：加宽加深 U-Net，FID 的下降曲线不规律。LLM 和 VLM 的成功证明 Transformer 有可预测的幂律扩展，Peebles & Xie 的贡献就是将这种扩展律引入图像生成。</p>
 
     <h3>5.2 把图像变成 token 序列</h3>
-    <p>DiT 在 LDM 的潜在空间中运行。对 256×256 图像，VAE 得到 \(32\times32\times4\) 的潜变量，然后类似 ViT 切成 patch：</p>
+    <p>DiT 在 LDM 的潜在空间中运行。对 256×256 图像，VAE 得到 <span class="math-i" data-tex="32\times32\times4"></span> 的潜变量，然后类似 ViT 切成 patch：</p>
   </div>
 
   <div class="math-wrap"><span class="mlabel">Patchify 参数</span>
-    $$\text{patch 大小} \;p \in \{2,4,8\}, \quad \text{token 数} \;T = \left(\frac{\text{latent\_size}}{p}\right)^2$$
-    $$\text{每个 token 维度} = p\times p\times C \;\xrightarrow{\text{线性投影}}\; d_\text{model}$$
-    $$\text{计算量 Gflops} \propto T \propto p^{-2}, \quad \text{即 } p \text{ 减半则计算量翻四倍}$$
+    <div class="math-d" data-tex="\text{patch 大小} \;p \in \{2,4,8\}, \quad \text{token 数} \;T = \left(\frac{\text{latent\_size}}{p}\right)^2"></div>
+    <div class="math-d" data-tex="\text{每个 token 维度} = p\times p\times C \;\xrightarrow{\text{线性投影}}\; d_\text{model}"></div>
+    <div class="math-d" data-tex="\text{计算量 Gflops} \propto T \propto p^{-2}, \quad \text{即 } p \text{ 减半则计算量翻四倍}"></div>
     <p class="math-note">更小的 patch 意味着更多 token，更多计算量，也带来更好的生成质量。DiT-XL/2 表示最大模型、patch 大小为 2。</p>
   </div>
 
   <div class="prose">
     <h3>5.3 关键创新：adaLN-Zero 条件注入</h3>
-    <p>时间步 \(t\) 和类别/文本条件 \(c\) 通过<strong>自适应层归一化（adaLN）</strong>注入每个 Transformer 块。论文对比了四种方案：</p>
+    <p>时间步 <span class="math-i" data-tex="t"></span> 和类别/文本条件 <span class="math-i" data-tex="c"></span> 通过<strong>自适应层归一化（adaLN）</strong>注入每个 Transformer 块。论文对比了四种方案：</p>
   </div>
 
   <div class="tbl-wrap"><table>
     <thead><tr><th>方案</th><th>机制</th><th>400K 步 FID↓</th><th>额外计算量</th></tr></thead>
     <tbody>
-      <tr><td>In-context</td><td>把 \(t,c\) 作为额外 token 拼接</td><td>119.9</td><td>极小</td></tr>
-      <tr><td>Cross-Attention</td><td>\(t,c\) 作为 K/V</td><td>45.9</td><td>中等</td></tr>
-      <tr><td>adaLN</td><td>由 \(t,c\) 预测 LayerNorm 的 scale/shift</td><td>47.9</td><td>极小</td></tr>
+      <tr><td>In-context</td><td>把 <span class="math-i" data-tex="t,c"></span> 作为额外 token 拼接</td><td>119.9</td><td>极小</td></tr>
+      <tr><td>Cross-Attention</td><td><span class="math-i" data-tex="t,c"></span> 作为 K/V</td><td>45.9</td><td>中等</td></tr>
+      <tr><td>adaLN</td><td>由 <span class="math-i" data-tex="t,c"></span> 预测 LayerNorm 的 scale/shift</td><td>47.9</td><td>极小</td></tr>
       <tr><td><strong>adaLN-Zero</strong></td><td>adaLN + 零初始化残差门控</td><td><strong>23.5</strong></td><td><strong>极小</strong></td></tr>
     </tbody>
   </table></div>
 
   <div class="math-wrap"><span class="mlabel">adaLN-Zero 计算流程</span>
-    $$\mathbf{c}_\text{emb} = \text{MLP}(\mathbf{t}_\text{emb} + \mathbf{c}_\text{emb})$$
-    $$(\gamma_1,\beta_1,\alpha_1,\gamma_2,\beta_2,\alpha_2) = \text{MLP}_\text{mod}(\mathbf{c}_\text{emb})$$
-    $$\mathbf{h}' = \mathbf{x} + \alpha_1\cdot\text{Attention}\!\left(\text{adaLN}(\mathbf{x};\gamma_1,\beta_1)\right)$$
-    $$\mathbf{h} = \mathbf{h}' + \alpha_2\cdot\text{MLP}\!\left(\text{adaLN}(\mathbf{h}';\gamma_2,\beta_2)\right)$$
-    <p class="math-note">其中 \(\alpha_1,\alpha_2\) 初始化为 0（零初始化），使每个 DiT Block 一开始等价于恒等变换，大幅稳定大规模训练。</p>
+    <div class="math-d" data-tex="\mathbf{c}_\text{emb} = \text{MLP}(\mathbf{t}_\text{emb} + \mathbf{c}_\text{emb})"></div>
+    <div class="math-d" data-tex="(\gamma_1,\beta_1,\alpha_1,\gamma_2,\beta_2,\alpha_2) = \text{MLP}_\text{mod}(\mathbf{c}_\text{emb})"></div>
+    <div class="math-d" data-tex="\mathbf{h}' = \mathbf{x} + \alpha_1\cdot\text{Attention}\!\left(\text{adaLN}(\mathbf{x};\gamma_1,\beta_1)\right)"></div>
+    <div class="math-d" data-tex="\mathbf{h} = \mathbf{h}' + \alpha_2\cdot\text{MLP}\!\left(\text{adaLN}(\mathbf{h}';\gamma_2,\beta_2)\right)"></div>
+    <p class="math-note">其中 <span class="math-i" data-tex="\alpha_1,\alpha_2"></span> 初始化为 0（零初始化），使每个 DiT Block 一开始等价于恒等变换，大幅稳定大规模训练。</p>
   </div>
 
   <div class="prose">
@@ -879,12 +887,12 @@ footer {
     <p>Flow Matching 的核心想法很直接：如果能让运输路径尽可能笔直，积分步骤自然大幅减少。</p>
 
     <h3>6.2 从连续归一化流（CNF）出发</h3>
-    <p>Flow Matching 建立在连续归一化流的框架上。给定时变向量场 \(v_t(\mathbf{x})\)，定义 ODE：</p>
+    <p>Flow Matching 建立在连续归一化流的框架上。给定时变向量场 <span class="math-i" data-tex="v_t(\mathbf{x})"></span>，定义 ODE：</p>
   </div>
 
   <div class="math-wrap"><span class="mlabel">流 ODE</span>
-    $$\frac{\mathrm{d}\boldsymbol{\phi}_t(\mathbf{x})}{\mathrm{d}t} = v_t\!\left(\boldsymbol{\phi}_t(\mathbf{x})\right), \quad \boldsymbol{\phi}_0(\mathbf{x}) = \mathbf{x}$$
-    <p class="math-note">流 \(\boldsymbol\phi_t\) 将 \(t=0\) 时的噪声分布 \(p_0=\mathcal{N}(0,\mathbf{I})\) 运输到 \(t=1\) 时的数据分布 \(p_1=p_\text{data}\)。分布演化满足连续性方程 \(\partial_t p_t = -\text{div}(v_t\,p_t)\)。</p>
+    <div class="math-d" data-tex="\frac{\mathrm{d}\boldsymbol{\phi}_t(\mathbf{x})}{\mathrm{d}t} = v_t\!\left(\boldsymbol{\phi}_t(\mathbf{x})\right), \quad \boldsymbol{\phi}_0(\mathbf{x}) = \mathbf{x}"></div>
+    <p class="math-note">流 <span class="math-i" data-tex="\boldsymbol\phi_t"></span> 将 <span class="math-i" data-tex="t=0"></span> 时的噪声分布 <span class="math-i" data-tex="p_0=\mathcal{N}(0,\mathbf{I})"></span> 运输到 <span class="math-i" data-tex="t=1"></span> 时的数据分布 <span class="math-i" data-tex="p_1=p_\text{data}"></span>。分布演化满足连续性方程 <span class="math-i" data-tex="\partial_t p_t = -\text{div}(v_t\,p_t)"></span>。</p>
   </div>
 
   <div class="prose">
@@ -893,8 +901,8 @@ footer {
   </div>
 
   <div class="math-wrap"><span class="mlabel">边际 FM 目标（不可行）</span>
-    $$L_\text{FM}(\theta) = \mathbb{E}_{t,\,\mathbf{x}\sim p_t}\!\left[\|v_\theta(\mathbf{x},t) - u_t(\mathbf{x})\|^2\right]$$
-    <p class="math-note">问题在于边际向量场 \(u_t(\mathbf{x}) = \int u_t(\mathbf{x}\mid\mathbf{x}_1)\,\frac{p_t(\mathbf{x}\mid\mathbf{x}_1)\,p_\text{data}(\mathbf{x}_1)}{p_t(\mathbf{x})}\,\mathrm{d}\mathbf{x}_1\) 需要对整个数据分布积分，计算不可行。</p>
+    <div class="math-d" data-tex="L_\text{FM}(\theta) = \mathbb{E}_{t,\,\mathbf{x}\sim p_t}\!\left[\|v_\theta(\mathbf{x},t) - u_t(\mathbf{x})\|^2\right]"></div>
+    <p class="math-note">问题在于边际向量场 <span class="math-i" data-tex="u_t(\mathbf{x}) = \int u_t(\mathbf{x}\mid\mathbf{x}_1)\,\frac{p_t(\mathbf{x}\mid\mathbf{x}_1)\,p_\text{data}(\mathbf{x}_1)}{p_t(\mathbf{x})}\,\mathrm{d}\mathbf{x}_1"></span> 需要对整个数据分布积分，计算不可行。</p>
   </div>
 
   <div class="prose">
@@ -903,9 +911,9 @@ footer {
   </div>
 
   <div class="math-wrap"><span class="mlabel">CFM 等价定理</span>
-    $$L_\text{CFM}(\theta) = \mathbb{E}_{t,\,\mathbf{x}_1\sim p_\text{data},\,\mathbf{x}\sim p_t(\mathbf{x}\mid\mathbf{x}_1)}\!\left[\|v_\theta(\mathbf{x},t) - u_t(\mathbf{x}\mid\mathbf{x}_1)\|^2\right]$$
-    $$\nabla_\theta L_\text{FM} = \nabla_\theta L_\text{CFM} \quad \text{（梯度完全相等）}$$
-    <p class="math-note">条件向量场 \(u_t(\mathbf{x}\mid\mathbf{x}_1)\) 只依赖单个数据样本 \(\mathbf{x}_1\)，计算简单。两个目标的梯度相等，因此优化 CFM 就是优化 FM。</p>
+    <div class="math-d" data-tex="L_\text{CFM}(\theta) = \mathbb{E}_{t,\,\mathbf{x}_1\sim p_\text{data},\,\mathbf{x}\sim p_t(\mathbf{x}\mid\mathbf{x}_1)}\!\left[\|v_\theta(\mathbf{x},t) - u_t(\mathbf{x}\mid\mathbf{x}_1)\|^2\right]"></div>
+    <div class="math-d" data-tex="\nabla_\theta L_\text{FM} = \nabla_\theta L_\text{CFM} \quad \text{（梯度完全相等）}"></div>
+    <p class="math-note">条件向量场 <span class="math-i" data-tex="u_t(\mathbf{x}\mid\mathbf{x}_1)"></span> 只依赖单个数据样本 <span class="math-i" data-tex="\mathbf{x}_1"></span>，计算简单。两个目标的梯度相等，因此优化 CFM 就是优化 FM。</p>
   </div>
 
   <div class="prose">
@@ -915,14 +923,14 @@ footer {
   <div class="steps">
     <div class="step"><div class="step-n">1</div><div class="step-body">
       <p>选择从噪声到数据的线性插值路径：</p>
-      <div class="math-wrap">$$\mathbf{x}_t = (1-t)\,\mathbf{x}_0 + t\,\mathbf{x}_1, \quad t\in[0,1]$$
-        <p class="math-note">\(\mathbf{x}_0\sim\mathcal{N}(0,\mathbf{I})\)（噪声），\(\mathbf{x}_1\sim p_\text{data}\)（真实数据）。</p>
+      <div class="math-wrap"><div class="math-d" data-tex="\mathbf{x}_t = (1-t)\,\mathbf{x}_0 + t\,\mathbf{x}_1, \quad t\in[0,1]"></div>
+        <p class="math-note"><span class="math-i" data-tex="\mathbf{x}_0\sim\mathcal{N}(0,\mathbf{I})"></span>（噪声），<span class="math-i" data-tex="\mathbf{x}_1\sim p_\text{data}"></span>（真实数据）。</p>
       </div>
     </div></div>
     <div class="step"><div class="step-n">2</div><div class="step-body">
-      <p>对 \(\mathbf{x}_t\) 关于 \(t\) 求导，得到条件速度场：</p>
-      <div class="math-wrap">$$u_t(\mathbf{x}_t\mid\mathbf{x}_1) = \frac{\mathrm{d}\mathbf{x}_t}{\mathrm{d}t} = \mathbf{x}_1 - \mathbf{x}_0$$
-        <p class="math-note">这个速度是常数！不依赖 \(t\)，也不依赖 \(\mathbf{x}_t\) 本身，只依赖端点 \(\mathbf{x}_0,\mathbf{x}_1\)。这正是训练更稳定的原因。</p>
+      <p>对 <span class="math-i" data-tex="\mathbf{x}_t"></span> 关于 <span class="math-i" data-tex="t"></span> 求导，得到条件速度场：</p>
+      <div class="math-wrap"><div class="math-d" data-tex="u_t(\mathbf{x}_t\mid\mathbf{x}_1) = \frac{\mathrm{d}\mathbf{x}_t}{\mathrm{d}t} = \mathbf{x}_1 - \mathbf{x}_0"></div>
+        <p class="math-note">这个速度是常数！不依赖 <span class="math-i" data-tex="t"></span>，也不依赖 <span class="math-i" data-tex="\mathbf{x}_t"></span> 本身，只依赖端点 <span class="math-i" data-tex="\mathbf{x}_0,\mathbf{x}_1"></span>。这正是训练更稳定的原因。</p>
       </div>
     </div></div>
     <div class="step"><div class="step-n">3</div><div class="step-body"><p>代入 CFM 损失，得到极简形式：</p></div></div>
@@ -930,7 +938,7 @@ footer {
 
   <div class="fspot">
     <span class="fspot-label">Flow Matching 核心训练目标（OT-CFM）</span>
-    $$L_\text{FM} = \mathbb{E}_{t,\,\mathbf{x}_0\sim\mathcal{N}(0,\mathbf{I}),\,\mathbf{x}_1\sim p_\text{data}}\!\left[\left\|v_\theta\!\left((1-t)\mathbf{x}_0+t\mathbf{x}_1,\;t\right) - \left(\mathbf{x}_1-\mathbf{x}_0\right)\right\|^2\right]$$
+    <div class="math-d" data-tex="L_\text{FM} = \mathbb{E}_{t,\,\mathbf{x}_0\sim\mathcal{N}(0,\mathbf{I}),\,\mathbf{x}_1\sim p_\text{data}}\!\left[\left\|v_\theta\!\left((1-t)\mathbf{x}_0+t\mathbf{x}_1,\;t\right) - \left(\mathbf{x}_1-\mathbf{x}_0\right)\right\|^2\right]"></div>
     <p class="fspot-note">采样一对噪声和数据，插值得到中间点，让网络预测从起点到终点的方向向量。目标是常数，训练方差更低，过程更稳定。</p>
   </div>
 
@@ -938,17 +946,17 @@ footer {
     <thead><tr><th>对比维度</th><th>DDPM</th><th>Flow Matching（OT-CFM）</th></tr></thead>
     <tbody>
       <tr><td>路径类型</td><td>方差保持高斯路径（曲线）</td><td>线性最优传输路径（直线）</td></tr>
-      <tr><td>训练目标</td><td>预测噪声 \(\boldsymbol\epsilon\)</td><td>预测速度向量 \(\mathbf{x}_1-\mathbf{x}_0\)（常数）</td></tr>
-      <tr><td>目标依赖 \(t\)</td><td>是（通过 \(\sqrt{\bar\alpha_t}\) 等权重）</td><td>否</td></tr>
+      <tr><td>训练目标</td><td>预测噪声 <span class="math-i" data-tex="\boldsymbol\epsilon"></span></td><td>预测速度向量 <span class="math-i" data-tex="\mathbf{x}_1-\mathbf{x}_0"></span>（常数）</td></tr>
+      <tr><td>目标依赖 <span class="math-i" data-tex="t"></span></td><td>是（通过 <span class="math-i" data-tex="\sqrt{\bar\alpha_t}"></span> 等权重）</td><td>否</td></tr>
       <tr><td>典型采样步数</td><td>500–1000 步</td><td>10–50 步</td></tr>
-      <tr><td>训练稳定性</td><td>需仔细调节 \(\beta\) 调度表</td><td>更稳定，梯度方差更小</td></tr>
+      <tr><td>训练稳定性</td><td>需仔细调节 <span class="math-i" data-tex="\beta"></span> 调度表</td><td>更稳定，梯度方差更小</td></tr>
       <tr><td>理论关系</td><td>FM 的一个特例</td><td>严格包含 DDPM</td></tr>
     </tbody>
   </table></div>
 
   <div class="math-wrap"><span class="mlabel">Flow Matching 采样（Euler 方法）</span>
-    $$\mathbf{x}_0\sim\mathcal{N}(0,\mathbf{I}), \quad \mathbf{x}_{t+\Delta} = \mathbf{x}_t + \Delta\cdot v_\theta(\mathbf{x}_t,t), \quad t: 0\to 1$$
-    <p class="math-note">路径越直，步长 \(\Delta\) 可以越大，误差越小。理论上直线路径一步即可，实际中用 10–20 步已能得到高质量结果。</p>
+    <div class="math-d" data-tex="\mathbf{x}_0\sim\mathcal{N}(0,\mathbf{I}), \quad \mathbf{x}_{t+\Delta} = \mathbf{x}_t + \Delta\cdot v_\theta(\mathbf{x}_t,t), \quad t: 0\to 1"></div>
+    <p class="math-note">路径越直，步长 <span class="math-i" data-tex="\Delta"></span> 可以越大，误差越小。理论上直线路径一步即可，实际中用 10–20 步已能得到高质量结果。</p>
   </div>
 </div>
 </section>
@@ -975,13 +983,13 @@ footer {
   </div>
 
   <div class="math-wrap"><span class="mlabel">CogVideoX 3D VAE 压缩率</span>
-    $$\text{输入: } T\times H\times W\times 3 \;\xrightarrow{\text{3D causal VAE}}\; \frac{T}{4}\times\frac{H}{8}\times\frac{W}{8}\times 16$$
+    <div class="math-d" data-tex="\text{输入: } T\times H\times W\times 3 \;\xrightarrow{\text{3D causal VAE}}\; \frac{T}{4}\times\frac{H}{8}\times\frac{W}{8}\times 16"></div>
     <p class="math-note">总 token 数减少 256 倍，与仅做空间压缩（64倍）相比额外压缩了 4 倍时间维度。CogVideoX 选取的变体 B 在 PSNR（28.7）和抖动评分（86.3）上的综合表现最佳。</p>
   </div>
 
   <div class="card-insight">
     <span class="card-label">💡 因果 3D 卷积的设计逻辑</span>
-    普通 3D 卷积会让第 \(t\) 帧"看到"未来帧，破坏时序因果性。因果 3D 卷积把所有时间维度的填充放在序列<strong>开头</strong>，确保每帧只依赖当前和历史帧。这样第一帧可以作为图生视频的条件输入，训练和推理的逻辑也因此统一。
+    普通 3D 卷积会让第 <span class="math-i" data-tex="t"></span> 帧"看到"未来帧，破坏时序因果性。因果 3D 卷积把所有时间维度的填充放在序列<strong>开头</strong>，确保每帧只依赖当前和历史帧。这样第一帧可以作为图生视频的条件输入，训练和推理的逻辑也因此统一。
   </div>
 
   <div class="prose">
@@ -990,8 +998,8 @@ footer {
   </div>
 
   <div class="math-wrap"><span class="mlabel">时空 Patch 化</span>
-    $$\text{3D 潜变量: } (T',H',W',C) \;\xrightarrow{\text{切割 }(p_t,p_h,p_w)}\; N_\text{tok}\times(p_t p_h p_w C) \;\xrightarrow{\text{线性投影}}\; N_\text{tok}\times d_\text{model}$$
-    $$N_\text{tok} = \frac{T'}{p_t}\cdot\frac{H'}{p_h}\cdot\frac{W'}{p_w}$$
+    <div class="math-d" data-tex="\text{3D 潜变量: } (T',H',W',C) \;\xrightarrow{\text{切割 }(p_t,p_h,p_w)}\; N_\text{tok}\times(p_t p_h p_w C) \;\xrightarrow{\text{线性投影}}\; N_\text{tok}\times d_\text{model}"></div>
+    <div class="math-d" data-tex="N_\text{tok} = \frac{T'}{p_t}\cdot\frac{H'}{p_h}\cdot\frac{W'}{p_w}"></div>
     <p class="math-note">位置编码采用 3D RoPE（CogVideoX-5B）或 3D 正弦余弦编码（CogVideoX-2B）。</p>
   </div>
 
@@ -1016,9 +1024,9 @@ footer {
   </div>
 
   <div class="math-wrap"><span class="mlabel">Open-Sora 整流流训练细节</span>
-    $$L = \mathbb{E}\!\left[\left\|v_\theta(\mathbf{z}_t,t,c) - (\mathbf{z}_1-\mathbf{z}_0)\right\|^2\right]$$
+    <div class="math-d" data-tex="L = \mathbb{E}\!\left[\left\|v_\theta(\mathbf{z}_t,t,c) - (\mathbf{z}_1-\mathbf{z}_0)\right\|^2\right]"></div>
     <p class="math-note">
-      附加细节：时间步 \(t\) 采用 logit-normal 采样（偏向中间噪声级别）；高分辨率/长视频使用更大的时间步偏移（因为更难去噪）；每个通道独立归一化对整流流训练至关重要。
+      附加细节：时间步 <span class="math-i" data-tex="t"></span> 采用 logit-normal 采样（偏向中间噪声级别）；高分辨率/长视频使用更大的时间步偏移（因为更难去噪）；每个通道独立归一化对整流流训练至关重要。
     </p>
   </div>
 
@@ -1057,11 +1065,11 @@ footer {
   </div>
 
   <div class="math-wrap"><span class="mlabel">π0 动作流匹配训练目标</span>
-    $$\mathbf{A}_t^\tau = \tau\cdot\mathbf{A}_t + (1-\tau)\cdot\boldsymbol{\epsilon}, \quad \boldsymbol{\epsilon}\sim\mathcal{N}(0,\mathbf{I}), \quad \tau\in[0,1]$$
-    $$L(\theta) = \mathbb{E}_{\tau,t}\!\left[\left\|v_\theta\!\left(\mathbf{A}_t^\tau,\,\mathbf{o}_t\right) - \left(\mathbf{A}_t - \boldsymbol{\epsilon}\right)\right\|^2\right]$$
+    <div class="math-d" data-tex="\mathbf{A}_t^\tau = \tau\cdot\mathbf{A}_t + (1-\tau)\cdot\boldsymbol{\epsilon}, \quad \boldsymbol{\epsilon}\sim\mathcal{N}(0,\mathbf{I}), \quad \tau\in[0,1]"></div>
+    <div class="math-d" data-tex="L(\theta) = \mathbb{E}_{\tau,t}\!\left[\left\|v_\theta\!\left(\mathbf{A}_t^\tau,\,\mathbf{o}_t\right) - \left(\mathbf{A}_t - \boldsymbol{\epsilon}\right)\right\|^2\right]"></div>
     <p class="math-note">
-      \(\mathbf{A}_t = [a_t,\ldots,a_{t+H-1}]\) 是 \(H=50\) 步的动作块；\(\mathbf{o}_t = \{\text{图像},\text{语言},\text{关节状态}\}\) 为条件（通过 VLM 编码后 KV 缓存）；\(\tau=0\) 时为纯噪声，\(\tau=1\) 时为干净动作。<br>
-      时间步 \(\tau\sim\text{Beta}((s-\tau)/s;\,1.5,1)\) 偏向低 \(\tau\)（高噪声），\(s=0.999\)。推理时用 10 步 Euler 积分，条件的 KV 缓存，控制频率可达 50 Hz。
+      <span class="math-i" data-tex="\mathbf{A}_t = [a_t,\ldots,a_{t+H-1}]"></span> 是 <span class="math-i" data-tex="H=50"></span> 步的动作块；<span class="math-i" data-tex="\mathbf{o}_t = \{\text{图像},\text{语言},\text{关节状态}\}"></span> 为条件（通过 VLM 编码后 KV 缓存）；<span class="math-i" data-tex="\tau=0"></span> 时为纯噪声，<span class="math-i" data-tex="\tau=1"></span> 时为干净动作。<br>
+      时间步 <span class="math-i" data-tex="\tau\sim\text{Beta}((s-\tau)/s;\,1.5,1)"></span> 偏向低 <span class="math-i" data-tex="\tau"></span>（高噪声），<span class="math-i" data-tex="s=0.999"></span>。推理时用 10 步 Euler 积分，条件的 KV 缓存，控制频率可达 50 Hz。
     </p>
   </div>
 
@@ -1094,33 +1102,33 @@ footer {
   <div class="tbl-wrap" style="margin-top:28px;"><table>
     <thead><tr><th>算法</th><th>核心思想</th><th>训练目标</th><th>采样步数</th><th>优势</th><th>劣势</th><th>代表系统</th></tr></thead>
     <tbody>
-      <tr><td>DDPM</td><td>马尔可夫加噪/去噪链</td><td>\(\boldsymbol\epsilon\)（噪声 MSE）</td><td>500–1000</td><td>数学完备，理论清晰，训练稳定</td><td>采样极慢</td><td>早期图像生成 Demo</td></tr>
+      <tr><td>DDPM</td><td>马尔可夫加噪/去噪链</td><td><span class="math-i" data-tex="\boldsymbol\epsilon"></span>（噪声 MSE）</td><td>500–1000</td><td>数学完备，理论清晰，训练稳定</td><td>采样极慢</td><td>早期图像生成 Demo</td></tr>
       <tr><td>DDIM</td><td>非马尔可夫确定性 ODE</td><td>同 DDPM（无需重训）</td><td>10–50</td><td>10–50× 加速，确定性，支持反演</td><td>极少步时质量略降</td><td>所有 DDPM 的快速采样</td></tr>
       <tr><td>CFG</td><td>条件与无条件差值放大</td><td>同上 + null-token 丢弃</td><td>（叠加在其他方法上）</td><td>无需额外分类器，文本控制强</td><td>每步需 2 次前向；过强会失真</td><td>SD、DALLE-2、SDXL</td></tr>
-      <tr><td>LDM+VAE</td><td>在压缩潜变量空间扩散</td><td>潜变量上的 \(\boldsymbol\epsilon\) + VAE ELBO</td><td>同 DDPM/DDIM</td><td>计算效率提升约 64×</td><td>两阶段训练；VAE 解码有误差</td><td>Stable Diffusion 全系</td></tr>
-      <tr><td>DiT</td><td>Transformer 替换 U-Net</td><td>\(\boldsymbol\epsilon\) 或 \(\mathbf{v}\)（patch 级别）</td><td>同 DDPM/DDIM</td><td>可预测扩展律，多模态友好</td><td>小数据/小计算下弱于 U-Net</td><td>Sora、SD3、PIXART</td></tr>
-      <tr><td>Flow Matching</td><td>直线 OT 路径，回归速度场</td><td>\(\mathbf{v} = \mathbf{x}_1-\mathbf{x}_0\)（常数）</td><td>5–20</td><td>训练简单稳定，路径直，严格包含 DDPM</td><td>ODE 求解器/配对方式影响效果</td><td>SD3、FLUX、CogVideoX、π0</td></tr>
+      <tr><td>LDM+VAE</td><td>在压缩潜变量空间扩散</td><td>潜变量上的 <span class="math-i" data-tex="\boldsymbol\epsilon"></span> + VAE ELBO</td><td>同 DDPM/DDIM</td><td>计算效率提升约 64×</td><td>两阶段训练；VAE 解码有误差</td><td>Stable Diffusion 全系</td></tr>
+      <tr><td>DiT</td><td>Transformer 替换 U-Net</td><td><span class="math-i" data-tex="\boldsymbol\epsilon"></span> 或 <span class="math-i" data-tex="\mathbf{v}"></span>（patch 级别）</td><td>同 DDPM/DDIM</td><td>可预测扩展律，多模态友好</td><td>小数据/小计算下弱于 U-Net</td><td>Sora、SD3、PIXART</td></tr>
+      <tr><td>Flow Matching</td><td>直线 OT 路径，回归速度场</td><td><span class="math-i" data-tex="\mathbf{v} = \mathbf{x}_1-\mathbf{x}_0"></span>（常数）</td><td>5–20</td><td>训练简单稳定，路径直，严格包含 DDPM</td><td>ODE 求解器/配对方式影响效果</td><td>SD3、FLUX、CogVideoX、π0</td></tr>
       <tr><td>Video DiT</td><td>3D VAE + 时空 patch + DiT</td><td>整流流速度向量</td><td>10–50</td><td>时序一致，可扩展，统一视频与动作</td><td>计算量极大，需海量数据</td><td>Sora、CogVideoX、Open-Sora</td></tr>
     </tbody>
   </table></div>
 
   <div class="prose" style="margin-top:40px;">
     <h3>统一视角：所有方法都是概率传输的不同实例</h3>
-    <p>七个方法及其变体，都可以用同一个框架描述：给定简单先验 \(p_0\) 和数据分布 \(p_1\)，学习时变向量场 \(v_\theta(\mathbf{x},t)\) 使对应的流将 \(p_0\) 运输到 \(p_1\)。不同方法的区别仅在于路径选择和预测参数化方式：</p>
+    <p>七个方法及其变体，都可以用同一个框架描述：给定简单先验 <span class="math-i" data-tex="p_0"></span> 和数据分布 <span class="math-i" data-tex="p_1"></span>，学习时变向量场 <span class="math-i" data-tex="v_\theta(\mathbf{x},t)"></span> 使对应的流将 <span class="math-i" data-tex="p_0"></span> 运输到 <span class="math-i" data-tex="p_1"></span>。不同方法的区别仅在于路径选择和预测参数化方式：</p>
   </div>
 
   <div class="math-wrap"><span class="mlabel">统一框架</span>
-    $$\text{DDPM: 方差保持高斯路径} \;\longrightarrow\; \text{预测 } \boldsymbol{\epsilon}$$
-    $$\text{FM-OT: 线性最优传输路径} \;\longrightarrow\; \text{预测 } \mathbf{v} = \mathbf{x}_1 - \mathbf{x}_0$$
-    $$\text{Score: 与 DDPM 同路径} \;\longrightarrow\; \text{预测 } \nabla_{\mathbf{x}}\log p_t$$
-    <p class="math-note">三种目标线性等价：\(\mathbf{v} = \sqrt{\bar\alpha_t}\,\boldsymbol\epsilon - \sqrt{1-\bar\alpha_t}\,\mathbf{x}_0\)，\(\text{score} = -\boldsymbol\epsilon/\sqrt{1-\bar\alpha_t}\)。理解其中一个，其他两个可直接推导。</p>
+    <div class="math-d" data-tex="\text{DDPM: 方差保持高斯路径} \;\longrightarrow\; \text{预测 } \boldsymbol{\epsilon}"></div>
+    <div class="math-d" data-tex="\text{FM-OT: 线性最优传输路径} \;\longrightarrow\; \text{预测 } \mathbf{v} = \mathbf{x}_1 - \mathbf{x}_0"></div>
+    <div class="math-d" data-tex="\text{Score: 与 DDPM 同路径} \;\longrightarrow\; \text{预测 } \nabla_{\mathbf{x}}\log p_t"></div>
+    <p class="math-note">三种目标线性等价：<span class="math-i" data-tex="\mathbf{v} = \sqrt{\bar\alpha_t}\,\boldsymbol\epsilon - \sqrt{1-\bar\alpha_t}\,\mathbf{x}_0"></span>，<span class="math-i" data-tex="\text{score} = -\boldsymbol\epsilon/\sqrt{1-\bar\alpha_t}"></span>。理解其中一个，其他两个可直接推导。</p>
   </div>
 
   <div class="card-warn">
     <span class="card-label">⚠️ 常见陷阱</span>
-    <strong>时间方向约定不统一。</strong> Flow Matching 文献中存在两种惯例：Lipman et al. 和 π0 用 \(t=0\) 表示噪声、\(t=1\) 表示数据；许多扩散论文则相反。复现代码时务必先确认方向，这是最常见的 bug 来源。<br><br>
+    <strong>时间方向约定不统一。</strong> Flow Matching 文献中存在两种惯例：Lipman et al. 和 π0 用 <span class="math-i" data-tex="t=0"></span> 表示噪声、<span class="math-i" data-tex="t=1"></span> 表示数据；许多扩散论文则相反。复现代码时务必先确认方向，这是最常见的 bug 来源。<br><br>
     <strong>Sora 的内部细节是合理推断，非官方公开。</strong> OpenAI 的 Sora 报告刻意保持高层次，架构细节是社区基于 CogVideoX 和 Open-Sora 等开源系统做出的推断。以 CogVideoX 和 Open-Sora 为权威开源参考。<br><br>
-    <strong>CFG 引导强度没有万能值。</strong> 通常引用的 \(w\approx 7.5\) 是 SD 1.x 的经验设置，不同模型和任务下最优值差异显著，需要根据实际效果调整。
+    <strong>CFG 引导强度没有万能值。</strong> 通常引用的 <span class="math-i" data-tex="w\approx 7.5"></span> 是 SD 1.x 的经验设置，不同模型和任务下最优值差异显著，需要根据实际效果调整。
   </div>
 </div>
 </section>
@@ -1177,21 +1185,26 @@ const obs = new IntersectionObserver(entries => {
 }, { threshold: 0.25 });
 chapters.forEach(c => obs.observe(c));
 
-// KaTeX auto-render
-document.addEventListener('DOMContentLoaded', () => {
-  renderMathInElement(document.body, {
-    delimiters: [
-      {left: '$$', right: '$$', display: true},
-      {left: '$',  right: '$',  display: false}
-    ],
-    throwOnError: false,
-    trust: true,
-    strict: false,
-    macros: {
-      "\\boldsymbol": "\\mathbf"
-    }
+// KaTeX explicit rendering
+function renderAllMath() {
+  document.querySelectorAll('.math-d[data-tex]').forEach(function(el) {
+    try {
+      katex.render(el.dataset.tex, el, {
+        displayMode: true, throwOnError: false, trust: true, strict: false
+      });
+    } catch(e) { el.textContent = '[err: ' + el.dataset.tex + ']'; }
   });
-});
+  document.querySelectorAll('.math-i[data-tex]').forEach(function(el) {
+    try {
+      katex.render(el.dataset.tex, el, {
+        displayMode: false, throwOnError: false, trust: true, strict: false
+      });
+    } catch(e) { el.textContent = el.dataset.tex; }
+  });
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderAllMath);
+} else { renderAllMath(); }
 </script>
 </body>
 </html>
