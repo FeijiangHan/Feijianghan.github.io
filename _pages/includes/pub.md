@@ -164,11 +164,11 @@ WebShell attacks, where malicious scripts are injected into web servers, pose a 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><a href="" target="_blank"><img src='images/latex2layout.png' alt="LaTeX2Layout Pipeline" class="paper-image-hover" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
-[LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for Layout Detection](https://www.cis.upenn.edu/~ccb/publications/latex2layout.pdf)
+[LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for Layout Detection](https://ojs.aaai.org/index.php/AAAI/article/view/40349)
 
 **Feijiang Han**, Zelong Wang, Bowen Wang, Xinxin Liu, Skyler Cheung, Delip Rao, Chris Callison-Burch, Lyle Ungar
 
-[**Paper**](https://www.cis.upenn.edu/~ccb/publications/latex2layout.pdf) 
+[**Paper**](https://ojs.aaai.org/index.php/AAAI/article/view/40349) \| [**Code**](https://github.com/FeijiangHan/Latex2Layout-Core)
 
 **TL;DR.** Layout detection turns a PDF into structured page understanding (bounding boxes + reading order), but current VLMs struggle mainly because high-fidelity supervision is scarce and PDF-parser-based labels are noisy and expensive. We introduce LaTeX2Layout, a scalable data-centric pipeline that extracts pixel-accurate layout ground truth directly from the LaTeX compilation process, enabling large-scale training without manual annotation.
 
@@ -191,7 +191,7 @@ General-purpose Vision-Language Models (VLMs) are increasingly integral to moder
 
 **Feijiang Han**
 
-[**Paper**](https://arxiv.org/abs/2512.05288) \| [**Video (AI)**](https://drive.google.com/file/d/1PAljf0YjWgnBRUHhmDZDvjU-CmAcglqr/view?usp=sharing) \| [**Slide (AI)**](https://drive.google.com/file/d/1I3xKf1_lf8VIGlwMGgqWWxTUvFnNW3Po/view?usp=sharing) \| [**Code & Dataset**]
+[**Paper**](https://arxiv.org/abs/2512.05288) \| [**Video (AI)**](https://drive.google.com/file/d/1PAljf0YjWgnBRUHhmDZDvjU-CmAcglqr/view?usp=sharing) \| [**Slide (AI)**](https://drive.google.com/file/d/1I3xKf1_lf8VIGlwMGgqWWxTUvFnNW3Po/view?usp=sharing) \| [**Code & Dataset**](https://github.com/FeijiangHan/Beyond-Webshell-Detection)
 
 **TL;DR.** While WebShell detection answers “malicious or not,” real-world defense also needs attribution and tracking: WebShells come in diverse families with different behaviors and variants. We are the first to systematically study representation learning for automated WebShell family classification.
 
