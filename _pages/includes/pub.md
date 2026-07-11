@@ -24,7 +24,7 @@
 
 Sida Liu\*, **Feijiang Han**\*
 
-[**Paper**](https://arxiv.org/pdf/2606.11722) \| [**Website**](https://liusida.github.io/ica-lens-paper/) \| [**Code**](https://github.com/liusida/ica-lens-paper) \| [**Online ICAExplorer Demo**](https://huggingface.co/spaces/EEEAILab/ICAExplorer) \| [**Alphaxiv Chat**](https://www.alphaxiv.org/abs/2606.11722) \| [**Hugging Face**](https://huggingface.co/papers/2606.11722) 
+[**Paper**](https://arxiv.org/abs/2606.11722) \| [**Code**](https://github.com/liusida/ica-lens-paper) \| [**Website**](https://liusida.github.io/ica-lens-paper/) \| [**Demo**](https://huggingface.co/spaces/EEEAILab/ICAExplorer) \| [**Blog**](https://www.alphaxiv.org/abs/2606.11722) \| [**Hugging Face**](https://huggingface.co/papers/2606.11722) 
 
 **Relevant Chinese Blogs (RedNote):** [How This Idea Was Born — A Full Retrospective](https://www.xiaohongshu.com/discovery/item/6a2788ef000000002003b63b?source=webshare&xhsshare=pc_web&xsec_token=YB-efQkinworgcwkutTbIZHdIWjlM4ZUsScM2fsc2AQac=&xsec_source=pc_share) \| [Why I'm Skeptical About the Future of SAEs](https://www.xiaohongshu.com/discovery/item/6a2a34a00000000022022716?source=webshare&xhsshare=pc_web&xsec_token=YBOwlRa_zqd0GcxNPGwJGztNrmrgVuIQ28QpM9zeB1mjY=&xsec_source=pc_share)
 
@@ -50,7 +50,7 @@ Finding interpretable directions in language-model representations is a critical
 
 **Feijiang Han**, Xiaodong Yu, Jianheng Tang, Delip Rao, Weihua Du, Lyle Ungar
 
-[**Paper**](https://arxiv.org/abs/2505.11739) \| [**Code & Demo**](https://github.com/FeijiangHan/ZeroTuning) \| [**Blog**](https://www.alphaxiv.org/abs/2505.11739) \| [**Poster**](/papers/ZeroTuning_Poster.pdf){:target="_blank"} \| [**ICLR Talks**](https://recorder-v3.slideslive.com/?share=107858&s=60dd615f-e5d3-4961-84f9-f95a8016a527)
+[**Paper**](https://arxiv.org/abs/2505.11739) \| [**Code & Demo**](https://github.com/FeijiangHan/ZeroTuning) \| [**Blog**](https://www.alphaxiv.org/abs/2505.11739) \| [**Poster**](/papers/ZeroTuning_Poster.pdf){:target="_blank"} \| [**Talk**](https://recorder-v3.slideslive.com/?share=107858&s=60dd615f-e5d3-4961-84f9-f95a8016a527)
 
 **TL;DR.** Token-level attention steering can boost frozen LLMs, but prior methods often depend on fragile heuristics to find “important” task tokens. ZeroTuning shows a simpler universal control lever: tune only the initial token (e.g., &lt;BOS&gt;). With tiny head-specific biases on BOS attention logits, we can reshape downstream attention (sharpen/flatten), lower output entropy, and unlock pretrained knowledge—without any parameter updates.
 
@@ -79,7 +79,7 @@ Token-level attention tuning, a class of training-free methods including Post-ho
 
 Hengyuan Zhang, Zhihao Zhang, Mingyang Wang, Zunhai Su, Yiwei Wang, Qianli Wang, Shuzhou Yuan, Ercong Nie, Xufeng Duan, **Feijiang Han**, Qibo Xue, Zeping Yu, Chenming Shang, Xiao Liang, Jing Xiong, Hui Shen, Chaofan Tao, Zhengwu Liu, Senjie Jin, Zhiheng Xi, Dongdong Zhang, Sophia Ananiadou, Tao Gui, Ruobing Xie, Hayden Kwok-Hay So, Hinrich Schütze, Xuanjing Huang, Qi Zhang, Ngai Wong
 
-[**Paper**](https://arxiv.org/abs/2601.14004) \| [**Github Repo**](https://github.com/rattlesnakey/Awesome-Actionable-MI-Survey)
+[**Paper**](https://arxiv.org/abs/2601.14004) \| [**Repo**](https://github.com/rattlesnakey/Awesome-Actionable-MI-Survey)
 
 **TL;DR.** This survey reframes mechanistic interpretability as an actionable pipeline, not just a diagnostic tool: first locate where behaviors live, then steer those components, and finally use the intervention to improve alignment, capability, and efficiency in LLMs.
 
@@ -145,7 +145,7 @@ Large Language Models (LLMs) often fail on complex reasoning tasks due to flawed
 
 **Feijiang Han**, Jiaming Zhang, Chuyi Deng, Jianheng Tang, Yunhuai Liu
 
-[**Paper**](https://arxiv.org/abs/2504.13811v3) \| [**Resources**](https://github.com/FeijiangHan/LLM-for-Webshell-Detection) \| [**Blog**](https://www.alphaxiv.org/abs/2504.13811v3) \| [**Poster**](/papers/LLM_Webshell_Poster.pdf){:target="_blank"}
+[**Paper**](https://arxiv.org/abs/2504.13811v3) \| [**Code**](https://github.com/FeijiangHan/LLM-for-Webshell-Detection) \| [**Blog**](https://www.alphaxiv.org/abs/2504.13811v3) \| [**Poster**](/papers/LLM_Webshell_Poster.pdf){:target="_blank"}
 
 **TL;DR.** WebShell detection is hard for LLMs because a server-side script can span millions of tokens while the truly malicious logic is often just a tiny, obfuscated fragment—so naïvely feeding the whole file dilutes the signal and breaks context limits. We provide the first comprehensive evaluation of LLMs for WebShell detection and introduce BFAD, a behavior-driven, function-aware pipeline that helps LLMs focus on the most indicative code, yielding a +13.82% average F1 improvement and pushing both large and small LLMs toward (or beyond) prior SOTA.
 
@@ -191,7 +191,7 @@ General-purpose Vision-Language Models (VLMs) are increasingly integral to moder
 
 **Feijiang Han**
 
-[**Paper**](https://arxiv.org/abs/2512.05288) \| [**Video (AI)**](https://drive.google.com/file/d/1PAljf0YjWgnBRUHhmDZDvjU-CmAcglqr/view?usp=sharing) \| [**Slide (AI)**](https://drive.google.com/file/d/1I3xKf1_lf8VIGlwMGgqWWxTUvFnNW3Po/view?usp=sharing) \| [**Code & Dataset**](https://github.com/FeijiangHan/Beyond-Webshell-Detection)
+[**Paper**](https://arxiv.org/abs/2512.05288) \| [**Code & Dataset**](https://github.com/FeijiangHan/Beyond-Webshell-Detection) \| [**Slides**](https://drive.google.com/file/d/1I3xKf1_lf8VIGlwMGgqWWxTUvFnNW3Po/view?usp=sharing) \| [**Video**](https://drive.google.com/file/d/1PAljf0YjWgnBRUHhmDZDvjU-CmAcglqr/view?usp=sharing)
 
 **TL;DR.** While WebShell detection answers “malicious or not,” real-world defense also needs attribution and tracking: WebShells come in diverse families with different behaviors and variants. We are the first to systematically study representation learning for automated WebShell family classification.
 
