@@ -78,7 +78,7 @@ details > div {
 .rtag-amber:hover  { background: rgba(217,119,6,.14); box-shadow: 0 0 10px rgba(217,119,6,.28); }
 </style>
 
-I am an incoming CS Ph.D. student at the University of Maryland <img src='./images/umd.png' style="width: 1.35em;">, where I will work with [Prof. Furong Huang](https://furong-huang.com/). I completed my master's degree at the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, where I worked with [Prof. Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/), [Prof. Lyle Ungar](https://www.cis.upenn.edu/~ungar/), [Delip Rao](https://deliprao.com/), and [Dr. Xiaodong Yu](https://www.xiaodongyu.me/).
+I am an incoming CS Ph.D. student at the University of Maryland <img src='./images/umd.png' style="width: 1.35em;">, where I will work with [Prof. Furong Huang](https://furong-huang.com/) and TBD. I completed my master's degree at the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, where I worked with [Prof. Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/), [Prof. Lyle Ungar](https://www.cis.upenn.edu/~ungar/), [Delip Rao](https://deliprao.com/), and [Dr. Xiaodong Yu](https://www.xiaodongyu.me/).
 
 **Goal:** Build mechanism-guided AI systems that can understand the world, improve themselves, and still remain understandable and controllable to people. 
 
