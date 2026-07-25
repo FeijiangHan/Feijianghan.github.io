@@ -86,8 +86,6 @@ I am an incoming CS Ph.D. student at the University of Maryland <img src='./imag
 
 **Research Question:** How can we more accurately understand models (e.g., how knowledge is stored, how training dynamics shape representations, how fine-tuning changes behavior, how attention, circuits, and internal structures interact)? Can these insights serve as first principles for designing better AI systems (e.g., better training, collaboration, and self-evolution)?
 
-I have recently grown interested in **embodied AI** as well; see my [RedNote post (Chinese)](https://www.xiaohongshu.com/discovery/item/6a3c74d8000000002103ce61?source=webshare&xhsshare=pc_web&xsec_token=ABtyFB4dNL8SGcYBnxmSNhfa8KSn1KW9kwUDJJ08WsRCg=&xsec_source=pc_share){:target="_blank"} for my reasons and current thinking.
-
 My work spans two complementary directions:
 
 <div style="display: flex; gap: 2em; align-items: flex-start; margin: 2em 0; flex-wrap: wrap;">
