@@ -80,11 +80,13 @@ details > div {
 
 I am a first-year CS Ph.D. student at the University of Maryland <img src='./images/umd.png' style="width: 1.35em;">, working with [Prof. Furong Huang](https://furong-huang.com/) and TBD. I received my master’s degree from the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, where I worked with [Prof. Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/), [Prof. Lyle Ungar](https://www.cis.upenn.edu/~ungar/), [Delip Rao](https://deliprao.com/), and [Dr. Xiaodong Yu](https://www.xiaodongyu.me/).
 
-**Goal:** Build mechanism-guided AI systems that can understand the world, improve themselves, and still remain understandable and controllable to people. 
+**Goal:** Build mechanism-guided AI systems that can understand the world, improve themselves, and still remain understandable and controllable to humans. 
 
-**Research Topics:** {LLMs, VLMs, VLAs, Cognitive Science}
+**Research Topics:** {LLMs, VLMs, Agents, Cognitive Science}
 
-**Research Question:** How can we more accurately understand models (e.g., how knowledge is stored, how training dynamics shape representations, how fine-tuning changes behavior, how attention, circuits, and internal structures interact)? Can these insights serve as first principles for designing better AI systems (e.g., better training, collaboration, and self-evolution)?
+**Research Questions:**
+- **Model level:** How can we understand models more accurately, including how knowledge is stored, how training dynamics shape representations, how fine-tuning changes behavior, and how attention, circuits, and other internal structures interact? Can these insights serve as first principles for designing better AI systems, from training to collaboration to self-evolution?
+- **Agent level:** Can an agent understand which of its own internal representations, skills, and strategies are useful, and use that understanding to decide what to reinforce, compose, modify, or discard?
 
 My past work spans two complementary directions:
 
@@ -201,13 +203,12 @@ document.addEventListener('DOMContentLoaded', function () {
 <div markdown="1">
 
 <details>
-        <summary><strong>My current views</strong></summary>
-        <div><div style="margin: .8em 0 1.2em; padding: 1em 1.4em; background: #f8f9fb; border-left: 3px solid #d1d5db; border-radius: 6px; color: #4b5563; font-size: 0.95em; line-height: 1.7;">
-        I am not a fan of SAEs or activation steering.
-        SAEs feel too heavyweight as a <em>first lens</em> for understanding models---yet too weak as a downstream application tool compared to simpler baselines.
-        My view is: if the goal is to <em>understand</em> a model, we should reach for lighter-weight tools first; if the goal is to <em>control</em> a model, we should pick the baseline that actually fits the task.
-        On steering specifically, I suspect it is not a genuine application need in most settings---it is better treated as a <em>diagnostic tool</em> for probing interpretability, rather than a deployable solution.
-        </div></div>
+<summary><strong>My current views</strong></summary>
+<div><div style="margin: .8em 0 1.2em; padding: 1em 1.4em; background: #f8f9fb; border-left: 3px solid #d1d5db; border-radius: 6px; color: #4b5563; font-size: 0.95em; line-height: 1.7;">
+Interpretability matters for the goal of recursive self-improvement (RSI), but using it to actually guide how models and agents optimize themselves is a hard problem.
+Imagine you are in the middle of a final exam, and I hand you a brain scanner that shows exactly what you are thinking right now. Would that help you solve the problem? Probably not.
+That is why I think we need to move beyond the traditional, model-level view of interpretability.
+</div></div>
 </details>
 
 TLDR: I care about explanations because they can do two things: (1) help us trust models in practice, (2) help us design better models without relying only on trial and error.
