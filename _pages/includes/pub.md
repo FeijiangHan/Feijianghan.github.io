@@ -24,7 +24,7 @@
 
 Sida Liu\*, **Feijiang Han**\*
 
-[**Paper**](https://arxiv.org/abs/2606.11722) \| [**Code**](https://github.com/liusida/ica-lens-paper) \| [**Website**](https://liusida.github.io/ica-lens-paper/) \| [**Demo**](https://huggingface.co/spaces/EEEAILab/ICAExplorer) \| [**Blog**](https://www.alphaxiv.org/abs/2606.11722) \| [**Hugging Face**](https://huggingface.co/papers/2606.11722) 
+[**Paper**](https://arxiv.org/abs/2606.11722) \| [**Code**](https://github.com/liusida/ica-lens-paper) \| [**Website**](https://liusida.github.io/ica-lens-paper/) \| [**Demo**](https://huggingface.co/spaces/EEEAILab/ICAExplorer) \| [**Blog**](https://www.alphaxiv.org/abs/2606.11722) \| [**Video**](/videos/ICA_Lens_explainer_final_captioned.mp4) \| [**X Post**](https://x.com/feijianghan/status/2112654366599504277?s=20) \| [**Hugging Face**](https://huggingface.co/papers/2606.11722)
 
 **Relevant Chinese Blogs (RedNote):** [How This Idea Was Born — A Full Retrospective](https://www.xiaohongshu.com/discovery/item/6a2788ef000000002003b63b?source=webshare&xhsshare=pc_web&xsec_token=YB-efQkinworgcwkutTbIZHdIWjlM4ZUsScM2fsc2AQac=&xsec_source=pc_share) \| [Why I'm Skeptical About the Future of SAEs](https://www.xiaohongshu.com/discovery/item/6a2a34a00000000022022716?source=webshare&xhsshare=pc_web&xsec_token=YBOwlRa_zqd0GcxNPGwJGztNrmrgVuIQ28QpM9zeB1mjY=&xsec_source=pc_share)
 
@@ -35,6 +35,14 @@ Sida Liu\*, **Feijiang Han**\*
 </div>
 <div class="paper-abstract" id="icalens_abstract">
 Finding interpretable directions in language-model representations is a critical step toward understanding model behavior and enabling more precise control over model internals. Sparse autoencoders (SAEs) have become the standard tool for this purpose, but using them as the default first lens often requires training, tuning, storing, and evaluating large overcomplete dictionaries for every layer, activation site, and sparsity setting. This computational bottleneck limits rapid exploration and motivates a fundamental question: how much interpretable structure is already visible from activation geometry before training another neural dictionary? Our intuition is simple: many interpretable directions are selective on tokens, and selective directions should look less Gaussian than typical random directions. We therefore revisit independent component analysis (ICA), a classical method for finding non-Gaussian directions, as a compact lens for language-model interpretability. We find that ICA has been underestimated for LLM interpretability because prior uses often relied on off-the-shelf ICA implementations that are brittle on LLM activations and lacked systematic tools for inspecting, annotating, and evaluating the recovered directions. To bridge these gaps, we introduce ICALens, the first practical workflow for stable, efficient, and auditable ICA analysis of LLM representations. ICALens combines an optimized GPU-parallel FastICA pipeline with LLM-specific stability recipes and better fitting diagnostics, enabling efficient and reliable layer-wise analysis across modern LLMs. Across GPT-2 Small, Gemma 2 2B, and Qwen 3.5 2B Base, ICALens efficiently recovers compact, human-interpretable directions without per-layer gradient-based dictionary training. On SAEBench, ICA is competitive with public SAEs in sparse probing and outperforms them in targeted probe perturbation under small-to-medium component budgets. These results suggest that ICA should not be viewed as a weak classical baseline, but as an efficient and complementary first lens for exploring language-model representations. To support reproducible analysis, we release all fitted ICA checkpoints, the ICA explorer, and human annotations.
+</div>
+
+<div style="margin: 1em 0 0;">
+<video controls preload="metadata" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+<source src="/videos/ICA_Lens_explainer_final_captioned.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p style="margin-top: 0.5em; color: #666; font-size: 0.9em; font-style: italic;">ICA Lens explainer video (with captions) · <a href="https://x.com/feijianghan/status/2112654366599504277?s=20" target="_blank">Discussion on X</a></p>
 </div>
 </div>
 </div>
