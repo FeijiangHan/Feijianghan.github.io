@@ -1,5 +1,6 @@
 # 📝 Notes & Experiences
 
+- [Agentic RL: A Reading Field Guide](/reports/agentic-rl/){:target="_blank"} - Three essential papers, nine connected reading sessions, and 27 research questions, with progress tracking, a personal notebook, and follow-up reading.
 - [PaperForge](https://github.com/FeijiangHan/PaperForge){:target="_blank"} - An active paper-reading skill that reconstructs author reasoning, explains methods mechanistically, stress-tests assumptions, and generates follow-up research ideas.
 - [Embodied AI: A 3-Week Reading Roadmap](/reports/embodied-ai-reading-plan.html){:target="_blank"} - A curated curriculum for LLM/VLM researchers entering embodied AI, covering VLA, world models, and WAM with key papers and hands-on projects.
 - [Where do AI models agree — and disagree — on the world's top CS schools?](https://feijianghan.com/reports/llm_cs_rankings){:target="_blank"} - We asked 11 leading large language models to rank the top 50 computer science universities worldwide, using only their internal knowledge and intuition. Here's what they said.
