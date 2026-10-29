@@ -122,7 +122,7 @@
         <li><a href="{{ author.researchgate }}"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i> ResearchGate</a></li>
       {% endif %}
       {% if author.twitter %}
-        <li><a href="https://twitter.com/{{ author.twitter }}"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        <li><a href="https://x.com/{{ author.twitter }}" aria-label="X" title="X">{% include social-icon.html icon="x" %} X</a></li>
       {% endif %}
       {% if author.facebook %}
         <li><a href="https://www.facebook.com/{{ author.facebook }}"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
@@ -179,7 +179,7 @@
         <li><a href="https://www.weibo.com/{{ author.weibo }}"><i class="fab fa-fw fa-weibo" aria-hidden="true"></i> Weibo</a></li>
       {% endif %}
       {% if author.xiaohongshu %}
-        <li><a href="{{ author.xiaohongshu }}"><span style="font-size: 1.2em;">📖</span> Xiaohongshu</a></li>
+        <li><a href="{{ author.xiaohongshu }}" aria-label="Xiaohongshu" title="Xiaohongshu">{% include social-icon.html icon="xiaohongshu" %} Xiaohongshu</a></li>
       {% endif %}
       {% if author.flickr %}
         <li><a href="https://www.flickr.com/{{ author.flickr }}"><i class="fab fa-fw fa-flickr" aria-hidden="true"></i> Flickr</a></li>
@@ -220,7 +220,7 @@
         <a href="{{ author.researchgate }}"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i></a>
       {% endif %}
       {% if author.twitter %}
-        <a href="https://twitter.com/{{ author.twitter }}"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i></a>
+        <a href="https://x.com/{{ author.twitter }}" aria-label="X" title="X">{% include social-icon.html icon="x" %}</a>
       {% endif %}
       {% if author.facebook %}
         <a href="https://www.facebook.com/{{ author.facebook }}"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i></a>
@@ -277,7 +277,7 @@
         <a href="https://www.weibo.com/{{ author.weibo }}"><i class="fab fa-fw fa-weibo" aria-hidden="true"></i></a>
       {% endif %}
       {% if author.xiaohongshu %}
-        <a href="{{ author.xiaohongshu }}"><span style="font-size: 1.2em;">📖</span></a>
+        <a href="{{ author.xiaohongshu }}" aria-label="Xiaohongshu" title="Xiaohongshu">{% include social-icon.html icon="xiaohongshu" %}</a>
       {% endif %}
       {% if author.flickr %}
         <a href="https://www.flickr.com/{{ author.flickr }}"><i class="fab fa-fw fa-flickr" aria-hidden="true"></i></a>
