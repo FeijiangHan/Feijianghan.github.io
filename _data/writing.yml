@@ -1,0 +1,55 @@
+- id: agentic-rl
+  path: /reports/agentic-rl/
+  title: "Agentic RL, from the inside out — A Reading Field Guide"
+  description: "A free agentic reinforcement learning guide connecting Search-R1, Agent Lightning, and a survey through nine reading sessions and 27 research questions."
+  language: en
+  type: Article
+  category: Reading Guides
+  featured: true
+  image: /reports/agentic-rl/social.png
+- id: embodied-ai
+  path: /reports/embodied-ai-reading-plan.html
+  title: "具身智能入门：VLA、世界模型与 WAM 的三周阅读路线图"
+  description: "面向 LLM/VLM 研究者的具身智能三周入门路线图，涵盖视觉语言动作模型 VLA、世界模型、WAM、核心论文与动手项目。"
+  language: zh-CN
+  type: Article
+  category: Reading Guides
+  featured: true
+- id: diffusion-tutorial
+  path: /reports/diffusion_tutorial.html
+  title: "从噪声到动作：视频生成与扩散模型完全教程"
+  description: "从第一原理理解扩散模型、Flow Matching、视频生成与动作建模，串联数学直觉、模型原理、代表论文和具身智能应用。"
+  language: zh-CN
+  type: Article
+  category: Tutorials & Research Practice
+  featured: true
+- id: ai-reviewer
+  path: /reports/ai-reviewer.html
+  title: "Better AI-Assisted Paper Review with Dynamic Reviewer Personas"
+  description: "A practical guide to AI-assisted paper review using dynamic reviewer personas, structured prompts, and critical questions for research feedback."
+  language: en
+  type: Article
+  category: Tutorials & Research Practice
+  featured: true
+- id: llm-cs-rankings
+  path: /reports/llm_cs_rankings.html
+  title: "Where do AI models agree — and disagree — on the world's top CS schools?"
+  description: "An exploratory comparison of 11 language models' subjective CS university rankings, examining agreement, disagreement, and geographic patterns."
+  language: en
+  type: Article
+  category: Research Explorations
+  featured: true
+- id: ica-proposal
+  path: /reports/ica-proposal.html
+  title: "Interpretable directions in LLM hidden states"
+  description: "A CMSC838B project proposal on finding interpretable directions in language model activations by directly optimizing non-Gaussianity."
+  language: en
+  type: WebPage
+  featured: false
+- id: reviewer-comparison
+  path: /papers/reviewer_comparison.html
+  title: "AI Reviewer Persona Comparison — ICLR Experiment Dashboard"
+  description: "An interactive dashboard comparing AI reviewer configurations, score alignment, decision accuracy, diversity, and cost in an ICLR review experiment."
+  language: en
+  type: WebPage
+  featured: false

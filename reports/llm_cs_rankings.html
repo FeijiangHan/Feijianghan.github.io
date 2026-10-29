@@ -1,9 +1,14 @@
+---
+layout: null
+article_id: llm-cs-rankings
+permalink: /reports/llm_cs_rankings.html
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LLM CS University Rankings · Comparative Analysis</title>
+
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -479,6 +484,7 @@ footer {
   .hero h1 { font-size: 26px; }
 }
 </style>
+{% include discovery-head.html %}
 </head>
 <body>
 
@@ -613,7 +619,7 @@ footer {
     How similar are two models' ranking preferences? Correlation is computed over the consensus top 50 schools. Missing ranks treated as 75. Higher = more agreement.
   </p>
   <div style="overflow-x:auto;margin-bottom:48px;" id="corr-matrix-wrap"></div>
-  
+
   <div class="section-header"><h2>Correlation Bar Chart</h2><span class="badge">Average correlation per model</span></div>
   <div id="avg-corr-chart" style="margin-bottom:48px;max-width:600px;"></div>
 </section>
@@ -973,7 +979,7 @@ function buildConsensus() {
 function buildHeatmap() {
   heatmapBuilt = true;
   const container = document.getElementById('heatmap-container');
-  
+
   let html = '<table class="heatmap-table"><thead><tr>';
   html += '<th style="text-align:right;padding-right:8px;color:var(--text-dim)">#</th>';
   html += '<th class="school-col">University</th>';
@@ -983,7 +989,7 @@ function buildHeatmap() {
   // CSRankings header
   html += `<th style="color:${CSR_COLOR};border-left:2px solid #fde68a">CSRankings<br><span style="font-weight:400;font-size:9px">2016–26</span></th>`;
   html += '</tr></thead><tbody>';
-  
+
   DATA.top50.forEach((school, i) => {
     html += `<tr>`;
     html += `<td class="row-rank">${i+1}</td>`;
@@ -1017,7 +1023,7 @@ function buildHeatmap() {
     }
     html += '</tr>';
   });
-  
+
   html += '</tbody></table>';
   container.innerHTML = html;
 }
@@ -1067,35 +1073,35 @@ function renderBump() {
   // columns = 11 LLMs + CSRankings
   const llmModels = DATA.models;
   const allCols = [...llmModels, 'CSRankings\n2021–2026'];
-  
+
   const W = Math.max(1100, allCols.length * 95);
   const H = 580;
   const padL = 44, padR = 44, padT = 70, padB = 60;
   const chartW = W - padL - padR;
   const chartH = H - padT - padB;
   const cols = allCols.length;
-  
+
   const xPos = (i) => padL + (i / (cols - 1)) * chartW;
   const yPos = (rank) => {
     if (!rank) return null;
     return padT + ((rank - 1) / 49) * chartH;
   };
-  
+
   // Color per school — stable palette
   const schoolColors = {};
   const palette = ['#2563eb','#d97706','#059669','#dc2626','#7c3aed','#0891b2','#db2777','#65a30d','#ea580c','#0284c7','#9333ea','#b45309','#16a34a','#e11d48','#4338ca'];
   const schoolList = DATA.top50.filter(s => activeBumpSchools.has(s.name));
   schoolList.forEach((s, i) => { schoolColors[s.name] = palette[i % palette.length]; });
-  
+
   const CSR_COL_COLOR = '#b45309'; // amber for CSRankings column
-  
+
   let svg = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" style="max-width:100%;display:block">`;
   svg += `<style>.bump-line{stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:0.9}.bump-label{font-family:'JetBrains Mono',monospace;font-size:10px}</style>`;
-  
+
   // CSRankings column separator
   const csrX = xPos(cols - 1);
   svg += `<rect x="${csrX - 30}" y="${padT - 20}" width="60" height="${chartH + 40}" rx="6" fill="rgba(180,83,9,0.06)" stroke="rgba(180,83,9,0.18)" stroke-width="1"/>`;
-  
+
   // Grid lines
   for (let i = 0; i < cols; i++) {
     const x = xPos(i);
@@ -1106,14 +1112,14 @@ function renderBump() {
     svg += `<text x="${x}" y="${padT - 24}" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9.5" font-weight="600" fill="${colColor}">${label}</text>`;
     if (label2) svg += `<text x="${x}" y="${padT - 12}" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="${colColor}">${label2}</text>`;
   }
-  
+
   // Rank guides
   [1,5,10,15,20,25,30,40,50].forEach(r => {
     const y = yPos(r);
     svg += `<line x1="${padL}" y1="${y}" x2="${W-padR}" y2="${y}" stroke="rgba(0,0,0,0.05)" stroke-width="1" stroke-dasharray="3,4"/>`;
     svg += `<text x="${padL - 6}" y="${y + 4}" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="9" fill="rgba(0,0,0,0.28)">${r}</text>`;
   });
-  
+
   // Lines per school
   schools.forEach(school => {
     const color = schoolColors[school.name];
@@ -1124,7 +1130,7 @@ function renderBump() {
       else r = CSR_RANK[school.name] || null;
       return r ? {x: xPos(ci), y: yPos(r), r} : null;
     });
-    
+
     // Draw connected segments (skip nulls)
     let d = '';
     pts.forEach((p, pi) => {
@@ -1136,7 +1142,7 @@ function renderBump() {
       else d += ` L${p.x},${p.y}`;
     });
     if (d) svg += `<path class="bump-line" d="${d}" stroke="${color}"/>`;
-    
+
     pts.forEach((p, pi) => {
       if (!p) return;
       const colName = pi < llmModels.length ? allCols[pi] : 'CSRankings';
@@ -1145,7 +1151,7 @@ function renderBump() {
       svg += `<text x="${p.x}" y="${p.y - 9}" text-anchor="middle" class="bump-label" fill="${dotColor}">${p.r}</text>`;
     });
   });
-  
+
   // Legend at bottom
   let legX = padL, legY = H - 16;
   schools.forEach(s => {
@@ -1161,7 +1167,7 @@ function renderBump() {
     svg += `<text x="${legX + 13}" y="${legY + 4}" font-family="Outfit,sans-serif" font-size="11" fill="${c}">${shortName}</text>`;
     legX += tw;
   });
-  
+
   svg += '</svg>';
   wrap.innerHTML = svg;
 }
@@ -1171,13 +1177,13 @@ function buildCorrelation() {
   corrBuilt = true;
   const models = DATA.models;
   const corr = DATA.correlations;
-  
+
   let html = '<table class="corr-table"><thead><tr><th></th>';
   models.forEach(m => {
     html += `<th style="color:${MODEL_COLORS[m]};writing-mode:vertical-rl;transform:rotate(180deg);height:80px;text-align:left">${m}</th>`;
   });
   html += '</tr></thead><tbody>';
-  
+
   models.forEach(m1 => {
     html += `<tr><td class="corr-label" style="color:${MODEL_COLORS[m1]}">${m1}</td>`;
     models.forEach(m2 => {
@@ -1202,14 +1208,14 @@ function buildCorrelation() {
   });
   html += '</tbody></table>';
   document.getElementById('corr-matrix-wrap').innerHTML = html;
-  
+
   // Average correlation bar chart
   const avgCorrs = models.map(m => {
     const others = models.filter(m2 => m2 !== m);
     const avg = others.reduce((s, m2) => s + corr[m][m2], 0) / others.length;
     return { model: m, avg };
   }).sort((a, b) => b.avg - a.avg);
-  
+
   let barHtml = '';
   const maxAvg = avgCorrs[0].avg;
   avgCorrs.forEach(({ model, avg }) => {
@@ -1262,5 +1268,6 @@ buildModelCards();
 buildCoverageChart();
 buildConsensus();
 </script>
+<aside class="author-discovery" aria-label="Author and related writing">Published by <a href="https://feijianghan.com/" rel="author">Feijiang Han</a> · <a href="https://feijianghan.com/writing/">More writing &amp; reading guides</a></aside>
 </body>
 </html>

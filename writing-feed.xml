@@ -1,0 +1,13 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+<title>Feijiang Han — Writing &amp; Reading Guides</title>
+<link>{{ '/writing/' | absolute_url }}</link>
+<description>Research guides, tutorials, and explorations by Feijiang Han.</description>
+{% for entry in site.data.writing %}{% if entry.featured %}
+<item><title>{{ entry.title | xml_escape }}</title><link>{{ entry.path | absolute_url }}</link><guid isPermaLink="true">{{ entry.path | absolute_url }}</guid><description>{{ entry.description | xml_escape }}</description></item>
+{% endif %}{% endfor %}
+</channel></rss>

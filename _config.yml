@@ -9,6 +9,9 @@
 title                    : "Feijiang Han"
 description              : "Feijiang Han's Homepage"
 repository               : "Feijianghan/Feijianghan.github.io"
+url                      : "https://feijianghan.com"
+baseurl                  : ""
+seo_description          : "Feijiang Han, UMD CS PhD and UPenn alumnus. Research on mechanistic interpretability, language models, AI agents, and practical research reading guides."
 
 # google analytics
 google_analytics_id      : G-XMDWG8RXJ1 # get google_analytics_id from https://analytics.google.com/analytics/

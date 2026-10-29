@@ -1,0 +1,19 @@
+---
+permalink: /writing/
+title: Writing & Reading Guides
+description: "Research reading guides, tutorials, tools, and explorations by Feijiang Han, covering agentic RL, embodied AI, diffusion models, and AI-assisted research."
+---
+<h1>Writing & Reading Guides</h1>
+<p>Reading guides, tutorials, and research explorations by <a href="/">Feijiang Han</a>. These resources connect papers, practical tools, and questions worth investigating.</p>
+{% assign categories = 'Reading Guides|Tutorials & Research Practice|Research Explorations' | split: '|' %}
+{% for category in categories %}
+<h2>{{ category }}</h2>
+<ul class="writing-list">
+{% for entry in site.data.writing %}{% if entry.featured and entry.category == category %}
+  <li lang="{{ entry.language }}"><h3><a href="{{ entry.path }}">{{ entry.title }}</a></h3><p>{{ entry.description }}</p><small>{% if entry.language == 'en' %}English{% else %}中文{% endif %}</small></li>
+{% endif %}{% endfor %}
+</ul>
+{% endfor %}
+<h2>Research Tools & Community Discussions</h2>
+<p><a href="https://github.com/FeijiangHan/PaperForge">PaperForge</a> · <a href="https://github.com/FeijiangHan/Top-Conference-Best-Papers">Top Conference Best Papers</a> · <a href="/#reading-community">Discussions on X and Xiaohongshu</a></p>
+<p><a href="/writing-feed.xml">Subscribe to the writing feed</a> · <a href="/llms.txt">Site content directory</a></p>

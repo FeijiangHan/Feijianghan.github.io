@@ -19,6 +19,10 @@ Source for [feijianghan.com](https://feijianghan.com), built with Jekyll and pub
 | `_sass/_home.scss` | Homepage layout, responsive styles, and interactive states |
 | `assets/js/home.js` | Publication filters, accessible navigation, pronunciation, and local time |
 | `scripts/serve.sh` | Local Jekyll preview |
+| `_data/writing.yml` | Shared article titles, descriptions, canonical paths, and writing-directory entries |
+| `_includes/discovery-head.html` | Article metadata and JSON-LD shared by standalone reports |
+| `_pages/writing.html` | Public writing and reading-guide directory |
+| `robots.txt`, `sitemap.xml`, `llms.txt`, `writing-feed.xml` | Crawler rules, generated sitemap, content directory, and writing feed |
 
 Each full paper has a stable `data-paper-id` and a topic (`data-interest="1"`, `"2"`, or `"3"`). Add its ID to `_data/publication-highlights.yml` to highlight it. Highlights and topic filters work independently. All publications remain visible when JavaScript is unavailable.
 
@@ -40,6 +44,8 @@ bundle exec jekyll build
 ```
 
 The GitHub Actions verification workflow builds the site using the official GitHub Pages Jekyll action. No citation crawler or automatic GitHub profile updater is used.
+
+Standalone HTML reports use `layout: null` front matter and the shared discovery include; their original designs and interactions remain self-contained. The Agentic RL guide also includes a readable outline generated from its existing session data, so the nine-session plan is present in the initial HTML. Update that outline alongside the session data when editing the curriculum. `llms.txt` is an optional content directory, not a search-ranking mechanism. No social engagement counts or article publication dates are inferred.
 
 ## Restoring the previous design
 

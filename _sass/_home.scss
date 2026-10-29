@@ -96,6 +96,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .news-scroll:focus
 }
 .news-scroll ul { margin-top: .2em; margin-bottom: .2em; }
 .scroll-hint { margin: .55em 0 1.5em !important; color: #7a8288; font-size: .8em !important; }
+.community-discussions { margin: 1.1em 0; padding: .9em 1.1em; border-left: 3px solid #a8bad2; background: #f7f9fc; border-radius: 0 5px 5px 0; }
+.community-discussions ul { margin-bottom: 0; }
+.writing-list { padding-left: 1.2em; }
+.writing-list li { margin-bottom: 1.5em; }
+.writing-list h3 { margin-bottom: .4em; line-height: 1.5; }
+.writing-list small { color: #697483; }
 
 /* Shared SVG sizing keeps brand marks and metadata on the same baseline. */
 .profile-social-icon {

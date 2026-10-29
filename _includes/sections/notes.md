@@ -12,6 +12,18 @@
 
 - [A curated list of **Best Paper Award** winners from top ML/NLP venues (ICLR, NeurIPS, ICML, ACL, EMNLP, NAACL, AAAI, and more), covering **2022–2026**](https://github.com/FeijiangHan/Top-Conference-Best-Papers){:target="_blank"} - A resource for developing research taste.
 
+<div class="community-discussions" id="reading-community" markdown="1">
+
+**Community discussions** · I share reading resources and discuss research practice on X and Xiaohongshu.
+
+- [Join the discussion on X](https://x.com/feijianghan/status/2115463997537255835){:target="_blank" rel="noopener"}
+- [用 AI 读论文两年半，我认为最好用的 prompt · Xiaohongshu](https://www.xiaohongshu.com/discovery/item/6a300c2e00000000060363b6?source=webshare&xhsshare=pc_web&xsec_token=ABYfMQEP9MGgfWyKvWBWs6xNvvKB4S0bZZnSZV1z99gBc=&xsec_source=pc_share){:target="_blank" rel="noopener"}
+- [如何提高 research taste 的一些思考 — AI 方向 · Xiaohongshu](https://www.xiaohongshu.com/discovery/item/6983f11e000000000d009446?source=webshare&xhsshare=pc_web&xsec_token=ABEiJY0PJd2kt1Bf2h1cr6aFAfzmpvO7kBqG7I9qQ8y-0=&xsec_source=pc_share){:target="_blank" rel="noopener"}
+
+</div>
+
+[Browse all writing, tutorials, and reading guides →](/writing/)
+
 ### Research Explorations
 
 - [Where do AI models agree — and disagree — on the world's top CS schools?](https://feijianghan.com/reports/llm_cs_rankings){:target="_blank"} - We asked 11 leading large language models to rank the top 50 computer science universities worldwide, using only their internal knowledge and intuition. Here's what they said.
