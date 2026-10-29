@@ -79,6 +79,23 @@
 }
 .name-say-btn:hover::after,
 .name-say-btn:hover::before { opacity: 1; }
+/* Local SVG brand marks share the fixed-width column of the font icons. */
+.author__urls-wrapper .profile-social-icon {
+  display: inline-flex;
+  width: 1.25em;
+  height: 1em;
+  align-items: center;
+  justify-content: center;
+  vertical-align: -0.125em;
+}
+
+.author__urls-wrapper .profile-social-icon svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+  flex: none;
+}
+
 </style>
 
 <script>
