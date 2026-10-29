@@ -9,7 +9,6 @@
 title                    : "Feijiang Han"
 description              : "Feijiang Han's Homepage"
 repository               : "Feijianghan/Feijianghan.github.io"
-google_scholar_stats_use_cdn : false
 
 # google analytics
 google_analytics_id      : G-XMDWG8RXJ1 # get google_analytics_id from https://analytics.google.com/analytics/
@@ -30,37 +29,11 @@ author:
   bio              : "NLPer @ UPenn | Developing Efficient, Effective, and Explainable Methods for (M)LLMs"
   location         : "Philadelphia, USA"
   employer         : "University of Pennsylvania"
-  pubmed           : 
   googlescholar    : "https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ"
   email            : "feijianghan@gmail.com"
-  researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
-  uri              :
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
   github           : "Feijianghan"
-  google_plus      :
-  keybase          :
-  instagram        :
-  impactstory      : # e.g., "https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
-  lastfm           :
   linkedin         : "feijianghan"
-  dblp             : # e.g., "https://dblp.org/pid/xx/xxxx.html"
-  orcid            : # e.g., "https://orcid.org/xxxx"
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            :
-  tumblr           :
   twitter          : "feijianghan"
-  vine             :
-  weibo            :
-  xing             :
-  youtube          :
-  wikipedia        :
   xiaohongshu     : "https://www.xiaohongshu.com/user/profile/5f96bb470000000001009db4"
 
 
@@ -71,7 +44,6 @@ include:
   - files
 exclude:
   - docs
-  - google_scholar_crawler
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -86,9 +58,7 @@ exclude:
   - LICENSE
   - README
   - Rakefile
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
+  - scripts
   - config
   - gulpfile.js
   - log
@@ -164,5 +134,4 @@ whitelist:
 # - http://jch.penibelst.de/
 compress_html:
   clippings: all
-  ignore:
     envs: development

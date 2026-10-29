@@ -1,0 +1,18 @@
+- label: Email
+  icon: email
+  url: mailto:feijianghan@gmail.com
+- label: X
+  icon: x
+  url: https://x.com/feijianghan
+- label: LinkedIn
+  icon: linkedin
+  url: https://www.linkedin.com/in/feijianghan
+- label: GitHub
+  icon: github
+  url: https://github.com/FeijiangHan
+- label: Xiaohongshu
+  icon: xiaohongshu
+  url: https://www.xiaohongshu.com/user/profile/5f96bb470000000001009db4
+- label: Google Scholar
+  icon: scholar
+  url: https://scholar.google.com.hk/citations?user=PEJ5x3EAAAAJ

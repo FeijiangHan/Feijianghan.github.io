@@ -1,0 +1,28 @@
+name: Verify homepage
+
+on:
+  push:
+    branches: [main, refinement/2026-10-29]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build with the GitHub Pages Jekyll environment
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Check rendered navigation, content, and assets
+        run: python3 scripts/verify-site.py _site
+      - name: Upload the rendered site for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: rendered-homepage
+          path: _site/
+          retention-days: 7

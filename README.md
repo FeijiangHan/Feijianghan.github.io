@@ -1,76 +1,50 @@
+# Feijiang Han’s homepage
 
-<h1 align="center">
-AcadHomepage
-</h1>
+Source for [feijianghan.com](https://feijianghan.com), built with Jekyll and published through GitHub Pages.
 
-<div align="center">
+## Editing the homepage
 
-[![](https://img.shields.io/github/stars/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/forks/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/issues/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/license/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io/blob/main/LICENSE)  | [中文文档](./docs/README-zh.md) 
-</div>
+| Location | Purpose |
+| --- | --- |
+| `_pages/about.md` | Introduction, research interests, philosophy, and personal notes |
+| `_includes/sections/news.md` | News entries, newest first; fixed-height scroll area |
+| `_includes/sections/publications.md` | Complete publication content, figures, abstracts, and video |
+| `_data/publication-highlights.yml` | Paper IDs selected for the default Highlights view |
+| `_includes/sections/honors.md` | Honors and awards |
+| `_includes/sections/notes.md` | Reading guides, research tools, explorations, and experiences |
+| `_data/navigation.yml` | Links to existing homepage sections |
+| `_data/profile-links.yml` | Social and contact links for desktop and mobile |
+| `_config.yml` | Personal profile, analytics, and Jekyll settings |
+| `_includes/social-icon.html` | Local SVG icon definitions |
+| `_sass/_home.scss` | Homepage layout, responsive styles, and interactive states |
+| `assets/js/home.js` | Publication filters, accessible navigation, pronunciation, and local time |
+| `scripts/serve.sh` | Local Jekyll preview |
 
-<p align="center">A Modern and Responsive Academic Personal Homepage</p>
+Each full paper has a stable `data-paper-id` and a topic (`data-interest="1"`, `"2"`, or `"3"`). Add its ID to `_data/publication-highlights.yml` to highlight it. Highlights and topic filters work independently. All publications remain visible when JavaScript is unavailable.
 
-<p align="center">
-    <br>
-    <img src="docs/screenshot.png" width="100%"/>
-    <br>
-</p>
+Public URLs under `images/`, `papers/`, `reports/`, and `videos/` are intentionally retained so previously shared links keep working. Unused personal image variants are in `images/archive/`. Theme support styles and licensed fonts remain in `_sass/vendor/` and `assets/fonts/`.
 
-Some examples:
-- [Demo Page](https://rayeren.github.io/acad-homepage.github.io/)
-- [Personal Homepage of the author](https://rayeren.github.io/)
+## Local development
 
-## Key Features
-- **Automatically update google scholar citations**: using the google scholar crawler and github action, this REPO can update the author citations and publication citations automatically.
-- **Support Google analytics**: you can trace the traffics of your homepage by easy configuration.
-- **Responsive**: this homepage automatically adjust for different screen sizes and viewports.
-- **Beautiful and Simple Design**: this homepage is beautiful and simple, which is very suitable for academic personal homepage.
-- **SEO**: search Engine Optimization (SEO) helps search engines find the information you publish on your homepage easily, then rank it against similar websites.
+With Ruby and Bundler installed:
 
-## Quick Start
+```sh
+bundle install
+bash scripts/serve.sh
+```
 
-1. Fork this REPO and rename to `USERNAME.github.io`, where `USERNAME` is your github USERNAME.
-1. Configure the google scholar citation crawler:
-    1. Find your google scholar ID in the url of your google scholar page (e.g., https://scholar.google.com/citations?user=SCHOLAR_ID), where `SCHOLAR_ID` is your google scholar ID.
-    1. Set GOOGLE_SCHOLAR_ID variable to your google scholar ID in `Settings -> Secrets -> Actions -> New repository secret` of the REPO website with `name=GOOGLE_SCHOLAR_ID` and `value=SCHOLAR_ID`.
-    1. Click the `Action` of the REPO website and enable the workflows by clicking *"I understand my workflows, go ahead and enable them"*. This github action will generate google scholar citation stats data `gs_data.json` in `google-scholar-stats` branch of your REPO. When you update your main branch, this action will be triggered. This action will also be trigger 08:00 UTC everyday.
-1. Generate favicon using [favicon-generator](https://redketchup.io/favicon-generator) and download all generated files to `REPO/images`.
-1. Modify the configuration of your homepage `_config.yml`:
-    1. `title`: the title of your homepage
-    1. `description`: the description of your homepage
-    1. `repository`: USER_NAME/REPO_NAME  
-    1. `google_analytics_id` (optional): google analytics ID
-    1. SEO Related keys (optional): get these keys from search engine consoles (e.g. Google, Bing and Baidu) and paste here.
-    1. `author`: the author information of this homepage, including some other websites, emails, city and univeristy.
-    1. More configuration details are described in the comments.
-1. Add your homepage content in `_pages/about.md`.
-    1. You can use html+markdown syntax just same as jekyll.
-    1. You can use a `<span>` tag with class `show_paper_citations` and attribute `data` to display the citations of your paper. Set the data to the google scholar paper ID. For
-        ```html
-        <span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span>
-        ``` 
-        > Q: How to get the google scholar paper ID?   
-        > A: Enter your google scholar homepage and click the paper name. Then you can see the paper ID from `citation_for_view=XXXX`, where `XXXX` is the required paper ID.
-1. Your page will be published at `https://USERNAME.github.io`.
+To build without starting a server:
 
-## Debug Locally
+```sh
+bundle exec jekyll build
+```
 
-1. Clone your REPO to local using `git clone`.
-1. Install Jekyll building environment, including `Ruby`, `RubyGems`, `GCC` and `Make` following [the installation guide](https://jekyllrb.com/docs/installation/#requirements).
-1. Run `bash run_server.sh` to start Jekyll livereload server.
-1. Open http://127.0.0.1:4000 in your browser.
-1. If you change the source code of the website, the livereload server will automatically refresh.
-1. When you finish the modification of your homepage, `commit` your changings and `push` to your remote REPO using `git` command.
+The GitHub Actions verification workflow builds the site using the official GitHub Pages Jekyll action. No citation crawler or automatic GitHub profile updater is used.
 
-# Acknowledges
+## Restoring the previous design
 
-- AcadHomepage incorporates Font Awesome, which is distributed under the terms of the SIL OFL 1.1 and MIT License.
-- AcadHomepage is influenced by the github repo [mmistakes/minimal-mistakes](https://github.com/mmistakes/minimal-mistakes), which is distributed under the MIT License.
-- AcadHomepage is influenced by the github repo [academicpages/academicpages.github.io](https://github.com/academicpages/academicpages.github.io), which is distributed under the MIT License.
+The `backup/pre-refinement-2026-10-29` branch preserves the complete version before the first refinement pass, at commit `6ffcffc79172c8bca8e07a0cf5d1e2f521fcc195`. It can be compared with `main` or used as a restore source without rewriting history.
 
-- https://search.google.com/search-console?resource_id=https%3A%2F%2Fwww.feijianghan.com%2F
-- https://www.bing.com/webmasters/home?siteUrl=https://www.feijianghan.com
-- 
+## Credits
+
+The original theme is based on AcadHomepage, Minimal Mistakes, and Academic Pages. Their MIT license notices are retained. Font Awesome artwork is distributed under its applicable OFL/MIT/CC BY licenses; Academicons artwork is distributed under its OFL license. X and Xiaohongshu marks come from Simple Icons (CC0). Brand marks identify their respective services.

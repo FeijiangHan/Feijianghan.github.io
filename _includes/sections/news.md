@@ -1,6 +1,9 @@
 <span class='anchor' id='news'></span>
 
 # 🔥 News & Milestones
+
+<div class="news-scroll" role="region" aria-label="News and milestones, scroll for older updates" tabindex="0" markdown="1">
+
 - *May 2026*: &nbsp;🎓 Graduated from the **University of Pennsylvania**!
 - *April 2026*: &nbsp;🏅 Honored to receive the **Outstanding Research Award** from the University of Pennsylvania!
 - *April 2026*: &nbsp;🎉 **ACL 2026 x 1**
@@ -13,3 +16,6 @@
 - *June 2025*: &nbsp;🎉 Paper published in **Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT) 2025**
 - *June 2025*: &nbsp;🎉 **MOSS@ICML2025**
 - *January 2025*: &nbsp;📝 Create my OpenReview account and led my first conference paper submission.
+
+</div>
+<p class="scroll-hint">Scroll for earlier updates ↓</p>

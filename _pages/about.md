@@ -7,105 +7,37 @@ redirect_from:
   - /about/
   - /about.html
 ---
-{% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
-{% else %}
-{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
-{% endif %}
-{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
 <span class='anchor' id='about-me'></span>
 
-<style>
-/* ─── ③ Smooth <details> ─── */
-details > summary {
-  cursor: pointer;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: .45em;
-  padding: .4em 0;
-  user-select: none;
-}
-details > summary::-webkit-details-marker,
-details > summary::marker { display: none; content: ''; }
-details > summary::before {
-  content: '▶';
-  font-size: .6em;
-  color: #5B6E91;
-  transition: transform .3s cubic-bezier(.4,0,.2,1);
-  flex-shrink: 0;
-}
-details[open] > summary::before { transform: rotate(90deg); }
-details > div {
-  overflow: hidden;
-  transition: max-height .42s cubic-bezier(.4,0,.2,1), opacity .35s ease;
-}
-
-/* ─── ④ Attention keyword glow ─── */
-.aw {
-  border-radius: 3px;
-  padding: 0 2px;
-  cursor: default;
-  transition: background .3s ease, text-shadow .3s ease;
-}
-.aw:hover {
-  background: linear-gradient(120deg, rgba(91,110,145,.18), rgba(139,92,246,.14));
-  text-shadow: 0 0 8px rgba(91,110,145,.45);
-}
-.aw[data-w="high"]:hover {
-  background: linear-gradient(120deg, rgba(91,110,145,.26), rgba(139,92,246,.22));
-  text-shadow: 0 0 12px rgba(91,110,145,.65);
-  box-shadow: 0 1px 0 rgba(91,110,145,.3);
-}
-
-/* ─── ⑤ Research tag chips ─── */
-.research-tags { display: inline-flex; flex-wrap: wrap; gap: .35em; vertical-align: middle; }
-.rtag {
-  display: inline-block; padding: .18em .65em;
-  border-radius: 999px; font-size: .82em; font-weight: 500;
-  border: 1.5px solid; cursor: default;
-  transition: background .25s, box-shadow .25s, transform .2s;
-}
-.rtag:hover { transform: translateY(-1px); }
-.rtag-purple { color: #7C3AED; border-color: rgba(124,58,237,.45); background: rgba(124,58,237,.06); }
-.rtag-purple:hover { background: rgba(124,58,237,.14); box-shadow: 0 0 10px rgba(124,58,237,.28); }
-.rtag-blue   { color: #2563EB; border-color: rgba(37,99,235,.45);  background: rgba(37,99,235,.06); }
-.rtag-blue:hover   { background: rgba(37,99,235,.14); box-shadow: 0 0 10px rgba(37,99,235,.28); }
-.rtag-green  { color: #059669; border-color: rgba(5,150,105,.45);  background: rgba(5,150,105,.06); }
-.rtag-green:hover  { background: rgba(5,150,105,.14); box-shadow: 0 0 10px rgba(5,150,105,.28); }
-.rtag-amber  { color: #D97706; border-color: rgba(217,119,6,.45);  background: rgba(217,119,6,.06); }
-.rtag-amber:hover  { background: rgba(217,119,6,.14); box-shadow: 0 0 10px rgba(217,119,6,.28); }
-</style>
-
 I am a first-year CS Ph.D. student at the University of Maryland <img src='./images/umd.png' style="width: 1.35em;">, working with [Prof. Furong Huang](https://furong-huang.com/) and collaborating with [Prof. Sarah Wiegreffe](https://sarahwie.github.io/). I received my master’s degree from the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, where I worked with [Prof. Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/), [Prof. Lyle Ungar](https://www.cis.upenn.edu/~ungar/), [Delip Rao](https://deliprao.com/), and [Dr. Xiaodong Yu](https://www.xiaodongyu.me/).
 
-**Goal:** Build mechanism-guided AI systems that can understand the world, improve themselves, and still remain understandable and controllable to humans. 
+**Goal:** Build AI systems that use insights into their own mechanisms to understand the world and improve themselves, while remaining understandable and controllable to humans.
 
 **Research Topics:** {LLMs, VLMs, Agents, Cognitive Science}
 
 **Research Questions:**
-- **Model level:** How can we understand models more accurately, including how knowledge is stored, how training dynamics shape representations, how fine-tuning changes behavior, and how attention, circuits, and other internal structures interact? Can these insights serve as first principles for designing better AI systems, from training to collaboration to self-evolution?
-- **Agent level:** Can an agent understand which of its own internal representations, skills, and strategies are useful, and use that understanding to decide what to reinforce, compose, modify, or discard?
+- **Model level:** How do models store knowledge, how do training and fine-tuning shape their representations and behavior, and how do attention, circuits, and other internal structures interact? Can we turn this understanding into principles for building better AI systems—from training and collaboration to self-improvement?
+- **Agent level:** Can agents identify which of their internal representations, skills, and strategies are useful, then use that understanding to decide what to reinforce, combine, modify, or discard?
 
 My past work spans two complementary directions:
 
 <div style="display: flex; gap: 2em; align-items: flex-start; margin: 2em 0; flex-wrap: wrap;">
-  <div style="flex: 1; min-width: 300px; max-width: 500px;">
-    <img src="/images/research-pipeline.png" alt="Research Pipeline: Effective • Efficient • Explainable" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <div style="flex: 1; min-width: min(300px, 100%); max-width: 500px;">
+    <img src="/images/research-pipeline.png" alt="Research Pipeline: Effective • Efficient • Explainable" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 1px 5px rgba(0,0,0,0.06);">
     <p style="margin-top: 0.5em; color: #666; font-size: 0.9em; font-style: italic; text-align: center;">From understanding → to reliable impact → to continual improvement</p>
   </div>
-  <div style="flex: 1; min-width: 300px;">
+  <div style="flex: 1; min-width: min(300px, 100%);">
     <ul style="list-style: none; padding-left: 0; margin: 0;">
       <li style="margin-bottom: 1.5em;">
-        <strong>1. Mechanism-driven Understanding and Optimization</strong>: I study the internals of LLMs and VLMs. I believe interpretability should help us optimize and control models, not just describe them after the fact. Recent work includes revisiting ICA as a compact first lens for exploring interpretable directions in LLM activations without training another sparse dictionary (<a href="https://liusida.github.io/ica-lens-paper/">ICALens, arXiv 2026</a>), understanding why attention sinks emerge and how to steer them (<a href="https://arxiv.org/abs/2505.11739">ZeroTuning, ICLR 2026</a>), diagnosing comprehension failures through the lens of attention (<a href="https://arxiv.org/abs/2504.09402v2">SSR, ICASSP 2026</a>), and building the first unified framework for Actionable Mechanistic Interpretability in LLMs (<a href="https://arxiv.org/abs/2601.14004">Locate, Steer, and Improve, ACL 2026</a>).<br>
+        <strong>1. Mechanism-driven Understanding and Optimization</strong>: I study the internals of LLMs and VLMs. I believe interpretability should help us optimize and control models, not just describe them after the fact. Recent work includes revisiting ICA as a compact first lens for exploring interpretable directions in LLM activations without training another sparse dictionary (<a href="https://liusida.github.io/ica-lens-paper/">ICALens, arXiv 2026</a>), understanding why attention sinks emerge and how to steer them (<a href="https://arxiv.org/abs/2505.11739">ZeroTuning, ICLR 2026</a>), diagnosing comprehension failures through the lens of attention (<a href="https://arxiv.org/abs/2504.09402v2">SSR, ICASSP 2026</a>), and organizing actionable mechanistic interpretability in LLMs into a unified framework (<a href="https://arxiv.org/abs/2601.14004">Locate, Steer, and Improve, ACL 2026</a>).<br>
         <!-- <span style="color: red;">(More: <a href="#why-i-care-about-interpretability" style="color: red;">Why I care about interpretability</a>)</span> -->
          <span style="font-size: 0.95em; color: #6B7280;">
           (<a href="#why-i-care-about-interpretability" style="color: #5B6E91;">Why I care about interpretability</a>)
         </span>
       </li>
       <li>
-        <strong>2. Model Adaptation and Alignment</strong>: I adapt foundation models into domain experts for settings where general models still struggle. Recent work includes the first fully LaTeX-derived layout annotation pipeline for large-scale document understanding (<a href="https://www.cis.upenn.edu/~ccb/publications/latex2layout.pdf">LaTeX2Layout, AAAI 2026</a>), LLM-based systems for million-token malicious code analysis (<a href="https://arxiv.org/abs/2504.13811v3">WebShell Detection, COLM 2025</a>; <a href="https://arxiv.org/abs/2512.05288">WebShell Classification, AAAI 2026</a>), and efficient and effective verifier for scientific claim verification (<a href="https://arxiv.org/abs/2604.01652">ThinknCheck, NLDB 2026</a>).<br>
+        <strong>2. Model Adaptation and Alignment</strong>: I adapt foundation models into domain experts for settings where general models still struggle. Recent work includes the first fully LaTeX-derived layout annotation pipeline for large-scale document understanding (<a href="https://www.cis.upenn.edu/~ccb/publications/latex2layout.pdf">LaTeX2Layout, AAAI 2026</a>), LLM-based systems for million-token malicious code analysis (<a href="https://arxiv.org/abs/2504.13811v3">WebShell Detection, COLM 2025</a>; <a href="https://arxiv.org/abs/2512.05288">WebShell Classification, AAAI 2026</a>), and a compact, reliable verifier for scientific claims (<a href="https://arxiv.org/abs/2604.01652">ThinknCheck, NLDB 2026</a>).<br>
         <span style="font-size: 0.95em; color: #6B7280;">
           (<a href="#why-i-care-about-model-adaptation" style="color: #5B6E91;">Why I care about model adaptation</a>)
         </span>
@@ -123,77 +55,7 @@ If our research interests align and you would like to collaborate, ask for advic
 
 <p style="color: #DC2626; margin-top: 0.8em;"><strong>I am actively looking for a 2027 Summer internship.</strong> If you think my work aligns with your team's, please feel free to reach out by email!</p>
 
-<script>
-(function() {
-  var el = document.getElementById('contact-local-time');
-  if (!el) return;
-  var tz = el.getAttribute('data-timezone') || 'America/New_York';
-  function update() {
-    try {
-      var formatter = new Intl.DateTimeFormat('en-US', {
-        timeZone: tz,
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true
-      });
-      el.textContent = formatter.format(new Date());
-    } catch (e) {
-      el.textContent = '—';
-    }
-  }
-  update();
-  setInterval(update, 60000);
-})();
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-
-  /* ══ ③ Smooth <details> expand / collapse ══ */
-  document.querySelectorAll('details').forEach(function (det) {
-    var sum = det.querySelector('summary'), con = det.querySelector('div');
-    if (!sum || !con) return;
-
-    // Set initial state without transition flash
-    con.style.maxHeight = det.open ? con.scrollHeight + 'px' : '0';
-    con.style.opacity   = det.open ? '1' : '0';
-
-    sum.addEventListener('click', function (e) {
-      e.preventDefault();
-      if (det.open) {
-        // ── Closing ──
-        con.style.maxHeight = con.scrollHeight + 'px';
-        requestAnimationFrame(function () {
-          con.style.maxHeight = '0';
-          con.style.opacity   = '0';
-        });
-        con.addEventListener('transitionend', function h(ev) {
-          if (ev.propertyName !== 'max-height') return;
-          det.removeAttribute('open');
-          con.removeEventListener('transitionend', h);
-        });
-      } else {
-        // ── Opening ──
-        det.setAttribute('open', '');
-        requestAnimationFrame(function () {
-          requestAnimationFrame(function () {
-            con.style.maxHeight = con.scrollHeight + 'px';
-            con.style.opacity   = '1';
-          });
-        });
-        con.addEventListener('transitionend', function h(ev) {
-          if (ev.propertyName !== 'max-height') return;
-          con.style.maxHeight = 'none'; // allow content to reflow freely
-          con.removeEventListener('transitionend', h);
-        });
-      }
-    });
-  });
-
-});
-</script>
-
-{% include_relative includes/news.md %}
+{% include sections/news.md %}
 
 # Why I'm excited about these problems
 
@@ -232,7 +94,7 @@ My hope is that interpretability can slowly move from biology-style observation 
 In the near term, I care most about making interpretability actionable. A good explanation should help us localize the issue, steer the behavior, and improve the model.
 
 <div style="margin: 2em 0; text-align: center;">
-  <img src="/images/llm_interpretability_overview.png" alt="Actionable Mechanistic Interpretability Framework" style="width: 100%; max-width: 900px; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <img src="/images/llm_interpretability_overview.png" alt="Actionable Mechanistic Interpretability Framework" style="width: 100%; max-width: 900px; height: auto; border-radius: 8px; box-shadow: 0 1px 5px rgba(0,0,0,0.06);">
   <p style="margin-top: 0.8em; color: #666; font-size: 0.9em; font-style: italic; max-width: 900px; margin-left: auto; margin-right: auto;">Actionable Mechanistic Interpretability: From Localizing and Steering to Model Improvement<br><span style="font-size: 0.85em;">(Figure from the survey "Locate, Steer, and Improve: A Practical Survey of Actionable Mechanistic Interpretability in Large Language Models")</span></p>
 </div>
 
@@ -262,7 +124,7 @@ So I care about a practical question: how do we turn a strong base model into a 
 I think about this in two layers, as illustrated below:
 
 <div style="margin: 2em 0; text-align: center;">
-  <img src="/images/model_adaptation_overview.png" alt="Model Adaptation Overview" style="width: 100%; max-width: 900px; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <img src="/images/model_adaptation_overview.png" alt="Model Adaptation Overview" style="width: 100%; max-width: 900px; height: auto; border-radius: 8px; box-shadow: 0 1px 5px rgba(0,0,0,0.06);">
   <p style="margin-top: 0.8em; color: #666; font-size: 0.9em; font-style: italic; max-width: 900px; margin-left: auto; margin-right: auto;">Novelty in Model Adaptation: Task-Specific vs Task-Agnostic Approaches</p>
 </div>
 
@@ -279,15 +141,11 @@ In the long run, I am optimistic about a system view of intelligence. Instead of
 </div>
 </details>
 
-{% include_relative includes/pub.md %}
+{% include sections/publications.md %}
 
-{% include_relative includes/honors.md %}
+{% include sections/honors.md %}
 
-<!-- {% include_relative includes/others.md %} -->
-
-{% include_relative includes/notes.md %}
-
-{% include_relative includes/schedule.md %}
+{% include sections/notes.md %}
 
 # Misc
 
