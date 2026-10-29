@@ -2,6 +2,16 @@
 (() => {
   'use strict';
 
+  // Preserve the original external-link behavior without a global base target,
+  // which would also open same-page navigation in a new tab.
+  document.querySelectorAll('a[href]').forEach(link => {
+    const destination = new URL(link.href, location.href);
+    if (destination.origin !== location.origin && /^https?:$/.test(destination.protocol)) {
+      link.target = '_blank';
+      link.rel = [...new Set(`${link.rel} noopener`.trim().split(/\s+/))].join(' ');
+    }
+  });
+
   const controls = document.getElementById('publication-controls');
   if (controls) {
     const papers = [...document.querySelectorAll('.paper-box[data-paper-id]')];

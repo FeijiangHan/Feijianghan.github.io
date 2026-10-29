@@ -132,7 +132,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .news-scroll:focus
 #site-nav .visible-links li { margin-bottom: 0; }
 #site-nav .visible-links a { margin: 0 .8em; }
 .masthead__menu-item--lg { padding-right: 1em; }
-.masthead__menu-item--lg + .masthead__menu-item { display: none; }
 
 @media (max-width: 924px) {
   .profile_box { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: .8em; align-items: center; }
@@ -166,7 +165,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .news-scroll:focus
   #site-nav .visible-links a { margin: 0; padding: .6em .3em; }
   #site-nav.is-open .visible-links { padding-top: 44px; }
   #site-nav.is-open .visible-links li { display: block; }
-  #site-nav.is-open .visible-links .masthead__menu-item--lg + .masthead__menu-item { display: none; }
   #site-nav.is-open .masthead__menu-home-item { position: absolute; top: 0; left: 0; }
   .no-js #site-nav .visible-links li { display: block; }
   .no-js #site-nav .nav-toggle { display: none; }
