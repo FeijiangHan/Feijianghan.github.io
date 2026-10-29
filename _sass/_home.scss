@@ -140,8 +140,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .news-scroll:focus
   .author__bio { line-height: 1.5; }
   .author__urls-wrapper { display: block; grid-column: 1 / -1; margin: 0; width: 100%; }
   .author__urls { display: none; }
-  .author__urls_sm { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: .2em; padding: 0; font-size: 1em; }
-  .author__urls_sm a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 6px; color: #526174; }
+  .author__urls_sm { display: flex; flex-wrap: nowrap; justify-content: flex-start; gap: 0; padding: 0; font-size: 1em; }
+  .author__urls_sm a { display: inline-flex; flex: 0 1 44px; min-width: 36px; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 6px; color: #526174; }
   .author__urls_sm a:hover { background: #f0f4f8; }
   .author__urls_sm .profile-social-icon { font-size: 21px; }
   .sidebar { margin-bottom: 1.5em; }
