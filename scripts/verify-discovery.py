@@ -44,7 +44,7 @@ class Metadata(HTMLParser):
 
 
 site = Path(sys.argv[1] if len(sys.argv) > 1 else '_site')
-paths = ['', 'writing/', 'reports/agentic-rl/', 'reports/embodied-ai-reading-plan.html',
+paths = ['', 'writing/', 'notes/', 'reports/agentic-rl/', 'reports/embodied-ai-reading-plan.html',
          'reports/diffusion_tutorial.html', 'reports/ai-reviewer.html',
          'reports/llm_cs_rankings.html', 'reports/ica-proposal.html', 'papers/reviewer_comparison.html']
 for path in paths:
@@ -64,6 +64,38 @@ for path in paths:
 home = (site / 'index.html').read_text()
 for post in ('2115463997537255835', '6a300c2e00000000060363b6', '6983f11e000000000d009446'):
     assert post in home, ('missing community post', post)
+assert '<h1>Resources</h1>' in home
+assert 'Community discussions</' not in home
+assert 'href="/#resources"' in home
+assert 'class="chinese-notes-scroll"' in home
+assert home.count('data-note-id=') == 9
+notes = (site / 'notes/index.html').read_text()
+assert notes.count('data-note-id=') == 9
+for post in ('6ac26805000000001a031356', '6ab96013000000001b01c8eb', '6a7306710000000033013eac',
+             '6a65d8d6000000001c00f767', '6a02a71b000000000702e368', '69cb60e4000000001a036780', '68e942a9000000000402adf7'):
+    assert post in home and post in notes, ('missing Chinese note', post)
+
+class ResourceReferences(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.current = None
+        self.links = {}
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == 'li' and 'resource-item' in attrs.get('class', '').split():
+            self.current = attrs['id']
+            self.links[self.current] = []
+        if tag == 'a' and self.current:
+            self.links[self.current].append(attrs.get('href', ''))
+    def handle_endtag(self, tag):
+        if tag == 'li':
+            self.current = None
+
+references = ResourceReferences()
+references.feed(home)
+for resource, post in [('agentic-rl', '2115463997537255835'), ('paperforge', '6a300c2e00000000060363b6'), ('best-papers', '6983f11e000000000d009446')]:
+    assert any(post in url for url in references.links['resource-' + resource]), ('discussion mismatch', resource)
+assert len(references.links) == 7
 guide = (site / 'reports/agentic-rl/index.html').read_text()
 assert 'id="full-reading-outline"' in guide
 assert guide.count('<section><h3>') == 9
@@ -83,4 +115,4 @@ for path in paths:
 feed = ET.parse(site / 'writing-feed.xml')
 assert len(feed.findall('.//item')) == 5
 assert 'https://feijianghan.com/writing/' in (site / 'llms.txt').read_text()
-print('Discovery verified: 9 pages with unique canonicals and valid JSON-LD; 3 social posts; 9 static reading sessions; HTTPS sitemap, robots, directory, and 5-entry feed.')
+print('Discovery verified: 10 pages with unique canonicals and valid JSON-LD; 7 resources with correctly matched discussions; 9 Chinese notes; 9 static reading sessions; HTTPS sitemap, robots, directory, and feed.')

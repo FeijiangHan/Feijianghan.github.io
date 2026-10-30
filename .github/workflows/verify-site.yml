@@ -2,7 +2,7 @@ name: Verify homepage
 
 on:
   push:
-    branches: [main, refinement/2026-10-29, seo/2026-10-29]
+    branches: [main, refinement/2026-10-29, seo/2026-10-29, resources/2026-10-30]
   pull_request:
 
 permissions:

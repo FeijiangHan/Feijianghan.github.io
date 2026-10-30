@@ -145,7 +145,7 @@ In the long run, I am optimistic about a system view of intelligence. Instead of
 
 {% include sections/honors.md %}
 
-{% include sections/notes.md %}
+{% include sections/resources.html %}
 
 # Misc
 

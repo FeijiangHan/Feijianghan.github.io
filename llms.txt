@@ -10,6 +10,8 @@ sitemap: false
 
 - [Homepage](https://feijianghan.com/): Current research, publications, background, and contact links.
 - [Writing and reading guides](https://feijianghan.com/writing/): A directory of tutorials, guides, and research explorations in English and Chinese.
+- [Resources](https://feijianghan.com/#resources): Research tools, projects, reading guides, and discussions matched to each resource.
+- [Chinese research notes](https://feijianghan.com/notes/): Chinese-language Xiaohongshu notes on AI, research taste, and PhD life, with bilingual topic labels and links to the original posts.
 - [Publications](https://feijianghan.com/#publications): Selected highlights and the complete publication list. The full list is present in the page HTML.
 
 ## Writing and learning resources

@@ -1,0 +1,23 @@
+<span class="anchor" id="resources"></span>
+<span class="anchor" id="notes"></span>
+<span class="anchor" id="reading-community"></span>
+<h1>Resources</h1>
+{% assign resource_categories = 'Reading Guides & Research Tools|Research Explorations|PhD & Research Life' | split: '|' %}
+{% for category in resource_categories %}
+<h3>{{ category }}</h3>
+<ul class="resource-list">
+{% for resource in site.data.resources %}{% if resource.category == category %}
+  {% include resource-item.html resource=resource %}
+{% endif %}{% endfor %}
+</ul>
+{% endfor %}
+<p><a href="/writing/">Browse all writing, tutorials, and reading guides →</a></p>
+
+<h2 id="xiaohongshu-notes">小红书笔记 <span class="section-translation">· Research Notes in Chinese</span></h2>
+<p class="notes-intro">Notes on AI research, research taste, and PhD life. <span lang="zh-CN">以下 {{ site.data.xiaohongshu | size }} 篇笔记均为中文，点击标题前往小红书。</span></p>
+<div class="chinese-notes-scroll" role="region" aria-label="Chinese research notes on Xiaohongshu, scroll to browse" tabindex="0">
+  <ul class="chinese-notes-list">
+  {% for note in site.data.xiaohongshu %}{% include chinese-note.html note=note %}{% endfor %}
+  </ul>
+</div>
+<p class="notes-browse"><span class="scroll-hint">Scroll to browse ↓</span><a href="/notes/">查看全部 {{ site.data.xiaohongshu | size }} 篇 · Browse all Chinese notes →</a></p>

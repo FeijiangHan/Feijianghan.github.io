@@ -96,8 +96,33 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .news-scroll:focus
 }
 .news-scroll ul { margin-top: .2em; margin-bottom: .2em; }
 .scroll-hint { margin: .55em 0 1.5em !important; color: #7a8288; font-size: .8em !important; }
-.community-discussions { margin: 1.1em 0; padding: .9em 1.1em; border-left: 3px solid #a8bad2; background: #f7f9fc; border-radius: 0 5px 5px 0; }
-.community-discussions ul { margin-bottom: 0; }
+.resource-list { list-style: none; padding-left: 0; }
+.resource-list .resource-item { margin-bottom: 1.25em; padding-bottom: 1em; border-bottom: 1px solid #edf0f4; }
+.resource-list .resource-item:last-child { border-bottom: 0; }
+.page__content .resource-title { margin: 0 0 .35em; font-size: 1.03em; line-height: 1.5; }
+.resource-title a { text-decoration: none; }
+.resource-title a:hover { text-decoration: underline; }
+.resource-item p { margin-bottom: .35em; }
+.page__content .resource-discussion-link { font-size: .86em; }
+.resource-discussion-link a { display: inline-flex; align-items: center; gap: .35em; color: #5d6f87; text-decoration: none; }
+.resource-discussion-link a:hover { text-decoration: underline; }
+.resource-discussion-link .profile-social-icon { font-size: 15px; }
+.language-label { display: inline-block; padding: .05em .45em; border: 1px solid #dde3ec; border-radius: 4px; color: #697483; font-size: .75rem; font-weight: 400; line-height: 1.5; vertical-align: middle; white-space: nowrap; }
+.section-translation { font-size: .8em; font-weight: 400; color: #697483; }
+.notes-intro { color: #697483; font-size: .9em !important; }
+.chinese-notes-scroll { height: 22rem; padding: .1em 1em .1em 0; overflow-y: auto; overflow-x: hidden; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: #b7c2d0 transparent; border-bottom: 1px solid #edf0f4; }
+.chinese-notes-scroll:focus-visible { outline: 2px solid #44669b; outline-offset: 4px; border-radius: 3px; }
+.chinese-notes-list { list-style: none; padding-left: 0; margin-top: 0; }
+.chinese-notes-list .chinese-note { padding: .9em 0; margin: 0; border-bottom: 1px solid #edf0f4; overflow-wrap: anywhere; }
+.chinese-notes-list .chinese-note:last-child { border-bottom: 0; }
+.chinese-note > a { display: block; line-height: 1.65; font-weight: 500; text-decoration: none; }
+.chinese-note > a:hover { text-decoration: underline; }
+.note-english { color: #697483; font-size: .9em; font-weight: 400; }
+.note-meta { display: flex; align-items: center; gap: .6em; margin-top: .4em; color: #7a8288; font-size: .78em; }
+.notes-browse { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .5em; margin-top: .65em !important; font-size: .85em !important; }
+.notes-browse .scroll-hint { margin: 0 !important; }
+.chinese-notes-full { margin-bottom: 2em; }
+.note-topic-links { line-height: 2; }
 .writing-list { padding-left: 1.2em; }
 .writing-list li { margin-bottom: 1.5em; }
 .writing-list h3 { margin-bottom: .4em; line-height: 1.5; }

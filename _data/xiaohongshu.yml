@@ -1,0 +1,45 @@
+- id: related-work-ai-review
+  title: "只改论文 related work，就能让 AI 从弱拒到接收"
+  english: Related Work & AI Reviewing
+  category: AI & Agents
+  url: "https://www.xiaohongshu.com/discovery/item/6ac26805000000001a031356?source=webshare&xhsshare=pc_web&xsec_token=ABcynph-T1aoK3FO41QQSljlUBlxNPgPKIDvnxMus3k5o=&xsec_source=pc_share"
+- id: agent-design
+  title: "Agent 的设计是不是被 LLMs 限制了？"
+  english: Agent Design
+  category: AI & Agents
+  url: "https://www.xiaohongshu.com/discovery/item/6ab96013000000001b01c8eb?source=webshare&xhsshare=pc_web&xsec_token=ABmzC3Yhx8AP4lbfJ5VoZs7lhn1nG7xo1OGnvvnPak6lE=&xsec_source=pc_share"
+- id: interpretability
+  title: "LLMs 可解释性还有没有继续研究的必要？"
+  english: Interpretability
+  category: AI & Agents
+  url: "https://www.xiaohongshu.com/discovery/item/6a7306710000000033013eac?source=webshare&xhsshare=pc_web&xsec_token=ABXIrjot_odU67Rcc3u4b4nBhoQMA8dopSf_jE2WnSryg=&xsec_source=pc_share"
+- id: predicting-impact
+  title: "提高 taste 不要只看论文，得练习预测 impact"
+  english: Research Taste
+  category: Research Taste & Practice
+  url: "https://www.xiaohongshu.com/discovery/item/6a65d8d6000000001c00f767?source=webshare&xhsshare=pc_web&xsec_token=AB3GLk6rZa5oB0g3czv9Poc4LAmi5JtEnnkpwE3K9Zq-E=&xsec_source=pc_share"
+- id: phd-admissions-2026
+  title: "基于 60 个 offer 分析 2026 Fall CS PhD 申请难度"
+  english: PhD Admissions
+  category: PhD & Research Life
+  url: "https://www.xiaohongshu.com/discovery/item/6a02a71b000000000702e368?source=webshare&xhsshare=pc_web&xsec_token=ABahxGGh6uhIeAzDiFO4t5N3zAOpbdqrTcvtd6f5HdcT0=&xsec_source=pc_share"
+- id: research-at-upenn
+  title: "UPenn CIS/DS Master 如何更好地做 Research"
+  english: Research at UPenn
+  category: PhD & Research Life
+  url: "https://www.xiaohongshu.com/discovery/item/69cb60e4000000001a036780?source=webshare&xhsshare=pc_web&xsec_token=ABCY8rwOzlVxFkVxXORata1UEO8T18S4M9sCq6FoDQwJ8=&xsec_source=pc_share"
+- id: scaling-training
+  title: "Prompt 论文已死，拥抱 Scaling Training"
+  english: Research Directions
+  category: Research Taste & Practice
+  url: "https://www.xiaohongshu.com/discovery/item/68e942a9000000000402adf7?source=webshare&xhsshare=pc_web&xsec_token=ABgYpv2zT6p1dI_cldWRAyAx2UhGjV0MFCC1ugo6xZyWo=&xsec_source=pc_share"
+- id: paperforge
+  title: "用 AI 读论文两年半，我认为最好用的 prompt"
+  english: PaperForge
+  category: Research Taste & Practice
+  url: "https://www.xiaohongshu.com/discovery/item/6a300c2e00000000060363b6?source=webshare&xhsshare=pc_web&xsec_token=ABYfMQEP9MGgfWyKvWBWs6xNvvKB4S0bZZnSZV1z99gBc=&xsec_source=pc_share"
+- id: best-paper-taste
+  title: "如何提高 research taste 的一些思考 — AI 方向"
+  english: Best Papers & Research Taste
+  category: Research Taste & Practice
+  url: "https://www.xiaohongshu.com/discovery/item/6983f11e000000000d009446?source=webshare&xhsshare=pc_web&xsec_token=ABEiJY0PJd2kt1Bf2h1cr6aFAfzmpvO7kBqG7I9qQ8y-0=&xsec_source=pc_share"

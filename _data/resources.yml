@@ -1,0 +1,40 @@
+- id: agentic-rl
+  category: Reading Guides & Research Tools
+  title: "Agentic RL: A Reading Field Guide"
+  url: /reports/agentic-rl/
+  description: "Three essential papers, nine connected reading sessions, and 27 research questions, with progress tracking, a personal notebook, and follow-up reading."
+  discussion_x: https://x.com/feijianghan/status/2115463997537255835
+- id: paperforge
+  category: Reading Guides & Research Tools
+  title: PaperForge
+  url: https://github.com/FeijiangHan/PaperForge
+  description: "An active paper-reading skill that reconstructs author reasoning, explains methods mechanistically, stress-tests assumptions, and generates follow-up research ideas."
+  discussion_note: paperforge
+- id: best-papers
+  category: Reading Guides & Research Tools
+  title: Top Conference Best Papers
+  url: https://github.com/FeijiangHan/Top-Conference-Best-Papers
+  description: "A curated list of Best Paper Award winners from top ML/NLP venues, including ICLR, NeurIPS, ICML, ACL, EMNLP, NAACL, and AAAI, covering 2022–2026. A resource for developing research taste."
+  discussion_note: best-paper-taste
+- id: embodied-ai
+  category: Reading Guides & Research Tools
+  title: "Embodied AI: A 3-Week Reading Roadmap"
+  url: /reports/embodied-ai-reading-plan.html
+  language: 中文
+  description: "A curated curriculum for LLM/VLM researchers entering embodied AI, covering VLA, world models, and WAM with key papers and hands-on projects."
+- id: llm-cs-rankings
+  category: Research Explorations
+  title: "Where do AI models agree — and disagree — on the world's top CS schools?"
+  url: /reports/llm_cs_rankings.html
+  description: "We asked 11 leading large language models to rank the top 50 computer science universities worldwide, using only their internal knowledge and intuition. Here’s what they said."
+- id: phd-journey
+  category: PhD & Research Life
+  title: "A Comprehensive Guide to the Computer Science PhD Journey"
+  url: https://github.com/FeijiangHan/A-Comprehensive-Guide-to-the-Computer-Science-PhD-Journey
+  description: "Collected advice from nearly 20 researchers’ essays and talks, covering applications, advisor choice, research workflow, publishing, and post-PhD planning."
+- id: study-abroad
+  category: PhD & Research Life
+  title: Experiences of Applying to Study in the United States
+  url: /papers/liuxue-experience.pdf
+  language: 中文 PDF
+  description: "My experience summary and suggestions for studying in the United States."
