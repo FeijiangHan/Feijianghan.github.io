@@ -70,14 +70,29 @@
       {% endfor %}
       ]
     }
-    {% elsif page.url == '/notes/' %},
+    {% elsif page.url == '/notes/' or page.url == '/' %},
     {
       "@type": "ItemList",
-      "name": "Feijiang Han's Chinese research notes on Xiaohongshu",
+      "@id": "https://feijianghan.com/notes/#catalog",
+      "name": "小红书笔记 · Rednote blogs by Feijiang Han",
       "inLanguage": "zh-CN",
       "itemListElement": [
       {% for note in site.data.xiaohongshu %}
-        {"@type": "ListItem", "position": {{ forloop.index }}, "name": {{ note.title | append: ' · ' | append: note.english | jsonify }}, "url": {{ note.url | jsonify }}}{% unless forloop.last %},{% endunless %}
+        {
+          "@type": "ListItem", "position": {{ forloop.index }},
+          "name": {{ note.title | append: ' · ' | append: note.english | jsonify }},
+          "url": {{ note.url | jsonify }},
+          "item": {
+            "@type": "CreativeWork",
+            "@id": {{ note.url | split: '?' | first | jsonify }},
+            "name": {{ note.title | jsonify }},
+            "alternateName": {{ note.english | jsonify }},
+            "url": {{ note.url | jsonify }},
+            "inLanguage": "zh-CN",
+            {% if page.url == '/notes/' %}"description": {{ note.description | jsonify }}, "keywords": {{ note.topics | join: ', ' | jsonify }},{% endif %}
+            "author": {"@id": "https://feijianghan.com/#person", "@type": "Person", "name": "Feijiang Han"}
+          }
+        }{% unless forloop.last %},{% endunless %}
       {% endfor %}
       ]
     }

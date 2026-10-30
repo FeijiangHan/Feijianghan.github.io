@@ -68,9 +68,26 @@ assert '<h1>Resources</h1>' in home
 assert 'Community discussions</' not in home
 assert 'href="/#resources"' in home
 assert 'class="chinese-notes-scroll"' in home
+assert 'class="resources-scroll"' in home
+assert 'Browse all writing, tutorials, and reading guides' not in home
+assert '以下 9 篇笔记均为中文' not in home
+assert 'NLPer @ UMD' in home and 'NLPer @ UPenn' not in home
+assert '>Misc<' not in home
+assert 'October 2026' in home and 'Released <strong>ICA Lens</strong>' in home
 assert home.count('data-note-id=') == 9
 notes = (site / 'notes/index.html').read_text()
 assert notes.count('data-note-id=') == 9
+for rendered in (home, notes):
+    assert 'Rednote blogs' in rendered
+    assert rendered.count('class="note-english"') == 9
+    assert 'class="language-label">中文</span>' not in rendered
+    assert '中文 Chinese' in rendered
+    metadata = Metadata()
+    metadata.feed(rendered)
+    catalog = next(node for data in metadata.data for node in data.get('@graph', []) if node.get('@id') == 'https://feijianghan.com/notes/#catalog')
+    assert len(catalog['itemListElement']) == 9
+    assert all(len(row['item']['alternateName']) > 35 for row in catalog['itemListElement'])
+assert notes.count('class="note-description"') == 9
 for post in ('6ac26805000000001a031356', '6ab96013000000001b01c8eb', '6a7306710000000033013eac',
              '6a65d8d6000000001c00f767', '6a02a71b000000000702e368', '69cb60e4000000001a036780', '68e942a9000000000402adf7'):
     assert post in home and post in notes, ('missing Chinese note', post)

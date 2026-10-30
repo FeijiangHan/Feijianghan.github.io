@@ -146,9 +146,3 @@ In the long run, I am optimistic about a system view of intelligence. Instead of
 {% include sections/honors.md %}
 
 {% include sections/resources.html %}
-
-# Misc
-
-I love animals—I’ve raised four dogs, two cats, five red-eared slider turtles, a rabbit, and a hedgehog.
-
-Outside of work, I enjoy practicing Chinese martial arts, including [Tai Chi](https://en.wikipedia.org/wiki/Tai_chi){:target="_blank"} and [Mawangdui Daoyin](https://en.wikipedia.org/wiki/Yangsheng_(Daoism)){:target="_blank"}.

@@ -13,7 +13,7 @@ Source for [feijianghan.com](https://feijianghan.com), built with Jekyll and pub
 | `_includes/sections/honors.md` | Honors and awards |
 | `_includes/sections/resources.html` | English-first resources, matched discussions, and a scrolling Chinese-note preview |
 | `_data/resources.yml` | Resource descriptions and the discussion attached to each resource |
-| `_data/xiaohongshu.yml` | Chinese note titles, English topic labels, categories, and original links |
+| `_data/xiaohongshu.yml` | Chinese titles, full English title translations, short topic descriptions, categories, and original links |
 | `_pages/chinese-notes.html` | Full Chinese-note index at `/notes/` |
 | `_data/navigation.yml` | Links to existing homepage sections |
 | `_data/profile-links.yml` | Social and contact links for desktop and mobile |

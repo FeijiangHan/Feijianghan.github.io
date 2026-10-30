@@ -10,11 +10,11 @@ description: "Research reading guides, tutorials, tools, and explorations by Fei
 <h2>{{ category }}</h2>
 <ul class="writing-list">
 {% for entry in site.data.writing %}{% if entry.featured and entry.category == category %}
-  <li lang="{{ entry.language }}"><h3><a href="{{ entry.path }}">{{ entry.title }}</a></h3><p>{{ entry.description }}</p><small>{% if entry.language == 'en' %}English{% else %}中文{% endif %}</small></li>
+  <li lang="{{ entry.language }}"><h3><a href="{{ entry.path }}">{{ entry.title }}</a></h3><p>{{ entry.description }}</p><small>{% if entry.language == 'en' %}English{% else %}中文 Chinese{% endif %}</small></li>
 {% endif %}{% endfor %}
 </ul>
 {% endfor %}
 <h2>Resources & Chinese Notes</h2>
 <p><a href="/#resource-paperforge">PaperForge & discussion</a> · <a href="/#resource-best-papers">Top Conference Best Papers & discussion</a> · <a href="/#resources">All resources</a></p>
-<p><a href="/notes/">小红书笔记 · Research Notes in Chinese →</a></p>
+<p><a href="/notes/">小红书笔记 · Rednote blogs →</a></p>
 <p><a href="/writing-feed.xml">Subscribe to the writing feed</a> · <a href="/llms.txt">Site content directory</a></p>

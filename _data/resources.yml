@@ -20,7 +20,7 @@
   category: Reading Guides & Research Tools
   title: "Embodied AI: A 3-Week Reading Roadmap"
   url: /reports/embodied-ai-reading-plan.html
-  language: 中文
+  language: 中文 Chinese
   description: "A curated curriculum for LLM/VLM researchers entering embodied AI, covering VLA, world models, and WAM with key papers and hands-on projects."
 - id: llm-cs-rankings
   category: Research Explorations
@@ -36,5 +36,5 @@
   category: PhD & Research Life
   title: Experiences of Applying to Study in the United States
   url: /papers/liuxue-experience.pdf
-  language: 中文 PDF
+  language: 中文 Chinese · PDF
   description: "My experience summary and suggestions for studying in the United States."

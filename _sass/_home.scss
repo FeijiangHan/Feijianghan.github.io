@@ -97,6 +97,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .news-scroll:focus
 .news-scroll ul { margin-top: .2em; margin-bottom: .2em; }
 .scroll-hint { margin: .55em 0 1.5em !important; color: #7a8288; font-size: .8em !important; }
 .resource-list { list-style: none; padding-left: 0; }
+.resources-scroll { height: 26rem; padding: .1em 1em .1em 0; overflow-y: auto; overflow-x: hidden; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: #b7c2d0 transparent; border-bottom: 1px solid #edf0f4; }
+.resources-scroll:focus-visible { outline: 2px solid #44669b; outline-offset: 4px; border-radius: 3px; }
+.resources-scroll > h3:first-child { margin-top: 0; }
 .resource-list .resource-item { margin-bottom: 1.25em; padding-bottom: 1em; border-bottom: 1px solid #edf0f4; }
 .resource-list .resource-item:last-child { border-bottom: 0; }
 .page__content .resource-title { margin: 0 0 .35em; font-size: 1.03em; line-height: 1.5; }
@@ -117,7 +120,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .news-scroll:focus
 .chinese-notes-list .chinese-note:last-child { border-bottom: 0; }
 .chinese-note > a { display: block; line-height: 1.65; font-weight: 500; text-decoration: none; }
 .chinese-note > a:hover { text-decoration: underline; }
-.note-english { color: #697483; font-size: .9em; font-weight: 400; }
+.note-english { display: block; margin-top: .3em; color: #697483; font-size: .86em; font-weight: 400; line-height: 1.6; }
+.page__content .note-description { margin: .65em 0 0; color: #697483; font-size: .86em; line-height: 1.65; }
 .note-meta { display: flex; align-items: center; gap: .6em; margin-top: .4em; color: #7a8288; font-size: .78em; }
 .notes-browse { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .5em; margin-top: .65em !important; font-size: .85em !important; }
 .notes-browse .scroll-hint { margin: 0 !important; }

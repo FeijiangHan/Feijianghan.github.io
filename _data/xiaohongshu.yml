@@ -1,45 +1,99 @@
 - id: related-work-ai-review
-  title: "只改论文 related work，就能让 AI 从弱拒到接收"
-  english: Related Work & AI Reviewing
+  title: 只改论文 related work，就能让 AI 从弱拒到接收
+  english: Changing only a paper’s related work can shift an AI review from weak reject to accept.
   category: AI & Agents
-  url: "https://www.xiaohongshu.com/discovery/item/6ac26805000000001a031356?source=webshare&xhsshare=pc_web&xsec_token=ABcynph-T1aoK3FO41QQSljlUBlxNPgPKIDvnxMus3k5o=&xsec_source=pc_share"
+  url: https://www.xiaohongshu.com/discovery/item/6ac26805000000001a031356?source=webshare&xhsshare=pc_web&xsec_token=ABcynph-T1aoK3FO41QQSljlUBlxNPgPKIDvnxMus3k5o=&xsec_source=pc_share
+  topic: Related Work & AI Reviewing
+  description: AI-assisted peer review, related-work sections, and sensitivity to how prior research is presented.
+  topics:
+  - AI paper review
+  - related work
+  - reviewer sensitivity
 - id: agent-design
-  title: "Agent 的设计是不是被 LLMs 限制了？"
-  english: Agent Design
+  title: Agent 的设计是不是被 LLMs 限制了？
+  english: Is agent design constrained by large language models?
   category: AI & Agents
-  url: "https://www.xiaohongshu.com/discovery/item/6ab96013000000001b01c8eb?source=webshare&xhsshare=pc_web&xsec_token=ABmzC3Yhx8AP4lbfJ5VoZs7lhn1nG7xo1OGnvvnPak6lE=&xsec_source=pc_share"
+  url: https://www.xiaohongshu.com/discovery/item/6ab96013000000001b01c8eb?source=webshare&xhsshare=pc_web&xsec_token=ABmzC3Yhx8AP4lbfJ5VoZs7lhn1nG7xo1OGnvvnPak6lE=&xsec_source=pc_share
+  topic: Agent Design
+  description: How current LLM capabilities and constraints may shape the design of AI agents.
+  topics:
+  - LLM agents
+  - agent design
+  - agent architecture
 - id: interpretability
-  title: "LLMs 可解释性还有没有继续研究的必要？"
-  english: Interpretability
+  title: LLMs 可解释性还有没有继续研究的必要？
+  english: Is LLM interpretability still worth researching?
   category: AI & Agents
-  url: "https://www.xiaohongshu.com/discovery/item/6a7306710000000033013eac?source=webshare&xhsshare=pc_web&xsec_token=ABXIrjot_odU67Rcc3u4b4nBhoQMA8dopSf_jE2WnSryg=&xsec_source=pc_share"
+  url: https://www.xiaohongshu.com/discovery/item/6a7306710000000033013eac?source=webshare&xhsshare=pc_web&xsec_token=ABXIrjot_odU67Rcc3u4b4nBhoQMA8dopSf_jE2WnSryg=&xsec_source=pc_share
+  topic: Interpretability
+  description: The motivation for studying LLM interpretability and whether the field still has worthwhile research questions.
+  topics:
+  - LLM interpretability
+  - mechanistic interpretability
+  - research questions
 - id: predicting-impact
-  title: "提高 taste 不要只看论文，得练习预测 impact"
-  english: Research Taste
+  title: 提高 taste 不要只看论文，得练习预测 impact
+  english: To develop research taste, go beyond reading papers and practice predicting impact.
   category: Research Taste & Practice
-  url: "https://www.xiaohongshu.com/discovery/item/6a65d8d6000000001c00f767?source=webshare&xhsshare=pc_web&xsec_token=AB3GLk6rZa5oB0g3czv9Poc4LAmi5JtEnnkpwE3K9Zq-E=&xsec_source=pc_share"
+  url: https://www.xiaohongshu.com/discovery/item/6a65d8d6000000001c00f767?source=webshare&xhsshare=pc_web&xsec_token=AB3GLk6rZa5oB0g3czv9Poc4LAmi5JtEnnkpwE3K9Zq-E=&xsec_source=pc_share
+  topic: Research Taste
+  description: Developing research judgment by predicting the potential impact of ideas, alongside reading papers.
+  topics:
+  - research taste
+  - research impact
+  - paper reading
 - id: phd-admissions-2026
-  title: "基于 60 个 offer 分析 2026 Fall CS PhD 申请难度"
-  english: PhD Admissions
+  title: 基于 60 个 offer 分析 2026 Fall CS PhD 申请难度
+  english: How competitive were Fall 2026 CS PhD admissions? An analysis of 60 offers.
   category: PhD & Research Life
-  url: "https://www.xiaohongshu.com/discovery/item/6a02a71b000000000702e368?source=webshare&xhsshare=pc_web&xsec_token=ABahxGGh6uhIeAzDiFO4t5N3zAOpbdqrTcvtd6f5HdcT0=&xsec_source=pc_share"
+  url: https://www.xiaohongshu.com/discovery/item/6a02a71b000000000702e368?source=webshare&xhsshare=pc_web&xsec_token=ABahxGGh6uhIeAzDiFO4t5N3zAOpbdqrTcvtd6f5HdcT0=&xsec_source=pc_share
+  topic: PhD Admissions
+  description: A discussion of Fall 2026 computer science PhD admissions based on 60 offers.
+  topics:
+  - CS PhD admissions
+  - Fall 2026
+  - PhD applications
 - id: research-at-upenn
-  title: "UPenn CIS/DS Master 如何更好地做 Research"
-  english: Research at UPenn
+  title: UPenn CIS/DS Master 如何更好地做 Research
+  english: How to do better research as a UPenn CIS/DS master’s student.
   category: PhD & Research Life
-  url: "https://www.xiaohongshu.com/discovery/item/69cb60e4000000001a036780?source=webshare&xhsshare=pc_web&xsec_token=ABCY8rwOzlVxFkVxXORata1UEO8T18S4M9sCq6FoDQwJ8=&xsec_source=pc_share"
+  url: https://www.xiaohongshu.com/discovery/item/69cb60e4000000001a036780?source=webshare&xhsshare=pc_web&xsec_token=ABCY8rwOzlVxFkVxXORata1UEO8T18S4M9sCq6FoDQwJ8=&xsec_source=pc_share
+  topic: Research at UPenn
+  description: Research advice for University of Pennsylvania CIS and Data Science master’s students.
+  topics:
+  - UPenn CIS
+  - data science master’s
+  - master’s research
 - id: scaling-training
-  title: "Prompt 论文已死，拥抱 Scaling Training"
-  english: Research Directions
+  title: Prompt 论文已死，拥抱 Scaling Training
+  english: 'Prompt papers are dead: embrace scaling and training.'
   category: Research Taste & Practice
-  url: "https://www.xiaohongshu.com/discovery/item/68e942a9000000000402adf7?source=webshare&xhsshare=pc_web&xsec_token=ABgYpv2zT6p1dI_cldWRAyAx2UhGjV0MFCC1ugo6xZyWo=&xsec_source=pc_share"
+  url: https://www.xiaohongshu.com/discovery/item/68e942a9000000000402adf7?source=webshare&xhsshare=pc_web&xsec_token=ABgYpv2zT6p1dI_cldWRAyAx2UhGjV0MFCC1ugo6xZyWo=&xsec_source=pc_share
+  topic: Research Directions
+  description: A research-direction reflection on prompting papers, scaling, and model training.
+  topics:
+  - prompting research
+  - scaling
+  - model training
 - id: paperforge
-  title: "用 AI 读论文两年半，我认为最好用的 prompt"
-  english: PaperForge
+  title: 用 AI 读论文两年半，我认为最好用的 prompt
+  english: After two and a half years of reading papers with AI, this is the prompt I find most useful.
   category: Research Taste & Practice
-  url: "https://www.xiaohongshu.com/discovery/item/6a300c2e00000000060363b6?source=webshare&xhsshare=pc_web&xsec_token=ABYfMQEP9MGgfWyKvWBWs6xNvvKB4S0bZZnSZV1z99gBc=&xsec_source=pc_share"
+  url: https://www.xiaohongshu.com/discovery/item/6a300c2e00000000060363b6?source=webshare&xhsshare=pc_web&xsec_token=ABYfMQEP9MGgfWyKvWBWs6xNvvKB4S0bZZnSZV1z99gBc=&xsec_source=pc_share
+  topic: PaperForge
+  description: AI-assisted paper reading and a prompt for understanding research papers, connected to the PaperForge resource.
+  topics:
+  - AI paper reading
+  - paper-reading prompt
+  - PaperForge
 - id: best-paper-taste
-  title: "如何提高 research taste 的一些思考 — AI 方向"
-  english: Best Papers & Research Taste
+  title: 如何提高 research taste 的一些思考 — AI 方向
+  english: Some thoughts on developing research taste in AI.
   category: Research Taste & Practice
-  url: "https://www.xiaohongshu.com/discovery/item/6983f11e000000000d009446?source=webshare&xhsshare=pc_web&xsec_token=ABEiJY0PJd2kt1Bf2h1cr6aFAfzmpvO7kBqG7I9qQ8y-0=&xsec_source=pc_share"
+  url: https://www.xiaohongshu.com/discovery/item/6983f11e000000000d009446?source=webshare&xhsshare=pc_web&xsec_token=ABEiJY0PJd2kt1Bf2h1cr6aFAfzmpvO7kBqG7I9qQ8y-0=&xsec_source=pc_share
+  topic: Best Papers & Research Taste
+  description: Research taste in AI and learning from award-winning machine learning and NLP papers.
+  topics:
+  - research taste
+  - best papers
+  - AI research

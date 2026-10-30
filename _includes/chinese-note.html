@@ -1,4 +1,5 @@
-<li class="chinese-note" data-note-id="{{ include.note.id }}" lang="zh-CN">
-  <a href="{{ include.note.url | escape }}" target="_blank" rel="noopener">{{ include.note.title | escape }} <span class="note-english" lang="en">· {{ include.note.english | escape }}</span></a>
-  <span class="note-meta"><span class="language-label">中文</span> <span lang="en">{{ include.note.category | escape }}</span></span>
+<li class="chinese-note" id="note-{{ include.note.id }}" data-note-id="{{ include.note.id }}" lang="zh-CN">
+  <a href="{{ include.note.url | escape }}" target="_blank" rel="noopener"><span class="note-title">{{ include.note.title | escape }}</span><span class="note-english" lang="en">{{ include.note.english | escape }}</span></a>
+  <span class="note-meta"><span class="language-label">中文 Chinese</span> <span lang="en">{{ include.note.category | escape }}</span></span>
+  {% if include.detailed %}<p class="note-description" lang="en">{{ include.note.description | escape }}</p>{% endif %}
 </li>

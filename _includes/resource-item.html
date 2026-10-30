@@ -6,6 +6,6 @@
   {% endif %}
   {% if include.resource.discussion_note %}
   {% assign related_note = site.data.xiaohongshu | where: 'id', include.resource.discussion_note | first %}
-  <p class="resource-discussion-link"><a href="{{ related_note.url | escape }}" target="_blank" rel="noopener" lang="zh-CN">{% include social-icon.html icon="xiaohongshu" %}<span>小红书讨论 <span class="language-label">中文</span></span></a></p>
+  <p class="resource-discussion-link"><a href="{{ related_note.url | escape }}" target="_blank" rel="noopener" lang="zh-CN">{% include social-icon.html icon="xiaohongshu" %}<span>小红书讨论 <span class="language-label">中文 Chinese</span></span></a></p>
   {% endif %}
 </li>

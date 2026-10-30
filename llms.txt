@@ -11,7 +11,7 @@ sitemap: false
 - [Homepage](https://feijianghan.com/): Current research, publications, background, and contact links.
 - [Writing and reading guides](https://feijianghan.com/writing/): A directory of tutorials, guides, and research explorations in English and Chinese.
 - [Resources](https://feijianghan.com/#resources): Research tools, projects, reading guides, and discussions matched to each resource.
-- [Chinese research notes](https://feijianghan.com/notes/): Chinese-language Xiaohongshu notes on AI, research taste, and PhD life, with bilingual topic labels and links to the original posts.
+- [小红书笔记 · Rednote blogs](https://feijianghan.com/notes/): Chinese-language posts on AI reviewing, LLM agents, interpretability, research taste, paper-reading prompts, UPenn research, and CS PhD admissions, with full English title translations and links to the original posts.
 - [Publications](https://feijianghan.com/#publications): Selected highlights and the complete publication list. The full list is present in the page HTML.
 
 ## Writing and learning resources
@@ -23,6 +23,13 @@ sitemap: false
 
 - [PaperForge](https://github.com/FeijiangHan/PaperForge): An active paper-reading skill for reconstructing reasoning, understanding methods, checking assumptions, and developing research questions.
 - [Top Conference Best Papers](https://github.com/FeijiangHan/Top-Conference-Best-Papers): A curated list of award-winning ML and NLP papers.
+
+## Rednote blogs
+
+The posts are in Chinese. English translations below describe their titles, not translated full articles.
+{% for note in site.data.xiaohongshu %}
+- [{{ note.english }}](https://feijianghan.com/notes/#note-{{ note.id }}): {{ note.title }}. Topics: {{ note.topics | join: ', ' }}.
+{% endfor %}
 
 ## Discovery
 

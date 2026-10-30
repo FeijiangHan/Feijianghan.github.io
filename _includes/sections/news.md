@@ -4,6 +4,7 @@
 
 <div class="news-scroll" role="region" aria-label="News and milestones, scroll for older updates" tabindex="0" markdown="1">
 
+- *October 2026*: &nbsp;🔬 Released **ICA Lens**, a practical approach to discovering interpretable directions in language models through non-Gaussianity. [Paper](https://arxiv.org/abs/2606.11722) · [X post](https://x.com/feijianghan/status/2112654366599504277)
 - *May 2026*: &nbsp;🎓 Graduated from the **University of Pennsylvania**!
 - *April 2026*: &nbsp;🏅 Honored to receive the **Outstanding Research Award** from the University of Pennsylvania!
 - *April 2026*: &nbsp;🎉 **ACL 2026 x 1**

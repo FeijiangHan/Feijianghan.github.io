@@ -1,17 +1,18 @@
 ---
 permalink: /notes/
-title: 小红书笔记 · Research Notes in Chinese
-description: "Feijiang Han’s Chinese-language notes on AI agents, interpretability, AI reviewing, research taste, UPenn research experience, and CS PhD applications."
+title: 小红书笔记 · Rednote blogs
+description: "Bilingual titles and topic guides to Feijiang Han’s Rednote posts on AI paper reviewing, LLM agents, interpretability, paper-reading prompts, research taste, and CS PhD admissions."
 ---
-<h1>小红书笔记 <span class="section-translation">· Research Notes in Chinese</span></h1>
-<p>Research reflections by <a href="/">Feijiang Han</a>, shared on Xiaohongshu. <span lang="zh-CN">共 {{ site.data.xiaohongshu | size }} 篇中文笔记；中英混合标题方便按主题浏览，全文请点击原帖。</span></p>
+<h1>小红书笔记 <span class="section-translation" lang="en">· Rednote blogs</span></h1>
+<p>Research reflections by <a href="/">Feijiang Han</a>, published in Chinese on Xiaohongshu (Rednote), with English title translations and topic descriptions.</p>
+<p>Explore AI paper reviewing and related work, LLM agent design, mechanistic interpretability, AI-assisted paper reading with PaperForge, research taste and impact, UPenn master’s research, and CS PhD admissions.</p>
 <p class="note-topic-links"><a href="#ai-agents">AI & Agents</a> · <a href="#research-taste">Research Taste & Practice</a> · <a href="#phd-life">PhD & Research Life</a></p>
 {% assign note_categories = 'AI & Agents|Research Taste & Practice|PhD & Research Life' | split: '|' %}
 {% assign note_anchors = 'ai-agents|research-taste|phd-life' | split: '|' %}
 {% for category in note_categories %}
 <h2 id="{{ note_anchors[forloop.index0] }}">{{ category }}</h2>
 <ul class="chinese-notes-list chinese-notes-full">
-{% for note in site.data.xiaohongshu %}{% if note.category == category %}{% include chinese-note.html note=note %}{% endif %}{% endfor %}
+{% for note in site.data.xiaohongshu %}{% if note.category == category %}{% include chinese-note.html note=note detailed=true %}{% endif %}{% endfor %}
 </ul>
 {% endfor %}
 <p><a href="/#resources">English resources & research tools →</a> · <a href="/writing/">Writing & reading guides →</a></p>
