@@ -2,7 +2,15 @@
 <span class="anchor" id="notes"></span>
 <span class="anchor" id="reading-community"></span>
 <h1>Resources</h1>
-<div class="resources-scroll" role="region" aria-label="Resources, scroll to browse reading guides and research tools" tabindex="0">
+<div class="scroll-panel" data-scroll-panel>
+  <div class="scroll-panel-toolbar">
+    <span class="scroll-panel-hint"><span aria-hidden="true">↕</span> Scroll inside · 区域内滑动</span>
+    <div class="scroll-panel-actions" hidden>
+      <button type="button" data-scroll-play aria-controls="resources-scroll" aria-pressed="false" aria-label="Start auto-scrolling Resources">Auto-scroll</button>
+      <button type="button" data-scroll-expand aria-controls="resources-scroll" aria-expanded="false">Expand</button>
+    </div>
+  </div>
+<div id="resources-scroll" class="resources-scroll" role="region" aria-label="Resources, scroll to browse reading guides and research tools" tabindex="0">
 {% assign resource_categories = 'Reading Guides & Research Tools|Research Explorations|PhD & Research Life' | split: '|' %}
 {% for category in resource_categories %}
 <h3>{{ category }}</h3>
@@ -13,13 +21,24 @@
 </ul>
 {% endfor %}
 </div>
-<p class="scroll-hint">Scroll to browse ↓</p>
+<div class="scroll-panel-progress" aria-hidden="true"><span></span></div>
+</div>
 
 <h2 id="xiaohongshu-notes">小红书笔记 <span class="section-translation" lang="en">· Rednote blogs</span></h2>
 <p class="notes-intro">Notes on AI reviewing, LLM agents and interpretability, paper-reading prompts, research taste, and CS PhD life.</p>
-<div class="chinese-notes-scroll" role="region" aria-label="Chinese research notes on Xiaohongshu, scroll to browse" tabindex="0">
+<div class="scroll-panel scroll-panel--notes" data-scroll-panel>
+  <div class="scroll-panel-toolbar">
+    <span class="scroll-panel-hint"><span aria-hidden="true">↕</span> Scroll inside · 区域内滑动</span>
+    <div class="scroll-panel-actions" hidden>
+      <button type="button" data-scroll-play aria-controls="chinese-notes-scroll" aria-pressed="false" aria-label="Start auto-scrolling Rednote blogs">Auto-scroll</button>
+      <button type="button" data-scroll-expand aria-controls="chinese-notes-scroll" aria-expanded="false">Expand</button>
+    </div>
+  </div>
+<div id="chinese-notes-scroll" class="chinese-notes-scroll" role="region" aria-label="Chinese research notes on Xiaohongshu, scroll to browse" tabindex="0">
   <ul class="chinese-notes-list">
   {% for note in site.data.xiaohongshu %}{% include chinese-note.html note=note %}{% endfor %}
   </ul>
 </div>
-<p class="notes-browse"><span class="scroll-hint">Scroll to browse ↓</span><a href="/notes/">查看全部 {{ site.data.xiaohongshu | size }} 篇 · Browse all Chinese notes →</a></p>
+<div class="scroll-panel-progress" aria-hidden="true"><span></span></div>
+</div>
+<p class="notes-browse"><a href="/notes/">查看全部 {{ site.data.xiaohongshu | size }} 篇 · Browse all Chinese notes →</a></p>

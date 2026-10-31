@@ -97,8 +97,50 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .news-scroll:focus
 .news-scroll ul { margin-top: .2em; margin-bottom: .2em; }
 .scroll-hint { margin: .55em 0 1.5em !important; color: #7a8288; font-size: .8em !important; }
 .resource-list { list-style: none; padding-left: 0; }
-.resources-scroll { height: 26rem; padding: .1em 1em .1em 0; overflow-y: auto; overflow-x: hidden; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: #b7c2d0 transparent; border-bottom: 1px solid #edf0f4; }
-.resources-scroll:focus-visible { outline: 2px solid #44669b; outline-offset: 4px; border-radius: 3px; }
+.resources-scroll { height: 26rem; }
+/* Bounded reading panes: visible edges, a fixed toolbar, and a progress rail. */
+.scroll-panel {
+  --panel-accent: #526f99; --scroll-progress: 0%;
+  margin: .8em 0 1.4em; border: 1px solid #d6dfe9; border-radius: 10px;
+  background: #fafbfd; overflow: hidden;
+}
+.scroll-panel--notes { --panel-accent: #9a6070; background: #fdfbfc; border-color: #e5dce0; }
+.scroll-panel-toolbar {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+  gap: .5em 1em; padding: .65em 1em; border-bottom: 1px solid #e2e7ee;
+  background: #f0f4f8; color: #53657c; font-size: .78em;
+}
+.scroll-panel--notes .scroll-panel-toolbar { background: #f7f0f3; border-color: #e9e0e4; color: #795665; }
+.scroll-panel-hint { display: inline-flex; align-items: center; gap: .5em; }
+.scroll-panel-hint > span { font-size: 1.3em; font-weight: 600; color: var(--panel-accent); }
+.scroll-panel-actions { display: flex; gap: .45em; }
+.scroll-panel-actions button {
+  margin: 0; padding: .35em .7em; min-height: 36px; border: 1px solid #d3dce7;
+  border-radius: 6px; background: #fff; color: #445b78; font: inherit;
+  line-height: 1.4; cursor: pointer;
+}
+.scroll-panel-actions button:hover { border-color: var(--panel-accent); }
+.scroll-panel-actions button[aria-pressed="true"] { background: #e8eef7; border-color: var(--panel-accent); }
+.scroll-panel .resources-scroll, .scroll-panel .chinese-notes-scroll {
+  padding: 1em 1.15em; overflow-y: auto; overflow-x: hidden; overscroll-behavior-y: auto;
+  scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: #a4b3c7 #edf1f6;
+  scroll-behavior: auto;
+}
+.scroll-panel .resources-scroll:focus-visible, .scroll-panel .chinese-notes-scroll:focus-visible {
+  outline: 2px solid var(--panel-accent); outline-offset: -3px; border-radius: 3px;
+}
+.scroll-panel ::-webkit-scrollbar { width: 9px; }
+.scroll-panel ::-webkit-scrollbar-track { background: #edf1f6; }
+.scroll-panel ::-webkit-scrollbar-thumb { background: #a4b3c7; border: 2px solid #edf1f6; border-radius: 8px; }
+.scroll-panel-progress { height: 3px; background: #e5eaf1; }
+.scroll-panel-progress > span { display: block; height: 100%; width: var(--scroll-progress); background: var(--panel-accent); }
+.scroll-panel.is-expanded .resources-scroll, .scroll-panel.is-expanded .chinese-notes-scroll { height: auto; overflow: visible; }
+.scroll-panel.is-expanded .scroll-panel-progress { display: none; }
+@media (max-width: 600px) {
+  .scroll-panel-toolbar { padding: .6em .8em; }
+  .scroll-panel-actions button { min-height: 44px; padding: .4em .75em; }
+  .scroll-panel .resources-scroll, .scroll-panel .chinese-notes-scroll { padding: .8em; }
+}
 .resources-scroll > h3:first-child { margin-top: 0; }
 .resource-list .resource-item { margin-bottom: 1.25em; padding-bottom: 1em; border-bottom: 1px solid #edf0f4; }
 .resource-list .resource-item:last-child { border-bottom: 0; }
@@ -113,8 +155,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .news-scroll:focus
 .language-label { display: inline-block; padding: .05em .45em; border: 1px solid #dde3ec; border-radius: 4px; color: #697483; font-size: .75rem; font-weight: 400; line-height: 1.5; vertical-align: middle; white-space: nowrap; }
 .section-translation { font-size: .8em; font-weight: 400; color: #697483; }
 .notes-intro { color: #697483; font-size: .9em !important; }
-.chinese-notes-scroll { height: 22rem; padding: .1em 1em .1em 0; overflow-y: auto; overflow-x: hidden; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: #b7c2d0 transparent; border-bottom: 1px solid #edf0f4; }
-.chinese-notes-scroll:focus-visible { outline: 2px solid #44669b; outline-offset: 4px; border-radius: 3px; }
+.chinese-notes-scroll { height: 22rem; }
 .chinese-notes-list { list-style: none; padding-left: 0; margin-top: 0; }
 .chinese-notes-list .chinese-note { padding: .9em 0; margin: 0; border-bottom: 1px solid #edf0f4; overflow-wrap: anywhere; }
 .chinese-notes-list .chinese-note:last-child { border-bottom: 0; }

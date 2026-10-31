@@ -2,7 +2,7 @@ name: Verify homepage
 
 on:
   push:
-    branches: [main, refinement/2026-10-29, seo/2026-10-29, resources/2026-10-30, bilingual-resources/2026-10-30]
+    branches: [main, refinement/2026-10-29, seo/2026-10-29, resources/2026-10-30, bilingual-resources/2026-10-30, scroll-panels/2026-10-31]
   pull_request:
 
 permissions:
@@ -20,6 +20,8 @@ jobs:
           destination: ./_site
       - name: Check rendered navigation, content, and assets
         run: python3 scripts/verify-site.py _site
+      - name: Check reading-pane interaction
+        run: node scripts/verify-scroll-panels.cjs
       - name: Check search and content discovery
         run: python3 scripts/verify-discovery.py _site
       - name: Upload the rendered site for review
