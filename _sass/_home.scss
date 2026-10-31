@@ -108,19 +108,21 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .news-scroll:focus
 .scroll-panel-toolbar {
   display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
   gap: .5em 1em; padding: .65em 1em; border-bottom: 1px solid #e2e7ee;
-  background: #f0f4f8; color: #53657c; font-size: .78em;
+  background: #f0f4f8; color: #53657c; font-size: .84em;
 }
 .scroll-panel--notes .scroll-panel-toolbar { background: #f7f0f3; border-color: #e9e0e4; color: #795665; }
 .scroll-panel-hint { display: inline-flex; align-items: center; gap: .5em; }
-.scroll-panel-hint > span { font-size: 1.3em; font-weight: 600; color: var(--panel-accent); }
+.scroll-panel-hint svg { width: 16px; height: 16px; fill: none; stroke: var(--panel-accent); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .scroll-panel-actions { display: flex; gap: .45em; }
 .scroll-panel-actions button {
-  margin: 0; padding: .35em .7em; min-height: 36px; border: 1px solid #d3dce7;
-  border-radius: 6px; background: #fff; color: #445b78; font: inherit;
+  display: inline-flex; align-items: center; gap: .45em;
+  margin: 0; padding: .35em .75em; min-height: 36px; border: 1px solid #dbe2eb;
+  border-radius: 999px; background: #ffffffb3; color: #445b78; font: inherit; font-weight: 500;
   line-height: 1.4; cursor: pointer;
 }
 .scroll-panel-actions button:hover { border-color: var(--panel-accent); }
-.scroll-panel-actions button[aria-pressed="true"] { background: #e8eef7; border-color: var(--panel-accent); }
+.scroll-panel-actions button svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.scroll-panel-actions button[aria-expanded="true"] svg { transform: rotate(180deg); }
 .scroll-panel .resources-scroll, .scroll-panel .chinese-notes-scroll {
   padding: 1em 1.15em; overflow-y: auto; overflow-x: hidden; overscroll-behavior-y: auto;
   scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: #a4b3c7 #edf1f6;

@@ -4,10 +4,9 @@
 <h1>Resources</h1>
 <div class="scroll-panel" data-scroll-panel>
   <div class="scroll-panel-toolbar">
-    <span class="scroll-panel-hint"><span aria-hidden="true">↕</span> Scroll inside · 区域内滑动</span>
+    <span class="scroll-panel-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4v16m-4-4 4 4 4-4M16 20V4m-4 4 4-4 4 4"/></svg><span data-scroll-hint>Scroll to explore</span></span>
     <div class="scroll-panel-actions" hidden>
-      <button type="button" data-scroll-play aria-controls="resources-scroll" aria-pressed="false" aria-label="Start auto-scrolling Resources">Auto-scroll</button>
-      <button type="button" data-scroll-expand aria-controls="resources-scroll" aria-expanded="false">Expand</button>
+      <button type="button" data-scroll-expand aria-controls="resources-scroll" aria-expanded="false" aria-label="Show all resources"><span data-expand-label>Show all</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg></button>
     </div>
   </div>
 <div id="resources-scroll" class="resources-scroll" role="region" aria-label="Resources, scroll to browse reading guides and research tools" tabindex="0">
@@ -28,10 +27,9 @@
 <p class="notes-intro">Notes on AI reviewing, LLM agents and interpretability, paper-reading prompts, research taste, and CS PhD life.</p>
 <div class="scroll-panel scroll-panel--notes" data-scroll-panel>
   <div class="scroll-panel-toolbar">
-    <span class="scroll-panel-hint"><span aria-hidden="true">↕</span> Scroll inside · 区域内滑动</span>
+    <span class="scroll-panel-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4v16m-4-4 4 4 4-4M16 20V4m-4 4 4-4 4 4"/></svg><span data-scroll-hint>Scroll to explore</span></span>
     <div class="scroll-panel-actions" hidden>
-      <button type="button" data-scroll-play aria-controls="chinese-notes-scroll" aria-pressed="false" aria-label="Start auto-scrolling Rednote blogs">Auto-scroll</button>
-      <button type="button" data-scroll-expand aria-controls="chinese-notes-scroll" aria-expanded="false">Expand</button>
+      <button type="button" data-scroll-expand aria-controls="chinese-notes-scroll" aria-expanded="false" aria-label="Show all Rednote blogs"><span data-expand-label>Show all</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg></button>
     </div>
   </div>
 <div id="chinese-notes-scroll" class="chinese-notes-scroll" role="region" aria-label="Chinese research notes on Xiaohongshu, scroll to browse" tabindex="0">
@@ -41,4 +39,5 @@
 </div>
 <div class="scroll-panel-progress" aria-hidden="true"><span></span></div>
 </div>
-<p class="notes-browse"><a href="/notes/">查看全部 {{ site.data.xiaohongshu | size }} 篇 · Browse all Chinese notes →</a></p>
+{% assign rednote_profile = site.data.profile-links | where: 'icon', 'xiaohongshu' | first %}
+<p class="notes-browse"><a href="{{ rednote_profile.url }}" target="_blank" rel="noopener">More on Xiaohongshu <span aria-hidden="true">↗</span></a></p>
