@@ -15,6 +15,7 @@
   type: Article
   category: Reading Guides
   featured: true
+  image: /images/social/embodied-ai.png
 - id: diffusion-tutorial
   path: /reports/diffusion_tutorial.html
   title: "从噪声到动作：视频生成与扩散模型完全教程"
@@ -23,6 +24,7 @@
   type: Article
   category: Tutorials & Research Practice
   featured: true
+  image: /images/social/diffusion-tutorial.png
 - id: ai-reviewer
   path: /reports/ai-reviewer.html
   title: "Better AI-Assisted Paper Review with Dynamic Reviewer Personas"
@@ -31,6 +33,7 @@
   type: Article
   category: Tutorials & Research Practice
   featured: true
+  image: /images/social/ai-reviewer.png
 - id: llm-cs-rankings
   path: /reports/llm_cs_rankings.html
   title: "Where do AI models agree — and disagree — on the world's top CS schools?"
@@ -39,6 +42,7 @@
   type: Article
   category: Research Explorations
   featured: true
+  image: /images/social/llm-cs-rankings.png
 - id: ica-proposal
   path: /reports/ica-proposal.html
   title: "Interpretable directions in LLM hidden states"
@@ -46,6 +50,7 @@
   language: en
   type: WebPage
   featured: false
+  image: /images/social/ica-proposal.png
 - id: reviewer-comparison
   path: /papers/reviewer_comparison.html
   title: "AI Reviewer Persona Comparison — ICLR Experiment Dashboard"
@@ -53,3 +58,4 @@
   language: en
   type: WebPage
   featured: false
+  image: /images/social/reviewer-comparison.png

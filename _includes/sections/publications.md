@@ -1,6 +1,6 @@
 <span class='anchor' id='publications'></span>
 
-# 📝 Publications 
+<h2 class="section-heading">📝 Publications</h2>
 
 
 <div class="publication-controls" id="publication-controls" hidden>
@@ -18,16 +18,16 @@
 </div>
 <p class="publication-empty" id="publication-empty" hidden>No highlighted papers in this topic yet. <button type="button" data-show-all>View all papers in this topic</button>.</p>
 
-<h2 class="interest-heading" data-interest="1">🔮 Research Interest 1: Actionable Mechanistic Interpretability in Large Language Models</h2>
+<h3 class="interest-heading" data-interest="1">🔮 Research Interest 1: Actionable Mechanistic Interpretability in Large Language Models</h3>
 
 <div class="paper-box" data-paper-id="ica-lens" data-interest="1" data-highlight="{% if site.data.publication-highlights contains 'ica-lens' %}true{% else %}false{% endif %}">
 
 <div class='paper-box-image'>
-<div><div class="badge">arXiv 2026</div><a href="https://arxiv.org/abs/2606.11722" target="_blank"><img src='images/ica_example.png' alt="Non-Gaussian interpretable directions in LLM activations" class="paper-image-hover" width="100%"></a></div></div>
+<div><div class="badge">arXiv 2026</div><a href="https://arxiv.org/abs/2606.11722" target="_blank"><img src="/images/ica_example.webp" alt="Non-Gaussian interpretable directions in LLM activations" class="paper-image-hover" width="900" height="487" decoding="async" loading="lazy"></a></div></div>
 
 <div class='paper-box-text' markdown="1">
 
-<h3 class="paper-title"><a href="https://arxiv.org/abs/2606.11722">Non-Gaussianity Reveals Interpretable Directions in Language Models</a></h3>
+<h4 class="paper-title"><a href="https://arxiv.org/abs/2606.11722">Non-Gaussianity Reveals Interpretable Directions in Language Models</a></h4>
 
 Sida Liu\*, **Feijiang Han**\*, Sarah Wiegreffe, Furong Huang
 
@@ -60,11 +60,11 @@ Your browser does not support the video tag.
 <div class="paper-box" data-paper-id="zerotuning" data-interest="1" data-highlight="{% if site.data.publication-highlights contains 'zerotuning' %}true{% else %}false{% endif %}">
 
 <div class='paper-box-image'>
-<div><div class="badge">ICLR 2026</div><a href="https://arxiv.org/abs/2505.11739" target="_blank"><img src='images/ZeroTuningcode.png' alt="ZeroTuning Overview" class="paper-image-hover" width="100%"></a></div></div>
+<div><div class="badge">ICLR 2026</div><a href="https://arxiv.org/abs/2505.11739" target="_blank"><img src="/images/ZeroTuningcode.webp" alt="ZeroTuning Overview" class="paper-image-hover" width="900" height="690" decoding="async" loading="lazy"></a></div></div>
 
 <div class='paper-box-text' markdown="1">
 
-<h3 class="paper-title"><a href="https://arxiv.org/abs/2505.11739">ZeroTuning: Unlocking the Initial Token&#x27;s Power to Enhance Large Language Models Without Training</a></h3>
+<h4 class="paper-title"><a href="https://arxiv.org/abs/2505.11739">ZeroTuning: Unlocking the Initial Token&#x27;s Power to Enhance Large Language Models Without Training</a></h4>
 
 **Feijiang Han**, Xiaodong Yu, Jianheng Tang, Delip Rao, Weihua Du, Lyle Ungar
 
@@ -85,11 +85,11 @@ Token-level attention tuning, a class of training-free methods including Post-ho
 <div class="paper-box" data-paper-id="locate-steer-improve" data-interest="1" data-highlight="{% if site.data.publication-highlights contains 'locate-steer-improve' %}true{% else %}false{% endif %}">
 
 <div class='paper-box-image'>
-<div><div class="badge">ACL 2026</div><a href="https://arxiv.org/abs/2601.14004" target="_blank"><img src='/images/llm_interpretability_overview.png' alt="Locate, Steer, and Improve" class="paper-image-hover" width="100%"></a></div></div>
+<div><div class="badge">ACL 2026</div><a href="https://arxiv.org/abs/2601.14004" target="_blank"><img src="/images/llm_interpretability_overview.webp" alt="Locate, Steer, and Improve" class="paper-image-hover" width="1344" height="715" decoding="async" loading="lazy"></a></div></div>
 
 <div class='paper-box-text' markdown="1">
 
-<h3 class="paper-title"><a href="https://arxiv.org/abs/2601.14004">Locate, Steer, and Improve: A Practical Survey of Actionable Mechanistic Interpretability in Large Language Models</a></h3>
+<h4 class="paper-title"><a href="https://arxiv.org/abs/2601.14004">Locate, Steer, and Improve: A Practical Survey of Actionable Mechanistic Interpretability in Large Language Models</a></h4>
 
 Hengyuan Zhang, Zhihao Zhang, Mingyang Wang, Zunhai Su, Yiwei Wang, Qianli Wang, Shuzhou Yuan, Ercong Nie, Xufeng Duan, **Feijiang Han**, Qibo Xue, Zeping Yu, Chenming Shang, Xiao Liang, Jing Xiong, Hui Shen, Chaofan Tao, Zhengwu Liu, Senjie Jin, Zhiheng Xi, Dongdong Zhang, Sophia Ananiadou, Tao Gui, Ruobing Xie, Hayden Kwok-Hay So, Hinrich Schütze, Xuanjing Huang, Qi Zhang, Ngai Wong
 
@@ -109,11 +109,11 @@ Mechanistic Interpretability (MI) has emerged as a vital approach to demystify t
 
 <div class="paper-box" data-paper-id="read-before-you-think" data-interest="1" data-highlight="{% if site.data.publication-highlights contains 'read-before-you-think' %}true{% else %}false{% endif %}">
 
-<div class='paper-box-image'><div><div class="badge">ICASSP 2026</div><a href="https://arxiv.org/abs/2504.09402v2" target="_blank"><img src='images/SSR.png' alt="SSR+" class="paper-image-hover" width="100%"></a></div></div>
+<div class='paper-box-image'><div><div class="badge">ICASSP 2026</div><a href="https://arxiv.org/abs/2504.09402v2" target="_blank"><img src="/images/SSR.webp" alt="SSR+" class="paper-image-hover" width="836" height="794" decoding="async" loading="lazy"></a></div></div>
 
 <div class='paper-box-text' markdown="1">
 
-<h3 class="paper-title"><a href="https://arxiv.org/abs/2504.09402v2">Read Before You Think: Mitigating LLM Comprehension Failures with Step-by-Step Reading</a></h3>
+<h4 class="paper-title"><a href="https://arxiv.org/abs/2504.09402v2">Read Before You Think: Mitigating LLM Comprehension Failures with Step-by-Step Reading</a></h4>
 
 **Feijiang Han**, Hengtao Cui, Licheng Guo, Zelong Wang, Zhiyuan Lyu
 
@@ -132,20 +132,20 @@ Large Language Models (LLMs) often fail on complex reasoning tasks due to flawed
 </div>
 
 
-<h2 class="interest-heading" data-interest="2">🔍 Research Interest 2: Model Adaptation</h2>
+<h3 class="interest-heading" data-interest="2">🔍 Research Interest 2: Model Adaptation</h3>
 
 <div class="paper-box" data-paper-id="webshell-detection" data-interest="2" data-highlight="{% if site.data.publication-highlights contains 'webshell-detection' %}true{% else %}false{% endif %}"> 
 
 <div class='paper-box-image'>
 <div>
 <div class="badge">COLM 2025</div>
-<a href="https://arxiv.org/abs/2504.13811v3" target="_blank"><img src='images/webshell_detection.png' alt="WebShell Detection Framework" class="paper-image-hover" width="100%"></a>
+<a href="https://arxiv.org/abs/2504.13811v3" target="_blank"><img src="/images/webshell_detection.webp" alt="WebShell Detection Framework" class="paper-image-hover" width="900" height="550" decoding="async" loading="lazy"></a>
 </div>
 </div>
 
 <div class='paper-box-text' markdown="1">
 
-<h3 class="paper-title"><a href="https://arxiv.org/abs/2504.13811v3">Can LLMs handle WebShell detection? Overcoming Detection Challenges with Behavioral Function-Aware Framework</a></h3>
+<h4 class="paper-title"><a href="https://arxiv.org/abs/2504.13811v3">Can LLMs handle WebShell detection? Overcoming Detection Challenges with Behavioral Function-Aware Framework</a></h4>
 
 **Feijiang Han**, Jiaming Zhang, Chuyi Deng, Jianheng Tang, Yunhuai Liu
 
@@ -164,10 +164,10 @@ WebShell attacks, where malicious scripts are injected into web servers, pose a 
 </div>
 </div>
 
-<div class="paper-box" data-paper-id="latex2layout" data-interest="2" data-highlight="{% if site.data.publication-highlights contains 'latex2layout' %}true{% else %}false{% endif %}"><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><a href="https://ojs.aaai.org/index.php/AAAI/article/view/40349" target="_blank"><img src='images/latex2layout.png' alt="LaTeX2Layout Pipeline" class="paper-image-hover" width="100%"></a></div></div>
+<div class="paper-box" data-paper-id="latex2layout" data-interest="2" data-highlight="{% if site.data.publication-highlights contains 'latex2layout' %}true{% else %}false{% endif %}"><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><a href="https://ojs.aaai.org/index.php/AAAI/article/view/40349" target="_blank"><img src="/images/latex2layout.webp" alt="LaTeX2Layout Pipeline" class="paper-image-hover" width="900" height="709" decoding="async" loading="lazy"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
-<h3 class="paper-title"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/40349">LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for Layout Detection</a></h3>
+<h4 class="paper-title"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/40349">LaTeX2Layout: High-Fidelity, Scalable Document Layout Annotation Pipeline for Layout Detection</a></h4>
 
 **Feijiang Han**, Zelong Wang, Bowen Wang, Xinxin Liu, Skyler Cheung, Delip Rao, Chris Callison-Burch, Lyle Ungar
 
@@ -185,11 +185,11 @@ General-purpose Vision-Language Models (VLMs) are increasingly integral to moder
 </div>
 </div>
 
-<div class="paper-box" data-paper-id="webshell-classification" data-interest="2" data-highlight="{% if site.data.publication-highlights contains 'webshell-classification' %}true{% else %}false{% endif %}"><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><a href="https://arxiv.org/abs/2512.05288" target="_blank"><img src='images/webshell_family.png' alt="WebShell Family Classification" class="paper-image-hover" width="100%"></a></div></div>
+<div class="paper-box" data-paper-id="webshell-classification" data-interest="2" data-highlight="{% if site.data.publication-highlights contains 'webshell-classification' %}true{% else %}false{% endif %}"><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><a href="https://arxiv.org/abs/2512.05288" target="_blank"><img src="/images/webshell_family.webp" alt="WebShell Family Classification" class="paper-image-hover" width="900" height="538" decoding="async" loading="lazy"></a></div></div>
 
 <div class='paper-box-text' markdown="1">
 
-<h3 class="paper-title"><a href="https://arxiv.org/abs/2512.05288">Beyond Detection: A Comprehensive Benchmark and Study on Representation Learning for Fine-Grained Webshell Family Classification</a></h3>
+<h4 class="paper-title"><a href="https://arxiv.org/abs/2512.05288">Beyond Detection: A Comprehensive Benchmark and Study on Representation Learning for Fine-Grained Webshell Family Classification</a></h4>
 
 **Feijiang Han**
 
@@ -213,14 +213,14 @@ Malicious WebShells represent a severe and evolving threat, compromising critica
     <div>
       <div class="badge">NLDB 2026</div>
       <a href="https://arxiv.org/abs/2604.01652" target="_blank">
-        <img src='images/thinkncheck.png' alt="ThinknCheck: Grounded Claim Verification" class="paper-image-hover" width="100%">
+        <img src="/images/thinkncheck.webp" alt="ThinknCheck: Grounded Claim Verification" class="paper-image-hover" width="664" height="616" decoding="async" loading="lazy">
       </a>
     </div>
   </div>
 
   <div class='paper-box-text' markdown="1">
 
-<h3 class="paper-title"><a href="https://arxiv.org/abs/2604.01652">ThinknCheck: Grounded Claim Verification with Compact, Reasoning-Driven, and Interpretable Models</a></h3>
+<h4 class="paper-title"><a href="https://arxiv.org/abs/2604.01652">ThinknCheck: Grounded Claim Verification with Compact, Reasoning-Driven, and Interpretable Models</a></h4>
 
 Delip Rao, **Feijiang Han**, Chris Callison-Burch
 
@@ -240,12 +240,12 @@ We present ThinknCheck, a 1B-parameter verifier for grounded claim verification 
 </div>
 
 
-<h2 class="interest-heading" data-interest="3">🌟 Earlier Work: Crowdsourcing, Federated & Continual Learning, HCI</h2>
+<h3 class="interest-heading" data-interest="3">🌟 Earlier Work: Crowdsourcing, Federated & Continual Learning, HCI</h3>
 
-<div class="paper-box" data-paper-id="cql-mab" data-interest="3" data-highlight="{% if site.data.publication-highlights contains 'cql-mab' %}true{% else %}false{% endif %}"><div class='paper-box-image'><div><div class="badge">Information Sciences 2023</div><a href="https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290" target="_blank"><img src='images/cqlmab.png' alt="CQL-MAB Overview" class="paper-image-hover" width="100%"></a></div></div>
+<div class="paper-box" data-paper-id="cql-mab" data-interest="3" data-highlight="{% if site.data.publication-highlights contains 'cql-mab' %}true{% else %}false{% endif %}"><div class='paper-box-image'><div><div class="badge">Information Sciences 2023</div><a href="https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290" target="_blank"><img src="/images/cqlmab.webp" alt="CQL-MAB Overview" class="paper-image-hover" width="900" height="601" decoding="async" loading="lazy"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
-<h3 class="paper-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290">Credit and quality intelligent learning based multi-armed bandit scheme for unknown worker selection in multimedia MCS</a></h3>
+<h4 class="paper-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290">Credit and quality intelligent learning based multi-armed bandit scheme for unknown worker selection in multimedia MCS</a></h4>
 Jianheng Tang, **Feijiang Han**, Kejia Fan, et al.  
 
 

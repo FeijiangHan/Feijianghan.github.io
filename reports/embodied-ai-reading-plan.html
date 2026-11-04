@@ -19,17 +19,17 @@ permalink: /reports/embodied-ai-reading-plan.html
     --border:    #252a38;
     --border-lit:#2e3550;
 
-    --w1:    #3b82f6;   /* Week 1 — blue  */
-    --w2:    #8b5cf6;   /* Week 2 — violet */
+    --w1:    #60a5fa;   /* Week 1 — blue  */
+    --w2:    #a78bfa;   /* Week 2 — violet */
     --w3:    #10b981;   /* Week 3 — emerald */
 
     --survey:  #f59e0b;  /* tag: survey */
-    --biglab:  #ec4899;  /* tag: big-lab */
+    --biglab:  #f9a8d4;  /* tag: big-lab */
     --code:    #22d3ee;  /* tag: code */
     --blog:    #a3e635;  /* tag: blog */
 
     --text:   #e2e8f0;
-    --muted:  #64748b;
+    --muted:  #94a3b8;
     --dim:    #94a3b8;
 
     --radius: 10px;
@@ -355,9 +355,11 @@ permalink: /reports/embodied-ai-reading-plan.html
   .w3 .progress-bar { background: var(--w3); width: 100%; }
 
   /* ── Responsive ── */
+  .author-discovery { color: #94a3b8 !important; }
   @media (max-width: 640px) {
     .hero, .main, .week-tabs { padding-left: 16px; padding-right: 16px; }
-    .day-grid, .biglab-grid { grid-template-columns: 1fr; }
+    .day-grid, .biglab-grid { grid-template-columns: minmax(0, 1fr); }
+    .day-card { grid-column: auto !important; min-width: 0; overflow-wrap: anywhere; }
     .week-dates { display: none; }
   }
 
@@ -369,6 +371,7 @@ permalink: /reports/embodied-ai-reading-plan.html
 {% include discovery-head.html %}
 </head>
 <body>
+<main style="display:contents">
 
 <!-- ══════════════════ HERO ══════════════════ -->
 <section class="hero">
@@ -628,7 +631,7 @@ permalink: /reports/embodied-ai-reading-plan.html
 
   <!-- W1 大厂 -->
   <div class="biglab-section">
-    <h3 style="font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; margin-top:28px; margin-bottom:4px;">📌 Week 1 大厂参考（按需补读，不强制）</h3>
+    <h3 role="heading" aria-level="2" style="font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; margin-top:28px; margin-bottom:4px;">📌 Week 1 大厂参考（按需补读，不强制）</h3>
     <div class="biglab-grid">
       <div class="biglab-card">
         <div class="paper-item-top" style="margin-bottom:6px">
@@ -654,7 +657,7 @@ permalink: /reports/embodied-ai-reading-plan.html
   </div>
 
   <div class="outcome-box">
-    <h4>Week 1 结束后，你应该能做到</h4>
+    <h4 role="heading" aria-level="3">Week 1 结束后，你应该能做到</h4>
     <ul class="outcome-list">
       <li>解释 VLA 和 VLM 的架构差异，以及 action head 的三种主流实现方式</li>
       <li>定位 RT-1→RT-2→OpenVLA→π0 在技术演进中的位置</li>
@@ -866,7 +869,7 @@ permalink: /reports/embodied-ai-reading-plan.html
 
   <!-- W2 大厂补充 -->
   <div class="biglab-section">
-    <h3 style="font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; margin-top:28px; margin-bottom:4px;">📌 Week 2 大厂参考（按需补读）</h3>
+    <h3 role="heading" aria-level="2" style="font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; margin-top:28px; margin-bottom:4px;">📌 Week 2 大厂参考（按需补读）</h3>
     <div class="biglab-grid">
       <div class="biglab-card">
         <div class="paper-item-top" style="margin-bottom:6px">
@@ -888,7 +891,7 @@ permalink: /reports/embodied-ai-reading-plan.html
   </div>
 
   <div class="outcome-box">
-    <h4>Week 2 结束后，你应该能做到</h4>
+    <h4 role="heading" aria-level="3">Week 2 结束后，你应该能做到</h4>
     <ul class="outcome-list">
       <li>用三轴框架（Functionality / Temporal / Spatial）给任意一篇 WM 论文分类</li>
       <li>解释 Dreamer 系列的 RSSM 结构和 latent imagination 训练方式</li>
@@ -1138,5 +1141,6 @@ permalink: /reports/embodied-ai-reading-plan.html
   });
 </script>
 <aside class="author-discovery" aria-label="Author and related writing">Published by <a href="https://feijianghan.com/" rel="author">Feijiang Han</a> · <a href="https://feijianghan.com/writing/">More writing &amp; reading guides</a></aside>
+</main>
 </body>
 </html>

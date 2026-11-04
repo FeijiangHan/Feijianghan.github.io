@@ -19,12 +19,12 @@ permalink: /reports/diffusion_tutorial.html
 :root {
   --ink:      #18181b;
   --ink-2:    #3f3f46;
-  --ink-3:    #71717a;
+  --ink-3:    #5f5f68;
   --paper:    #fafaf9;
   --paper-2:  #f5f5f4;
   --paper-3:  #e7e5e4;
   --accent:   #4338ca;
-  --accent-l: #6366f1;
+  --accent-l: #4f46e5;
   --teal:     #0d9488;
   --amber:    #b45309;
   --emerald:  #065f46;
@@ -209,6 +209,8 @@ a:hover { text-decoration: underline; }
 
 /* inline math */
 .katex { font-size: 1em; }
+.math-wrap, .math-d, .fspot { max-width: 100%; min-width: 0; }
+.math-d, .katex-display { overflow-x: auto; overflow-y: hidden; }
 /* Explicit rendered math elements */
 .math-d {
   overflow-x: auto;
@@ -218,6 +220,8 @@ a:hover { text-decoration: underline; }
 .math-d .katex-display { margin: 0; }
 .math-i { display: inline; }
 .math-i .katex { font-size: 1em; }
+.math-wrap, .math-d, .fspot { max-width: 100%; min-width: 0; }
+.math-d, .katex-display { overflow-x: auto; overflow-y: hidden; }
 
 /* formula spotlight */
 .fspot {
@@ -277,7 +281,7 @@ a:hover { text-decoration: underline; }
   font-family: 'Helvetica Neue', sans-serif; font-size: .75rem; font-weight: 700;
   margin-top: 3px;
 }
-.step-body { flex: 1; }
+.step-body { flex: 1; min-width: 0; }
 .step-body p { margin-bottom: .4em; font-family: 'Helvetica Neue', sans-serif; font-size: .93rem; }
 
 /* ===== TABLE ===== */
@@ -392,6 +396,7 @@ footer {
 {% include discovery-head.html %}
 </head>
 <body>
+<main style="display:contents">
 
 <!-- HERO -->
 <header class="hero" id="top">
@@ -1213,5 +1218,11 @@ if (document.readyState === 'loading') {
 } else { renderAllMath(); }
 </script>
 <aside class="author-discovery" aria-label="Author and related writing">Published by <a href="https://feijianghan.com/" rel="author">Feijiang Han</a> · <a href="https://feijianghan.com/writing/">More writing &amp; reading guides</a></aside>
+<script>
+/* Keyboard users need a tab stop on anything that scrolls sideways. */
+(function(){function mark(){document.querySelectorAll('.math-d,.tbl-wrap,.katex-display').forEach(function(e){if(e.scrollWidth>e.clientWidth+1){e.tabIndex=0;}else{e.removeAttribute('tabindex');}});}
+window.addEventListener('load',function(){setTimeout(mark,300);});window.addEventListener('resize',mark);})();
+</script>
+</main>
 </body>
 </html>

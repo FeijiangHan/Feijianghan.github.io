@@ -53,7 +53,10 @@ assert not page.duplicates, f'Duplicate IDs: {page.duplicates}'
 assert not page.empty_links, 'Empty links remain'
 for href in page.nav_links:
     parsed = urlsplit(href)
-    assert parsed.fragment in page.ids, f'Missing navigation target: {href}'
+    if parsed.fragment:
+        assert parsed.fragment in page.ids, f'Missing navigation target: {href}'
+    else:
+        assert (site / parsed.path.lstrip('/') / 'index.html').is_file(), f'Missing navigation page: {href}'
 for src in page.assets:
     parsed = urlsplit(src)
     if not parsed.scheme and not parsed.netloc:

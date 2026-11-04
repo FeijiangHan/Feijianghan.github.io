@@ -10,7 +10,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am a first-year CS Ph.D. student at the University of Maryland <img src='./images/umd.png' style="width: 1.35em;">, working with [Prof. Furong Huang](https://furong-huang.com/) and collaborating with [Prof. Sarah Wiegreffe](https://sarahwie.github.io/). I received my master’s degree from the University of Pennsylvania <img src='./images/upenn.png' style="width: 1.35em;">, where I worked with [Prof. Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/), [Prof. Lyle Ungar](https://www.cis.upenn.edu/~ungar/), [Delip Rao](https://deliprao.com/), and [Dr. Xiaodong Yu](https://www.xiaodongyu.me/).
+I am a first-year CS Ph.D. student at the University of Maryland <img src="/images/umd.webp" width="64" height="64" decoding="async" alt="" class="inline-logo">, working with [Prof. Furong Huang](https://furong-huang.com/) and collaborating with [Prof. Sarah Wiegreffe](https://sarahwie.github.io/). I received my master’s degree from the University of Pennsylvania <img src="/images/upenn.webp" width="64" height="55" decoding="async" alt="" class="inline-logo">, where I worked with [Prof. Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/), [Prof. Lyle Ungar](https://www.cis.upenn.edu/~ungar/), [Delip Rao](https://deliprao.com/), and [Dr. Xiaodong Yu](https://www.xiaodongyu.me/).
 
 **Goal:** Build AI systems that use insights into their own mechanisms to understand the world and improve themselves, while remaining understandable and controllable to humans.
 
@@ -24,7 +24,7 @@ My past work spans two complementary directions:
 
 <div style="display: flex; gap: 2em; align-items: flex-start; margin: 2em 0; flex-wrap: wrap;">
   <div style="flex: 1; min-width: min(300px, 100%); max-width: 500px;">
-    <img src="/images/research-pipeline.png" alt="Research Pipeline: Effective • Efficient • Explainable" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 1px 5px rgba(0,0,0,0.06);">
+    <img src="/images/research-pipeline.webp" alt="Research Pipeline: Effective • Efficient • Explainable" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 1px 5px rgba(0,0,0,0.06);" width="1000" height="1000" decoding="async">
     <p style="margin-top: 0.5em; color: #666; font-size: 0.9em; font-style: italic; text-align: center;">From understanding → to reliable impact → to continual improvement</p>
   </div>
   <div style="flex: 1; min-width: min(300px, 100%);">
@@ -57,7 +57,7 @@ If our research interests align and you would like to collaborate, ask for advic
 
 {% include sections/news.md %}
 
-# Why I'm excited about these problems
+<h2 class="section-heading">Why I'm excited about these problems</h2>
 
 <span id="why-i-care-about-interpretability"></span>
 <details>
@@ -94,7 +94,7 @@ My hope is that interpretability can slowly move from biology-style observation 
 In the near term, I care most about making interpretability actionable. A good explanation should help us localize the issue, steer the behavior, and improve the model.
 
 <div style="margin: 2em 0; text-align: center;">
-  <img src="/images/llm_interpretability_overview.png" alt="Actionable Mechanistic Interpretability Framework" style="width: 100%; max-width: 900px; height: auto; border-radius: 8px; box-shadow: 0 1px 5px rgba(0,0,0,0.06);">
+  <img src="/images/llm_interpretability_overview.webp" alt="Actionable Mechanistic Interpretability Framework" style="width: 100%; max-width: 900px; height: auto; border-radius: 8px; box-shadow: 0 1px 5px rgba(0,0,0,0.06);" width="1344" height="715" decoding="async" loading="lazy">
   <p style="margin-top: 0.8em; color: #666; font-size: 0.9em; font-style: italic; max-width: 900px; margin-left: auto; margin-right: auto;">Actionable Mechanistic Interpretability: From Localizing and Steering to Model Improvement<br><span style="font-size: 0.85em;">(Figure from the survey "Locate, Steer, and Improve: A Practical Survey of Actionable Mechanistic Interpretability in Large Language Models")</span></p>
 </div>
 
@@ -124,7 +124,7 @@ So I care about a practical question: how do we turn a strong base model into a 
 I think about this in two layers, as illustrated below:
 
 <div style="margin: 2em 0; text-align: center;">
-  <img src="/images/model_adaptation_overview.png" alt="Model Adaptation Overview" style="width: 100%; max-width: 900px; height: auto; border-radius: 8px; box-shadow: 0 1px 5px rgba(0,0,0,0.06);">
+  <img src="/images/model_adaptation_overview.webp" alt="Model Adaptation Overview" style="width: 100%; max-width: 900px; height: auto; border-radius: 8px; box-shadow: 0 1px 5px rgba(0,0,0,0.06);" width="1433" height="790" decoding="async" loading="lazy">
   <p style="margin-top: 0.8em; color: #666; font-size: 0.9em; font-style: italic; max-width: 900px; margin-left: auto; margin-right: auto;">Novelty in Model Adaptation: Task-Specific vs Task-Agnostic Approaches</p>
 </div>
 

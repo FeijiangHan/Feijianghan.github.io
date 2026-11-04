@@ -7,10 +7,11 @@
 
   <body>
 
+    <a class="skip-link" href="#main">Skip to content</a>
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
-    <div id="main" role="main">
+    <div id="main" role="main" tabindex="-1">
       {% include sidebar.html %}
     
       <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
