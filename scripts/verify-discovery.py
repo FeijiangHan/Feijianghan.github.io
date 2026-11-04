@@ -64,7 +64,8 @@ for path in paths:
 home = (site / 'index.html').read_text()
 for post in ('2115463997537255835', '6a300c2e00000000060363b6', '6983f11e000000000d009446'):
     assert post in home, ('missing community post', post)
-assert '<h1>Resources</h1>' in home
+assert '<h2 class="section-heading">Resources</h2>' in home
+assert home.count('<h1') == 1 and 'href="/writing/"' in home and 'href="/notes/"' in home
 assert 'Community discussions</' not in home
 assert 'href="/#resources"' in home
 assert 'class="chinese-notes-scroll"' in home

@@ -1,6 +1,6 @@
 <span class='anchor' id='news'></span>
 
-# 🔥 News & Milestones
+<h2 class="section-heading">🔥 News &amp; Milestones</h2>
 
 <div class="news-scroll" role="region" aria-label="News and milestones, scroll for older updates" tabindex="0" markdown="1">
 

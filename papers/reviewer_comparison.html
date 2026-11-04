@@ -23,8 +23,8 @@ permalink: /papers/reviewer_comparison.html
     --accent3: #52c48a;
     --accent4: #c97ff0;
     --text-primary: #e8ecf4;
-    --text-secondary: #7a8299;
-    --text-dim: #4a5168;
+    --text-secondary: #a0a8bc;
+    --text-dim: #8f97ab;
     --gold: #f0c060;
     --silver: #9ab0c8;
 
@@ -315,6 +315,12 @@ permalink: /papers/reviewer_comparison.html
   /* RESPONSIVE */
   @media (max-width: 900px) {
     .header, .nav, .main { padding-left: 24px; padding-right: 24px; }
+    .nav { overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .nav::-webkit-scrollbar { display: none; }
+    .nav-item { flex: 0 0 auto; }
+    .header-meta { flex-wrap: wrap; gap: 6px 18px; }
+    .chart-wrap > div[style*="grid"] { grid-template-columns: minmax(0, 1fr) !important; }
+    .two-col > *, .cards > *, .main > * { min-width: 0; max-width: 100%; }
     .cards { grid-template-columns: 1fr 1fr; }
     .two-col, .insights-grid, .method-legend { grid-template-columns: 1fr; }
   }
@@ -340,6 +346,7 @@ permalink: /papers/reviewer_comparison.html
 {% include discovery-head.html %}
 </head>
 <body>
+<main style="display:contents">
 
 <div class="header">
   <div class="header-label">Experiment Results · ICLR Peer Review Simulation</div>
@@ -353,12 +360,12 @@ permalink: /papers/reviewer_comparison.html
 </div>
 
 <nav class="nav">
-  <div class="nav-item active" onclick="switchSection('overview')">Overview</div>
-  <div class="nav-item" onclick="switchSection('decision')">Decision Metrics</div>
-  <div class="nav-item" onclick="switchSection('scores')">Score Alignment</div>
-  <div class="nav-item" onclick="switchSection('agreement')">Reviewer Agreement</div>
-  <div class="nav-item" onclick="switchSection('cost')">Cost & Distribution</div>
-  <div class="nav-item" onclick="switchSection('insights')">Insights</div>
+  <div class="nav-item active" role="button" tabindex="0" onclick="switchSection('overview')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">Overview</div>
+  <div class="nav-item" role="button" tabindex="0" onclick="switchSection('decision')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">Decision Metrics</div>
+  <div class="nav-item" role="button" tabindex="0" onclick="switchSection('scores')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">Score Alignment</div>
+  <div class="nav-item" role="button" tabindex="0" onclick="switchSection('agreement')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">Reviewer Agreement</div>
+  <div class="nav-item" role="button" tabindex="0" onclick="switchSection('cost')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">Cost & Distribution</div>
+  <div class="nav-item" role="button" tabindex="0" onclick="switchSection('insights')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">Insights</div>
 </nav>
 
 <div class="main">
@@ -1242,5 +1249,6 @@ function switchScoreTab(tab) {
   event.target.classList.add('active');
 }
 </script>
+</main>
 </body>
 </html>

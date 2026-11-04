@@ -35,6 +35,7 @@
       "@type": "Person",
       "@id": "https://feijianghan.com/#person",
       "name": "Feijiang Han",
+      "jobTitle": "PhD Student",
       "url": "https://feijianghan.com/",
       "image": {{ site.author.avatar | absolute_url | jsonify }},
       "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Maryland"},
@@ -97,6 +98,16 @@
       ]
     }
     {% endif %}
+    {% if page.url == '/' %}{% for paper in site.data.publications %},
+    {
+      "@type": "ScholarlyArticle",
+      "headline": {{ paper.title | jsonify }},
+      "name": {{ paper.title | jsonify }},
+      "url": {{ paper.url | jsonify }},
+      "datePublished": {{ paper.year | jsonify }},
+      "publication": {"@type": "PublicationEvent", "name": {{ paper.venue | jsonify }}},
+      "author": [{% for name in paper.authors %}{% if name == 'Feijiang Han' %}{"@id": "https://feijianghan.com/#person"}{% else %}{"@type": "Person", "name": {{ name | jsonify }}}{% endif %}{% unless forloop.last %},{% endunless %}{% endfor %}]
+    }{% endfor %}{% endif %}
   ]
 }
 </script>

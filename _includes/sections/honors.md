@@ -1,6 +1,7 @@
 <span class='anchor' id='honors'></span>
 
-# 🎖 Honors and Awards
+<h2 class="section-heading">🎖 Honors and Awards</h2>
+
 - 2026 Upenn Outstanding Research Award
 - 2025 AAAI 2026 Scholarship 
 - 2025 COLM 2025 Scholarship

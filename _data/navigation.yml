@@ -7,5 +7,7 @@ main:
     url: "/#honors"
   - title: "Resources"
     url: "/#resources"
+  - title: "Writing"
+    url: "/writing/"
   - title: "小红书笔记 · Rednote blogs"
     url: "/#xiaohongshu-notes"

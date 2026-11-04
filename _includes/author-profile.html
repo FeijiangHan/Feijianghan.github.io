@@ -1,13 +1,14 @@
 {% assign author = site.author %}
+{% assign name_tag = 'p' %}{% if page.url == '/' %}{% assign name_tag = 'h1' %}{% endif %}
 <div itemscope itemtype="http://schema.org/Person" class="profile_box">
-  <div class="author__avatar"><img src="/{{ author.avatar }}" alt="{{ author.name }}"></div>
+  <div class="author__avatar"><img src="/images/Chase-avatar.webp" alt="{{ author.name }}" width="350" height="350" decoding="async"></div>
   <div class="author__content">
-    <h3 class="author__name">{{ author.name }}
+    <{{ name_tag }} class="author__name">{{ author.name }}
       <button type="button" class="name-say-btn" id="name-say-btn" aria-label="Play name pronunciation" aria-describedby="name-say-tip">
         {% include social-icon.html icon="speaker" %}
         <span class="name-say-tip" id="name-say-tip" role="tooltip">Hear my name</span>
       </button>
-    </h3>
+    </{{ name_tag }}>
     <audio id="name-say-audio" src="/images/name.m4a" preload="none"></audio>
     <span class="visually-hidden" id="name-say-status" aria-live="polite"></span>
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}

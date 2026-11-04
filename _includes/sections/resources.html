@@ -1,7 +1,7 @@
 <span class="anchor" id="resources"></span>
 <span class="anchor" id="notes"></span>
 <span class="anchor" id="reading-community"></span>
-<h1>Resources</h1>
+<h2 class="section-heading">Resources</h2>
 <div class="scroll-panel" data-scroll-panel>
   <div class="scroll-panel-toolbar">
     <span class="scroll-panel-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4v16m-4-4 4 4 4-4M16 20V4m-4 4 4-4 4 4"/></svg><span data-scroll-hint>Scroll to explore</span></span>
@@ -40,4 +40,4 @@
 <div class="scroll-panel-progress" aria-hidden="true"><span></span></div>
 </div>
 {% assign rednote_profile = site.data.profile-links | where: 'icon', 'xiaohongshu' | first %}
-<p class="notes-browse"><a href="{{ rednote_profile.url }}" target="_blank" rel="noopener">More on Xiaohongshu <span aria-hidden="true">↗</span></a></p>
+<p class="notes-browse"><a href="/notes/">All notes</a><a href="{{ rednote_profile.url }}" target="_blank" rel="noopener">More on Xiaohongshu <span aria-hidden="true">↗</span></a></p>
