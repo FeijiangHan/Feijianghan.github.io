@@ -43,7 +43,7 @@ My past work spans three complementary directions:
         </span>
       </li>
       <li style="margin-top: 1.5em;">
-        <strong>3. AI Agents and Self-Evolution</strong>: I study how agents can improve their prompts, tools, memory, and workflows as they work. In <a href="https://arxiv.org/abs/2611.05139">Meta² (arXiv 2026)</a>, we learn reusable guidance from training trajectories to help an agent decide when and how to adapt its harness during a new run.
+        <strong>3. AI Agents and Self-Evolution</strong>: I study how agents adapt during a task and how reliably we can steer them. <a href="https://arxiv.org/abs/2611.05139">Meta²</a> learns reusable guidance for adapting an agent’s harness mid-run. <a href="https://arxiv.org/abs/2610.27295">RealControlBench</a> tests whether steering achieves the intended behavior while preserving task performance.
       </li>
     </ul>
   </div>
