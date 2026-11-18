@@ -1,6 +1,6 @@
 <span class='anchor' id='publications'></span>
 
-<h2 class="section-heading">📝 Publications</h2>
+<h2 class="section-heading">Publications</h2>
 
 
 <div class="publication-controls" id="publication-controls" hidden>
@@ -19,7 +19,7 @@
 </div>
 <p class="publication-empty" id="publication-empty" hidden>No highlighted papers in this topic yet. <button type="button" data-show-all>View all papers in this topic</button>.</p>
 
-<h3 class="interest-heading" data-interest="1">🔮 Research Interest 1: Actionable Mechanistic Interpretability in Large Language Models</h3>
+<h3 class="interest-heading" data-interest="1">Research Interest 1: Actionable Mechanistic Interpretability in Large Language Models</h3>
 
 <div class="paper-box" data-paper-id="ica-lens" data-interest="1" data-highlight="{% if site.data.publication-highlights contains 'ica-lens' %}true{% else %}false{% endif %}">
 
@@ -133,7 +133,7 @@ Large Language Models (LLMs) often fail on complex reasoning tasks due to flawed
 </div>
 
 
-<h3 class="interest-heading" data-interest="2">🔍 Research Interest 2: Model Adaptation</h3>
+<h3 class="interest-heading" data-interest="2">Research Interest 2: Model Adaptation</h3>
 
 <div class="paper-box" data-paper-id="webshell-detection" data-interest="2" data-highlight="{% if site.data.publication-highlights contains 'webshell-detection' %}true{% else %}false{% endif %}"> 
 
@@ -241,7 +241,7 @@ We present ThinknCheck, a 1B-parameter verifier for grounded claim verification 
 </div>
 
 
-<h3 class="interest-heading" data-interest="4">🤖 Research Interest 3: AI Agents and Self-Evolution</h3>
+<h3 class="interest-heading" data-interest="4">Research Interest 3: AI Agents and Self-Evolution</h3>
 
 <div class="paper-box" data-paper-id="meta2" data-interest="4" data-highlight="{% if site.data.publication-highlights contains 'meta2' %}true{% else %}false{% endif %}">
   <div class='paper-box-image'>
@@ -305,7 +305,7 @@ The five tracks cover instruction following, tool-use decisions, reasoning accur
 </div>
 
 
-<h3 class="interest-heading" data-interest="3">🌟 Earlier Work: Crowdsourcing, Federated & Continual Learning, HCI</h3>
+<h3 class="interest-heading" data-interest="3">Earlier Work: Crowdsourcing, Federated & Continual Learning, HCI</h3>
 
 <div class="paper-box" data-paper-id="cql-mab" data-interest="3" data-highlight="{% if site.data.publication-highlights contains 'cql-mab' %}true{% else %}false{% endif %}"><div class='paper-box-image'><div><div class="badge">Information Sciences 2023</div><a href="https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290" target="_blank"><img src="/images/cqlmab.webp" alt="CQL-MAB Overview" class="paper-image-hover" width="900" height="601" decoding="async" loading="lazy"></a></div></div>
 <div class='paper-box-text' markdown="1">
