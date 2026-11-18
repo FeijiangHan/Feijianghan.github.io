@@ -274,6 +274,37 @@ Harness optimization improves long-horizon agents by refining the prompts, tools
 </div>
 
 
+<div class="paper-box" data-paper-id="realcontrolbench" data-interest="4" data-highlight="{% if site.data.publication-highlights contains 'realcontrolbench' %}true{% else %}false{% endif %}">
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">arXiv 2026</div>
+      <a href="https://arxiv.org/abs/2610.27295" target="_blank">
+        <img src="/images/realcontrolbench-overview.webp" alt="RealControlBench tool-use workflow: the same steering vectors are evaluated in single-turn and multi-turn settings" class="paper-image-hover" width="1176" height="180" decoding="async" loading="lazy">
+      </a>
+    </div>
+  </div>
+
+  <div class='paper-box-text' markdown="1">
+
+<h4 class="paper-title"><a href="https://arxiv.org/abs/2610.27295">RealControlBench: A Benchmark for Interpretability-Informed Fine-Grained Control of LLMs and Agents</a></h4>
+
+Xinying Cai\*, Bin Hu\*, Mingyu Jin\*, Qiming Zhang\*, Yang Ouyang, Bangwei Guo, Minghao Guo, Yutong Yin, Lang Gao, **Feijiang Han**, Sheldon Yu, Kaiqu Liang, Qingcheng Zeng, Jingcheng Niu, Fan Yang, Wei Cheng, Zhen Xiang, Julian McAuley, Zhaoran Wang
+
+[**Paper**](https://arxiv.org/abs/2610.27295) \| [**Code**](https://github.com/MingyuJ666/ControlBench)
+
+**TL;DR.** Can you steer an agent toward a specific behavior and still have it finish the task? RealControlBench measures both outcomes across five tracks, including multi-turn tool use. The methods tested often miss the intended behavior or reduce task performance.
+
+<details class="paper-details">
+<summary>Benchmark details</summary>
+<div class="paper-abstract" id="realcontrolbench_details">
+The five tracks cover instruction following, tool-use decisions, reasoning accuracy, reasoning length, and safety judgments based on the agent’s trajectory. The benchmark measures whether steering changes the intended behavior, whether the underlying task still gets done, and how the effects vary across prompts, domains, and models.
+</div>
+</details>
+
+</div>
+</div>
+
+
 <h3 class="interest-heading" data-interest="3">🌟 Earlier Work: Crowdsourcing, Federated & Continual Learning, HCI</h3>
 
 <div class="paper-box" data-paper-id="cql-mab" data-interest="3" data-highlight="{% if site.data.publication-highlights contains 'cql-mab' %}true{% else %}false{% endif %}"><div class='paper-box-image'><div><div class="badge">Information Sciences 2023</div><a href="https://www.sciencedirect.com/science/article/abs/pii/S0020025523010290" target="_blank"><img src="/images/cqlmab.webp" alt="CQL-MAB Overview" class="paper-image-hover" width="900" height="601" decoding="async" loading="lazy"></a></div></div>

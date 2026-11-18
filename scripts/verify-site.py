@@ -61,8 +61,8 @@ for src in page.assets:
     parsed = urlsplit(src)
     if not parsed.scheme and not parsed.netloc:
         assert (site / unquote(parsed.path.lstrip('/'))).is_file(), f'Missing asset: {src}'
-assert len(page.paper_ids) == 10, f'Expected all 10 full publication entries, got {len(page.paper_ids)}'
-assert len(set(page.paper_ids)) == 10
+assert len(page.paper_ids) == 11, f'Expected all 11 full publication entries, got {len(page.paper_ids)}'
+assert len(set(page.paper_ids)) == 11
 assert 'Chris Callison-Burch' in source and 'Lyle Ungar' in source and 'Delip Rao' in source and 'Xiaodong Yu' in source
 assert 'University of Pennsylvania' in source and 'University of Maryland' in source
 assert 'show_paper_citations' not in source and 'gs_data.json' not in source
