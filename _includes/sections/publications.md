@@ -12,6 +12,7 @@
     <button type="button" class="pf-btn" data-filter="all" aria-pressed="true">All topics</button>
     <button type="button" class="pf-btn" data-filter="1" aria-pressed="false">🔮 Mechanistic Interpretability</button>
     <button type="button" class="pf-btn" data-filter="2" aria-pressed="false">🔍 Model Adaptation</button>
+    <button type="button" class="pf-btn" data-filter="4" aria-pressed="false">🤖 AI Agents</button>
     <button type="button" class="pf-btn" data-filter="3" aria-pressed="false">🌟 Earlier Work</button>
   </div>
   <p class="publication-status" id="publication-status" aria-live="polite" aria-atomic="true"></p>
@@ -233,6 +234,39 @@ Delip Rao, **Feijiang Han**, Chris Callison-Burch
 <summary>Abstract</summary>
 <div class="paper-abstract" id="thinkncheck_abstract">
 We present ThinknCheck, a 1B-parameter verifier for grounded claim verification that first produces a short, structured rationale and then a binary verdict. We construct LLMAggreFact-Think, a 24.1k reasoning-augmented training set derived from LLMAggreFact, and fine-tune a 4-bit Gemma3 model to follow this format. On LLMAggreFact, ThinknCheck attains 78.1 balanced accuracy (BAcc), surpassing MiniCheck-7B (77.4) with 7x fewer parameters; removing the reasoning step reduces BAcc to 57.5. On SciFact, ThinknCheck reaches 64.7 BAcc, a +14.7 absolute gain over MiniCheck-7B. By contrast, zero-shot chain-of-thought on the base Gemma3-1B harms accuracy relative to direct answers, and preference optimization with a simple format+accuracy reward underperforms supervised reasoning. A qualitative audit of generated rationales indicates current verification datasets over-reward lexical overlap and under-test multi-sentence and numerical reasoning. To probe the latter, we introduce GSMClaims and a domain-specialized variant, ThinknCheck-Science, which improves across benchmarks, including 61.0\% accuracy on GSMClaims. Overall, explicit, supervised reasoning enables compact verifiers that are competitive while remaining resource-efficient and interpretable.
+</div>
+</details>
+
+</div>
+</div>
+
+
+<h3 class="interest-heading" data-interest="4">🤖 Research Interest 3: AI Agents and Self-Evolution</h3>
+
+<div class="paper-box" data-paper-id="meta2" data-interest="4" data-highlight="{% if site.data.publication-highlights contains 'meta2' %}true{% else %}false{% endif %}">
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">arXiv 2026</div>
+      <a href="https://arxiv.org/abs/2611.05139" target="_blank">
+        <img src="/images/meta2-overview.webp" alt="Meta² overview: offline Meta-Skill learning guides task-local harness evolution during online agent execution" class="paper-image-hover" width="1482" height="567" decoding="async" loading="lazy">
+      </a>
+    </div>
+  </div>
+
+  <div class='paper-box-text' markdown="1">
+
+<h4 class="paper-title"><a href="https://arxiv.org/abs/2611.05139">Meta²: Precomputing Reusable Knowledge for Online Harness Evolution in Long-Horizon Agents</a></h4>
+
+Lingzhi Yuan\*, Yiguang Cai\*, Weize Liu, Siqi Yang, **Feijiang Han**, Yongkyun Lee, Udari Madhushani Sehwag, Furong Huang
+
+[**Paper**](https://arxiv.org/abs/2611.05139) \| [**Website**](https://meta-square.github.io/)
+
+**TL;DR.** A fixed agent harness cannot adapt to problems that emerge during a run. Meta² learns reusable guidance from contrasting training trajectories, then uses it to decide when and how to edit the harness online. Edits stay local to each run, with no verifier feedback at test time.
+
+<details class="paper-details">
+<summary>Abstract</summary>
+<div class="paper-abstract" id="meta2_abstract">
+Harness optimization improves long-horizon agents by refining the prompts, tools, memory, and hooks around a frozen model. Offline methods can learn from completed trajectories, but deploy one shared harness that may overfit training tasks and cannot react to evidence revealed during a new run. Online evolution can adapt before, during, or after one run through an evolver, but may have to reason about every intervention from scratch or rely on verifier feedback that is usually unavailable at test time. We introduce Meta², which moves offline optimization one level up: rather than optimizing a shared harness, it learns reusable knowledge for harness evolution and applies it within each task online. Offline, Meta² learns a textual Meta-Skill M by contrasting training rollouts of the same task agent under three configurations: without an evolver, with an evolver guided by the current version of M, and with an evolver given privileged verifier information available only in training. Contrasts in trajectories and outcomes are aggregated across tasks to refine M into reusable guidance on when and how to evolve, when to leave the harness unchanged, and which interventions to avoid. Online, an evolver combines the frozen M with emerging trajectory evidence to decide whether to KEEP the harness unchanged or EVOLVE it through a task-local edit. Each edit applies to the rest of the same run without resetting its environment or progress. Thus, evolution guidance transfers across tasks while harness edits remain task-local, and held-out verifier feedback is never available to the evolver. On two long-horizon benchmarks, Terminal-Bench 2.1 and DeepSWE 1.1, Meta² achieves the highest performance among evaluated methods with GPT-5.6-Terra, reaching 81.00% and 44.44%, respectively. Ablations support the value of contrastive evolution guidance and keeping online harness edits task-local.
 </div>
 </details>
 

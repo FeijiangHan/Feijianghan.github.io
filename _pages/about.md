@@ -20,7 +20,7 @@ I am a first-year CS Ph.D. student at the University of Maryland <img src="/imag
 - **Model level:** How can we understand models more accurately, including how knowledge is stored, how training dynamics shape representations, how fine-tuning changes behavior, and how attention, circuits, and other internal structures interact? Can these insights serve as first principles for designing better AI systems, from training to collaboration to self-evolution?
 - **Agent level:** Can agents identify which of their internal representations, skills, and strategies are useful, then use that understanding to decide what to reinforce, combine, modify, or discard?
 
-My past work spans two complementary directions:
+My past work spans three complementary directions:
 
 <div style="display: flex; gap: 2em; align-items: flex-start; margin: 2em 0; flex-wrap: wrap;">
   <div style="flex: 1; min-width: min(300px, 100%); max-width: 500px;">
@@ -41,6 +41,9 @@ My past work spans two complementary directions:
         <span style="font-size: 0.95em; color: #6B7280;">
           (<a href="#why-i-care-about-model-adaptation" style="color: #5B6E91;">Why I care about model adaptation</a>)
         </span>
+      </li>
+      <li style="margin-top: 1.5em;">
+        <strong>3. AI Agents and Self-Evolution</strong>: I study how agents can improve their prompts, tools, memory, and workflows as they work. In <a href="https://arxiv.org/abs/2611.05139">Meta² (arXiv 2026)</a>, we learn reusable guidance from training trajectories to help an agent decide when and how to adapt its harness during a new run.
       </li>
     </ul>
   </div>
