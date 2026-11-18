@@ -12,12 +12,12 @@ redirect_from:
 
 I am a first-year CS Ph.D. student at the University of Maryland <img src="/images/umd.webp" width="64" height="64" decoding="async" alt="" class="inline-logo">, working with [Prof. Furong Huang](https://furong-huang.com/) and collaborating with [Prof. Sarah Wiegreffe](https://sarahwie.github.io/). I received my master’s degree from the University of Pennsylvania <img src="/images/upenn.webp" width="64" height="55" decoding="async" alt="" class="inline-logo">, where I worked with [Prof. Chris Callison-Burch](https://www.cis.upenn.edu/~ccb/), [Prof. Lyle Ungar](https://www.cis.upenn.edu/~ungar/), [Delip Rao](https://deliprao.com/), and [Dr. Xiaodong Yu](https://www.xiaodongyu.me/).
 
-**Goal:** Build AI systems that use insights into their own mechanisms to understand the world and improve themselves, while remaining understandable and controllable to humans.
+**Goal:** Build mechanism-guided AI systems that can understand the world, improve themselves, and still remain understandable and controllable to humans. 
 
 **Research Topics:** {LLMs, VLMs, Agents, Cognitive Science}
 
 **Research Questions:**
-- **Model level:** How do models store knowledge, how do training and fine-tuning shape their representations and behavior, and how do attention, circuits, and other internal structures interact? Can we turn this understanding into principles for building better AI systems—from training and collaboration to self-improvement?
+- **Model level:** How can we understand models more accurately, including how knowledge is stored, how training dynamics shape representations, how fine-tuning changes behavior, and how attention, circuits, and other internal structures interact? Can these insights serve as first principles for designing better AI systems, from training to collaboration to self-evolution?
 - **Agent level:** Can agents identify which of their internal representations, skills, and strategies are useful, then use that understanding to decide what to reinforce, combine, modify, or discard?
 
 My past work spans two complementary directions:
