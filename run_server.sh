@@ -1,1 +1,1 @@
-bundle exec jekyll serve --livereload
+bash "$(dirname "$0")/scripts/serve.sh" "$@"

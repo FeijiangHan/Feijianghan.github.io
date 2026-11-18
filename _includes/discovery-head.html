@@ -1,0 +1,43 @@
+{% assign entry = site.data.writing | where: "id", page.article_id | first %}
+{% assign entry_url = entry.path | absolute_url %}
+<title>{{ entry.title | escape }} | Feijiang Han</title>
+<meta name="description" content="{{ entry.description | escape }}">
+<meta name="author" content="Feijiang Han">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="{{ entry_url }}">
+<meta property="og:site_name" content="Feijiang Han">
+<meta property="og:type" content="{% if entry.type == 'Article' %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ entry.title | escape }}">
+<meta property="og:description" content="{{ entry.description | escape }}">
+<meta property="og:url" content="{{ entry_url }}">
+<meta name="twitter:site" content="@feijianghan">
+<meta name="twitter:creator" content="@feijianghan">
+<meta name="twitter:card" content="{% if entry.image %}summary_large_image{% else %}summary{% endif %}">
+<meta name="twitter:title" content="{{ entry.title | escape }}">
+<meta name="twitter:description" content="{{ entry.description | escape }}">
+{% if entry.image %}
+<meta property="og:image" content="{{ entry.image | absolute_url }}">
+<meta name="twitter:image" content="{{ entry.image | absolute_url }}">
+{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": {{ entry.type | jsonify }},
+  "@id": {{ entry_url | append: '#content' | jsonify }},
+  "url": {{ entry_url | jsonify }},
+  "name": {{ entry.title | jsonify }},
+  {% if entry.type == 'Article' %}"headline": {{ entry.title | jsonify }},{% endif %}
+  "description": {{ entry.description | jsonify }},
+  "inLanguage": {{ entry.language | jsonify }},
+  "author": {"@type": "Person", "@id": "https://feijianghan.com/#person", "name": "Feijiang Han", "url": "https://feijianghan.com/"},
+  "isPartOf": {"@id": "https://feijianghan.com/#website"},
+  {% if entry.image %}"image": {{ entry.image | absolute_url | jsonify }},{% endif %}
+  "mainEntityOfPage": {{ entry_url | jsonify }}
+}
+</script>
+<style>
+.author-discovery{box-sizing:border-box;max-width:1100px;margin:32px auto;padding:16px 24px;border-top:1px solid #d9dfe5;font:14px/1.6 system-ui,sans-serif;color:#526174}
+.author-discovery a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.reading-outline{max-width:1100px;margin:32px auto;padding:20px 24px;font:15px/1.7 system-ui,sans-serif;color:#273f37}
+.reading-outline summary{cursor:pointer;font-weight:600}.reading-outline h3{font-size:1.05em}.reading-outline li{margin-bottom:.5em}
+</style>

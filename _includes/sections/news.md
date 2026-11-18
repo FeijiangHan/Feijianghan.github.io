@@ -1,0 +1,22 @@
+<span class='anchor' id='news'></span>
+
+<h2 class="section-heading">🔥 News &amp; Milestones</h2>
+
+<div class="news-scroll" role="region" aria-label="News and milestones, scroll for older updates" tabindex="0" markdown="1">
+
+- *October 2026*: &nbsp;🔬 Released **ICA Lens**, a practical approach to discovering interpretable directions in language models through non-Gaussianity. [Paper](https://arxiv.org/abs/2606.11722) · [X post](https://x.com/feijianghan/status/2112654366599504277)
+- *May 2026*: &nbsp;🎓 Graduated from the **University of Pennsylvania**!
+- *April 2026*: &nbsp;🏅 Honored to receive the **Outstanding Research Award** from the University of Pennsylvania!
+- *April 2026*: &nbsp;🎉 **ACL 2026 x 1**
+- *March 2026*: &nbsp;🎉 **NLDB 2026 x 1**
+- *March 2026*: &nbsp;🎉 Accepted into the CS PhD program at the **University of Maryland** (starting Fall 2026)!
+- *January 2026*: &nbsp;🎉 **ICLR 2026 x 2**
+- *January 2026*: &nbsp;🎉 **ICASSP 2026**
+- *November 2025*: &nbsp;🎉 **AAAI 2026 x 2**
+- *July 2025*: &nbsp;🎉 **COLM 2025**
+- *June 2025*: &nbsp;🎉 Paper published in **Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT) 2025**
+- *June 2025*: &nbsp;🎉 **MOSS@ICML2025**
+- *January 2025*: &nbsp;📝 Create my OpenReview account and led my first conference paper submission.
+
+</div>
+<p class="scroll-hint">Scroll for earlier updates ↓</p>
